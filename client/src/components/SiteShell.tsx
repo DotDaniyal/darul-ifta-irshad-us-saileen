@@ -7,6 +7,7 @@ import { Menu, X, Phone, MessageCircle, ChevronRight, HeartHandshake, BookOpenCh
 import { Link, useLocation } from "wouter";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
+const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
 
 type Language = "ur" | "en";
 
@@ -116,6 +117,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
               <Link href="/" className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
               {links.map((item) => <a key={item.label} href={item.href} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
+              <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="nav-link nav-link-bayan">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}<ExternalLink className="h-3 w-3" /></a>
             </nav>
             <div className="absolute right-4 flex items-center gap-2 sm:right-8 sm:gap-3">
               <button onClick={() => setLanguage(language === "ur" ? "en" : "ur")} className="rounded-none border border-white/25 px-2.5 py-2 font-sans text-[10px] font-bold tracking-wide text-white transition hover:border-[#E9D4A2] hover:text-[#E9D4A2]" aria-label="Switch language">{t.lang}</button>
@@ -123,7 +125,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
               <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center text-white lg:hidden" aria-label="Toggle navigation">{open ? <X /> : <Menu />}</button>
             </div>
           </div>
-          {open && <div className="border-t border-white/10 bg-[#05070B] px-5 py-5 lg:hidden"><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm text-white/90"><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}</nav></div>}
+          {open && <div className="border-t border-white/10 bg-[#05070B] px-5 py-5 lg:hidden"><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm text-white/90"><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}<a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="mt-2 flex items-center justify-between border border-[#D1AC5B]/60 bg-[#D1AC5B]/10 px-4 py-3.5 text-sm font-bold text-[#FFE2A0]"><span>{language === "ur" ? "آن لائن بیان سنیں" : "Listen to Online Bayan"}</span><ExternalLink className="h-4 w-4" /></a></nav></div>}
         </div>
       </header>
       <div className="page-canvas">{children}</div>
@@ -133,7 +135,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr]">
             <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon"><MessageCircle className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon"><Phone className="h-4 w-4" /></a><span className="footer-icon"><ExternalLink className="h-4 w-4" /></span></div></div>
             <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
-            <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a></div></div>
+            <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a><a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a></div></div>
             <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><a href="tel:+923332617671" className="mt-4 block font-sans text-sm font-semibold text-[#E9D4A2]">+92 333 2617671</a><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
           </div>
           <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row"><span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span><span>{t.rights}</span></div>

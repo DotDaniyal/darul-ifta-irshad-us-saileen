@@ -36,3 +36,9 @@
 - [x] Limit the hero text measure and improve responsive type scaling to prevent collision.
 - [x] Adjust hero layout alignment around the date card at desktop and mobile widths.
 - [x] Verify the repaired typography on desktop and mobile.
+
+## Online Bayan Link Checklist
+
+- [x] Add the supplied Mixlr event to the primary navigation as Online Bayan.
+- [x] Add a visible Online Bayan call to action in the homepage guidance area.
+- [x] Verify both links open the correct external event in a new tab.
