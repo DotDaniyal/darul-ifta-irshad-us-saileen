@@ -85,3 +85,5 @@ The experience now uses a **centered transparent official mark** on a white cere
 - **Irshad Blue `#075A9B`** signals active guidance; deep navy and black are institutional ground; ivory and white are reading surfaces; gold is reserved for devotional marks, seals, primary actions, and dividers.
 - Every dark institutional chamber includes at least one depth cue: a quiet arch silhouette, a manuscript rule, a rosette point, or a gold seal line.
 - Urdu remains the primary ceremonial headline voice; Arabic is devotional; English serves concise institutional explanation and metadata.
+- The home hero gives **Urdu/Nastaliq** the primary ceremonial role, followed by Bismillah as devotional emphasis; the English institutional name supports rather than outranks it.
+- Fatwa request fields are presented as ruled, ivory manuscript paper with blue-ink interaction states and restrained gold edges.

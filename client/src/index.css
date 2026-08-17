@@ -24,8 +24,8 @@
   .royal-masthead::before { content: ""; position: absolute; width: 300px; height: 130px; top: 16px; left: 50%; transform: translateX(-50%); border: 1px solid rgba(200,156,70,.20); border-bottom: 0; border-radius: 160px 160px 0 0 / 108px 108px 0 0; pointer-events: none; }
   .royal-masthead::after { content: "✦  بِسْمِ ٱللَّٰهِ  ✦"; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); color: #B48731; font-family: "Aref Ruqaa Ink", "Amiri", serif; font-size: 12px; letter-spacing: .16em; white-space: nowrap; }
   .brand-mark-center { align-items: center; justify-content: center; }
-  .royal-nav { background: linear-gradient(100deg, #06152E, #153A89 51%, #06152E); border-bottom: 1px solid rgba(209,172,91,.58); }
-  .nav-link { @apply relative py-5 font-sans text-[11px] font-bold tracking-[.055em] text-white/88 transition hover:text-[#F0D89C]; }
+  .royal-nav { background: linear-gradient(100deg, #06152E, #153A89 51%, #06152E); border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(209,172,91,.58); }
+  .nav-link { @apply relative py-4 font-sans text-[10px] font-bold tracking-[.08em] text-white/84 transition hover:text-[#F0D89C]; }
   .nav-link::after { content: ""; @apply absolute bottom-0 left-0 h-0.5 w-0 bg-[#C89C46] transition-all duration-300; }
   .nav-link:hover::after, .nav-link-active::after { @apply w-full; }
   .nav-link-active { @apply text-white; }
@@ -39,6 +39,9 @@
   .hero-watermark img { @apply h-full w-full object-contain; }
   .hero-kicker { @apply flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-[.22em] text-[#E9D4A2]; }
   .hero-bismillah { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFE39A; font-size: clamp(1.65rem, 3vw, 2.45rem); line-height: 1.25; letter-spacing: .025em; text-shadow: 0 1px 0 rgba(255,255,255,.24), 0 5px 22px rgba(0,0,0,.40), 0 0 26px rgba(233,188,78,.22); }
+  .hero-urdu-identity { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; color: #FFF6D4; font-size: clamp(2rem, 4.1vw, 3.8rem); line-height: 1.52; text-shadow: 0 5px 24px rgba(0,0,0,.36); }
+  .hero-english-identity { font-size: clamp(2.15rem, 4.35vw, 4.35rem); line-height: .98; letter-spacing: -.035em; text-shadow: 0 5px 22px rgba(0,0,0,.32); }
+  .hero-english-identity span { color: #D7E7F8; }
   .hero-primary { @apply inline-flex items-center gap-2 rounded-none bg-[#D1AC5B] px-5 py-3.5 font-sans text-xs font-bold text-[#06152E] shadow-[0_12px_30px_rgba(0,0,0,.20)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F1DC9B] active:scale-[.98]; }
   .hero-secondary { @apply inline-flex items-center gap-2 rounded-[5px] border border-white/35 bg-white/5 px-5 py-3.5 font-sans text-xs font-bold text-white backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#F2DFB4] hover:bg-white/10 hover:text-[#F2DFB4] active:scale-[.98]; }
   .date-card { @apply relative flex min-w-[270px] gap-4 rounded-[10px] border border-white/35 bg-[#FCFAF6]/95 p-5 shadow-[0_24px_60px_rgba(2,18,40,.28)] backdrop-blur-sm; }
@@ -46,6 +49,7 @@
   .date-card > * { @apply relative; }
   .date-icon { @apply grid h-10 w-10 shrink-0 place-items-center bg-[#1C4399] text-white; }
   .arch-frame { @apply relative overflow-hidden rounded-[16px_16px_5px_5px] border border-[#D7CEC0] bg-white p-3 shadow-[0_20px_50px_rgba(16,34,58,.08)]; clip-path: polygon(0 4%, 9% 0, 91% 0, 100% 4%, 100% 100%, 0 100%); }
+  .arch-frame img { filter: saturate(.74) contrast(1.06) brightness(.92); }
   .service-card { @apply relative overflow-hidden rounded-[18px_18px_5px_5px] border border-[#CDB574] bg-white p-6 shadow-[0_12px_30px_rgba(10,22,52,.055)] transition duration-300 hover:-translate-y-1 hover:border-[#1C4399] hover:shadow-[0_24px_48px_rgba(10,22,52,.13)]; clip-path: polygon(0 5%, 10% 0, 90% 0, 100% 5%, 100% 100%, 0 100%); }
   .service-card::before { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(209,172,91,.34); border-bottom: 0; border-radius: 100px 100px 0 0 / 68px 68px 0 0; opacity: .7; pointer-events: none; }
   .service-card::after { content: ""; @apply absolute bottom-0 left-0 h-1 w-0 bg-[#C89C46] transition-all duration-300; }
@@ -76,7 +80,9 @@
   .utility-button { @apply flex items-center gap-2 border border-[#D7DFE6] px-3 py-2.5 font-sans text-xs font-semibold text-[#40556C] transition hover:border-[#075A9B] hover:bg-[#EEF3F8] hover:text-[#075A9B]; }
   .form-label { @apply mb-2 flex items-center gap-2 font-sans text-[11px] font-bold text-[#243D62]; }
   .form-label::before { content: "✦"; color: #C89C46; font-size: 9px; }
-  .form-control { @apply h-12 w-full rounded-none border border-[#BFC9D8] bg-white px-3 font-sans text-sm text-[#10223A] outline-none transition placeholder:text-[#98A3B1] focus:border-[#075A9B] focus:ring-2 focus:ring-[#075A9B]/10; box-shadow: inset 0 0 0 3px rgba(243,231,198,.18); }
+  .form-control { @apply h-12 w-full rounded-none border border-[#BFC9D8] bg-[#FFFEFA] px-3 font-sans text-sm text-[#10223A] outline-none transition placeholder:text-[#98A3B1] focus:border-[#075A9B] focus:ring-2 focus:ring-[#075A9B]/10; background-image: linear-gradient(transparent 91%, rgba(193,157,79,.24) 92%, transparent 93%); background-size: 100% 1.72rem; box-shadow: inset 0 0 0 3px rgba(243,231,198,.22); }
+  textarea.form-control { line-height: 1.72rem; padding-top: .5rem; }
+  .form-chamber input[type="file"]::file-selector-button { margin-right: .75rem; border: 0; border-right: 1px solid #CDB574; background: #FFF4D7; padding: .55rem .7rem; color: #173A78; font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 700; }
   textarea.form-control { @apply h-auto py-3; }
   .form-chamber { @apply relative overflow-hidden rounded-[24px_24px_6px_6px] border border-[#C6A65F] bg-[#FFFDF8]/95 p-6 shadow-[0_28px_72px_rgba(10,22,52,.12)] sm:p-9; clip-path: polygon(0 4%, 8% 0, 92% 0, 100% 4%, 100% 100%, 0 100%); background-image: radial-gradient(circle at 94% 6%, rgba(225,195,125,.21), transparent 12rem), linear-gradient(rgba(7,90,155,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.022) 1px, transparent 1px); background-size: auto, 22px 22px, 22px 22px; }
   .form-chamber::before { content: ""; @apply absolute left-7 right-7 top-3 h-px bg-[#C89C46]/65; }
@@ -92,6 +98,8 @@
   #donate::before { content: ""; position: absolute; left: 7%; bottom: -150px; width: 430px; height: 510px; border: 1px solid rgba(255,218,126,.22); border-bottom: 0; border-radius: 230px 230px 0 0 / 300px 300px 0 0; box-shadow: 0 0 0 22px rgba(255,218,126,.035), 0 0 0 44px rgba(255,218,126,.025); }
   #donate::after { content: "۞  صدقہ و خدمت  ۞"; position: absolute; top: 28px; right: 9%; color: rgba(255,218,126,.53); font-family: "Aref Ruqaa Ink", "Amiri", serif; font-size: 17px; letter-spacing: .08em; }
   #donate > div:last-child > div:last-child { position: relative; border-color: rgba(255,218,126,.40) !important; background-image: radial-gradient(circle at 90% 10%, rgba(255,218,126,.16), transparent 9rem); }
+  #donate h2 { color: #FFF7DB; text-shadow: 0 4px 22px rgba(0,0,0,.28); }
+  #donate p { color: rgba(255,255,255,.82); }
   #donate > div:last-child > div:last-child::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(255,218,126,.18); border-bottom: 0; border-radius: 130px 130px 0 0 / 90px 90px 0 0; pointer-events: none; }
 }
 
@@ -100,9 +108,24 @@
   .motion-section.is-visible { animation: section-reveal .72s cubic-bezier(.23, 1, .32, 1) var(--motion-delay, 0ms) both; }
   #home.is-visible .hero-kicker { animation: rise-in .55s cubic-bezier(.23, 1, .32, 1) .06s both; }
   #home.is-visible .hero-bismillah { animation: calligraphy-arrive .85s cubic-bezier(.23, 1, .32, 1) .13s both; }
-  #home.is-visible h1 { animation: rise-in .75s cubic-bezier(.23, 1, .32, 1) .21s both; }
+  #home.is-visible .hero-urdu-identity { animation: calligraphy-arrive .78s cubic-bezier(.23, 1, .32, 1) .20s both; }
+  #home.is-visible h1 { animation: rise-in .75s cubic-bezier(.23, 1, .32, 1) .30s both; }
+  #home.is-visible h1 span { display: inline-block; animation: title-sheen 3.8s ease-in-out 1.15s infinite; }
   #home.is-visible .hero-primary, #home.is-visible .hero-secondary { animation: rise-in .55s cubic-bezier(.23, 1, .32, 1) .34s both; }
   #home.is-visible .date-card { animation: float-in .8s cubic-bezier(.23, 1, .32, 1) .28s both; }
+  .motion-section.is-visible .section-eyebrow { animation: label-reveal .48s cubic-bezier(.23,1,.32,1) .08s both; }
+  .motion-section.is-visible .section-title { animation: text-lift .72s cubic-bezier(.23,1,.32,1) .15s both; }
+  .motion-section.is-visible .section-description { animation: text-lift .64s cubic-bezier(.23,1,.32,1) .28s both; }
+  .motion-section.is-visible .text-link { animation: label-reveal .5s cubic-bezier(.23,1,.32,1) .36s both; }
+  .motion-section.is-visible .featured-fatwa h3, .motion-section.is-visible .fatwa-card h3 { animation: text-lift .55s cubic-bezier(.23,1,.32,1) .18s both; }
+  .motion-section.is-visible .featured-fatwa p, .motion-section.is-visible .fatwa-card p { animation: text-lift .5s cubic-bezier(.23,1,.32,1) .26s both; }
+  .motion-section.is-visible .form-seal { animation: label-reveal .5s cubic-bezier(.23,1,.32,1) .10s both; }
+  .motion-section.is-visible .form-chamber h2, .motion-section.is-visible .form-chamber p { animation: text-lift .58s cubic-bezier(.23,1,.32,1) .22s both; }
+  .motion-section.is-visible .form-label { animation: label-reveal .44s cubic-bezier(.23,1,.32,1) both; }
+  .motion-section.is-visible .form-label:nth-of-type(2) { animation-delay: 55ms; }
+  .motion-section.is-visible .form-label:nth-of-type(3) { animation-delay: 110ms; }
+  .motion-section.is-visible .contact-card h3 { animation: text-lift .52s cubic-bezier(.23,1,.32,1) .14s both; }
+  .motion-section.is-visible .contact-card p { animation: text-lift .48s cubic-bezier(.23,1,.32,1) .22s both; }
   .service-card, .fatwa-card, .contact-card { animation: rise-in .55s cubic-bezier(.23,1,.32,1) both; }
   .service-card:nth-child(2), .fatwa-card:nth-child(2), .contact-card:nth-child(2) { animation-delay: 70ms; }
   .service-card:nth-child(3), .fatwa-card:nth-child(3), .contact-card:nth-child(3) { animation-delay: 130ms; }
@@ -120,6 +143,9 @@
   @keyframes section-reveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes rise-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes float-in { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  @keyframes text-lift { from { opacity: 0; transform: translateY(16px); filter: blur(2px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+  @keyframes label-reveal { from { opacity: 0; transform: translateY(8px); letter-spacing: .34em; } to { opacity: 1; transform: translateY(0); letter-spacing: inherit; } }
+  @keyframes title-sheen { 0%, 100% { color: #D7E7F8; text-shadow: none; } 50% { color: #FFF6D4; text-shadow: 0 0 20px rgba(255,220,139,.34); } }
   @keyframes calligraphy-arrive { from { opacity: 0; transform: translateY(12px) scale(.98); filter: blur(3px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
   @keyframes gold-sweep { 0%, 55% { transform: translateX(-30vw); opacity: 0; } 65% { opacity: .95; } 88%, 100% { transform: translateX(160vw); opacity: 0; } }
   @keyframes bismillah-glow { 0%, 100% { color: #FFD77D; text-shadow: 0 1px 0 rgba(255,255,255,.15), 0 5px 18px rgba(214,162,53,.32); } 50% { color: #FFF0C7; text-shadow: 0 1px 0 rgba(255,255,255,.28), 0 5px 24px rgba(243,186,52,.55); } }

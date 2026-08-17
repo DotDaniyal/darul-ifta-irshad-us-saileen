@@ -63,12 +63,12 @@ export function BrandMark({ compact = false, centered = false }: { compact?: boo
 
 export function SectionHeading({ eyebrow, title, description, align = "start" }: { eyebrow: string; title: string; description?: string; align?: "start" | "center" }) {
   return (
-    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      <div className={`mb-4 flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
+    <div className={`section-heading ${align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}`}>
+      <div className={`section-eyebrow mb-4 flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
         <span className="h-px w-9 bg-[#C89C46]" /><span className="font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-[#075A9B]">{eyebrow}</span><span className="h-1.5 w-1.5 rotate-45 bg-[#C89C46]" />
       </div>
-      <h2 className="font-display text-4xl leading-[1.05] text-[#10223A] sm:text-5xl">{title}</h2>
-      {description && <p className="mt-5 max-w-xl font-sans text-sm leading-7 text-[#52627A] sm:text-base">{description}</p>}
+      <h2 className="section-title font-display text-4xl leading-[1.05] text-[#10223A] sm:text-5xl">{title}</h2>
+      {description && <p className="section-description mt-5 max-w-xl font-sans text-sm leading-7 text-[#52627A] sm:text-base">{description}</p>}
     </div>
   );
 }

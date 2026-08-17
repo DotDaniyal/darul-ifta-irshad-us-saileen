@@ -22,3 +22,10 @@
 - [x] Deepen the Bismillah colour and calligraphic treatment in the masthead and page hero areas.
 - [x] Introduce a premium Arabic display calligraphy family while preserving readable Urdu body text.
 - [x] Verify animation rhythm, visual contrast, and responsive behavior.
+
+## Typography Motion Checklist
+
+- [x] Add staggered text reveals for headings, Urdu display copy, and supporting paragraphs.
+- [x] Animate section labels, metadata, and calls to action with restrained timing.
+- [x] Preserve readable text at all times and honor reduced-motion preferences.
+- [x] Verify headline animation rhythm across homepage, archive, and request form.
