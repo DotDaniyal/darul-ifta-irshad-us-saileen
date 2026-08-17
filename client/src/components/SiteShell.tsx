@@ -110,7 +110,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         {open && <div className="border-t border-white/10 bg-[#071D38] px-5 py-5 lg:hidden"><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm text-white/90"><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#C89C46]" /></a>)}</nav></div>}
       </header>
       {children}
-      <footer className="relative overflow-hidden bg-[#061A34] text-white">
+      <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
         <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
           <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr]">

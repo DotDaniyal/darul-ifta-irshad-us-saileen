@@ -71,3 +71,5 @@ The supplied official logo is the master mark and remains unchanged. It is paire
 - Primary content modules use a recognisable mihrab/manuscript outline rather than generic rectangular card treatment.
 - The archive, detail, and request flows retain the same ivory parchment, Irshad Blue, antique-gold divider, and geometric-linework material language as the home page.
 - Fatwa entries read as catalogued scholarly records, with bilingual titles first and deliberately framed metadata.
+- Interior-page heroes carry layered architectural depth through low-contrast mihrab silhouettes, rosette points, and geometric manuscript patterning.
+- Antique gold functions as a ceremonial marker for primary actions, scholarly metadata, and topic transitions, never as an indiscriminate accent.
