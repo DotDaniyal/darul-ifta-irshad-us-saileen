@@ -85,6 +85,21 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     { href: `${homePrefix}#contact`, label: t.contact },
   ];
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("main > section"));
+    sections.forEach((section, index) => {
+      section.classList.add("motion-section");
+      section.style.setProperty("--motion-delay", `${Math.min(index * 45, 180)}ms`);
+    });
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("is-visible"); }),
+      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [location]);
+
   return (
     <div className={`min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
       <div className="bismillah-bar px-4 py-2 sm:px-8">
@@ -111,7 +126,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           {open && <div className="border-t border-white/10 bg-[#05070B] px-5 py-5 lg:hidden"><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm text-white/90"><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}</nav></div>}
         </div>
       </header>
-      {children}
+      <div className="page-canvas">{children}</div>
       <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
         <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">

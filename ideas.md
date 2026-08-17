@@ -83,3 +83,5 @@ The experience now uses a **centered transparent official mark** on a white cere
 - Functional modules default to visible manuscript or mihrab framing; plain cards appear only inside a stronger ceremonial composition.
 - Fatwa archive records follow a scholarly catalogue structure: bilingual title, framed record marker, manuscript divider, then precise date/topic metadata.
 - **Irshad Blue `#075A9B`** signals active guidance; deep navy and black are institutional ground; ivory and white are reading surfaces; gold is reserved for devotional marks, seals, primary actions, and dividers.
+- Every dark institutional chamber includes at least one depth cue: a quiet arch silhouette, a manuscript rule, a rosette point, or a gold seal line.
+- Urdu remains the primary ceremonial headline voice; Arabic is devotional; English serves concise institutional explanation and metadata.
