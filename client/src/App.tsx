@@ -1,3 +1,4 @@
+/** Blue Minbar Heritage: full bilingual public routes for the Darul Ifta website. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -5,12 +6,18 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Fatawa from "./pages/Fatawa";
+import FatwaDetail from "./pages/FatwaDetail";
+import AskFatwa from "./pages/AskFatwa";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/fatawa"} component={Fatawa} />
+      <Route path={"/fatawa/:slug"} component={FatwaDetail} />
+      <Route path={"/ask-fatwa"} component={AskFatwa} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
