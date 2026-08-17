@@ -73,3 +73,13 @@ The supplied official logo is the master mark and remains unchanged. It is paire
 - Fatwa entries read as catalogued scholarly records, with bilingual titles first and deliberately framed metadata.
 - Interior-page heroes carry layered architectural depth through low-contrast mihrab silhouettes, rosette points, and geometric manuscript patterning.
 - Antique gold functions as a ceremonial marker for primary actions, scholarly metadata, and topic transitions, never as an indiscriminate accent.
+
+## Royal Calligraphy Refinement
+
+The experience now uses a **centered transparent official mark** on a white ceremonial masthead, capped by a Bismillah line in refined Arabic calligraphy. The material system shifts to black, royal blue, deep navy, white, and ceremonial gold; royal blue communicates scholarship, black/navy ground the experience, white creates measured calm, and gold marks only devotional or action-defining moments.
+
+### Style Decisions
+
+- Functional modules default to visible manuscript or mihrab framing; plain cards appear only inside a stronger ceremonial composition.
+- Fatwa archive records follow a scholarly catalogue structure: bilingual title, framed record marker, manuscript divider, then precise date/topic metadata.
+- **Irshad Blue `#075A9B`** signals active guidance; deep navy and black are institutional ground; ivory and white are reading surfaces; gold is reserved for devotional marks, seals, primary actions, and dividers.

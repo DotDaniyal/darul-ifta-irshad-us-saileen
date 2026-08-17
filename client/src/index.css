@@ -1,21 +1,27 @@
-/* Blue Minbar Heritage: Irshad Blue, warm ivory, discreet geometric texture, and scholarly bilingual typography. */
+/* Royal Calligraphy House: centered transparent logo, Bismillah masthead, royal-blue/navy/black/white/gold palette, and elevated Arabic calligraphy. */
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; --font-calligraphy: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif;
 }
 
-:root { --background: #FCFAF6; --foreground: #10223A; --card: #FFFFFF; --card-foreground: #10223A; --popover: #FFFFFF; --popover-foreground: #10223A; --primary: #075A9B; --primary-foreground: #FFFFFF; --secondary: #EFF4F8; --secondary-foreground: #10223A; --muted: #F4F0E8; --muted-foreground: #637187; --accent: #EAF0F5; --accent-foreground: #10223A; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #DED7CB; --input: #C8D0D8; --ring: #075A9B; }
+:root { --background: #FFFFFF; --foreground: #0A1634; --card: #FFFFFF; --card-foreground: #0A1634; --popover: #FFFFFF; --popover-foreground: #0A1634; --primary: #1C4399; --primary-foreground: #FFFFFF; --secondary: #EEF3FF; --secondary-foreground: #0A1634; --muted: #F5F7FC; --muted-foreground: #65718A; --accent: #F2E7C9; --accent-foreground: #0A1634; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #D8DFED; --input: #BBC8DC; --ring: #1C4399; }
 
-@layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 10% 7%, rgba(239,219,170,.24), transparent 26rem), radial-gradient(circle at 92% 24%, rgba(202,222,239,.28), transparent 29rem), linear-gradient(180deg, #FCFAF6, #F8F6EF); font-family: "Manrope", sans-serif; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #C6DCF0; color: #061A34; } }
+@layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #DDE6FF; color: #06152E; } }
 
 @layer components {
   .font-display { font-family: "DM Serif Display", Georgia, serif; }
   .font-urdu { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; }
-  .nav-link { @apply relative py-7 font-sans text-[11px] font-bold tracking-wide text-white/82 transition hover:text-[#F2DFB4]; }
+  .font-calligraphy { font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; }
+  .bismillah-bar { background: linear-gradient(90deg, #05070B, #071B45 48%, #05070B); border-bottom: 1px solid rgba(209,172,91,.26); }
+  .bismillah-script { font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; color: #E8CF92; font-size: 17px; line-height: 1.3; letter-spacing: .025em; }
+  .royal-masthead { display: flex; align-items: center; justify-content: center; min-height: 88px; background: radial-gradient(circle at 50% 22%, rgba(220,190,116,.16), transparent 180px), #FFFFFF; border-bottom: 1px solid #DCC484; }
+  .brand-mark-center { align-items: center; justify-content: center; }
+  .royal-nav { background: linear-gradient(100deg, #06152E, #153A89 51%, #06152E); border-bottom: 1px solid rgba(209,172,91,.58); }
+  .nav-link { @apply relative py-5 font-sans text-[11px] font-bold tracking-[.055em] text-white/88 transition hover:text-[#F0D89C]; }
   .nav-link::after { content: ""; @apply absolute bottom-0 left-0 h-0.5 w-0 bg-[#C89C46] transition-all duration-300; }
   .nav-link:hover::after, .nav-link-active::after { @apply w-full; }
   .nav-link-active { @apply text-white; }
@@ -23,55 +29,61 @@
   .footer-links { @apply mt-5 flex flex-col gap-3 font-sans text-sm text-white/65; }
   .footer-links a { @apply transition hover:text-white; }
   .footer-icon { @apply grid h-8 w-8 place-items-center rounded-[5px] border border-white/20 text-white/70 transition hover:-translate-y-0.5 hover:border-[#E9D4A2] hover:text-[#E9D4A2]; }
-  .site-footer { background-image: radial-gradient(circle at 12% 10%, rgba(25,88,140,.35), transparent 28rem), linear-gradient(135deg, #061A34, #0A315B 62%, #061A34); }
-  .hero-overlay { background: linear-gradient(90deg, rgba(4,23,48,.92) 0%, rgba(5,30,59,.82) 36%, rgba(8,40,76,.42) 63%, rgba(6,26,52,.18) 100%), radial-gradient(circle at 82% 18%, rgba(222,238,249,.18), transparent 26rem); }
-  .hero-watermark { @apply pointer-events-none absolute -right-10 top-8 hidden h-[460px] w-[460px] opacity-[0.07] lg:block; }
+  .site-footer { background-image: radial-gradient(circle at 12% 10%, rgba(38,83,181,.3), transparent 28rem), linear-gradient(135deg, #03060D, #071B45 60%, #03060D); }
+  .hero-overlay { background: linear-gradient(90deg, rgba(3,7,18,.96) 0%, rgba(6,21,46,.89) 37%, rgba(21,58,137,.44) 66%, rgba(3,7,18,.2) 100%), radial-gradient(circle at 83% 16%, rgba(232,207,146,.17), transparent 25rem); }
+  .hero-watermark { @apply pointer-events-none absolute left-1/2 top-8 hidden h-[480px] w-[480px] -translate-x-1/2 opacity-[0.10] lg:block; }
   .hero-watermark img { @apply h-full w-full object-contain; }
   .hero-kicker { @apply flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-[.22em] text-[#E9D4A2]; }
-  .hero-primary { @apply inline-flex items-center gap-2 rounded-[5px] bg-[#D3A951] px-5 py-3.5 font-sans text-xs font-bold text-[#061A34] shadow-[0_12px_30px_rgba(0,0,0,.20)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F0D99B] active:scale-[.98]; }
+  .hero-bismillah { font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; color: #F0D89C; font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.25; text-shadow: 0 5px 20px rgba(0,0,0,.28); }
+  .hero-primary { @apply inline-flex items-center gap-2 rounded-none bg-[#D1AC5B] px-5 py-3.5 font-sans text-xs font-bold text-[#06152E] shadow-[0_12px_30px_rgba(0,0,0,.20)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F1DC9B] active:scale-[.98]; }
   .hero-secondary { @apply inline-flex items-center gap-2 rounded-[5px] border border-white/35 bg-white/5 px-5 py-3.5 font-sans text-xs font-bold text-white backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#F2DFB4] hover:bg-white/10 hover:text-[#F2DFB4] active:scale-[.98]; }
   .date-card { @apply relative flex min-w-[270px] gap-4 rounded-[10px] border border-white/35 bg-[#FCFAF6]/95 p-5 shadow-[0_24px_60px_rgba(2,18,40,.28)] backdrop-blur-sm; }
   .date-card::before { content: ""; @apply absolute inset-2 border border-[#DCC78F]/40; }
   .date-card > * { @apply relative; }
-  .date-icon { @apply grid h-10 w-10 shrink-0 place-items-center bg-[#075A9B] text-white; }
+  .date-icon { @apply grid h-10 w-10 shrink-0 place-items-center bg-[#1C4399] text-white; }
   .arch-frame { @apply relative overflow-hidden rounded-[16px_16px_5px_5px] border border-[#D7CEC0] bg-white p-3 shadow-[0_20px_50px_rgba(16,34,58,.08)]; clip-path: polygon(0 4%, 9% 0, 91% 0, 100% 4%, 100% 100%, 0 100%); }
-  .service-card { @apply relative overflow-hidden rounded-[15px_15px_5px_5px] border border-[#C4D1DD] bg-[#FAFCFD]/95 p-6 shadow-[0_10px_26px_rgba(16,34,58,.035)] transition duration-300 hover:-translate-y-1 hover:border-[#8BAFCB] hover:shadow-[0_22px_45px_rgba(16,34,58,.11)]; clip-path: polygon(0 3%, 7% 0, 93% 0, 100% 3%, 100% 100%, 0 100%); }
+  .service-card { @apply relative overflow-hidden rounded-[18px_18px_5px_5px] border border-[#CDB574] bg-white p-6 shadow-[0_12px_30px_rgba(10,22,52,.055)] transition duration-300 hover:-translate-y-1 hover:border-[#1C4399] hover:shadow-[0_24px_48px_rgba(10,22,52,.13)]; clip-path: polygon(0 5%, 10% 0, 90% 0, 100% 5%, 100% 100%, 0 100%); }
+  .service-card::before { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(209,172,91,.34); border-bottom: 0; border-radius: 100px 100px 0 0 / 68px 68px 0 0; opacity: .7; pointer-events: none; }
   .service-card::after { content: ""; @apply absolute bottom-0 left-0 h-1 w-0 bg-[#C89C46] transition-all duration-300; }
   .service-card:hover::after { @apply w-full; }
   .text-link { @apply inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-[.12em] text-[#075A9B] transition hover:text-[#C89C46]; }
   .featured-fatwa { @apply flex items-start justify-between gap-5 rounded-[12px_12px_4px_4px] border border-white/20 bg-[#0A315B]/90 p-6 shadow-[0_15px_35px_rgba(0,0,0,.11)] transition hover:-translate-y-0.5 hover:bg-[#10406E] sm:p-7; }
   .page-hero { @apply relative isolate overflow-hidden bg-[#061A34]; background-image: radial-gradient(circle at 88% 15%, rgba(111,171,215,.16), transparent 26rem), linear-gradient(120deg, #061A34, #143A5E); }
   .page-hero::before { content: ""; position: absolute; right: 9%; bottom: -220px; width: 530px; height: 600px; border: 1px solid rgba(233,212,162,.24); border-bottom: 0; border-radius: 280px 280px 0 0 / 340px 340px 0 0; box-shadow: 0 0 0 22px rgba(233,212,162,.05), 0 0 0 44px rgba(233,212,162,.035); opacity: .9; }
-  .page-hero::after { content: "✦   ✦   ✦"; position: absolute; top: 34px; left: 8%; color: rgba(233,212,162,.36); font-size: 11px; letter-spacing: 2.1rem; white-space: pre; }
+  .page-hero::after { content: "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ"; position: absolute; top: 24px; left: 8%; color: rgba(233,212,162,.48); font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; font-size: 18px; white-space: nowrap; }
   .page-hero-pattern { @apply absolute inset-0 opacity-[.14]; background-image: url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg'); background-size: 350px; mix-blend-mode: screen; }
-  .archive-tools { @apply relative overflow-hidden rounded-[18px_18px_5px_5px] border border-[#D9C795] bg-[#FFFEFA]/95 p-4 shadow-[0_18px_48px_rgba(16,34,58,.07)] lg:p-5; background-image: radial-gradient(circle at 96% 10%, rgba(229,197,124,.18), transparent 10rem), linear-gradient(rgba(7,90,155,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.022) 1px, transparent 1px); background-size: auto, 18px 18px, 18px 18px; clip-path: polygon(0 4%, 5% 0, 95% 0, 100% 4%, 100% 100%, 0 100%); }
-  .archive-tools::before { content: "✦"; @apply absolute left-6 top-2 font-serif text-sm text-[#C89C46]; }
-  .archive-search { @apply border-b border-[#D7C897] px-2 lg:border-b-0 lg:border-r; }
+  .archive-tools { @apply relative overflow-hidden rounded-[22px_22px_5px_5px] border border-[#CDB574] bg-[#FFFDF7]/95 p-5 shadow-[0_20px_52px_rgba(10,22,52,.085)] lg:p-6; background-image: radial-gradient(circle at 96% 10%, rgba(229,197,124,.23), transparent 12rem), linear-gradient(rgba(7,90,155,.026) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.026) 1px, transparent 1px); background-size: auto, 18px 18px, 18px 18px; clip-path: polygon(0 6%, 9% 0, 91% 0, 100% 6%, 100% 100%, 0 100%); }
+  .archive-tools::before { content: "۞  فہرستِ فتاویٰ  ۞"; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); color: rgba(145,108,39,.68); font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; font-size: 14px; white-space: nowrap; }
+  .archive-search { @apply border-b border-[#D7C897] px-2 pt-3 lg:border-b-0 lg:border-r; }
   .archive-filter-group { @apply relative; }
-  .filter-pill { @apply border border-[#CFD6DB] bg-white/70 px-3 py-2 font-sans text-[10px] font-semibold text-[#55667C] transition hover:border-[#B28A3D] hover:text-[#075A9B]; clip-path: polygon(0 16%, 8% 0, 92% 0, 100% 16%, 100% 84%, 92% 100%, 8% 100%, 0 84%); }
+  .filter-pill { @apply border border-[#CFD6DB] bg-white/85 px-3 py-2 font-sans text-[10px] font-semibold text-[#55667C] transition hover:border-[#B28A3D] hover:text-[#075A9B]; clip-path: polygon(0 18%, 9% 0, 91% 0, 100% 18%, 100% 82%, 91% 100%, 9% 100%, 0 82%); }
   .filter-pill-active { @apply border-[#075A9B] bg-[#075A9B] text-white hover:text-white; }
-  .fatwa-card { @apply relative block overflow-hidden rounded-[14px_14px_5px_5px] bg-[#FCFBF7] p-[1px] shadow-[0_10px_28px_rgba(16,34,58,.045)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_46px_rgba(16,34,58,.13)]; background: linear-gradient(135deg, #D7B66C, #CFE0EC 42%, #5F9BC7); clip-path: polygon(0 3%, 7% 0, 93% 0, 100% 3%, 100% 100%, 0 100%); }
-  .fatwa-card::before { content: "✦"; @apply absolute right-5 top-3 font-serif text-[36px] text-[#C89C46]/20; }
-  .fatwa-card-inner { @apply relative h-full bg-[#FCFBF7]/96 p-6; background-image: radial-gradient(circle at 96% 8%, rgba(236,214,157,.22), transparent 7rem), linear-gradient(rgba(7,90,155,.021) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.021) 1px, transparent 1px); background-size: auto, 18px 18px, 18px 18px; }
-  .fatwa-number { @apply inline-flex border border-[#BFD2E2] bg-[#EDF4F8] px-2.5 py-1 font-sans text-[10px] font-bold tracking-[.12em] text-[#075A9B]; }
-  .archive-meta { @apply flex items-center justify-between border-t border-[#D8C898] pt-4 font-sans text-[10px] font-semibold tracking-wide text-[#65758A]; }
+  .fatwa-card { @apply relative block overflow-hidden rounded-[21px_21px_5px_5px] bg-[#FCFBF7] p-[1px] shadow-[0_12px_32px_rgba(10,22,52,.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_52px_rgba(10,22,52,.16)]; background: linear-gradient(135deg, #D7B66C 0%, #FFF6D9 18%, #1C4399 62%, #07152E 100%); clip-path: polygon(0 6%, 9% 0, 91% 0, 100% 6%, 100% 100%, 0 100%); }
+  .fatwa-card::before { content: "۞"; @apply absolute right-5 top-3 font-serif text-[34px] text-[#C89C46]/32; }
+  .fatwa-card-inner { @apply relative h-full bg-[#FFFDF8] p-6; background-image: radial-gradient(circle at 96% 8%, rgba(236,214,157,.26), transparent 7rem), linear-gradient(rgba(7,90,155,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.025) 1px, transparent 1px); background-size: auto, 18px 18px, 18px 18px; }
+  .fatwa-card-inner::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(209,172,91,.26); border-bottom: 0; border-radius: 100px 100px 0 0 / 72px 72px 0 0; pointer-events: none; }
+  .fatwa-number { @apply relative inline-flex border border-[#CDB574] bg-[#FFF7DD] px-2.5 py-1 font-sans text-[10px] font-bold tracking-[.12em] text-[#075A9B]; }
+  .archive-meta { @apply relative flex items-center justify-between border-t border-[#D8C898] pt-4 font-sans text-[10px] font-semibold tracking-wide text-[#65758A]; }
   .fatwa-reading { @apply relative overflow-hidden rounded-[14px_14px_5px_5px] border border-[#D6CCBA] bg-[#F5F2EA] p-7 shadow-[0_10px_28px_rgba(16,34,58,.035)]; clip-path: polygon(0 4%, 6% 0, 94% 0, 100% 4%, 100% 100%, 0 100%); background-image: linear-gradient(rgba(200,156,70,.045) 1px, transparent 1px); background-size: 100% 12px; }
   .guidance-manuscript { @apply relative overflow-hidden rounded-[12px_12px_5px_5px] border-l-4 border-[#2A78B0] bg-[#FCFBF7] p-7 shadow-[0_20px_48px_rgba(16,34,58,0.075)] sm:p-9; background-image: radial-gradient(circle at 95% 5%, rgba(222,191,112,.16), transparent 11rem), linear-gradient(90deg, transparent, rgba(200,156,70,.04), transparent), url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg'); background-size: auto, auto, 320px; background-blend-mode: normal, normal, multiply; }
   .reading-label { @apply mb-4 font-sans text-[10px] font-bold uppercase tracking-[.18em] text-[#8A6C36]; }
   .utility-button { @apply flex items-center gap-2 border border-[#D7DFE6] px-3 py-2.5 font-sans text-xs font-semibold text-[#40556C] transition hover:border-[#075A9B] hover:bg-[#EEF3F8] hover:text-[#075A9B]; }
-  .form-label { @apply mb-2 block font-sans text-[11px] font-bold text-[#40556C]; }
-  .form-control { @apply h-12 w-full rounded-none border border-[#C9D1D9] bg-[#FCFDFE] px-3 font-sans text-sm text-[#10223A] outline-none transition placeholder:text-[#98A3B1] focus:border-[#075A9B] focus:ring-2 focus:ring-[#075A9B]/10; }
+  .form-label { @apply mb-2 flex items-center gap-2 font-sans text-[11px] font-bold text-[#243D62]; }
+  .form-label::before { content: "✦"; color: #C89C46; font-size: 9px; }
+  .form-control { @apply h-12 w-full rounded-none border border-[#BFC9D8] bg-white px-3 font-sans text-sm text-[#10223A] outline-none transition placeholder:text-[#98A3B1] focus:border-[#075A9B] focus:ring-2 focus:ring-[#075A9B]/10; box-shadow: inset 0 0 0 3px rgba(243,231,198,.18); }
   textarea.form-control { @apply h-auto py-3; }
-  .form-chamber { @apply relative overflow-hidden rounded-[18px_18px_6px_6px] border border-[#D3C094] bg-[#FFFDF8]/95 p-6 shadow-[0_25px_70px_rgba(16,34,58,.10)] sm:p-9; clip-path: polygon(0 2%, 5% 0, 95% 0, 100% 2%, 100% 100%, 0 100%); background-image: radial-gradient(circle at 94% 6%, rgba(225,195,125,.17), transparent 12rem), linear-gradient(rgba(7,90,155,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.018) 1px, transparent 1px); background-size: auto, 22px 22px, 22px 22px; }
-  .form-chamber::before { content: ""; @apply absolute left-7 right-7 top-3 h-px bg-[#C89C46]/50; }
+  .form-chamber { @apply relative overflow-hidden rounded-[24px_24px_6px_6px] border border-[#C6A65F] bg-[#FFFDF8]/95 p-6 shadow-[0_28px_72px_rgba(10,22,52,.12)] sm:p-9; clip-path: polygon(0 4%, 8% 0, 92% 0, 100% 4%, 100% 100%, 0 100%); background-image: radial-gradient(circle at 94% 6%, rgba(225,195,125,.21), transparent 12rem), linear-gradient(rgba(7,90,155,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.022) 1px, transparent 1px); background-size: auto, 22px 22px, 22px 22px; }
+  .form-chamber::before { content: ""; @apply absolute left-7 right-7 top-3 h-px bg-[#C89C46]/65; }
+  .form-chamber::after { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(209,172,91,.37); border-bottom: 0; border-radius: 170px 170px 0 0 / 118px 118px 0 0; pointer-events: none; }
   .form-chamber > * { @apply relative; }
   .form-seal { @apply mb-5 flex items-center justify-center gap-3 font-sans text-[9px] font-bold tracking-[.17em] text-[#9B7838]; }
   .form-seal span:first-child, .form-seal span:last-child { @apply text-[#C89C46]; }
-  .contact-card { @apply min-h-[175px] rounded-[14px_14px_5px_5px] border border-[#D8E0E7] bg-[#F9FCFE]/95 p-5 shadow-[0_8px_24px_rgba(16,34,58,.03)] transition hover:-translate-y-1 hover:border-[#83AFCF] hover:shadow-[0_18px_36px_rgba(16,34,58,.10)]; }
+  .contact-card { @apply relative min-h-[175px] overflow-hidden rounded-[18px_18px_5px_5px] border border-[#CDB574] bg-white p-5 shadow-[0_10px_26px_rgba(10,22,52,.04)] transition hover:-translate-y-1 hover:border-[#1C4399] hover:shadow-[0_20px_40px_rgba(10,22,52,.12)]; clip-path: polygon(0 7%, 10% 0, 90% 0, 100% 7%, 100% 100%, 0 100%); }
+  .contact-card::before { content: ""; position: absolute; left: 0; top: 20px; bottom: 20px; width: 2px; background: #D1AC5B; }
   .contact-card h3 { @apply mt-7 font-display text-2xl text-[#10223A]; }
   .contact-card p { @apply mt-2 font-sans text-xs leading-5 text-[#637187]; }
 }
 
 @media (prefers-reduced-motion: no-preference) { .service-card, .fatwa-card, .contact-card { animation: rise-in .55s cubic-bezier(.23,1,.32,1) both; } @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } } }
-@media (max-width: 640px) { .date-card { min-width: 0; width: 100%; } .hero-overlay { background: linear-gradient(90deg, rgba(4,23,48,.95), rgba(5,30,59,.74)); } }
+@media (max-width: 640px) { .date-card { min-width: 0; width: 100%; } .hero-overlay { background: linear-gradient(90deg, rgba(3,7,18,.96), rgba(6,21,46,.78)); } .royal-masthead { min-height: 76px; } .bismillah-script { font-size: 14px; } .page-hero::after { left: 50%; transform: translateX(-50%); font-size: 15px; } }
 @media print { header, footer, .utility-button { display: none !important; } body { background: white !important; } }
