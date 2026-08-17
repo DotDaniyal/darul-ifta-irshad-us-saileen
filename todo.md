@@ -29,3 +29,10 @@
 - [x] Animate section labels, metadata, and calls to action with restrained timing.
 - [x] Preserve readable text at all times and honor reduced-motion preferences.
 - [x] Verify headline animation rhythm across homepage, archive, and request form.
+
+## Text Overlap Repair Checklist
+
+- [x] Separate the hero Urdu identity, English name, and supporting text into clear vertical rhythm.
+- [x] Limit the hero text measure and improve responsive type scaling to prevent collision.
+- [x] Adjust hero layout alignment around the date card at desktop and mobile widths.
+- [x] Verify the repaired typography on desktop and mobile.
