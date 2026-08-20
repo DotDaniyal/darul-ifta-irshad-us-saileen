@@ -149,4 +149,14 @@
 - [x] Render verified public scholar credentials and qualifications from managed profile data.
 - [x] Add success-path administration procedure tests for governed writes and audit events.
 - [x] Add router-level administrator success tests for governance reads and all governed save procedures.
-- [ ] Test privacy, accessibility, performance, and end-to-end workflows before publication.
+- [x] Test privacy, accessibility, performance, and end-to-end workflows before publication.
+- [x] Verify public tracking, archive discovery, and bilingual trust-page end-to-end behavior.
+- [x] Audit public output and governed publication safeguards for contact-data exposure.
+- [x] Check public forms, filters, and operational controls for accessible labels and keyboard-safe structure.
+- [x] Reduce the main client bundle by code-splitting route-level experiences and verify the production build.
+- [x] Submit a non-sensitive live test question, verify valid private tracking, and confirm invalid credentials are rejected without sensitive disclosure.
+- [x] Interactively verify managed methodology content and language switching in both Urdu and English.
+- [x] Verify keyboard focus order for public search, submission, and tracking controls; document the remaining shared-bundle advisory.
+- [x] Execute and document a full governed scholar drafting, reviewer approval/return, publication, and administrator governance workflow.
+- [x] Complete broader keyboard, form-validation, and screen-reader-label audits across public and protected workspace routes.
+- [x] Document production asset sizes, shared-chunk impact, and the accepted performance rationale for the final release.

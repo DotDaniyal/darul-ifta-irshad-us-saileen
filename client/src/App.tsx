@@ -1,22 +1,25 @@
 /** Blue Minbar Heritage: full bilingual public routes for the Darul Ifta website. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { lazy, Suspense } from "react";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import AskFatwa from "./pages/AskFatwa";
-import Fatawa from "./pages/Fatawa";
-import FatwaDetail from "./pages/FatwaDetail";
-import ScholarWorkspace from "./pages/ScholarWorkspace";
-import { RoleWorkspace } from "./pages/RoleWorkspace";
-import Methodology from "./pages/Methodology";
-import QuestionTracking from "./pages/QuestionTracking";
+
+const AskFatwa = lazy(() => import("./pages/AskFatwa"));
+const Fatawa = lazy(() => import("./pages/Fatawa"));
+const FatwaDetail = lazy(() => import("./pages/FatwaDetail"));
+const ScholarWorkspace = lazy(() => import("./pages/ScholarWorkspace"));
+const RoleWorkspace = lazy(() => import("./pages/RoleWorkspace").then(module => ({ default: module.RoleWorkspace })));
+const Methodology = lazy(() => import("./pages/Methodology"));
+const QuestionTracking = lazy(() => import("./pages/QuestionTracking"));
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
+    <Suspense fallback={<main className="min-h-screen bg-[#FAF8F2] p-10 text-center font-sans text-sm text-[#52627A]" aria-live="polite">Loading the Darul Ifta experience…</main>}>
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/fatawa"} component={Fatawa} />
@@ -33,6 +36,7 @@ function Router() {
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
+    </Suspense>
   );
 }
 
