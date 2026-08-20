@@ -49,3 +49,9 @@
 - [x] Remove the visible box treatment around the centered official logo.
 - [x] Add a clearer Online Bayan icon to the homepage call to action.
 - [x] Verify the revised header and main-page icon at desktop and mobile widths.
+
+## Masthead Bismillah Adjustment Checklist
+
+- [x] Remove the Bismillah detail from the centered masthead area.
+- [x] Retain the Bismillah in the separate top devotional bar.
+- [x] Verify the simplified header at desktop and mobile widths.
