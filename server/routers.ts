@@ -7,6 +7,7 @@ import { platformAdminProcedure, reviewerProcedure, scholarProcedure } from "./p
 import { publicCatalogueSearchInput } from "./publicCatalogueContract";
 import { publicQuestionSubmissionInput, questionTrackingInput, submitPublicQuestion, trackPublicQuestion } from "./questionIntake";
 import { fatwaDraftCreateInput, fatwaDraftUpdateInput, fatwaPublishInput, fatwaReviewApprovalInput, fatwaReviewReturnInput } from "./fatwaWorkflow";
+import { categoryInput, methodologyInput, policyInput, scholarProfileInput } from "./adminGovernance";
 import {
   approveFatwaDraft,
   claimQuestion,
@@ -17,12 +18,19 @@ import {
   getFatwaReviewQueue,
   getMyFatwaDrafts,
   getMyQuestionSummaries,
+  getAdministrationGovernance,
   getPublicCatalogueTaxonomy,
+  getPublicPolicies,
+  getPublicScholarProfiles,
   getPublishedFatwaBySlug,
   getPlatformOverview,
   publishApprovedFatwa,
   returnFatwaDraft,
   searchPublishedFatwas,
+  upsertCategory,
+  upsertMethodology,
+  upsertPublicPolicy,
+  upsertScholarProfile,
   updateFatwaDraft,
   updatePlatformUserRole,
 } from "./platformQueries";
@@ -45,6 +53,11 @@ export const appRouter = router({
     taxonomy: publicProcedure.query(() => getPublicCatalogueTaxonomy()),
     search: publicProcedure.input(publicCatalogueSearchInput).query(({ input }) => searchPublishedFatwas(input)),
     bySlug: publicProcedure.input(z.object({ slug: z.string().trim().min(1).max(160) })).query(({ input }) => getPublishedFatwaBySlug(input.slug)),
+  }),
+
+  publicTrust: router({
+    scholars: publicProcedure.query(() => getPublicScholarProfiles()),
+    policies: publicProcedure.query(() => getPublicPolicies()),
   }),
 
   workspace: router({
@@ -94,6 +107,11 @@ export const appRouter = router({
 
   administration: router({
     overview: platformAdminProcedure.query(() => getPlatformOverview()),
+    governance: platformAdminProcedure.query(() => getAdministrationGovernance()),
+    saveScholarProfile: platformAdminProcedure.input(scholarProfileInput).mutation(({ ctx, input }) => upsertScholarProfile(input, ctx.user.id)),
+    saveCategory: platformAdminProcedure.input(categoryInput).mutation(({ ctx, input }) => upsertCategory(input, ctx.user.id)),
+    saveMethodology: platformAdminProcedure.input(methodologyInput).mutation(({ ctx, input }) => upsertMethodology(input, ctx.user.id)),
+    savePolicy: platformAdminProcedure.input(policyInput).mutation(({ ctx, input }) => upsertPublicPolicy(input, ctx.user.id)),
     setUserRole: platformAdminProcedure
       .input(z.object({ userId: z.number().int().positive(), role: z.enum(["user", "scholar", "reviewer", "admin"]) }))
       .mutation(async ({ ctx, input }) => {

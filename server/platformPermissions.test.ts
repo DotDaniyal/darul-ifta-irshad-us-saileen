@@ -68,6 +68,13 @@ describe("concrete role-protected platform actions", () => {
     ).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
   });
 
+  it("prevents reviewers from accessing or changing scholarly profiles, taxonomy, and trust policy", async () => {
+    const caller = appRouter.createCaller(createContext("reviewer"));
+    await expect(caller.administration.governance()).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+    await expect(caller.administration.saveCategory({ slug: "test-category", nameEn: "Test Category" })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+    await expect(caller.administration.savePolicy({ key: "privacy", titleEn: "Confidentiality", titleUr: "رازداری", bodyEn: "Private information remains restricted to authorised scholarly personnel.", bodyUr: "نجی معلومات صرف مجاز علمی عملے کے لیے محدود رہتی ہیں۔" })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+  });
+
   it("prevents a questioner from claiming restricted cases or creating a Fatwa draft", async () => {
     const caller = appRouter.createCaller(createContext("user"));
     await expect(caller.questions.claim({ questionId: 1 })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });

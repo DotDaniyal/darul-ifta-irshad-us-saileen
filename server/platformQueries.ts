@@ -1,16 +1,21 @@
 import { randomUUID } from "node:crypto";
 import { TRPCError } from "@trpc/server";
 import { and, count, desc, eq, inArray, isNull, like, or, sql } from "drizzle-orm";
-import { auditEvents, fatwaCategories, fatwaRecords, fatwaRevisions, fiqhMethodologies, questionSubmissions, users } from "../drizzle/schema";
+import { auditEvents, fatwaCategories, fatwaRecords, fatwaRevisions, fiqhMethodologies, questionSubmissions, scholarProfiles, siteSettings, users } from "../drizzle/schema";
 import { getDb } from "./db";
 import { applyPublicationTreatment, canScholarMoveDraft, isIndependentReviewer, sanitizeForPublication, type fatwaDraftCreateInput, type fatwaDraftUpdateInput, type fatwaPublishInput, type fatwaReviewReturnInput } from "./fatwaWorkflow";
 import type { z } from "zod";
+import type { categoryInput, methodologyInput, policyInput, scholarProfileInput } from "./adminGovernance";
 
 type DraftCreateInput = z.infer<typeof fatwaDraftCreateInput>;
 type DraftUpdateInput = z.infer<typeof fatwaDraftUpdateInput>;
 type PublishInput = z.infer<typeof fatwaPublishInput>;
 type ReturnInput = z.infer<typeof fatwaReviewReturnInput>;
 type WorkflowRecord = typeof fatwaRecords.$inferSelect;
+type ProfileInput = z.infer<typeof scholarProfileInput>;
+type CategoryInput = z.infer<typeof categoryInput>;
+type MethodologyInput = z.infer<typeof methodologyInput>;
+type PolicyInput = z.infer<typeof policyInput>;
 
 function safeSlug(value: string) {
   const normalized = value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -300,6 +305,74 @@ export async function updatePlatformUserRole(userId: number, role: "user" | "sch
   if (!db) throw new Error("Database is unavailable");
   await db.update(users).set({ role }).where(eq(users.id, userId));
   return { userId, role };
+}
+
+export async function getAdministrationGovernance() {
+  const db = await getDb();
+  if (!db) return { profiles: [], categories: [], methodologies: [], policies: [] };
+  const [profiles, categories, methodologies, policies] = await Promise.all([
+    db.select({ id: scholarProfiles.id, userId: scholarProfiles.userId, slug: scholarProfiles.slug, honorific: scholarProfiles.honorific, displayNameEn: scholarProfiles.displayNameEn, displayNameUr: scholarProfiles.displayNameUr, biographyEn: scholarProfiles.biographyEn, biographyUr: scholarProfiles.biographyUr, qualifications: scholarProfiles.qualifications, scholarlyLineage: scholarProfiles.scholarlyLineage, isPublished: scholarProfiles.isPublished, userName: users.name, userRole: users.role }).from(scholarProfiles).innerJoin(users, eq(scholarProfiles.userId, users.id)).orderBy(desc(scholarProfiles.updatedAt)),
+    db.select().from(fatwaCategories).orderBy(fatwaCategories.sortOrder),
+    db.select().from(fiqhMethodologies).orderBy(fiqhMethodologies.nameEn),
+    db.select().from(siteSettings).where(inArray(siteSettings.settingKey, ["policy.methodology", "policy.privacy", "policy.guidance", "policy.publication"])),
+  ]);
+  return { profiles, categories, methodologies, policies };
+}
+
+export async function upsertScholarProfile(input: ProfileInput, actorId: number) {
+  const db = await getDb(); if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Administration is temporarily unavailable." });
+  const user = (await db.select({ id: users.id, role: users.role }).from(users).where(eq(users.id, input.userId)).limit(1))[0];
+  if (!user || !["scholar", "reviewer", "admin"].includes(user.role)) throw new TRPCError({ code: "BAD_REQUEST", message: "A public scholar profile requires a scholarly-role account." });
+  const existing = (await db.select({ id: scholarProfiles.id, slug: scholarProfiles.slug }).from(scholarProfiles).where(eq(scholarProfiles.userId, input.userId)).limit(1))[0];
+  if (existing && existing.slug !== input.slug) throw new TRPCError({ code: "CONFLICT", message: "Profile slugs are immutable after creation." });
+  const values = { slug: input.slug, honorific: input.honorific ?? null, displayNameEn: input.displayNameEn ?? null, displayNameUr: input.displayNameUr ?? null, displayNameAr: input.displayNameAr ?? null, biographyEn: input.biographyEn ?? null, biographyUr: input.biographyUr ?? null, biographyAr: input.biographyAr ?? null, qualifications: input.qualifications, scholarlyLineage: input.scholarlyLineage ?? null, isPublished: input.isPublished };
+  if (existing) await db.update(scholarProfiles).set(values).where(eq(scholarProfiles.id, existing.id)); else await db.insert(scholarProfiles).values({ userId: input.userId, ...values });
+  await db.insert(auditEvents).values({ actorId, entityType: "scholar_profile", entityId: String(existing?.id ?? input.userId), action: existing ? "scholar_profile_updated" : "scholar_profile_created", metadata: { userId: input.userId, isPublished: input.isPublished } });
+  return { userId: input.userId, isPublished: input.isPublished };
+}
+
+async function ensureImmutableSlug(db: any, table: any, id: number | undefined, slugValue: string) {
+  if (!id) return;
+  const row = (await db.select({ slug: table.slug }).from(table).where(eq(table.id, id)).limit(1))[0];
+  if (!row) throw new TRPCError({ code: "NOT_FOUND", message: "The governance record was not found." });
+  if (row.slug !== slugValue) throw new TRPCError({ code: "CONFLICT", message: "Governance slugs are immutable to preserve historical references." });
+}
+
+export async function upsertCategory(input: CategoryInput, actorId: number) {
+  const db = await getDb(); if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Administration is temporarily unavailable." });
+  await ensureImmutableSlug(db, fatwaCategories, input.id, input.slug);
+  const values = { slug: input.slug, nameEn: input.nameEn, nameUr: input.nameUr ?? null, nameAr: input.nameAr ?? null, descriptionEn: input.descriptionEn ?? null, sortOrder: input.sortOrder, isActive: input.isActive };
+  if (input.id) await db.update(fatwaCategories).set(values).where(eq(fatwaCategories.id, input.id)); else await db.insert(fatwaCategories).values(values);
+  await db.insert(auditEvents).values({ actorId, entityType: "fatwa_category", entityId: String(input.id ?? input.slug), action: input.id ? "category_updated" : "category_created", metadata: { isActive: input.isActive } });
+  return { id: input.id ?? null, slug: input.slug };
+}
+
+export async function upsertMethodology(input: MethodologyInput, actorId: number) {
+  const db = await getDb(); if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Administration is temporarily unavailable." });
+  await ensureImmutableSlug(db, fiqhMethodologies, input.id, input.slug);
+  const values = { slug: input.slug, nameEn: input.nameEn, nameUr: input.nameUr ?? null, nameAr: input.nameAr ?? null, methodologyStatement: input.methodologyStatement ?? null, isActive: input.isActive };
+  if (input.id) await db.update(fiqhMethodologies).set(values).where(eq(fiqhMethodologies.id, input.id)); else await db.insert(fiqhMethodologies).values(values);
+  await db.insert(auditEvents).values({ actorId, entityType: "fiqh_methodology", entityId: String(input.id ?? input.slug), action: input.id ? "methodology_updated" : "methodology_created", metadata: { isActive: input.isActive } });
+  return { id: input.id ?? null, slug: input.slug };
+}
+
+export async function upsertPublicPolicy(input: PolicyInput, actorId: number) {
+  const db = await getDb(); if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Administration is temporarily unavailable." });
+  const settingKey = `policy.${input.key}`; const value = { titleEn: input.titleEn, titleUr: input.titleUr, bodyEn: input.bodyEn, bodyUr: input.bodyUr };
+  const existing = (await db.select({ id: siteSettings.id }).from(siteSettings).where(eq(siteSettings.settingKey, settingKey)).limit(1))[0];
+  if (existing) await db.update(siteSettings).set({ value, updatedById: actorId }).where(eq(siteSettings.id, existing.id)); else await db.insert(siteSettings).values({ settingKey, value, updatedById: actorId });
+  await db.insert(auditEvents).values({ actorId, entityType: "site_policy", entityId: settingKey, action: "public_policy_updated", metadata: {} });
+  return { key: input.key, value };
+}
+
+export async function getPublicScholarProfiles() {
+  const db = await getDb(); if (!db) return [];
+  return db.select({ slug: scholarProfiles.slug, honorific: scholarProfiles.honorific, displayNameEn: scholarProfiles.displayNameEn, displayNameUr: scholarProfiles.displayNameUr, biographyEn: scholarProfiles.biographyEn, biographyUr: scholarProfiles.biographyUr, qualifications: scholarProfiles.qualifications, scholarlyLineage: scholarProfiles.scholarlyLineage }).from(scholarProfiles).where(eq(scholarProfiles.isPublished, true)).orderBy(scholarProfiles.displayNameEn);
+}
+
+export async function getPublicPolicies() {
+  const db = await getDb(); if (!db) return [];
+  return db.select({ settingKey: siteSettings.settingKey, value: siteSettings.value, updatedAt: siteSettings.updatedAt }).from(siteSettings).where(inArray(siteSettings.settingKey, ["policy.methodology", "policy.privacy", "policy.guidance", "policy.publication"]));
 }
 
 export type PublicCatalogueFilters = { query?: string; category?: string; methodology?: string; tag?: string };

@@ -140,5 +140,13 @@
 - [x] Add reviewer approval or return-for-revision actions protected by role capability checks.
 - [x] Add controlled publication that creates or updates a public Fatwa record only after approval.
 - [x] Add procedure-level tests for role authorization and permitted workflow transitions.
-- [ ] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
+- [x] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
+- [x] Add admin-controlled scholar profile management with public-safe credentials and active visibility.
+- [x] Add admin taxonomy management for categories and fiqh methodology labels with integrity safeguards.
+- [x] Add admin-managed bilingual public policy content for confidentiality, guidance scope, and publication standards.
+- [x] Add role-protected administration workspace controls and procedure tests.
+- [x] Add full edit and activation controls for existing scholar profiles, categories, and methodologies.
+- [x] Render verified public scholar credentials and qualifications from managed profile data.
+- [x] Add success-path administration procedure tests for governed writes and audit events.
+- [x] Add router-level administrator success tests for governance reads and all governed save procedures.
 - [ ] Test privacy, accessibility, performance, and end-to-end workflows before publication.

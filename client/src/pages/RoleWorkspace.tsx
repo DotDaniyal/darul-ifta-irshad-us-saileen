@@ -1,5 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import DashboardLayout from "@/components/DashboardLayout";
+import { AdminGovernance } from "@/components/AdminGovernance";
 import { ReviewerOperations } from "@/components/ReviewerOperations";
 import { ScholarOperations } from "@/components/ScholarOperations";
 import { Card, CardContent } from "@/components/ui/card";
@@ -50,7 +51,7 @@ export function RoleWorkspace({ kind }: { kind: WorkspaceKind }) {
     {!loading && !permitted ? <AccessDenied /> : null}
     {!loading && permitted && kind === "scholar" ? <ScholarOperations /> : null}
     {!loading && permitted && kind === "reviewer" ? <ReviewerOperations reviewerId={user!.id} /> : null}
-    {!loading && permitted && kind === "admin" ? <AdminCards counts={overview.data} pending={overview.isLoading} /> : null}
+    {!loading && permitted && kind === "admin" ? <><AdminCards counts={overview.data} pending={overview.isLoading} /><AdminGovernance /></> : null}
   </div></DashboardLayout>;
 }
 
