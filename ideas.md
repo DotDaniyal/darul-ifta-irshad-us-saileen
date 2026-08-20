@@ -87,3 +87,9 @@ The experience now uses a **centered transparent official mark** on a white cere
 - Urdu remains the primary ceremonial headline voice; Arabic is devotional; English serves concise institutional explanation and metadata.
 - The home hero gives **Urdu/Nastaliq** the primary ceremonial role, followed by Bismillah as devotional emphasis; the English institutional name supports rather than outranks it.
 - Fatwa request fields are presented as ruled, ivory manuscript paper with blue-ink interaction states and restrained gold edges.
+
+## Style Decisions
+
+- The Fatwa archive reads as a single scholarly catalogue ledger rather than a generic card grid: every entry uses an indexed folio, a framed record code, an Urdu-first title, a manuscript divider, and a separate source-document action.
+- Fatwa record pages use the shared dark ceremonial interior hero with a low-contrast mihrab, rosette divider, gold manuscript rule, and devotional Arabic mark before the ivory reading chamber.
+- English archive labels remain compact institutional metadata and never outrank Urdu titles in ceremonial hierarchy.

@@ -933,6 +933,481 @@ export const FATAWA: Fatwa[] = [
       "A0100"
     ],
     "pdfUrl": "/manus-storage/fatwa-049_410eb283.pdf"
+  },
+  {
+    "slug": "a0104-50",
+    "number": "A0104",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0104",
+    "titleUr": "عذر کی وجہ سے ناک میں پانی ڈالنے کی رخصت",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0104"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-050_22e2f764.pdf"
+  },
+  {
+    "slug": "a0107-51",
+    "number": "A0107",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0107",
+    "titleUr": "گزشتہ سالوں کی زکوٰۃ ادا کرنا لازم ہے",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0107"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-051_ae62f497.pdf"
+  },
+  {
+    "slug": "a0108-52",
+    "number": "A0108",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0108",
+    "titleUr": "کھانے سے پہلے اور بعد میں نمک چاٹنا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0108"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-052_e4f402f5.pdf"
+  },
+  {
+    "slug": "a0113-53",
+    "number": "A0113",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0113",
+    "titleUr": "والد کے خلاف کیس کرنا: نئی تحقیق",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0113"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-053_ba6bef47.pdf"
+  },
+  {
+    "slug": "a0115-54",
+    "number": "A0115",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0115",
+    "titleUr": "منت (نذر) پوری کرنے کی استطاعت نہ ہو تو کیا کرے",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0115"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-054_f93e07ff.pdf"
+  },
+  {
+    "slug": "a0132-55",
+    "number": "A0132",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0132",
+    "titleUr": "الفاظِ طلاق میں میاں بیوی کا اختلاف",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0132"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-055_5a3cf97e.pdf"
+  },
+  {
+    "slug": "a0143-56",
+    "number": "A0143",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0143",
+    "titleUr": "ستہ شوال کی شرعی حیثیت",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0143"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-056_657b049e.pdf"
+  },
+  {
+    "slug": "a0153-57",
+    "number": "A0153",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0153",
+    "titleUr": "کسی کا پالتو پرندہ گھر آ جائے تو کیا حکم ہے؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0153"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-057_053ec34a.pdf"
+  },
+  {
+    "slug": "a0158-58",
+    "number": "A0158",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0158",
+    "titleUr": "تقسیمِ وراثت: بیوی، دو بہنیں اور دو چچا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0158"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-058_05fbc8af.pdf"
+  },
+  {
+    "slug": "a0159-59",
+    "number": "A0159",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0159",
+    "titleUr": "ادھار پر سونا خریدنا اور اس کی زکوٰۃ کے مسائل (2)",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0159"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-059_e96d9847.pdf"
+  },
+  {
+    "slug": "a0159-60",
+    "number": "A0159",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0159",
+    "titleUr": "ادھار پر سونا خریدنا اور اس کی زکوٰۃ کے مسائل",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0159"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-060_fdd55bdc.pdf"
+  },
+  {
+    "slug": "a0160-61",
+    "number": "A0160",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0160",
+    "titleUr": "تقسیمِ وراثت: اولاد کی موجودگی میں پوتوں کا حصہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0160"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-061_491bf522.pdf"
+  },
+  {
+    "slug": "a0163-62",
+    "number": "A0163",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0163",
+    "titleUr": "کورٹ کی یک طرفہ خلع، متعنت شوہر کے حوالے سے",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0163"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-062_3d29f2f1.pdf"
+  },
+  {
+    "slug": "a0164-63",
+    "number": "A0164",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0164",
+    "titleUr": "ماں، بیوی، تین بیٹوں اور دو بیٹیوں میں تقسیمِ میراث اور وصیت کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0164"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-063_3c178929.pdf"
+  },
+  {
+    "slug": "a0165-64",
+    "number": "A0165",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0165",
+    "titleUr": "غصے میں بیوی کو تیسری طلاق دے دی تو شرعی حکم (2)",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0165"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-064_c46b6400.pdf"
+  },
+  {
+    "slug": "a0165-65",
+    "number": "A0165",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0165",
+    "titleUr": "غصے میں بیوی کو تیسری طلاق دے دی تو شرعی حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0165"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-065_052394d2.pdf"
+  },
+  {
+    "slug": "a0167-66",
+    "number": "A0167",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0167",
+    "titleUr": "مصنوعی بال لگانا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0167"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-066_a6cc6e4c.pdf"
+  },
+  {
+    "slug": "a0171-67",
+    "number": "A0171",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0171",
+    "titleUr": "مغالطۂ طلاق کی بنیاد پر اخبارِ طلاق کا حکم (د)",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0171"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-067_8ac3411a.pdf"
+  },
+  {
+    "slug": "a0172-68",
+    "number": "A0172",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0172",
+    "titleUr": "تقسیمِ وراثت: دو بیٹے، زوجہ اور بیٹی کے درمیان",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0172"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-068_38f47de8.pdf"
+  },
+  {
+    "slug": "a0173-69",
+    "number": "A0173",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0173",
+    "titleUr": "عشاء سے قبل چار رکعت اور وتر کا مسئلہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0173"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-069_9d054710.pdf"
+  },
+  {
+    "slug": "a0173-70",
+    "number": "A0173",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0173",
+    "titleUr": "عشاء کی سننِ غیر مؤکدہ اور تعدادِ رکعاتِ وتر کی تحقیق",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0173"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-070_16cfa182.pdf"
+  },
+  {
+    "slug": "a0182-71",
+    "number": "A0182",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0182",
+    "titleUr": "کلمہ پڑھنے پر مکمل مسلمانوں والے حقوق ملنا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0182"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-071_301875e6.pdf"
+  },
+  {
+    "slug": "a0197-72",
+    "number": "A0197",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0197",
+    "titleUr": "بالغ معذور لڑکے کو استنجاء کی صفائی ماں کروا سکتی ہے",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0197"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-072_cc9a2f00.pdf"
+  },
+  {
+    "slug": "a0198-73",
+    "number": "A0198",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0198",
+    "titleUr": "گڑیا اور کرسمس کے تحائف کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0198"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-073_48dd8253.pdf"
+  },
+  {
+    "slug": "a0199-74",
+    "number": "A0199",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0199",
+    "titleUr": "دو بیویاں، 4 بیٹے اور 6 بیٹیوں میں تقسیمِ میراث",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0199"
+    ],
+    "pdfUrl": "/manus-storage/fatwa-074_e76fbe70.pdf"
   }
 ];
 

@@ -80,3 +80,9 @@
 - [x] Upload source PDFs to persistent website storage for direct public access.
 - [x] Add all published fatwas to the searchable Fatwa catalogue and archive views.
 - [x] Verify original-PDF links, search, categories, and responsive archive presentation.
+
+## Additional Fatwa Attachments Checklist
+
+- [x] Compare the newly attached PDFs with the existing archive and identify records that require addition or replacement.
+- [x] Upload the resulting source PDFs to persistent website storage and add the corresponding searchable catalogue records.
+- [x] Verify direct PDF access, archive behavior, responsive presentation, and the production build.
