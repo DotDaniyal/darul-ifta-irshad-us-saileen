@@ -55,3 +55,9 @@
 - [x] Remove the Bismillah detail from the centered masthead area.
 - [x] Retain the Bismillah in the separate top devotional bar.
 - [x] Verify the simplified header at desktop and mobile widths.
+
+## Centered Brand Stack Checklist
+
+- [x] Rework the centered masthead brand mark into a vertical stack.
+- [x] Place the official logo above the Urdu and English brand name.
+- [x] Verify the stacked logo and brand name at desktop and mobile widths.
