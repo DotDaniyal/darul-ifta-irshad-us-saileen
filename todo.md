@@ -61,3 +61,9 @@
 - [x] Rework the centered masthead brand mark into a vertical stack.
 - [x] Place the official logo above the Urdu and English brand name.
 - [x] Verify the stacked logo and brand name at desktop and mobile widths.
+
+## Enlarged Masthead Logo Checklist
+
+- [x] Remove the invalid border-radius style created by the visual editor.
+- [x] Increase the centered official logo while preserving the vertical brand stack.
+- [x] Verify the enlarged logo at desktop and mobile widths.
