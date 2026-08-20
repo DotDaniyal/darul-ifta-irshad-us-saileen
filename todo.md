@@ -99,3 +99,21 @@
 - [x] Inspect the current masthead logo sizing and identify the appropriate visual increase.
 - [x] Increase the centered logo size without disrupting the Urdu and English brand stack.
 - [x] Verify desktop and mobile masthead presentation, then publish the refinement.
+
+## Darul Ifta Platform Blueprint Checklist
+
+- [x] Define roles, permissions, scholarly governance, and trust requirements.
+- [x] Specify user journeys, information architecture, and responsive wireframes.
+- [x] Document the recommended stack, data model, security controls, and delivery roadmap.
+
+## Darul Ifta Platform Implementation Checklist
+
+- [x] Upgrade the public website to a full-stack application and establish the governed domain model.
+- [x] Add role-aware access control for questioners, scholars, reviewers, and administrators.
+- [x] Implement protected tRPC procedures for questioner, scholar, reviewer, and administrator actions.
+- [x] Add and verify role-gated scholar, reviewer, and administrator workspace routes.
+- [ ] Implement multilingual public discovery, advanced Fatwa search, and trust content.
+- [ ] Implement confidential question intake, secure tracking, and private attachment handling.
+- [ ] Implement Mufti drafting, review, approval, and controlled publication workflows.
+- [ ] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
+- [ ] Test privacy, accessibility, performance, and end-to-end workflows before publication.

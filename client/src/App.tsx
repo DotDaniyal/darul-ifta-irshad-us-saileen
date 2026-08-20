@@ -6,18 +6,24 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import AskFatwa from "./pages/AskFatwa";
 import Fatawa from "./pages/Fatawa";
 import FatwaDetail from "./pages/FatwaDetail";
-import AskFatwa from "./pages/AskFatwa";
-
+import ScholarWorkspace from "./pages/ScholarWorkspace";
+import { RoleWorkspace } from "./pages/RoleWorkspace";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/fatawa"} component={Fatawa} />
       <Route path={"/fatawa/:slug"} component={FatwaDetail} />
-      <Route path={"/ask-fatwa"} component={AskFatwa} />
+      <Route path="/ask-fatwa" component={AskFatwa} />
+      <Route path="/workspace" component={ScholarWorkspace} />
+      <Route path="/workspace/scholar"><RoleWorkspace kind="scholar" /></Route>
+      <Route path="/workspace/review"><RoleWorkspace kind="reviewer" /></Route>
+      <Route path="/workspace/admin"><RoleWorkspace kind="admin" /></Route>
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

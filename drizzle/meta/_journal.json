@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787227173337,
+      "tag": "0000_clumsy_blonde_phantom",
+      "breakpoints": true
+    }
+  ]
+}
