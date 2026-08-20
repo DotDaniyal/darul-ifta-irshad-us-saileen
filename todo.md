@@ -42,3 +42,10 @@
 - [x] Add the supplied Mixlr event to the primary navigation as Online Bayan.
 - [x] Add a visible Online Bayan call to action in the homepage guidance area.
 - [x] Verify both links open the correct external event in a new tab.
+
+## Online Bayan Icon Refinement Checklist
+
+- [x] Repair any invalid duplicate style attributes from the visual-editor output.
+- [x] Remove the visible box treatment around the centered official logo.
+- [x] Add a clearer Online Bayan icon to the homepage call to action.
+- [x] Verify the revised header and main-page icon at desktop and mobile widths.

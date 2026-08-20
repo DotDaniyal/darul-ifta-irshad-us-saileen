@@ -49,7 +49,7 @@
   .hero-primary { @apply inline-flex items-center gap-2 rounded-none bg-[#D1AC5B] px-5 py-3.5 font-sans text-xs font-bold text-[#06152E] shadow-[0_12px_30px_rgba(0,0,0,.20)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F1DC9B] active:scale-[.98]; }
   .hero-secondary { @apply inline-flex items-center gap-2 rounded-[5px] border border-white/35 bg-white/5 px-5 py-3.5 font-sans text-xs font-bold text-white backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#F2DFB4] hover:bg-white/10 hover:text-[#F2DFB4] active:scale-[.98]; }
   .hero-bayan { @apply inline-flex items-center gap-2 rounded-[5px] border border-[#D1AC5B]/70 bg-[#06152E]/55 px-5 py-3.5 font-sans text-xs font-bold text-[#FFE3A2] backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#FFE3A2] hover:bg-[#173A78]/65 hover:text-white active:scale-[.98]; }
-  .hero-bayan span { box-shadow: 0 0 0 4px rgba(247,212,117,.12), 0 0 15px rgba(247,212,117,.75); }
+  .hero-bayan-icon { color: #F7D475; filter: drop-shadow(0 0 5px rgba(247,212,117,.70)); }
   .date-card { @apply relative flex min-w-[270px] gap-4 rounded-[10px] border border-white/35 bg-[#FCFAF6]/95 p-5 shadow-[0_24px_60px_rgba(2,18,40,.28)] backdrop-blur-sm; }
   .date-card::before { content: ""; @apply absolute inset-2 border border-[#DCC78F]/40; }
   .date-card > * { @apply relative; }
