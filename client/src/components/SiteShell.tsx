@@ -55,8 +55,8 @@ export function BrandMark({ compact = false, centered = false }: { compact?: boo
         <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" className="h-full w-full object-contain transition duration-300 group-hover:scale-105" />
       </span>
       <span className={`min-w-0 leading-none ${centered ? "text-center" : "text-white"}`}>
-        <span className={`block font-urdu text-[13px] leading-6 ${centered ? "text-[#101E42]" : "text-[#E9D4A2]"}`}>دارالافتاء ارشاد السائلین</span>
-        <span className={`block font-sans text-[9px] font-semibold uppercase tracking-[0.18em] ${centered ? "text-[#1F4394]" : "text-white/85"} sm:text-[10px]`}>Darul Ifta Irshad-us-Saileen</span>
+        <span className={`block font-urdu ${centered ? "brand-urdu-name text-[21px] leading-[1.55] text-[#101E42] sm:text-[25px]" : "text-[13px] leading-6 text-[#E9D4A2]"}`}>دارالافتاء ارشاد السائلین</span>
+        <span className={`block font-sans font-semibold uppercase ${centered ? "brand-english-name mt-1 text-[11px] tracking-[0.20em] text-[#1F4394] sm:text-[13px]" : "text-[9px] tracking-[0.18em] text-white/85 sm:text-[10px]"}`}>Darul Ifta Irshad-us-Saileen</span>
       </span>
     </Link>
   );

@@ -67,3 +67,9 @@
 - [x] Remove the invalid border-radius style created by the visual editor.
 - [x] Increase the centered official logo while preserving the vertical brand stack.
 - [x] Verify the enlarged logo at desktop and mobile widths.
+
+## Enlarged Brand Typography Checklist
+
+- [x] Remove the invalid inline style values created by the visual editor.
+- [x] Increase Urdu and English masthead name sizing with responsive CSS classes.
+- [x] Verify the enlarged brand text remains balanced under the logo at desktop and mobile widths.
