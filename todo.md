@@ -86,3 +86,10 @@
 - [x] Compare the newly attached PDFs with the existing archive and identify records that require addition or replacement.
 - [x] Upload the resulting source PDFs to persistent website storage and add the corresponding searchable catalogue records.
 - [x] Verify direct PDF access, archive behavior, responsive presentation, and the production build.
+
+## Fatwa Phone Number Review Checklist
+
+- [x] Inspect the Fatwa pages and source PDFs to locate the requested phone number.
+- [x] Identify all non-approved phone-number entries in the Fatwa PDFs, retaining `+92 333 2617671`.
+- [x] Create redacted archive PDFs that remove only the non-approved phone-number entries.
+- [x] Replace archive links and verify the revised PDF presentation and direct access.
