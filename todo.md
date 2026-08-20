@@ -93,3 +93,9 @@
 - [x] Identify all non-approved phone-number entries in the Fatwa PDFs, retaining `+92 333 2617671`.
 - [x] Create redacted archive PDFs that remove only the non-approved phone-number entries.
 - [x] Replace archive links and verify the revised PDF presentation and direct access.
+
+## Masthead Logo Size Refinement Checklist
+
+- [x] Inspect the current masthead logo sizing and identify the appropriate visual increase.
+- [x] Increase the centered logo size without disrupting the Urdu and English brand stack.
+- [x] Verify desktop and mobile masthead presentation, then publish the refinement.

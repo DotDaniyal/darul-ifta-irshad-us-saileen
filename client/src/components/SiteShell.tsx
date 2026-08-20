@@ -51,7 +51,7 @@ export function useLanguage() {
 export function BrandMark({ compact = false, centered = false }: { compact?: boolean; centered?: boolean }) {
   return (
     <Link href="/" className={`group flex items-center gap-3 ${centered ? "brand-mark-center flex-col gap-0.5" : "text-left"}`} aria-label="Darul Ifta Irshad-us-Saileen home">
-      <span className={`${centered ? "h-[62px] w-[62px] sm:h-[72px] sm:w-[72px]" : compact ? "h-11 w-11" : "h-14 w-14"} flex shrink-0 items-center justify-center overflow-hidden bg-transparent transition duration-300 group-hover:-translate-y-0.5`}>
+      <span className={`${centered ? "h-[84px] w-[84px] sm:h-[102px] sm:w-[102px]" : compact ? "h-11 w-11" : "h-14 w-14"} flex shrink-0 items-center justify-center overflow-hidden bg-transparent transition duration-300 group-hover:-translate-y-0.5`}>
         <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" className="h-full w-full object-contain transition duration-300 group-hover:scale-105" />
       </span>
       <span className={`min-w-0 leading-none ${centered ? "text-center" : "text-white"}`}>
