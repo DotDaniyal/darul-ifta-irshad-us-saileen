@@ -5,6 +5,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { platformAdminProcedure, reviewerProcedure, scholarProcedure } from "./platformPermissions";
 import { publicCatalogueSearchInput } from "./publicCatalogueContract";
+import { publicQuestionSubmissionInput, questionTrackingInput, submitPublicQuestion, trackPublicQuestion } from "./questionIntake";
 import {
   getAssignedQuestionSummaries,
   getFatwaReviewQueue,
@@ -50,6 +51,8 @@ export const appRouter = router({
   }),
 
   questions: router({
+    submit: publicProcedure.input(publicQuestionSubmissionInput).mutation(({ input }) => submitPublicQuestion(input)),
+    track: publicProcedure.input(questionTrackingInput).query(({ input }) => trackPublicQuestion(input)),
     /** A questioner may see only their own non-anonymous submission summaries. */
     mine: protectedProcedure.query(({ ctx }) => getMyQuestionSummaries(ctx.user.id)),
     /** Assigned private questions are visible only to scholars, reviewers, and administrators. */

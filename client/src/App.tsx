@@ -12,6 +12,7 @@ import FatwaDetail from "./pages/FatwaDetail";
 import ScholarWorkspace from "./pages/ScholarWorkspace";
 import { RoleWorkspace } from "./pages/RoleWorkspace";
 import Methodology from "./pages/Methodology";
+import QuestionTracking from "./pages/QuestionTracking";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -22,6 +23,8 @@ function Router() {
       <Route path={"/fatawa/:slug"} component={FatwaDetail} />
       <Route path="/methodology" component={Methodology} />
       <Route path="/ask-fatwa" component={AskFatwa} />
+      <Route path="/track-question" component={QuestionTracking} />
+      <Route path="/question-status" component={QuestionTracking} />
       <Route path="/workspace" component={ScholarWorkspace} />
       <Route path="/workspace/scholar"><RoleWorkspace kind="scholar" /></Route>
       <Route path="/workspace/review"><RoleWorkspace kind="reviewer" /></Route>

@@ -76,6 +76,8 @@ export const scholarProfiles = mysqlTable("scholarProfiles", {
 export const questionSubmissions = mysqlTable("questionSubmissions", {
   id: int("id").autoincrement().primaryKey(),
   referenceCode: varchar("referenceCode", { length: 32 }).notNull().unique(),
+  /** Hash of the one-time tracking secret shown only to the requester after submission. */
+  trackingSecretHash: varchar("trackingSecretHash", { length: 128 }).notNull(),
   submittedById: int("submittedById").references(() => users.id, { onDelete: "set null" }),
   isAnonymous: boolean("isAnonymous").default(false).notNull(),
   requesterName: varchar("requesterName", { length: 180 }),
@@ -95,6 +97,7 @@ export const questionSubmissions = mysqlTable("questionSubmissions", {
   index("question_submissions_status_idx").on(table.status),
   index("question_submissions_assigned_scholar_idx").on(table.assignedScholarId),
   index("question_submissions_category_idx").on(table.categoryId),
+  index("question_submissions_tracking_idx").on(table.referenceCode, table.trackingSecretHash),
 ]);
 
 /** S3-only private file metadata for a question; raw bytes are never stored in the database. */

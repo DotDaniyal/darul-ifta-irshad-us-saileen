@@ -124,7 +124,16 @@
 - [x] Add automated public-catalogue result tests for fatwa number, title, tag, category, and methodology filters.
 - [x] Verify and document fatwa-number search across the governed query and public archive UI.
 - [x] Exercise a representative Fatwa-number search in both the governed catalogue API and the public archive interface, then record the result.
-- [ ] Implement confidential question intake, secure tracking, and private attachment handling.
+- [x] Implement confidential question intake, secure tracking, and private attachment handling.
+- [x] Add confidential submission creation with an unguessable tracking secret and private status lookup.
+- [x] Replace the public Fatwa request form with validated category-aware, anonymity-aware tracked submission.
+- [x] Add restricted attachment validation, S3 storage, and metadata-only database persistence.
+- [x] Validate attachment signatures against declared PDF, JPEG, or PNG types before private storage.
+- [x] Notify the project owner of each submitted question without sharing sensitive question content.
+- [x] Add contract tests for public intake validation, private tracking, and attachment safeguards.
+- [x] Test private tracking with valid and invalid reference-secret pairs, asserting only non-sensitive status fields are returned.
+- [x] Test submission behavior for signature and size rejection, metadata-only attachment persistence, and content-free owner-notification wiring.
+- [x] Repair and verify the public private-tracking route so submitted reference details can be checked without login.
 - [ ] Implement Mufti drafting, review, approval, and controlled publication workflows.
 - [ ] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
 - [ ] Test privacy, accessibility, performance, and end-to-end workflows before publication.
