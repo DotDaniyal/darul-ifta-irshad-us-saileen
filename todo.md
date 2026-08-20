@@ -73,3 +73,10 @@
 - [x] Remove the invalid inline style values created by the visual editor.
 - [x] Increase Urdu and English masthead name sizing with responsive CSS classes.
 - [x] Verify the enlarged brand text remains balanced under the logo at desktop and mobile widths.
+
+## Fatwa Library Publication Checklist
+
+- [x] Inventory every uploaded fatwa PDF and establish its scholarly record metadata.
+- [x] Upload source PDFs to persistent website storage for direct public access.
+- [x] Add all published fatwas to the searchable Fatwa catalogue and archive views.
+- [x] Verify original-PDF links, search, categories, and responsive archive presentation.
