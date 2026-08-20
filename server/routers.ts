@@ -4,11 +4,14 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { platformAdminProcedure, reviewerProcedure, scholarProcedure } from "./platformPermissions";
+import { publicCatalogueSearchInput } from "./publicCatalogueContract";
 import {
   getAssignedQuestionSummaries,
   getFatwaReviewQueue,
   getMyQuestionSummaries,
+  getPublicCatalogueTaxonomy,
   getPlatformOverview,
+  searchPublishedFatwas,
   updatePlatformUserRole,
 } from "./platformQueries";
 
@@ -24,6 +27,11 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  publicCatalogue: router({
+    taxonomy: publicProcedure.query(() => getPublicCatalogueTaxonomy()),
+    search: publicProcedure.input(publicCatalogueSearchInput).query(({ input }) => searchPublishedFatwas(input)),
   }),
 
   workspace: router({

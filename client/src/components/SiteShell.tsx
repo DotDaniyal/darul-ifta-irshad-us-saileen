@@ -13,12 +13,12 @@ type Language = "ur" | "en";
 
 const copy = {
   en: {
-    home: "Home", about: "Introduction", services: "Services", fatawa: "Fatawa", scholars: "Scholars", contact: "Contact", donate: "Donate",
+    home: "Home", about: "Introduction", services: "Services", fatawa: "Fatawa", methodology: "Methodology", scholars: "Scholars", contact: "Contact", donate: "Donate",
     lang: "اردو", quick: "Quick links", aboutText: "A trusted space for considered Islamic guidance grounded in the Qur’an and Sunnah.",
     rights: "All rights reserved.", location: "Al Mujeeb Garden A31, Karachi, Pakistan", contactUs: "Contact", serviceLinks: "Our services",
   },
   ur: {
-    home: "سرورق", about: "تعارف", services: "خدمات", fatawa: "فتاویٰ", scholars: "علماء", contact: "رابطہ", donate: "عطیات",
+    home: "سرورق", about: "تعارف", services: "خدمات", fatawa: "فتاویٰ", methodology: "منہج و رازداری", scholars: "علماء", contact: "رابطہ", donate: "عطیات",
     lang: "English", quick: "اہم روابط", aboutText: "قرآن و سنت کی روشنی میں معتبر اور ذمہ دار شرعی رہنمائی کا مرکز۔", 
     rights: "تمام حقوق محفوظ ہیں۔", location: "المجیب گارڈن اے 31، کراچی، پاکستان", contactUs: "رابطہ", serviceLinks: "ہماری خدمات",
   },
@@ -82,7 +82,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   const homePrefix = location === "/" ? "" : "/";
   const links = [
     { href: `${homePrefix}#about`, label: t.about }, { href: `${homePrefix}#services`, label: t.services },
-    { href: "/fatawa", label: t.fatawa }, { href: `${homePrefix}#scholars`, label: t.scholars },
+    { href: "/fatawa", label: t.fatawa }, { href: "/methodology", label: t.methodology }, { href: `${homePrefix}#scholars`, label: t.scholars },
     { href: `${homePrefix}#contact`, label: t.contact },
   ];
 

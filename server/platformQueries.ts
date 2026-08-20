@@ -1,5 +1,5 @@
-import { count, desc, eq, inArray } from "drizzle-orm";
-import { fatwaRecords, questionSubmissions, users } from "../drizzle/schema";
+import { and, count, desc, eq, inArray, like, or, sql } from "drizzle-orm";
+import { fatwaCategories, fatwaRecords, fiqhMethodologies, questionSubmissions, users } from "../drizzle/schema";
 import { getDb } from "./db";
 
 export async function getMyQuestionSummaries(userId: number) {
@@ -93,3 +93,77 @@ export async function updatePlatformUserRole(userId: number, role: "user" | "sch
   return { userId, role };
 }
 
+export type PublicCatalogueFilters = {
+  query?: string;
+  category?: string;
+  methodology?: string;
+  tag?: string;
+};
+
+/** Published fields only. Private source questions, editorial notes, and contact details never join this query. */
+export async function searchPublishedFatwas(filters: PublicCatalogueFilters) {
+  const db = await getDb();
+  if (!db) return [];
+
+  const query = filters.query?.trim();
+  const conditions = [eq(fatwaRecords.status, "published")];
+
+  if (filters.category) conditions.push(eq(fatwaCategories.slug, filters.category));
+  if (filters.methodology) conditions.push(eq(fiqhMethodologies.slug, filters.methodology));
+  if (filters.tag) conditions.push(sql`CAST(${fatwaRecords.tags} AS CHAR) LIKE ${`%${filters.tag}%`}`);
+  if (query) {
+    const needle = `%${query}%`;
+    conditions.push(or(
+      like(fatwaRecords.referenceNumber, needle),
+      like(fatwaRecords.titleEn, needle),
+      like(fatwaRecords.titleUr, needle),
+      like(fatwaRecords.summaryEn, needle),
+      like(fatwaRecords.summaryUr, needle),
+      like(fatwaCategories.nameEn, needle),
+      like(fatwaCategories.nameUr, needle),
+      like(fiqhMethodologies.nameEn, needle),
+      like(fiqhMethodologies.nameUr, needle),
+      sql`CAST(${fatwaRecords.tags} AS CHAR) LIKE ${needle}`,
+    )!);
+  }
+
+  return db
+    .select({
+      id: fatwaRecords.id,
+      slug: fatwaRecords.slug,
+      referenceNumber: fatwaRecords.referenceNumber,
+      titleEn: fatwaRecords.titleEn,
+      titleUr: fatwaRecords.titleUr,
+      summaryEn: fatwaRecords.summaryEn,
+      summaryUr: fatwaRecords.summaryUr,
+      tags: fatwaRecords.tags,
+      publicPdfUrl: fatwaRecords.publicPdfUrl,
+      publishedAt: fatwaRecords.publishedAt,
+      categorySlug: fatwaCategories.slug,
+      categoryEn: fatwaCategories.nameEn,
+      categoryUr: fatwaCategories.nameUr,
+      methodologySlug: fiqhMethodologies.slug,
+      methodologyEn: fiqhMethodologies.nameEn,
+      methodologyUr: fiqhMethodologies.nameUr,
+    })
+    .from(fatwaRecords)
+    .leftJoin(fatwaCategories, eq(fatwaRecords.categoryId, fatwaCategories.id))
+    .leftJoin(fiqhMethodologies, eq(fatwaRecords.methodologyId, fiqhMethodologies.id))
+    .where(and(...conditions))
+    .orderBy(desc(fatwaRecords.publishedAt), desc(fatwaRecords.id))
+    .limit(100);
+}
+
+export async function getPublicCatalogueTaxonomy() {
+  const db = await getDb();
+  if (!db) return { categories: [], methodologies: [] };
+
+  const [categories, methodologies] = await Promise.all([
+    db.select({ slug: fatwaCategories.slug, nameEn: fatwaCategories.nameEn, nameUr: fatwaCategories.nameUr, nameAr: fatwaCategories.nameAr })
+      .from(fatwaCategories).where(eq(fatwaCategories.isActive, true)).orderBy(fatwaCategories.sortOrder),
+    db.select({ slug: fiqhMethodologies.slug, nameEn: fiqhMethodologies.nameEn, nameUr: fiqhMethodologies.nameUr, nameAr: fiqhMethodologies.nameAr })
+      .from(fiqhMethodologies).where(eq(fiqhMethodologies.isActive, true)).orderBy(fiqhMethodologies.nameEn),
+  ]);
+
+  return { categories, methodologies };
+}

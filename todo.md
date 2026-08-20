@@ -112,7 +112,18 @@
 - [x] Add role-aware access control for questioners, scholars, reviewers, and administrators.
 - [x] Implement protected tRPC procedures for questioner, scholar, reviewer, and administrator actions.
 - [x] Add and verify role-gated scholar, reviewer, and administrator workspace routes.
-- [ ] Implement multilingual public discovery, advanced Fatwa search, and trust content.
+- [x] Implement multilingual public discovery, advanced Fatwa search, and trust content.
+- [x] Import the existing verified Fatwa archive into governed published-record storage without changing its source PDFs.
+- [x] Add public database-backed search across fatwa number, titles, tags, category, and configured methodology.
+- [x] Upgrade the archive controls with accessible keyword, category, methodology, and tag filtering.
+- [x] Add a public methodology, privacy, and scholarly-guidance page with clear contextual disclaimers.
+- [x] Verify Urdu and English switching on the governed archive and methodology page.
+- [x] Exercise public search using a title, tag, category, and methodology query and retain the results as test coverage.
+- [x] Confirm accessible labels and keyboard-operable keyword, category, methodology, and tag archive controls.
+- [x] Seed one formally approved methodology taxonomy entry and associate it with published archive records.
+- [x] Add automated public-catalogue result tests for fatwa number, title, tag, category, and methodology filters.
+- [x] Verify and document fatwa-number search across the governed query and public archive UI.
+- [x] Exercise a representative Fatwa-number search in both the governed catalogue API and the public archive interface, then record the result.
 - [ ] Implement confidential question intake, secure tracking, and private attachment handling.
 - [ ] Implement Mufti drafting, review, approval, and controlled publication workflows.
 - [ ] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
