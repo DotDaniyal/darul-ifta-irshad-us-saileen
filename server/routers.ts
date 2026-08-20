@@ -6,13 +6,24 @@ import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { platformAdminProcedure, reviewerProcedure, scholarProcedure } from "./platformPermissions";
 import { publicCatalogueSearchInput } from "./publicCatalogueContract";
 import { publicQuestionSubmissionInput, questionTrackingInput, submitPublicQuestion, trackPublicQuestion } from "./questionIntake";
+import { fatwaDraftCreateInput, fatwaDraftUpdateInput, fatwaPublishInput, fatwaReviewApprovalInput, fatwaReviewReturnInput } from "./fatwaWorkflow";
 import {
+  approveFatwaDraft,
+  claimQuestion,
+  createFatwaDraft,
   getAssignedQuestionSummaries,
+  getApprovedFatwaPublicationQueue,
+  getClaimableQuestionSummaries,
   getFatwaReviewQueue,
+  getMyFatwaDrafts,
   getMyQuestionSummaries,
   getPublicCatalogueTaxonomy,
+  getPublishedFatwaBySlug,
   getPlatformOverview,
+  publishApprovedFatwa,
+  returnFatwaDraft,
   searchPublishedFatwas,
+  updateFatwaDraft,
   updatePlatformUserRole,
 } from "./platformQueries";
 
@@ -33,6 +44,7 @@ export const appRouter = router({
   publicCatalogue: router({
     taxonomy: publicProcedure.query(() => getPublicCatalogueTaxonomy()),
     search: publicProcedure.input(publicCatalogueSearchInput).query(({ input }) => searchPublishedFatwas(input)),
+    bySlug: publicProcedure.input(z.object({ slug: z.string().trim().min(1).max(160) })).query(({ input }) => getPublishedFatwaBySlug(input.slug)),
   }),
 
   workspace: router({
@@ -57,11 +69,27 @@ export const appRouter = router({
     mine: protectedProcedure.query(({ ctx }) => getMyQuestionSummaries(ctx.user.id)),
     /** Assigned private questions are visible only to scholars, reviewers, and administrators. */
     assigned: scholarProcedure.query(({ ctx }) => getAssignedQuestionSummaries(ctx.user.id)),
+    /** Only non-sensitive case metadata is exposed until a scholar accepts the case. */
+    claimable: scholarProcedure.query(() => getClaimableQuestionSummaries()),
+    claim: scholarProcedure.input(z.object({ questionId: z.number().int().positive() })).mutation(({ ctx, input }) => claimQuestion(input.questionId, ctx.user.id)),
+  }),
+
+  fatwaDraft: router({
+    mine: scholarProcedure.query(({ ctx }) => getMyFatwaDrafts(ctx.user.id)),
+    create: scholarProcedure.input(fatwaDraftCreateInput).mutation(({ ctx, input }) => createFatwaDraft(input, ctx.user.id)),
+    update: scholarProcedure.input(fatwaDraftUpdateInput).mutation(({ ctx, input }) => updateFatwaDraft(input, ctx.user.id)),
   }),
 
   review: router({
     /** The editorial review queue never exposes source-question contact information. */
     queue: reviewerProcedure.query(() => getFatwaReviewQueue()),
+    approve: reviewerProcedure.input(fatwaReviewApprovalInput).mutation(({ ctx, input }) => approveFatwaDraft(input.fatwaId, ctx.user.id)),
+    return: reviewerProcedure.input(fatwaReviewReturnInput).mutation(({ ctx, input }) => returnFatwaDraft(input, ctx.user.id)),
+  }),
+
+  fatwaPublish: router({
+    queue: reviewerProcedure.query(() => getApprovedFatwaPublicationQueue()),
+    publish: reviewerProcedure.input(fatwaPublishInput).mutation(({ ctx, input }) => publishApprovedFatwa(input, ctx.user.id)),
   }),
 
   administration: router({

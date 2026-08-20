@@ -67,4 +67,16 @@ describe("concrete role-protected platform actions", () => {
       appRouter.createCaller(createContext("scholar")).administration.setUserRole({ userId: 9, role: "reviewer" })
     ).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
   });
+
+  it("prevents a questioner from claiming restricted cases or creating a Fatwa draft", async () => {
+    const caller = appRouter.createCaller(createContext("user"));
+    await expect(caller.questions.claim({ questionId: 1 })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+    await expect(caller.fatwaDraft.create({ questionId: 1, titleEn: "A governed answer", bodyEn: "This scholarly answer is deliberately long enough to meet the controlled draft contract." })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+  });
+
+  it("prevents a scholar from reaching independent approval and publication procedures", async () => {
+    const caller = appRouter.createCaller(createContext("scholar"));
+    await expect(caller.review.approve({ fatwaId: 1 })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+    await expect(caller.fatwaPublish.publish({ fatwaId: 1, publicationTreatment: "anonymized" })).rejects.toMatchObject<Partial<TRPCError>>({ code: "FORBIDDEN" });
+  });
 });

@@ -134,6 +134,11 @@
 - [x] Test private tracking with valid and invalid reference-secret pairs, asserting only non-sensitive status fields are returned.
 - [x] Test submission behavior for signature and size rejection, metadata-only attachment persistence, and content-free owner-notification wiring.
 - [x] Repair and verify the public private-tracking route so submitted reference details can be checked without login.
-- [ ] Implement Mufti drafting, review, approval, and controlled publication workflows.
+- [x] Implement Mufti drafting, review, approval, and controlled publication workflows.
+- [x] Add scholar-only queues and claim assignment for submitted confidential questions.
+- [x] Add draft Fatwa creation and status transitions with auditable editor attribution.
+- [x] Add reviewer approval or return-for-revision actions protected by role capability checks.
+- [x] Add controlled publication that creates or updates a public Fatwa record only after approval.
+- [x] Add procedure-level tests for role authorization and permitted workflow transitions.
 - [ ] Implement role-aware administration, scholarly profiles, taxonomy, and site policy controls.
 - [ ] Test privacy, accessibility, performance, and end-to-end workflows before publication.
