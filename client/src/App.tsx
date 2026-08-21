@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Fatawa from "./pages/Fatawa";
 import FatwaDetail from "./pages/FatwaDetail";
 import AskFatwa from "./pages/AskFatwa";
+import Methodology from "./pages/Methodology";
 
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/fatawa"} component={Fatawa} />
       <Route path={"/fatawa/:slug"} component={FatwaDetail} />
       <Route path={"/ask-fatwa"} component={AskFatwa} />
+      <Route path={"/methodology"} component={Methodology} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

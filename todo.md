@@ -97,3 +97,14 @@
 
 - [x] Reproduce the reported missing-record issue on the deployed Fatwa library and identify the responsible route, data, or rendering path.
 - [x] Repair the archive visibility failure, add regression coverage, and verify public records and PDF actions at desktop and mobile sizes.
+
+## Technical Audit and Reliability Checklist
+
+- [x] Establish a baseline with project tests, type checking, production build, route checks, and runtime-log review.
+- [x] Inspect public pages, navigation, archive interactions, form states, responsive behavior, and source code for verified defects.
+- [x] Restore the missing public methodology route and provide the institutional trust content previously required by the platform scope.
+- [x] Restore accessible official-email contact actions across public contact surfaces.
+- [x] Correct the question form so it does not imply that an unpersisted submission has been received.
+- [x] Apply targeted fixes for confirmed bugs, accessibility issues, broken interactions, or code-quality problems without changing the established design.
+- [x] Re-run the automated suite and responsive route checks and document the findings.
+- [x] Publish the audited technical-repair set in a new checkpoint after the verified methodology, email-action, and intake-flow fixes.
