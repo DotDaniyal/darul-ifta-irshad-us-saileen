@@ -59,3 +59,9 @@ The automated official-email contract now checks both language variants directly
 | Methodology | Shared contact bar and the substantive trust-principles email card | Rendered route test confirms the same approved `mailto:` target plus both Urdu and English labels. | Desktop and mobile captures confirm the card stays inside the trust-content sequence and remains fully readable. |
 
 The route-rendering coverage now exercises **Home**, **Ask Fatwa**, and **Methodology** in both language states with isolated public-query mocks. It asserts at least five approved direct mail links per route (shared header, footer icon, footer contact, shared callout, and contextual card), alongside language-specific accessible labels. The final suite passes **14 test files / 46 tests**.
+
+## Professional visual refinement accessibility audit
+
+On 21 August 2026, a live Chromium keyboard-only audit advanced focus through the homepage navigation, Fatwa archive search field, confidential-intake anonymity control, and Methodology guidance action. Each target matched `:focus-visible` and retained a visible **3 px solid outline** after the interface transition settled. The shared public shell uses a white outline with a gold halo on navy institutional surfaces; manuscript and form surfaces use the royal-blue outline with a gold halo.
+
+An explicit WCAG AA contrast audit confirmed the focus-outline pairings: royal blue `#075A9B` against white is **7.13:1**, royal blue against intake parchment `#FFFCF3` is **6.95:1**, white against royal navigation `#06152E` is **18.19:1**, and white against the navy page header `#143A5E` is **11.69:1**. All four exceed the **4.5:1** AA minimum used for this validation.

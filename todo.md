@@ -174,3 +174,13 @@
 - [x] Make header and footer email-link labels language-aware and cover shared public email-link rendering in Urdu and English.
 - [x] Document route-by-route desktop and mobile Urdu/English evidence for homepage, Ask Fatwa, and Methodology email surfaces.
 - [x] Add rendered route-level bilingual email-link tests for homepage, Ask Fatwa, and Methodology with isolated query mocks.
+- [x] Audit public desktop and mobile layouts for the highest-impact professionalism and aesthetic refinements.
+- [x] Refine shared navigation, contact presentation, typography rhythm, and surface hierarchy for a more institutional finish.
+- [x] Upgrade homepage, archive, intake, and methodology page compositions with calmer spacing and stronger editorial structure.
+- [x] Verify refined desktop/mobile visuals, accessible contrast and focus states, automated tests, and production build.
+- [x] Apply an explicit institutional refinement to shared navigation and contact surfaces in the SiteShell.
+- [x] Apply a documented editorial composition refinement to the Ask Fatwa intake route.
+- [x] Verify keyboard focus visibility and contrast for refined public navigation, archive, intake, and trust surfaces.
+- [x] Add a visual-accessibility contract test for focus-visible treatment, active navigation semantics, and the intake editorial guidance structure.
+- [x] Perform live keyboard-only focus verification on the homepage, archive, intake, and methodology routes.
+- [x] Run and document an explicit contrast and focus audit for refined public surfaces.

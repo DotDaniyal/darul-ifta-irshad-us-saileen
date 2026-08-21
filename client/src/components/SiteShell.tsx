@@ -104,20 +104,20 @@ export default function SiteShell({ children }: { children: ReactNode }) {
 
   return (
     <div className={`min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
-      <div className="bismillah-bar px-4 py-2 sm:px-8">
+      <div className="bismillah-bar border-b border-[#D1AC5B]/20 px-4 py-2 sm:px-8">
         <div className="mx-auto grid max-w-[1360px] grid-cols-[1fr_auto_1fr] items-center gap-4 font-sans text-[10px] tracking-wide sm:text-xs">
-          <div className="flex min-w-0 items-center gap-3 text-white/72"><a href="tel:+923332617671" className="flex shrink-0 items-center gap-2 transition hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a><a href={emailCopy.mailtoHref} aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="flex min-w-0 items-center gap-2 transition hover:text-[#E9D4A2]"><Mail className="h-3.5 w-3.5 shrink-0" /><span className="hidden truncate lg:inline">{OFFICIAL_ENQUIRY_EMAIL}</span></a></div>
+          <div className="flex min-w-0 items-center gap-1 text-white/72"><a href="tel:+923332617671" className="flex shrink-0 items-center gap-2 rounded-sm px-2 py-1.5 transition hover:bg-white/5 hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a><a href={emailCopy.mailtoHref} aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="flex min-w-0 items-center gap-2 rounded-sm px-2 py-1.5 transition hover:bg-white/5 hover:text-[#E9D4A2]"><Mail className="h-3.5 w-3.5 shrink-0" /><span className="hidden truncate lg:inline">{OFFICIAL_ENQUIRY_EMAIL}</span></a></div>
           <span className="bismillah-script text-center">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</span>
           <a href="https://wa.me/923332617671" className="flex items-center justify-end gap-2 text-white/72 transition hover:text-[#E9D4A2]" target="_blank" rel="noreferrer"><MessageCircle className="h-3.5 w-3.5" /><span className="hidden sm:inline">WhatsApp</span></a>
         </div>
       </div>
-      <header className="sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
+      <header className="sticky top-0 z-50 border-b border-[#D1AC5B]/30 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
         <div className="royal-masthead"><BrandMark centered /></div>
-        <div className="royal-nav">
+        <div className="royal-nav border-y border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,.08)]">
           <div className="relative mx-auto flex min-h-[57px] max-w-[1360px] items-center justify-center px-4 sm:px-8">
             <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
-              <Link href="/" className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
-              {links.map((item) => <a key={item.label} href={item.href} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
+              <Link href="/" aria-current={location === "/" ? "page" : undefined} className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
+              {links.map((item) => <a key={item.label} href={item.href} aria-current={location === item.href ? "page" : undefined} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
               <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="nav-link nav-link-bayan">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}<ExternalLink className="h-3 w-3" /></a>
             </nav>
             <div className="absolute right-4 flex items-center gap-2 sm:right-8 sm:gap-3">
@@ -137,7 +137,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon" aria-label="WhatsApp"><MessageCircle className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon" aria-label="Call +92 333 2617671"><Phone className="h-4 w-4" /></a><a href={emailCopy.mailtoHref} className="footer-icon" aria-label={`${emailCopy.cardTitle}: ${OFFICIAL_ENQUIRY_EMAIL}`}><Mail className="h-4 w-4" /></a><span className="footer-icon"><ExternalLink className="h-4 w-4" /></span></div></div>
             <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
             <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a><a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a></div></div>
-            <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><a href="tel:+923332617671" className="mt-4 block font-sans text-sm font-semibold text-[#E9D4A2]">+92 333 2617671</a><a href={emailCopy.mailtoHref} aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="mt-2 block break-all font-sans text-[11px] font-semibold tracking-tight text-[#E9D4A2] transition hover:text-white sm:text-xs">{OFFICIAL_ENQUIRY_EMAIL}</a><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
+            <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><div className="mt-4 space-y-1 border-s border-[#D1AC5B]/40 ps-4"><a href="tel:+923332617671" className="block font-sans text-sm font-semibold text-[#E9D4A2] transition hover:text-white">+92 333 2617671</a><a href={emailCopy.mailtoHref} aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="block break-all font-sans text-[11px] font-semibold tracking-tight text-[#E9D4A2] transition hover:text-white sm:text-xs">{OFFICIAL_ENQUIRY_EMAIL}</a></div><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
           </div>
           <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row"><span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span><span>{t.rights}</span></div>
         </div>
