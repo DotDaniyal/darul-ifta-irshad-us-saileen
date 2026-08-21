@@ -203,4 +203,4 @@
 - [x] Verify mail-action behavior and fallback access on desktop and mobile, update regression coverage, and publish the repair.
 - [x] Run an interaction-level mobile audit confirming native mailto behavior and the copy-address fallback on every public email surface.
 - [x] Document the verified official email-link repair, including the mailto-only root cause and fallback behavior.
-- [ ] Save and publish the verified official email-link repair in a new checkpoint.
+- [x] Save and publish the verified official email-link repair in a new checkpoint.
