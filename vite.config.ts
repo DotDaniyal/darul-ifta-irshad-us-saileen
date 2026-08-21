@@ -205,7 +205,7 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-function vitePluginScholarApi(): Plugin {
+export function vitePluginScholarApi(): Plugin {
   return {
     name: "scholar-api",
     configureServer(server: ViteDevServer) {

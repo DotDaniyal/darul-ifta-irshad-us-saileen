@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Check, ChevronLeft, Eye, FilePlus2, LockKeyhole, Pencil, Plus, Save, Trash2, X } from "lucide-react";
+import { Check, ChevronLeft, Eye, LockKeyhole, Pencil, Plus, Save, Trash2, X } from "lucide-react";
 import { Link } from "wouter";
 import SiteShell, { useLanguage } from "@/components/SiteShell";
 import { scholarAdminApi } from "@/data/scholarAdminApi";

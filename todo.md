@@ -170,3 +170,35 @@
 - [x] Verify desktop and mobile homepage presentation, archive-search handoff, automated tests, TypeScript, production build, and deployment readiness.
 - [x] Save and publish a checkpoint containing the verified homepage search refinement.
 - [x] Save the new release checkpoint for the preserved Fatwa panel and archive-search refinement after final verified state confirmation.
+
+## Full Technical Audit, Repair, and Optimization Checklist
+
+- [x] Establish a baseline inventory of project structure, dependencies, routes, APIs, assets, styling, and available validation commands.
+- [x] Inventory active client routes and navigation entry points from the route registry and shared site shell.
+- [x] Inventory active public assets and styling sources, including logo storage references, public files, and shared style rules.
+- [x] Audit runtime and browser diagnostics, API/data flow, imports, routes, navigation, forms, and interactive controls for confirmed defects.
+- [x] Correct the confirmed development-preview scholar API response-object mismatch that can make `res.status` unavailable during error handling.
+- [x] Audit desktop, tablet, and mobile layouts for overlap, overflow, hidden content, broken navigation, and accessibility concerns.
+- [x] Audit performance, duplicated or dead code, unused dependencies, and obvious security or reliability risks without deleting uncertain code.
+- [x] Resolve confirmed production dependency advisories affecting qs, path-to-regexp, and body-parser through safe compatible updates, then re-audit.
+- [x] Correct the package manifest trailing-comma syntax defect that blocks dependency installation and the audited security remediation.
+- [x] Add the required root workspace package declaration so pnpm can apply the supported override and patch configuration.
+- [x] Apply targeted repairs only for confirmed bugs, broken behavior, unsafe handling, or proven-unused code and dependencies.
+- [x] Remove the proven-unreachable legacy static scholar records after the live database migration while retaining their required shared UI type contract.
+- [x] Recreate the shared scholar type-contract module without restoring any static records or registry helpers.
+- [x] Verify dependent scholar imports and run TypeScript plus automated tests after the static-record cleanup.
+- [x] Verify every public and protected route, key interactions, responsive layouts, diagnostics, tests, type checking, and production build.
+- [x] Write a concise audit record detailing verified findings, fixes, retained safeguards, and validation outcomes.
+- [ ] Save and publish a checkpoint containing the verified technical-audit release.
+- [x] Individually verify the remaining dynamic, protected, alias, and not-found routes: `/fatawa/:slug`, `/scholars/:slug`, `/scholars/admin`, `/admin/scholars`, and `/404`.
+- [x] Verify the remaining dynamic, protected, alias, and not-found routes at tablet and mobile breakpoints before release.
+- [x] Recheck current diagnostics and conclusively distinguish the historical scholar response-object trace from any active preview failure.
+- [x] Re-run the full release validation command set and retain its success evidence: tests, strict TypeScript checks, production build, production audit, and frozen-lockfile installation.
+- [x] Re-run the protected Scholar Admin lifecycle coverage in the final pass and retain evidence of the access-control and CRUD interaction checks.
+- [x] Exercise the scholar API failure path through the actual Vite development-preview middleware and confirm a controlled `503` JSON response with no fresh response-object error trace.
+- [x] Re-run and document the final route-validation pass after the development-preview failure-path verification.
+- [x] Recheck all audited public, dynamic, protected, alias, and not-found routes after the Vite-preview regression change at their required desktop, tablet, and mobile breakpoints.
+- [x] Diagnose and repair the blank public-page render observed immediately after the Vite-preview plugin export change; current screenshots remain blank despite successful page-network activity, so repeat the post-preview route validation after repair.
+- [x] Record a concise final interaction checklist for homepage search handoff, live scholar directory/profile loading, protected Scholar Admin access, Ask Fatwa email-draft handoff, and public methodology/contact actions.
+- [x] Diagnose the homepage search handoff after browser entry and button activation did not visibly navigate to the archive in the final interaction pass.
+- [x] Clarify in the audit record that the blank preview was a transient shared Vite optimizer-cache side effect from the first isolated middleware test, with a temporary-cache mitigation and successful post-test render evidence.

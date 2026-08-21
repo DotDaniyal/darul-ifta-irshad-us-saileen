@@ -3,7 +3,7 @@
  * premium calligraphy, ceremonial Bismillah placement, and polished scholarly service interactions.
  */
 import { useEffect, useState } from "react";
-import { ArrowUpRight, BookOpenCheck, CalendarDays, Check, Copy, GraduationCap, HandHeart, Mail, MessageCircle, Phone, Printer, Radio, ScrollText, Search, Send, UsersRound } from "lucide-react";
+import { ArrowUpRight, BookOpenCheck, CalendarDays, Copy, GraduationCap, Mail, MessageCircle, Phone, Radio, ScrollText, Search, Send, UsersRound } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 import SiteShell, { SectionHeading, useLanguage } from "@/components/SiteShell";

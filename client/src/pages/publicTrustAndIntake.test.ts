@@ -42,8 +42,9 @@ describe("public trust and intake safeguards", () => {
     const home = read("./Home.tsx");
     const directory = read("./Scholars.tsx");
     const profile = read("./ScholarProfile.tsx");
-    const registry = read("../data/scholars.ts");
+    const types = read("../data/scholars.ts");
     const liveRegistry = read("../data/scholarsApi.ts");
+    const scholarServer = read("../../../server/scholars.ts");
     const siteShell = read("../components/SiteShell.tsx");
 
     expect(app).toContain('path={"/scholars"}');
@@ -58,12 +59,10 @@ describe("public trust and intake safeguards", () => {
     expect(liveRegistry).toContain('request<ApiScholar[]>("/api/scholars")');
     expect(liveRegistry).toContain("/api/scholars/${encodeURIComponent(slug)}");
     expect(siteShell).toContain('{ href: "/scholars", label: t.scholars }');
-    expect(registry).toContain('slug: "mufti-abdul-mannan"');
-    expect(registry).toContain("isPublished: true");
-    expect(registry).toContain("PUBLISHED_SCHOLARS = SCHOLARS.filter");
-    expect(registry).toContain("حضرت مولانا مفتی عبد المنان صاحب جامعہ دارالعلوم کراچی");
-    expect(registry).toContain("دارالافتاء کی دینی و شرعی خدمات آپ کی زیرِ نگرانی");
-    expect(registry).toContain("under his supervision and scholarly guidance");
-    expect(registry).toContain("No portrait fields are intentionally included");
+    expect(types).toContain("Scholar records themselves are database-backed");
+    expect(types).not.toContain("export const SCHOLARS");
+    expect(scholarServer).toContain("listPublishedScholars");
+    expect(scholarServer).toContain("where(eq(scholars.isPublished, true))");
+    expect(scholarServer).toContain("getPublishedScholar");
   });
 });
