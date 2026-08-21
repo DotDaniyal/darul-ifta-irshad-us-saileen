@@ -74,4 +74,12 @@ The subsequent contextual-card simplification now renders only the language-awar
 
 On 21 August 2026, full-page captures of Home, Ask Fatwa, and Methodology at 1280 px and 375 px confirmed that the email-only card is legible, correctly placed, and free of horizontal overflow. The Ask Fatwa card remains in the guidance sequence before the form on mobile, and the Methodology card remains after the trust disclaimer. The updated rendered-email tests and production build passed with **15 test files / 48 tests**.
 
+For the subsequent visual-editor request, source review confirmed that the email-only card uses a blue-grey fill with a gold start rule, while the requested alignment is to the existing warm ivory, gold-ruled institutional contact-card treatment.
+
+The homepage reference surfaces use an ivory `#FFFCF4` panel, a gold start rule, restrained navy text, and a light shadow. The shared contextual card will adopt this warm manuscript treatment while retaining the concise email-only content and accessible mail action.
+
+The homepage places the shared email card alongside WhatsApp, telephone, and social channels through the common `contact-card` presentation. The email component should therefore use that shared class as its baseline on every route rather than carrying a distinct blue-grey utility treatment.
+
+Verification on 21 August 2026 confirmed the shared `contact-card` baseline is active for the email-only action across Home, Ask Fatwa, and Methodology. Full-page captures at 1280 px and 375 px showed the same warm ivory, gold-ruled, manuscript-card hierarchy as the other contact channels, with no visible overflow. The automated suite passed **15 files / 48 tests**, including the rendered contract that asserts the shared `contact-card` class, and the production build completed successfully.
+
 Full-page desktop (1280 px) and mobile (375 px) captures were reviewed for both `/ask-fatwa` and `/methodology`. On Ask Fatwa, the contextual card remains legible in the guidance sequence and stacks before the intake form on mobile without covering a control. On Methodology, the card remains legible after the trust disclaimer and before the footer at both breakpoints. The homepage Fatwa-library text is also visibly separated from the navy archive panel by its new parchment background panel and gold start rule. The updated rendered email contract, full automated suite (**15 test files / 48 tests**), and production build all passed.

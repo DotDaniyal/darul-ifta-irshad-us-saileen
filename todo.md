@@ -192,3 +192,6 @@
 - [x] Simplify the contextual official-email card so it presents only the email prompt and official address.
 - [x] Verify the email-only card on the affected public routes, update automated coverage, and publish the change.
 - [x] Save and publish the verified email-only contextual-card update in a new checkpoint.
+- [x] Align the simplified contextual official-email card visually with the other institutional contact cards.
+- [x] Verify the aligned card on desktop and mobile, update relevant coverage, and publish the revision.
+- [ ] Save and publish the verified shared contextual email-card alignment in a new checkpoint.
