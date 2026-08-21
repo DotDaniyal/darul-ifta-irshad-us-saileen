@@ -163,7 +163,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .motion-section { opacity: 0; transform: translateY(22px); }
+  /* Visibility is progressive enhancement: a section is only temporarily hidden once the observer is ready, and SiteShell removes this state through an immediate viewport check plus a bounded failsafe. */
+  .motion-section.is-reveal-pending { opacity: 0; transform: translateY(22px); }
   .motion-section.is-visible { animation: section-reveal .72s cubic-bezier(.23, 1, .32, 1) var(--motion-delay, 0ms) both; }
   #home.is-visible .hero-kicker { animation: rise-in .55s cubic-bezier(.23, 1, .32, 1) .06s both; }
   #home.is-visible .hero-bismillah { animation: calligraphy-arrive .85s cubic-bezier(.23, 1, .32, 1) .13s both; }

@@ -28,9 +28,10 @@ export default function AskFatwa() {
       "",
       "Please note: attachments cannot be included through this form. Please reply to this email or coordinate by WhatsApp if a file is needed.",
     ].join("\n");
-    window.location.href = `mailto:${officialEmail}?subject=${encodeURIComponent(`Fatwa request: ${draft.title}`)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:${officialEmail}?subject=${encodeURIComponent(`Fatwa request: ${draft.title}`)}&body=${encodeURIComponent(body)}`;
     setDraftOpened(true);
     toast.success(urdu ? "ای میل کا مسودہ تیار کر دیا گیا ہے" : "An email draft has been opened");
+    window.setTimeout(() => { window.location.href = mailtoUrl; }, 0);
   };
 
   const languageOptions = urdu ? ["اردو", "English"] : ["English", "Urdu"];

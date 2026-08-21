@@ -117,3 +117,16 @@
 - [x] Confirm that cleanup introduced no broken imports, references, or validation failures while preserving design, content, routes, and functionality.
 - [x] Verify the browser console, core desktop/mobile routes, complete test suite, type checking, and production build; document the cleanup.
 - [x] Save a new checkpoint that includes the conservative cleanup changes and validation artifacts.
+
+## Project-wide Content Visibility Repair Checklist
+
+- [x] Reproduce and catalogue any routes or components whose legitimate content is present but blank, hidden, or visually obscured.
+- [x] Identify the root causes across CSS, layout, animation, routing, and rendering state without deleting valid content or redesigning the site.
+- [x] Apply focused visibility repairs, preserving responsive design, branding, existing content, and interaction behavior.
+- [x] Verify desktop, tablet, and mobile rendering; test clickable elements, browser diagnostics, type checking, tests, and production build; then publish the repair.
+- [x] Exercise key public navigation, Fatwa PDF, contact, and email-draft actions after the visibility repair and record the outcomes.
+- [x] Explicitly click and verify the public WhatsApp, telephone, and official email contact actions after the visibility repair.
+- [x] Submit the Ask Fatwa form with sample data to confirm the email-draft action opens the correct recipient with populated subject and body.
+- [x] Ensure the Ask Fatwa email-draft confirmation renders before initiating its mailto navigation, then re-verify the populated handoff.
+- [x] Save and publish a checkpoint containing the verified content-visibility repair.
+- [x] Save a release checkpoint covering the verified content-visibility repair, Ask Fatwa confirmation-order fix, and final validation results.

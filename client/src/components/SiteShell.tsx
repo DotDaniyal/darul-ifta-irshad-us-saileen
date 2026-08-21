@@ -88,17 +88,49 @@ export default function SiteShell({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!("IntersectionObserver" in window)) return;
+
     const sections = Array.from(document.querySelectorAll<HTMLElement>("main > section"));
-    sections.forEach((section, index) => {
-      section.classList.add("motion-section");
-      section.style.setProperty("--motion-delay", `${Math.min(index * 45, 180)}ms`);
-    });
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("is-visible"); }),
-      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
-    );
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    if (!sections.length) return;
+
+    const reveal = (section: HTMLElement) => {
+      section.classList.remove("is-reveal-pending");
+      section.classList.add("is-visible");
+    };
+
+    try {
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target as HTMLElement);
+            observer.unobserve(entry.target);
+          }
+        }),
+        { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
+      );
+
+      sections.forEach((section, index) => {
+        section.classList.add("motion-section", "is-reveal-pending");
+        section.style.setProperty("--motion-delay", `${Math.min(index * 45, 180)}ms`);
+      });
+
+      const activationFrame = window.requestAnimationFrame(() => {
+        sections.forEach((section) => {
+          const { bottom, top } = section.getBoundingClientRect();
+          if (top < window.innerHeight && bottom > 0) reveal(section);
+          observer.observe(section);
+        });
+      });
+      const visibilityFailsafe = window.setTimeout(() => sections.forEach(reveal), 1000);
+
+      return () => {
+        window.cancelAnimationFrame(activationFrame);
+        window.clearTimeout(visibilityFailsafe);
+        observer.disconnect();
+      };
+    } catch {
+      // Motion must never make reading content dependent on an optional browser API.
+    }
   }, [location]);
 
   return (

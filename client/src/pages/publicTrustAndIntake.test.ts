@@ -16,4 +16,11 @@ describe("public trust and intake safeguards", () => {
     expect(intake).toContain("Your request is received only after you send that email.");
     expect(intake).not.toContain("setSent(true)");
   });
+
+  it("records the email-draft confirmation before handing control to the mail client", () => {
+    const intake = read("./AskFatwa.tsx");
+    expect(intake).toContain("const mailtoUrl = `mailto:${officialEmail}");
+    expect(intake.indexOf("setDraftOpened(true)")).toBeLessThan(intake.indexOf("window.setTimeout(() => { window.location.href = mailtoUrl; }, 0)"));
+    expect(intake).toContain("toast.success");
+  });
 });
