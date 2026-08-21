@@ -92,3 +92,8 @@
 - [x] Inventory the newly supplied Fatwa PDFs, distinguish duplicate and replacement files, and extract publication metadata.
 - [x] Audit the supplied PDFs for phone numbers, retaining only 03332617671 / +92 333 2617671 in accordance with the established archive policy.
 - [x] Upload eligible reviewed PDFs, add governed archive records, and verify search and direct PDF access before publication.
+
+## Fatwa Library Visibility Repair Checklist
+
+- [x] Reproduce the reported missing-record issue on the deployed Fatwa library and identify the responsible route, data, or rendering path.
+- [x] Repair the archive visibility failure, add regression coverage, and verify public records and PDF actions at desktop and mobile sizes.
