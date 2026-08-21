@@ -108,3 +108,12 @@
 - [x] Apply targeted fixes for confirmed bugs, accessibility issues, broken interactions, or code-quality problems without changing the established design.
 - [x] Re-run the automated suite and responsive route checks and document the findings.
 - [x] Publish the audited technical-repair set in a new checkpoint after the verified methodology, email-action, and intake-flow fixes.
+
+## Conservative Code Cleanup Checklist
+
+- [x] Establish a build, test, type-check, and public-route baseline before any cleanup.
+- [x] Inventory imports, files, components, CSS, dependencies, diagnostics, and generated artifacts to identify only proven-unused or redundant candidates.
+- [x] Remove or consolidate only verified unused imports, dead code, duplicate logic, redundant styles, debug artifacts, and unnecessary dependencies.
+- [x] Confirm that cleanup introduced no broken imports, references, or validation failures while preserving design, content, routes, and functionality.
+- [x] Verify the browser console, core desktop/mobile routes, complete test suite, type checking, and production build; document the cleanup.
+- [ ] Save a new checkpoint that includes the conservative cleanup changes and validation artifacts.
