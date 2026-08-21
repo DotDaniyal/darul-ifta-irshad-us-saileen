@@ -97,3 +97,7 @@ The original public email controls used a plain `mailto:` action. Although struc
 The public typography system now gives each script a deliberate role: **Aref Ruqaa Ink** is reserved for devotional Arabic, **Noto Nastaliq Urdu** carries Urdu display headings, **Noto Naskh Arabic** maintains readable Urdu and Arabic body copy, and **Cormorant Garamond** gives English editorial display text a more ceremonial manuscript character. English body, labels, and form controls retain Manrope for clarity. The system loads the new Latin and Arabic display families from the document head and responds to the active `lang`/`dir` setting.
 
 Full-page reviews on Home, Fatawa, Ask Fatwa, and Methodology at 1280 px and 375 px confirmed the new calligraphic hierarchy remains balanced, legible, and free of visible overflow. The added typography contract passed, bringing the suite to **16 files / 50 tests**; the production build also completed successfully.
+
+### Homepage hero copy refinement — 21 August 2026
+
+The supporting sentence formerly shown beneath the bilingual Darul Ifta institution name has been removed as requested. The hero now moves directly from the institution identity to the three primary actions, with the action group adjusted to an 8-unit top margin. Desktop and mobile viewport checks confirm the institution name, action buttons, and Islamic date panel retain a balanced composition without overflow. The dedicated hero-content contract passed; the full suite passed **17 files / 51 tests** and the production build succeeded.

@@ -208,3 +208,6 @@
 - [x] Apply a cohesive premium Islamic calligraphic hierarchy for devotional Arabic, Urdu display text, and English editorial text while retaining readable body copy.
 - [x] Verify multilingual typography at desktop and mobile widths, add regression coverage, and publish the refinement.
 - [x] Save and publish the verified multilingual calligraphic typography refinement in a new checkpoint.
+- [x] Identify and remove the unwanted hero text displayed beneath the Darul Ifta institution name on the homepage.
+- [x] Verify the revised hero composition on desktop and mobile, update relevant coverage, and publish the refinement.
+- [ ] Save and publish the verified homepage hero-text removal in a new checkpoint.
