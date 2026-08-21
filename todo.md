@@ -207,4 +207,4 @@
 - [x] Audit the current Arabic, Urdu, and English font roles across the public design system.
 - [x] Apply a cohesive premium Islamic calligraphic hierarchy for devotional Arabic, Urdu display text, and English editorial text while retaining readable body copy.
 - [x] Verify multilingual typography at desktop and mobile widths, add regression coverage, and publish the refinement.
-- [ ] Save and publish the verified multilingual calligraphic typography refinement in a new checkpoint.
+- [x] Save and publish the verified multilingual calligraphic typography refinement in a new checkpoint.
