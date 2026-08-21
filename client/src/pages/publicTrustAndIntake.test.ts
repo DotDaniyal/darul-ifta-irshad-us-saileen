@@ -23,4 +23,12 @@ describe("public trust and intake safeguards", () => {
     expect(intake.indexOf("setDraftOpened(true)")).toBeLessThan(intake.indexOf("window.setTimeout(() => { window.location.href = mailtoUrl; }, 0)"));
     expect(intake).toContain("toast.success");
   });
+
+  it("publishes the supplied scholarly supervision profile rather than a placeholder", () => {
+    const home = read("./Home.tsx");
+    expect(home).toContain("حضرت مولانا مفتی عبد المنان صاحب جامعہ دارالعلوم کراچی");
+    expect(home).toContain("دارالافتاء کی دینی و شرعی خدمات حضرت مولانا مفتی عبد المنان صاحب کی زیرِ نگرانی");
+    expect(home).toContain("under the supervision and scholarly guidance of Mufti Abdul Mannan Sahib");
+    expect(home).not.toContain("This profile space is intentionally ready for verified biography information when available.");
+  });
 });

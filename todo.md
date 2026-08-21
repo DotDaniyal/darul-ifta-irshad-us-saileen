@@ -130,3 +130,11 @@
 - [x] Ensure the Ask Fatwa email-draft confirmation renders before initiating its mailto navigation, then re-verify the populated handoff.
 - [x] Save and publish a checkpoint containing the verified content-visibility repair.
 - [x] Save a release checkpoint covering the verified content-visibility repair, Ask Fatwa confirmation-order fix, and final validation results.
+
+## Scholar Supervision Profile Checklist
+
+- [x] Review the current scholars section and retain its established bilingual layout and design language.
+- [x] Add the supplied Mufti Abdul Mannan Sahib supervision profile in Urdu and an appropriately faithful English presentation.
+- [x] Verify scholar-section copy, responsive visibility, regression tests, TypeScript, and production build.
+- [x] Publish the verified scholar-section update in a new checkpoint.
+- [x] Save the verified Mufti Abdul Mannan Sahib scholar-profile update in a new checkpoint after completed tests, responsive checks, and bilingual browser verification.
