@@ -20,7 +20,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0001"
     ],
-    "pdfUrl": "/manus-storage/fatwa-001_d7f70df3.pdf"
+    "pdfUrl": "/manus-storage/fatwa-001_40c34800.pdf"
   },
   {
     "slug": "a0002-2",
@@ -39,7 +39,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0002"
     ],
-    "pdfUrl": "/manus-storage/fatwa-002_d13a2eb3.pdf"
+    "pdfUrl": "/manus-storage/fatwa-002_c4b61ccb.pdf"
   },
   {
     "slug": "a0003-3",
@@ -58,7 +58,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0003"
     ],
-    "pdfUrl": "/manus-storage/fatwa-003_8c97d229.pdf"
+    "pdfUrl": "/manus-storage/fatwa-003_38badc7e.pdf"
   },
   {
     "slug": "a0004-4",
@@ -77,7 +77,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0004"
     ],
-    "pdfUrl": "/manus-storage/fatwa-004_09834e64.pdf"
+    "pdfUrl": "/manus-storage/fatwa-004_dfe897c0.pdf"
   },
   {
     "slug": "a0005-5",
@@ -96,7 +96,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0005"
     ],
-    "pdfUrl": "/manus-storage/fatwa-005_8a23d0e6.pdf"
+    "pdfUrl": "/manus-storage/fatwa-005_aad76d0b.pdf"
   },
   {
     "slug": "a0006-6",
@@ -172,7 +172,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0012"
     ],
-    "pdfUrl": "/manus-storage/fatwa-009_f7417b84.pdf"
+    "pdfUrl": "/manus-storage/fatwa-009_ea671e01.pdf"
   },
   {
     "slug": "a0013-10",
@@ -267,7 +267,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0028"
     ],
-    "pdfUrl": "/manus-storage/fatwa-014_4af53c98.pdf"
+    "pdfUrl": "/manus-storage/fatwa-014_288dd461.pdf"
   },
   {
     "slug": "a0031-15",
@@ -343,7 +343,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0042"
     ],
-    "pdfUrl": "/manus-storage/fatwa-018_485ed60c.pdf"
+    "pdfUrl": "/manus-storage/fatwa-018_8863306d.pdf"
   },
   {
     "slug": "a0044-19",
@@ -362,7 +362,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0044"
     ],
-    "pdfUrl": "/manus-storage/fatwa-019_7a89d4cc.pdf"
+    "pdfUrl": "/manus-storage/fatwa-019_16178539.pdf"
   },
   {
     "slug": "a0045-20",
@@ -400,7 +400,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0046"
     ],
-    "pdfUrl": "/manus-storage/fatwa-021_be03c9a0.pdf"
+    "pdfUrl": "/manus-storage/fatwa-021_cb34ff07.pdf"
   },
   {
     "slug": "a0047-22",
@@ -419,7 +419,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0047"
     ],
-    "pdfUrl": "/manus-storage/fatwa-022_fbc2e049.pdf"
+    "pdfUrl": "/manus-storage/fatwa-022_24d9dcac.pdf"
   },
   {
     "slug": "a0048-23",
@@ -438,7 +438,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0048"
     ],
-    "pdfUrl": "/manus-storage/fatwa-023_708daae4.pdf"
+    "pdfUrl": "/manus-storage/fatwa-023_884d87c4.pdf"
   },
   {
     "slug": "a0051-24",
@@ -514,7 +514,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0055"
     ],
-    "pdfUrl": "/manus-storage/fatwa-027_80275549.pdf"
+    "pdfUrl": "/manus-storage/fatwa-027_e820595a.pdf"
   },
   {
     "slug": "a0056-28",
@@ -533,7 +533,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0056"
     ],
-    "pdfUrl": "/manus-storage/fatwa-028_8b8b5c5a.pdf"
+    "pdfUrl": "/manus-storage/fatwa-028_2f4d1dc7.pdf"
   },
   {
     "slug": "a0057-29",
@@ -571,7 +571,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0058"
     ],
-    "pdfUrl": "/manus-storage/fatwa-030_5c5a6b48.pdf"
+    "pdfUrl": "/manus-storage/fatwa-030_5a15755e.pdf"
   },
   {
     "slug": "a0060-31",
@@ -685,7 +685,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0067"
     ],
-    "pdfUrl": "/manus-storage/fatwa-036_17c1fa9a.pdf"
+    "pdfUrl": "/manus-storage/fatwa-036_360f9da0.pdf"
   },
   {
     "slug": "a0068-37",
@@ -704,7 +704,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0068"
     ],
-    "pdfUrl": "/manus-storage/fatwa-037_93ad791b.pdf"
+    "pdfUrl": "/manus-storage/fatwa-037_b0e72f80.pdf"
   },
   {
     "slug": "a0069-38",
@@ -742,7 +742,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0075"
     ],
-    "pdfUrl": "/manus-storage/fatwa-039_ca881315.pdf"
+    "pdfUrl": "/manus-storage/fatwa-039_0e7c9510.pdf"
   },
   {
     "slug": "a0076-40",
@@ -989,7 +989,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0108"
     ],
-    "pdfUrl": "/manus-storage/fatwa-052_7dc779e9.pdf"
+    "pdfUrl": "/manus-storage/fatwa-052_e4f402f5.pdf"
   },
   {
     "slug": "a0113-53",
@@ -1103,7 +1103,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0158"
     ],
-    "pdfUrl": "/manus-storage/fatwa-058_2df314ac.pdf"
+    "pdfUrl": "/manus-storage/fatwa-058_05fbc8af.pdf"
   },
   {
     "slug": "a0159-59",

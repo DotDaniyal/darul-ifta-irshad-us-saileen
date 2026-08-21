@@ -1,2 +1,0 @@
-ALTER TABLE `questionSubmissions` ADD `trackingSecretHash` varchar(128) NOT NULL;--> statement-breakpoint
-CREATE INDEX `question_submissions_tracking_idx` ON `questionSubmissions` (`referenceCode`,`trackingSecretHash`);

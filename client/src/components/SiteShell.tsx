@@ -3,23 +3,22 @@
  * ceremonial calligraphy, and clear bilingual navigation for a premium Darul Ifta experience.
  */
 import { useEffect, useState, type ReactNode } from "react";
-import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, BookOpenCheck, ExternalLink } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, ChevronRight, HeartHandshake, BookOpenCheck, ExternalLink } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { OfficialEmailLink } from "./OfficialEmailCallout";
-import { getOfficialEmailCopy, OFFICIAL_ENQUIRY_EMAIL } from "./officialEmailCopy";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
 const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
+
 type Language = "ur" | "en";
 
 const copy = {
   en: {
-    home: "Home", about: "Introduction", services: "Services", fatawa: "Fatawa", methodology: "Methodology", scholars: "Scholars", contact: "Contact", donate: "Donate",
+    home: "Home", about: "Introduction", services: "Services", fatawa: "Fatawa", scholars: "Scholars", contact: "Contact", donate: "Donate",
     lang: "اردو", quick: "Quick links", aboutText: "A trusted space for considered Islamic guidance grounded in the Qur’an and Sunnah.",
     rights: "All rights reserved.", location: "Al Mujeeb Garden A31, Karachi, Pakistan", contactUs: "Contact", serviceLinks: "Our services",
   },
   ur: {
-    home: "سرورق", about: "تعارف", services: "خدمات", fatawa: "فتاویٰ", methodology: "منہج و رازداری", scholars: "علماء", contact: "رابطہ", donate: "عطیات",
+    home: "سرورق", about: "تعارف", services: "خدمات", fatawa: "فتاویٰ", scholars: "علماء", contact: "رابطہ", donate: "عطیات",
     lang: "English", quick: "اہم روابط", aboutText: "قرآن و سنت کی روشنی میں معتبر اور ذمہ دار شرعی رہنمائی کا مرکز۔", 
     rights: "تمام حقوق محفوظ ہیں۔", location: "المجیب گارڈن اے 31، کراچی، پاکستان", contactUs: "رابطہ", serviceLinks: "ہماری خدمات",
   },
@@ -52,7 +51,7 @@ export function useLanguage() {
 export function BrandMark({ compact = false, centered = false }: { compact?: boolean; centered?: boolean }) {
   return (
     <Link href="/" className={`group flex items-center gap-3 ${centered ? "brand-mark-center flex-col gap-0.5" : "text-left"}`} aria-label="Darul Ifta Irshad-us-Saileen home">
-      <span className={`${centered ? "h-[84px] w-[84px] sm:h-[102px] sm:w-[102px]" : compact ? "h-11 w-11" : "h-14 w-14"} flex shrink-0 items-center justify-center overflow-hidden bg-transparent transition duration-300 group-hover:-translate-y-0.5`}>
+      <span className={`${centered ? "h-[62px] w-[62px] sm:h-[72px] sm:w-[72px]" : compact ? "h-11 w-11" : "h-14 w-14"} flex shrink-0 items-center justify-center overflow-hidden bg-transparent transition duration-300 group-hover:-translate-y-0.5`}>
         <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" className="h-full w-full object-contain transition duration-300 group-hover:scale-105" />
       </span>
       <span className={`min-w-0 leading-none ${centered ? "text-center" : "text-white"}`}>
@@ -80,11 +79,10 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [location] = useLocation();
   const t = copy[language];
-  const emailCopy = getOfficialEmailCopy(language);
   const homePrefix = location === "/" ? "" : "/";
   const links = [
     { href: `${homePrefix}#about`, label: t.about }, { href: `${homePrefix}#services`, label: t.services },
-    { href: "/fatawa", label: t.fatawa }, { href: "/methodology", label: t.methodology }, { href: `${homePrefix}#scholars`, label: t.scholars },
+    { href: "/fatawa", label: t.fatawa }, { href: `${homePrefix}#scholars`, label: t.scholars },
     { href: `${homePrefix}#contact`, label: t.contact },
   ];
 
@@ -105,20 +103,20 @@ export default function SiteShell({ children }: { children: ReactNode }) {
 
   return (
     <div className={`min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
-      <div className="bismillah-bar border-b border-[#D1AC5B]/20 px-4 py-2 sm:px-8">
+      <div className="bismillah-bar px-4 py-2 sm:px-8">
         <div className="mx-auto grid max-w-[1360px] grid-cols-[1fr_auto_1fr] items-center gap-4 font-sans text-[10px] tracking-wide sm:text-xs">
-          <div className="flex min-w-0 items-center gap-1 text-white/72"><a href="tel:+923332617671" className="flex shrink-0 items-center gap-2 rounded-sm px-2 py-1.5 transition hover:bg-white/5 hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a><OfficialEmailLink aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="flex min-w-0 items-center gap-2 rounded-sm px-2 py-1.5 transition hover:bg-white/5 hover:text-[#E9D4A2]"><Mail className="h-3.5 w-3.5 shrink-0" /><span className="hidden truncate lg:inline">{OFFICIAL_ENQUIRY_EMAIL}</span></OfficialEmailLink></div>
+          <a href="tel:+923332617671" className="flex items-center gap-2 text-white/72 transition hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a>
           <span className="bismillah-script text-center">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</span>
           <a href="https://wa.me/923332617671" className="flex items-center justify-end gap-2 text-white/72 transition hover:text-[#E9D4A2]" target="_blank" rel="noreferrer"><MessageCircle className="h-3.5 w-3.5" /><span className="hidden sm:inline">WhatsApp</span></a>
         </div>
       </div>
-      <header className="sticky top-0 z-50 border-b border-[#D1AC5B]/30 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
+      <header className="sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
         <div className="royal-masthead"><BrandMark centered /></div>
-        <div className="royal-nav border-y border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,.08)]">
+        <div className="royal-nav">
           <div className="relative mx-auto flex min-h-[57px] max-w-[1360px] items-center justify-center px-4 sm:px-8">
             <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
-              <Link href="/" aria-current={location === "/" ? "page" : undefined} className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
-              {links.map((item) => <a key={item.label} href={item.href} aria-current={location === item.href ? "page" : undefined} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
+              <Link href="/" className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
+              {links.map((item) => <a key={item.label} href={item.href} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
               <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="nav-link nav-link-bayan">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}<ExternalLink className="h-3 w-3" /></a>
             </nav>
             <div className="absolute right-4 flex items-center gap-2 sm:right-8 sm:gap-3">
@@ -134,11 +132,11 @@ export default function SiteShell({ children }: { children: ReactNode }) {
       <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
         <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
-          <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.3fr_0.7fr_0.8fr_1.35fr]">
-            <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon" aria-label="WhatsApp"><MessageCircle className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon" aria-label="Call +92 333 2617671"><Phone className="h-4 w-4" /></a><OfficialEmailLink className="footer-icon" aria-label={`${emailCopy.cardTitle}: ${OFFICIAL_ENQUIRY_EMAIL}`}><Mail className="h-4 w-4" /></OfficialEmailLink><span className="footer-icon"><ExternalLink className="h-4 w-4" /></span></div></div>
+          <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr]">
+            <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon"><MessageCircle className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon"><Phone className="h-4 w-4" /></a><span className="footer-icon"><ExternalLink className="h-4 w-4" /></span></div></div>
             <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
             <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a><a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a></div></div>
-            <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><div className="mt-4 space-y-1 border-s border-[#D1AC5B]/40 ps-4"><a href="tel:+923332617671" className="block font-sans text-sm font-semibold text-[#E9D4A2] transition hover:text-white">+92 333 2617671</a><OfficialEmailLink aria-label={`${emailCopy.sharedLabel}: ${OFFICIAL_ENQUIRY_EMAIL}`} className="block break-all font-sans text-[11px] font-semibold tracking-tight text-[#E9D4A2] transition hover:text-white sm:text-xs">{OFFICIAL_ENQUIRY_EMAIL}</OfficialEmailLink></div><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
+            <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><a href="tel:+923332617671" className="mt-4 block font-sans text-sm font-semibold text-[#E9D4A2]">+92 333 2617671</a><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
           </div>
           <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row"><span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span><span>{t.rights}</span></div>
         </div>

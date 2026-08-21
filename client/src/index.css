@@ -5,20 +5,18 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "Cormorant Garamond", "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; --font-calligraphy: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; --font-arabic-display: "Marhey", "Aref Ruqaa Ink", "Noto Naskh Arabic", serif;
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; --font-calligraphy: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; --font-arabic-display: "Reem Kufi", "Amiri", "Noto Naskh Arabic", serif;
 }
 
 :root { --background: #FFFFFF; --foreground: #0A1634; --card: #FFFFFF; --card-foreground: #0A1634; --popover: #FFFFFF; --popover-foreground: #0A1634; --primary: #1C4399; --primary-foreground: #FFFFFF; --secondary: #EEF3FF; --secondary-foreground: #0A1634; --muted: #F5F7FC; --muted-foreground: #65718A; --accent: #F2E7C9; --accent-foreground: #0A1634; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #D8DFED; --input: #BBC8DC; --ring: #1C4399; }
 
-@layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; } html[dir="rtl"] body { font-family: "Noto Naskh Arabic", "Noto Nastaliq Urdu", serif; font-weight: 500; letter-spacing: 0; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #DDE6FF; color: #06152E; } }
+@layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #DDE6FF; color: #06152E; } }
 
 @layer components {
-  .font-display, .font-latin-display { font-family: "Cormorant Garamond", "DM Serif Display", Georgia, serif; font-weight: 600; }
-  .font-urdu, .font-urdu-display { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-weight: 500; letter-spacing: 0; }
-  .font-calligraphy { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; font-weight: 700; }
-  .font-arabic-display { font-family: "Marhey", "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; font-weight: 600; }
-  [dir="rtl"] :is(h1, h2, h3, h4, h5, h6).font-display, [dir="rtl"] .section-title { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-weight: 500; letter-spacing: 0; line-height: 1.62; }
-  [dir="rtl"] .section-description { font-family: "Noto Naskh Arabic", "Noto Nastaliq Urdu", serif; line-height: 2; letter-spacing: 0; }
+  .font-display { font-family: "DM Serif Display", Georgia, serif; }
+  .font-urdu { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; }
+  .font-calligraphy { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; }
+  .font-arabic-display { font-family: "Reem Kufi", "Amiri", "Noto Naskh Arabic", serif; }
   .bismillah-bar { position: relative; overflow: hidden; background: linear-gradient(90deg, #02040A, #071B45 48%, #02040A); border-bottom: 1px solid rgba(209,172,91,.34); }
   .bismillah-bar::after { content: ""; position: absolute; bottom: 0; left: -25%; height: 1px; width: 28%; background: linear-gradient(90deg, transparent, #FFE4A3, transparent); opacity: .9; }
   .bismillah-script { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFD77D; font-size: 18px; line-height: 1.3; letter-spacing: .035em; text-shadow: 0 1px 0 rgba(255,255,255,.15), 0 5px 18px rgba(214,162,53,.35); }
@@ -28,7 +26,7 @@
   .brand-mark-center > span:last-child { display: flex; flex-direction: column; align-items: center; gap: .15rem; }
   .brand-urdu-name { text-shadow: 0 1px 0 rgba(255,255,255,.75); }
   .brand-english-name { white-space: nowrap; }
-  .royal-nav { background: linear-gradient(100deg, #06152E, #153A89 51%, #06152E); border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(209,172,91,.58); box-shadow: inset 0 1px rgba(255,255,255,.04), 0 10px 24px rgba(3,9,23,.14); }
+  .royal-nav { background: linear-gradient(100deg, #06152E, #153A89 51%, #06152E); border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(209,172,91,.58); }
   .nav-link { @apply relative py-4 font-sans text-[10px] font-bold tracking-[.08em] text-white/84 transition hover:text-[#F0D89C]; }
   .nav-link::after { content: ""; @apply absolute bottom-0 left-0 h-0.5 w-0 bg-[#C89C46] transition-all duration-300; }
   .nav-link:hover::after, .nav-link-active::after { @apply w-full; }
@@ -45,8 +43,8 @@
   .hero-kicker { @apply flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-[.22em] text-[#E9D4A2]; }
   .hero-copy { max-width: 39rem; }
   .hero-text-stack { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; margin-top: 1.35rem; }
-  .hero-bismillah { margin: 0; font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; font-weight: 700; color: #FFE39A; font-size: clamp(1.5rem, 2.45vw, 2.16rem); line-height: 1.46; letter-spacing: .025em; text-shadow: 0 1px 0 rgba(255,255,255,.24), 0 5px 22px rgba(0,0,0,.40), 0 0 26px rgba(233,188,78,.22); }
-  .hero-urdu-identity { margin: .18rem 0 0; font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-weight: 500; color: #FFF6D4; font-size: clamp(1.88rem, 3.3vw, 3.12rem); line-height: 1.75; text-shadow: 0 5px 24px rgba(0,0,0,.36); }
+  .hero-bismillah { margin: 0; font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFE39A; font-size: clamp(1.42rem, 2.35vw, 2.08rem); line-height: 1.46; letter-spacing: .025em; text-shadow: 0 1px 0 rgba(255,255,255,.24), 0 5px 22px rgba(0,0,0,.40), 0 0 26px rgba(233,188,78,.22); }
+  .hero-urdu-identity { margin: .18rem 0 0; font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; color: #FFF6D4; font-size: clamp(1.88rem, 3.3vw, 3.12rem); line-height: 1.75; text-shadow: 0 5px 24px rgba(0,0,0,.36); }
   .hero-english-identity { margin: .1rem 0 0; font-size: clamp(1.92rem, 3.7vw, 3.7rem); line-height: 1.04; letter-spacing: -.03em; text-shadow: 0 5px 22px rgba(0,0,0,.32); }
   .hero-english-identity span { color: #D7E7F8; }
   .hero-support-copy { max-width: 34rem; margin-top: 1.65rem; }
@@ -68,13 +66,6 @@
   .featured-fatwa { @apply relative flex items-start justify-between gap-5 overflow-hidden rounded-[16px_16px_4px_4px] border border-[#D1AC5B]/45 bg-[#0A315B]/90 p-6 shadow-[0_15px_35px_rgba(0,0,0,.11)] transition hover:-translate-y-0.5 hover:bg-[#10406E] sm:p-7; background-image: radial-gradient(circle at 92% 8%, rgba(209,172,91,.18), transparent 9rem), linear-gradient(135deg, rgba(255,255,255,.035), transparent); }
   .featured-fatwa::before { content: ""; position: absolute; left: 15px; right: 15px; top: 7px; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,224,147,.8), transparent); }
   .featured-fatwa::after { content: "۞"; position: absolute; bottom: 7px; right: 16px; color: rgba(255,218,126,.25); font-family: "Amiri", serif; font-size: 24px; }
-  .page-canvas { background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(247,249,253,.75)); }
-  .institutional-section { position: relative; isolation: isolate; }
-  .institutional-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .4; background-image: linear-gradient(90deg, transparent, rgba(200,156,70,.07), transparent); }
-  .section-heading { position: relative; }
-  .section-heading::after { content: ""; display: block; width: 58px; height: 1px; margin-top: 1.35rem; background: linear-gradient(90deg, #C89C46, rgba(200,156,70,0)); }
-  [dir="rtl"] .section-heading::after { background: linear-gradient(270deg, #C89C46, rgba(200,156,70,0)); }
-  .section-title { letter-spacing: -.028em; }
   .page-hero { @apply relative isolate overflow-hidden bg-[#061A34]; background-image: radial-gradient(circle at 88% 15%, rgba(111,171,215,.16), transparent 26rem), linear-gradient(120deg, #061A34, #143A5E); }
   .page-hero::before { content: ""; position: absolute; right: 9%; bottom: -220px; width: 530px; height: 600px; border: 1px solid rgba(233,212,162,.24); border-bottom: 0; border-radius: 280px 280px 0 0 / 340px 340px 0 0; box-shadow: 0 0 0 22px rgba(233,212,162,.05), 0 0 0 44px rgba(233,212,162,.035); opacity: .9; }
   .page-hero::after { content: "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ"; position: absolute; top: 24px; left: 8%; color: rgba(255,218,126,.72); font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; font-size: 20px; text-shadow: 0 3px 14px rgba(0,0,0,.26); white-space: nowrap; }
@@ -85,9 +76,6 @@
   .archive-filter-group { @apply relative; }
   .filter-pill { @apply border border-[#CFD6DB] bg-white/85 px-3 py-2 font-sans text-[10px] font-semibold text-[#55667C] transition hover:border-[#B28A3D] hover:text-[#075A9B]; clip-path: polygon(0 18%, 9% 0, 91% 0, 100% 18%, 100% 82%, 91% 100%, 9% 100%, 0 82%); }
   .filter-pill-active { @apply border-[#075A9B] bg-[#075A9B] text-white hover:text-white; }
-  .archive-summary { @apply relative flex items-center justify-between border-y border-[#D8C898]/75 py-3 font-sans text-[11px] font-semibold tracking-[.04em] text-[#637187]; }
-  .archive-guidance { @apply relative overflow-hidden border border-[#D7C690] bg-[#FFF9E9] p-6 font-sans text-sm leading-7 text-[#34465F] shadow-[0_10px_26px_rgba(10,22,52,.035)]; }
-  .archive-guidance::before { content: "۞"; position: absolute; right: 1.2rem; top: .5rem; font-family: "Amiri", serif; font-size: 3rem; color: rgba(200,156,70,.16); }
   .fatwa-catalogue-list { @apply relative space-y-4; }
   .fatwa-catalogue-list::before { content: ""; position: absolute; top: 0; bottom: 0; left: 5.25rem; width: 1px; background: linear-gradient(#D1AC5B, rgba(209,172,91,.12) 12%, rgba(209,172,91,.12) 88%, #D1AC5B); }
   .fatwa-catalogue-entry { @apply relative grid overflow-hidden border border-[#CDB574] bg-[#FFFDF8] shadow-[0_14px_34px_rgba(10,22,52,.055)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_rgba(10,22,52,.12)] md:grid-cols-[146px_minmax(0,1fr)_190px]; clip-path: polygon(0 10%, 2.5% 0, 97.5% 0, 100% 10%, 100% 100%, 0 100%); background-image: radial-gradient(circle at 96% 8%, rgba(236,214,157,.18), transparent 13rem), linear-gradient(rgba(7,90,155,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(7,90,155,.022) 1px, transparent 1px); background-size: auto, 18px 18px, 18px 18px; }
@@ -144,15 +132,6 @@
   .contact-card::before { content: ""; position: absolute; left: 0; top: 20px; bottom: 20px; width: 2px; background: #D1AC5B; }
   .contact-card h3 { @apply mt-7 font-display text-2xl text-[#10223A]; }
   .contact-card p { @apply mt-2 font-sans text-xs leading-5 text-[#637187]; }
-  .trust-ledger { @apply relative grid gap-px overflow-hidden border border-[#D9C998] bg-[#D9C998] shadow-[0_24px_60px_rgba(10,22,52,.09)] md:grid-cols-2; }
-  .trust-principle { @apply relative min-h-[250px] overflow-hidden bg-[#FFFDF8] p-7 sm:p-8; background-image: radial-gradient(circle at 96% 4%, rgba(225,195,125,.19), transparent 9rem), linear-gradient(rgba(7,90,155,.019) 1px, transparent 1px); background-size: auto, 100% 28px; }
-  .trust-principle::after { content: ""; position: absolute; left: 1.5rem; right: 1.5rem; bottom: 1rem; height: 1px; background: linear-gradient(90deg, rgba(200,156,70,0), rgba(200,156,70,.6), rgba(200,156,70,0)); }
-  .trust-index { @apply absolute right-6 top-5 font-display text-4xl text-[#D8E1EA]; }
-  [dir="rtl"] .trust-index { left: 1.5rem; right: auto; }
-  .trust-icon { @apply relative grid h-12 w-12 place-items-center border border-[#D1AC5B] bg-[#061A34] text-[#F0D08A] shadow-[0_8px_20px_rgba(6,26,52,.15)]; }
-  .trust-disclaimer { @apply relative mt-8 overflow-hidden border border-[#D1AC5B]/65 bg-[#0A315B] p-7 text-white shadow-[0_18px_42px_rgba(10,22,52,.12)] sm:p-8; background-image: radial-gradient(circle at 92% 15%, rgba(225,195,125,.2), transparent 13rem), linear-gradient(135deg, rgba(255,255,255,.04), transparent); }
-  .trust-disclaimer::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(255,225,154,.22); border-bottom: 0; border-radius: 125px 125px 0 0 / 84px 84px 0 0; pointer-events: none; }
-  .trust-disclaimer > * { position: relative; }
   #donate { isolation: isolate; background-image: radial-gradient(circle at 8% 15%, rgba(35,83,173,.32), transparent 22rem), linear-gradient(115deg, #040914, #0A315B 52%, #06152E); }
   #donate::before { content: ""; position: absolute; left: 7%; bottom: -150px; width: 430px; height: 510px; border: 1px solid rgba(255,218,126,.22); border-bottom: 0; border-radius: 230px 230px 0 0 / 300px 300px 0 0; box-shadow: 0 0 0 22px rgba(255,218,126,.035), 0 0 0 44px rgba(255,218,126,.025); }
   #donate::after { content: "۞  صدقہ و خدمت  ۞"; position: absolute; top: 28px; right: 9%; color: rgba(255,218,126,.53); font-family: "Aref Ruqaa Ink", "Amiri", serif; font-size: 17px; letter-spacing: .08em; }
@@ -217,6 +196,3 @@
 @media (max-width: 767px) { .fatwa-catalogue-list::before { left: 1.7rem; } .fatwa-folio { min-height: 0; flex-direction: row; justify-content: flex-start; gap: .8rem; padding: 1rem 1.4rem; } .fatwa-folio::before { inset: 6px; border-radius: 65px 65px 0 0 / 42px 42px 0 0; } .fatwa-catalogue-content { padding: 1.45rem; } .fatwa-catalogue-action { padding: 1.2rem 1.45rem; } }
 @media (max-width: 640px) { .date-card { min-width: 0; width: 100%; } .hero-overlay { background: linear-gradient(90deg, rgba(3,7,18,.96), rgba(6,21,46,.78)); } .royal-masthead { min-height: 146px; } .bismillah-script { font-size: 14px; } .page-hero::after { left: 50%; transform: translateX(-50%); font-size: 15px; } .detail-hero::after { left: 50%; right: auto; transform: translateX(-50%); font-size: 15px; white-space: nowrap; } .detail-urdu-title { font-size: 2rem; } .detail-hero-rule { margin-top: 2rem; } .hero-text-stack { gap: .38rem; margin-top: 1rem; } .hero-urdu-identity { font-size: clamp(1.66rem, 8vw, 2.35rem); line-height: 1.85; } .hero-english-identity { font-size: clamp(1.82rem, 9vw, 2.55rem); line-height: 1.08; } .hero-support-copy { margin-top: 1.25rem; } }
 @media print { header, footer, .utility-button { display: none !important; } body { background: white !important; } }
-@media (prefers-reduced-motion: no-preference) { :focus-visible { scroll-margin-block: 1rem; } }
-a[href]:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 3px solid #075A9B !important; outline-offset: 3px; box-shadow: 0 0 0 6px rgba(241,199,90,.34) !important; }
-.royal-nav a[href]:focus-visible, .royal-nav button:focus-visible, .bismillah-bar a[href]:focus-visible, .bismillah-bar button:focus-visible, .site-footer a[href]:focus-visible, .site-footer button:focus-visible { outline: 3px solid #FFFFFF !important; outline-offset: 3px; box-shadow: 0 0 0 5px rgba(255,227,162,.42) !important; }
