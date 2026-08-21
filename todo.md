@@ -204,3 +204,7 @@
 - [x] Run an interaction-level mobile audit confirming native mailto behavior and the copy-address fallback on every public email surface.
 - [x] Document the verified official email-link repair, including the mailto-only root cause and fallback behavior.
 - [x] Save and publish the verified official email-link repair in a new checkpoint.
+- [x] Audit the current Arabic, Urdu, and English font roles across the public design system.
+- [x] Apply a cohesive premium Islamic calligraphic hierarchy for devotional Arabic, Urdu display text, and English editorial text while retaining readable body copy.
+- [x] Verify multilingual typography at desktop and mobile widths, add regression coverage, and publish the refinement.
+- [ ] Save and publish the verified multilingual calligraphic typography refinement in a new checkpoint.
