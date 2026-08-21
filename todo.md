@@ -194,4 +194,4 @@
 - [x] Save and publish the verified email-only contextual-card update in a new checkpoint.
 - [x] Align the simplified contextual official-email card visually with the other institutional contact cards.
 - [x] Verify the aligned card on desktop and mobile, update relevant coverage, and publish the revision.
-- [ ] Save and publish the verified shared contextual email-card alignment in a new checkpoint.
+- [x] Save and publish the verified shared contextual email-card alignment in a new checkpoint.
