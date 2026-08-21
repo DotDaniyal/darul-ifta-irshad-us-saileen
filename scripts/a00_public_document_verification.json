@@ -1,0 +1,501 @@
+{
+  "generatedAt": "2026-08-21T07:34:44.147Z",
+  "baseUrl": "http://localhost:3000",
+  "documentsReviewed": 49,
+  "allAvailable": true,
+  "allMatchSupplied": true,
+  "unavailable": [],
+  "mismatches": [],
+  "records": [
+    {
+      "number": "A0001",
+      "url": "/manus-storage/fatwa-001_40c34800.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1213572,
+      "publicSha256": "125235f2f3885b7e986428825897cfcb00a201ed070d8814c2aeb9ad1d56b029",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0002",
+      "url": "/manus-storage/fatwa-002_c4b61ccb.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 852310,
+      "publicSha256": "d125a4acd5bd300feaa72c8cfb8550d34f9e5402a6f295ab86085c314cb72893",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0003",
+      "url": "/manus-storage/fatwa-003_38badc7e.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 580345,
+      "publicSha256": "78eff6a82faa9cd3df41764fad8ba4af16dd6fea2d31016d1425c374fcbc099c",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0004",
+      "url": "/manus-storage/fatwa-004_dfe897c0.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 897739,
+      "publicSha256": "6c9ce7a23d04fdd094da45ce4986c9d52aa7e444e537819d6b80f4f8c26e562c",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0005",
+      "url": "/manus-storage/fatwa-005_aad76d0b.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1115787,
+      "publicSha256": "368665a4faf89262b47b3336c1fbb6e14a74b9922efbc19c175826b607d9aa8a",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0006",
+      "url": "/manus-storage/fatwa-006_a518360c.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1497060,
+      "publicSha256": "3a0c3b95af79a084643a171693b4ce0ff7a57d3733a37dbac9753d84690ce008",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0007",
+      "url": "/manus-storage/fatwa-007_bb5025aa.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1061077,
+      "publicSha256": "07423a431c5d5346a6ac5d4eddd80111a254282fe474f4ed56fd0810daafd910",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0011",
+      "url": "/manus-storage/fatwa-008_5556d799.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 525871,
+      "publicSha256": "e2c106be8aca87dc6818072b61acfb7b2e7432485928d2b98103f69ad332858f",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0012",
+      "url": "/manus-storage/fatwa-009_ea671e01.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 814747,
+      "publicSha256": "07086671e9b28e3cb8628cff23b8367c3c6486ef9bf57538a5f576c9e2f5ebd6",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0013",
+      "url": "/manus-storage/fatwa-010_0de19fa4.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1100174,
+      "publicSha256": "1e2fae5306a702b98aba5e6dca6bd1cf934c2c3277ec6a28dd4bf5907a7f71a6",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0015",
+      "url": "/manus-storage/fatwa-011_8db31b51.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1144322,
+      "publicSha256": "b9ca3bff03def2fb2f2e5e8e58a749f88ea9fdf8c4b936fb5d6c7eb81a425ec2",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0017",
+      "url": "/manus-storage/fatwa-012_8272251b.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 527863,
+      "publicSha256": "41f35974f5f82521a09d288fa76bce67c309df54c94eca098034f98af9996636",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0022",
+      "url": "/manus-storage/fatwa-013_5670b121.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 2723295,
+      "publicSha256": "44aa0065a192d4dd8f55bc419a5cd74744a19f1be836570c4a1d651d66b28620",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0028",
+      "url": "/manus-storage/fatwa-014_288dd461.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 802604,
+      "publicSha256": "6a859b0d601813bbb849c3b18f4f471005673e237d50133f9adacfc03e038063",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0031",
+      "url": "/manus-storage/fatwa-015_dfaf0056.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 856464,
+      "publicSha256": "7d72703821e89a11291bd59b6cb50b650d6f416c1f6dda8d97ad4120f6303362",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0037",
+      "url": "/manus-storage/fatwa-016_99042d36.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1357644,
+      "publicSha256": "d9a56bce80bbfee7f540d29b695d6a1e7e7e698b7cb2b8728a21c8a615141553",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0039",
+      "url": "/manus-storage/fatwa-017_d13e21cd.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1204461,
+      "publicSha256": "276bef332fc5ab14a721622dd39a8bfa8c5deaa39ee96607c4e4dad46f065cf4",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0042",
+      "url": "/manus-storage/fatwa-018_8863306d.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 625943,
+      "publicSha256": "9881ba40bf0303724b299060afda94f2fa5dc120b3cd9ebe324f8e8b6f104c26",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0044",
+      "url": "/manus-storage/fatwa-019_16178539.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 583567,
+      "publicSha256": "f3cb692b71b25193f4024b58c5ac2864165b11e14b0c1ca8e32f078e40bf5d6a",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0045",
+      "url": "/manus-storage/fatwa-020_a4e67a17.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1036739,
+      "publicSha256": "ecb63eb81b76b9dbedd9d44ca2f6ee537ddef729548cff12c99d90cfc5667bae",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0046",
+      "url": "/manus-storage/fatwa-021_cb34ff07.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1108458,
+      "publicSha256": "7ba24dbd58da34d92124b0d241de97d4d250772befba37c615110a4ae93ec64a",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0047",
+      "url": "/manus-storage/fatwa-022_24d9dcac.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 605569,
+      "publicSha256": "0ec9015855df78dedfbf7546245e3835dffb0d676d2038322d9fbba6b66db61e",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0048",
+      "url": "/manus-storage/fatwa-023_884d87c4.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 792217,
+      "publicSha256": "611fbe2a479c0e236d8e6a2691bfc37d397321e689cee62dc2b03903ffa2aa17",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0051",
+      "url": "/manus-storage/fatwa-024_e567e128.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1126059,
+      "publicSha256": "481a7d0d48d26aebbbb86052a6cf726ee90cc86cf5ee4e062b893426313495ac",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0053",
+      "url": "/manus-storage/fatwa-025_ed617fcd.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1130903,
+      "publicSha256": "04317cd3e023501b71f9b3f72dcf385e2e8e5d375ab69da8ef633b0dbe46c20b",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0054",
+      "url": "/manus-storage/fatwa-026_71fe16bd.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 822413,
+      "publicSha256": "de7235478425dd7412223ef712bc506d4cc9544637d31f2bb14eda8ef67369b1",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0055",
+      "url": "/manus-storage/fatwa-027_e820595a.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 484755,
+      "publicSha256": "89f806ab7dadb474298574736b361fe72daa3aad5ed4e11c85bf91e3740cf62b",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0056",
+      "url": "/manus-storage/fatwa-028_2f4d1dc7.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1403593,
+      "publicSha256": "8974edab895321e8d7a1ba218f0cde9affd2af6d35f929ed0b670c0daef31dae",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0057",
+      "url": "/manus-storage/fatwa-029_356edf34.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 861973,
+      "publicSha256": "f30f16bed03eaba74637ff4547206827bcf894369830fd11fec0e14d9d94e6ea",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0058",
+      "url": "/manus-storage/fatwa-030_5a15755e.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 609861,
+      "publicSha256": "cc008f09883e1b1b394219d0cf67a8cd5b83a1330bda409c311df9d21405eca4",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0060",
+      "url": "/manus-storage/fatwa-031_587605c6.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1010912,
+      "publicSha256": "ffaaea25399ebbf7be5f13d3a4cf3844e693e5ad56ff7357e0b10f53852e5d16",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0062",
+      "url": "/manus-storage/fatwa-032_d3f7ea95.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1221409,
+      "publicSha256": "9119395ca9fe5d88aba4a62d0c5210ea574a64a9ad7ebdba4458e2cce7a685bb",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0063",
+      "url": "/manus-storage/fatwa-033_95bb8bb3.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 560459,
+      "publicSha256": "90f7e58cd306009722ad3f59c1e03e8dddadd731eb22694979759bd98dc81411",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0064",
+      "url": "/manus-storage/fatwa-034_4cdedff9.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 884491,
+      "publicSha256": "073011916cf3ea804f40db5c751b94739c927b1320f260d72bc7c0d213de7da4",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0065",
+      "url": "/manus-storage/fatwa-035_cc36c077.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1478357,
+      "publicSha256": "2167714e9559753787ed1d2f5de09fd2e62ece6fdc1136d471fc55b89fcf7a6d",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0067",
+      "url": "/manus-storage/fatwa-036_360f9da0.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 572000,
+      "publicSha256": "9c2c9e3f0364f9b3139f93e4180deb4642b9c10c758a4bd774d09c96412df55f",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0068",
+      "url": "/manus-storage/fatwa-037_b0e72f80.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 2611919,
+      "publicSha256": "712e61ee891fadce1ca3f13f4eb01139cf45149d3370ba0b9f8cb2ae7c26ec17",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0069",
+      "url": "/manus-storage/fatwa-038_e064dd70.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 760756,
+      "publicSha256": "febb9c86cd9944943f26e5b4f86e167e08e846e958afa5e8786e999ddedf1f6a",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0075",
+      "url": "/manus-storage/fatwa-039_0e7c9510.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 778872,
+      "publicSha256": "5b9fb4d6579ec34bcd1e9ccd466a0f968b2d2ad6a6a157d4aa1a0f27627317e6",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0076",
+      "url": "/manus-storage/fatwa-040_db072ee7.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1467253,
+      "publicSha256": "714ec4dab4318833bf1102c9206c39e1a6566c8bf46453da4ec4a1240fc78cca",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0078",
+      "url": "/manus-storage/fatwa-041_587d66a4.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 1116385,
+      "publicSha256": "0eea8e8cf5c0ac1cff547fa77cb836c64d9944070f8bbbcf56a021eaeb6c7e76",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0085",
+      "url": "/manus-storage/fatwa-042_036c3834.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 770814,
+      "publicSha256": "173ac205e2b73f2007922d26d9a7fac84bd871fd0416e1de9c82fdd0865480f3",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0086",
+      "url": "/manus-storage/fatwa-043_94ca4d80.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 767607,
+      "publicSha256": "beead1e4ea21a25e46c1707bbf9bc8e659b8084817b410051c925d1c0a2847c2",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0088",
+      "url": "/manus-storage/fatwa-044_4aff227b.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 2926628,
+      "publicSha256": "8be42190932f31fc254dfc077285b7dca8f27db7870193cf21af9698866c3880",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0091",
+      "url": "/manus-storage/fatwa-045_a09ee19d.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 729631,
+      "publicSha256": "609ce3052c23b99620679b0a768e65e8205d2c104c4fb6fd302a541beb4f40ff",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0092",
+      "url": "/manus-storage/fatwa-046_5cbc98b3.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 560808,
+      "publicSha256": "6fb310e98d7f0d026151e7032010f65f6f7250eb87624a17c884929f47a69f96",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0093",
+      "url": "/manus-storage/fatwa-047_11e0fe5b.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 845458,
+      "publicSha256": "84c576d617c543eac5432e7f43fc29f7a91ec1bbb560ff1d8be671c4d67324b9",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0099",
+      "url": "/manus-storage/fatwa-048_2011e318.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 558320,
+      "publicSha256": "e03d0596fe142e3436057ce9d3633cbaacb0392653822a7b0400f36c01c75480",
+      "matchesSuppliedDocument": true
+    },
+    {
+      "number": "A0100",
+      "url": "/manus-storage/fatwa-049_410eb283.pdf",
+      "available": true,
+      "status": 200,
+      "contentType": "application/pdf",
+      "publicBytes": 324389,
+      "publicSha256": "03ade2fb979a37e80ed756d8a8eae90b01e9c11f2510e2ddc4ca4d5c7961586c",
+      "matchesSuppliedDocument": true
+    }
+  ]
+}

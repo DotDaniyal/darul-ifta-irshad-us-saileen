@@ -86,3 +86,9 @@
 - [x] Compare the newly attached PDFs with the existing archive and identify records that require addition or replacement.
 - [x] Upload the resulting source PDFs to persistent website storage and add the corresponding searchable catalogue records.
 - [x] Verify direct PDF access, archive behavior, responsive presentation, and the production build.
+
+## Newly Supplied Fatwa Batch Checklist
+
+- [x] Inventory the newly supplied Fatwa PDFs, distinguish duplicate and replacement files, and extract publication metadata.
+- [x] Audit the supplied PDFs for phone numbers, retaining only 03332617671 / +92 333 2617671 in accordance with the established archive policy.
+- [x] Upload eligible reviewed PDFs, add governed archive records, and verify search and direct PDF access before publication.
