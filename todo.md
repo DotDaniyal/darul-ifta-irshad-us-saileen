@@ -219,3 +219,5 @@
 - [x] Diagnose why newly imported Fatwa PDFs are not visible in the public archive despite their governed records and storage links.
 - [x] Repair the public archive query, rendering, or pagination path so the new A0201–A0300 records display and open correctly.
 - [x] Verify visibility and direct PDF access for newly imported Fatwas on desktop and mobile, add regression coverage, and publish the repair.
+- [x] Diagnose the reported page-loading failure across public routes and identify the underlying runtime or deployment cause.
+- [x] Repair the loading failure, add regression coverage where appropriate, verify key desktop and mobile routes, and publish the correction.

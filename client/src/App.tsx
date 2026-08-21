@@ -7,8 +7,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import AskFatwa from "./pages/AskFatwa";
 
-const AskFatwa = lazy(() => import("./pages/AskFatwa"));
 const Fatawa = lazy(() => import("./pages/Fatawa"));
 const FatwaDetail = lazy(() => import("./pages/FatwaDetail"));
 const ScholarWorkspace = lazy(() => import("./pages/ScholarWorkspace"));
