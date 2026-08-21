@@ -101,3 +101,9 @@ Full-page reviews on Home, Fatawa, Ask Fatwa, and Methodology at 1280 px and 375
 ### Homepage hero copy refinement — 21 August 2026
 
 The supporting sentence formerly shown beneath the bilingual Darul Ifta institution name has been removed as requested. The hero now moves directly from the institution identity to the three primary actions, with the action group adjusted to an 8-unit top margin. Desktop and mobile viewport checks confirm the institution name, action buttons, and Islamic date panel retain a balanced composition without overflow. The dedicated hero-content contract passed; the full suite passed **17 files / 51 tests** and the production build succeeded.
+
+### A0201–A0300 Fatwa archive expansion and phone-number protection — 21 August 2026
+
+The supplied batch contains **32** Fatwa PDFs, numbered A0201 through A0300 with gaps matching the supplied documents. The approved-number-preserving redaction audit inspected the whole batch using vector-text and page-image OCR. It permanently masked **one non-approved Pakistani mobile-number occurrence** and retained **96 approved institutional-number occurrences** for `03332617671` / `+92 333 2617671`, including the approved footer number where present. The final audit reported no non-approved phone values remaining in the public copies.
+
+All 32 redacted PDFs were uploaded to public project storage and imported into governed published-record storage, increasing the verified public archive from **74 to 106** records. The archive contract validates each new A02 record and its dedicated storage URL. Database verification returned 106 published records and all 32 imported reference numbers. Full-page Fatawa archive review at 1280 px and 375 px confirmed the expanded manuscript list remains legible and discoverable. The full suite passed **18 files / 53 tests**, and the production build succeeded.

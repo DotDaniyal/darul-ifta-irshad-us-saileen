@@ -211,3 +211,8 @@
 - [x] Identify and remove the unwanted hero text displayed beneath the Darul Ifta institution name on the homepage.
 - [x] Verify the revised hero composition on desktop and mobile, update relevant coverage, and publish the refinement.
 - [x] Save and publish the verified homepage hero-text removal in a new checkpoint.
+- [x] Inventory the 32 uploaded Fatwa PDFs and identify every phone-number occurrence.
+- [x] Redact every non-approved phone number from the new PDFs while preserving 03332617671 and +92 333 2617671 wherever present.
+- [x] Upload the redacted PDFs and import the new Fatwa records into the governed public archive.
+- [x] Verify all new archive records, PDF links, redaction results, approved-number retention, automated coverage, and public presentation.
+- [ ] Save and publish the verified expanded Fatwa archive in a new checkpoint.
