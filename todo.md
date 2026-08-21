@@ -184,3 +184,8 @@
 - [x] Add a visual-accessibility contract test for focus-visible treatment, active navigation semantics, and the intake editorial guidance structure.
 - [x] Perform live keyboard-only focus verification on the homepage, archive, intake, and methodology routes.
 - [x] Run and document an explicit contrast and focus audit for refined public surfaces.
+- [x] Remove the redundant standalone official-email callout where requested and align its remaining email link with the surrounding institutional contact treatment.
+- [x] Add a readable institutional background treatment behind the requested homepage text section.
+- [x] Verify the adjusted email and homepage text surfaces at desktop and mobile sizes, run relevant automated checks, and publish the update.
+- [x] Capture and review desktop/mobile evidence for the updated email presentation on Ask Fatwa and Methodology after removing the standalone strip and restyling the contextual card.
+- [x] Document the desktop/mobile review outcome for the updated contextual email presentation on Ask Fatwa and Methodology.

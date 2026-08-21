@@ -1,6 +1,6 @@
 import { BookOpenCheck, LockKeyhole, Scale, ShieldCheck } from "lucide-react";
 import SiteShell, { SectionHeading, useLanguage } from "@/components/SiteShell";
-import { ContextualEmailCard, OfficialEmailCallout } from "@/components/OfficialEmailCallout";
+import { ContextualEmailCard } from "@/components/OfficialEmailCallout";
 import { trpc } from "@/lib/trpc";
 
 export default function Methodology() {
@@ -27,7 +27,7 @@ export default function Methodology() {
     [BookOpenCheck, managedPublication.title, managedPublication.text],
   ] as const;
 
-  return <SiteShell><main><OfficialEmailCallout />
+  return <SiteShell><main>
     <section className="page-hero"><div className="page-hero-pattern" /><div className="relative mx-auto max-w-[1360px] px-5 py-18 sm:px-8 sm:py-24"><p className="font-urdu text-xl text-[#E9D4A2]">دارالافتاء ارشاد السائلین</p><h1 className="mt-5 max-w-4xl font-display text-5xl leading-tight text-white sm:text-7xl">{copy.title}</h1><p className="mt-5 max-w-3xl font-sans text-sm leading-7 text-white/70 sm:text-base">{copy.intro}</p></div></section>
     <section className="institutional-section bg-[#FBF9F3] px-5 py-20 sm:px-8 lg:py-28"><div className="relative mx-auto max-w-[1240px]"><SectionHeading eyebrow={copy.eyebrow} title={urdu ? "اعتماد کے اصول" : "Principles that protect trust"} description={urdu ? "یہ اصول عوامی مطالعے، سوال جمع کروانے اور علمی اشاعت کے لیے رہنما ہیں۔" : "These principles guide public reading, private question intake, and scholarly publication."} /><div className="trust-ledger mt-12">{cards.map(([Icon, title, text], index) => <article key={title} className="trust-principle"><span className="trust-index">0{index + 1}</span><div className="trust-icon"><Icon className="h-5 w-5" /></div><h2 className="mt-6 max-w-sm font-display text-3xl leading-tight text-[#10223A]">{title}</h2><p className="mt-4 max-w-md font-sans text-sm leading-7 text-[#52627A]">{text}</p></article>)}</div><div className="trust-disclaimer"><p className="max-w-3xl font-sans text-sm leading-7 text-white/84">{urdu ? "اہم اعلان: یہ مواد عمومی معلومات اور شرعی رہنمائی کے لیے ہے؛ کسی عدالتی، طبی، مالی یا قابلِ نزاع معاملے کا خودکار یا حتمی فیصلہ نہیں۔" : "Important: this content is for general scholarly guidance. It is not an automated or final determination for a legal, medical, financial, or disputed matter."}</p><a href="/ask-fatwa" className="mt-6 inline-flex items-center gap-2 border border-[#E9D4A2]/70 bg-[#D1AC5B] px-5 py-3 font-sans text-xs font-bold text-[#06152E] transition hover:-translate-y-0.5 hover:bg-[#F1DC9B]"><BookOpenCheck className="h-4 w-4" />{copy.cta}</a></div><ContextualEmailCard className="mt-8" /></div></section>
   </main></SiteShell>;
