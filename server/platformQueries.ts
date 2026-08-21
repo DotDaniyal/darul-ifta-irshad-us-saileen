@@ -396,7 +396,7 @@ export async function searchPublishedFatwas(filters: PublicCatalogueFilters) {
     categorySlug: fatwaCategories.slug, categoryEn: fatwaCategories.nameEn, categoryUr: fatwaCategories.nameUr,
     methodologySlug: fiqhMethodologies.slug, methodologyEn: fiqhMethodologies.nameEn, methodologyUr: fiqhMethodologies.nameUr,
   }).from(fatwaRecords).leftJoin(fatwaCategories, eq(fatwaRecords.categoryId, fatwaCategories.id)).leftJoin(fiqhMethodologies, eq(fatwaRecords.methodologyId, fiqhMethodologies.id))
-    .where(and(...conditions)).orderBy(desc(fatwaRecords.publishedAt), desc(fatwaRecords.id)).limit(250);
+    .where(and(...conditions)).orderBy(desc(fatwaRecords.publishedAt), desc(fatwaRecords.id)).limit(100);
 }
 
 /** Public record view deliberately selects only publication-safe fields and never joins the private source question. */
