@@ -24,11 +24,33 @@ describe("public trust and intake safeguards", () => {
     expect(intake).toContain("toast.success");
   });
 
-  it("publishes the supplied scholarly supervision profile rather than a placeholder", () => {
+  it("publishes the supplied scholarly supervision profile through reusable directory and detail routes", () => {
+    const app = read("../App.tsx");
     const home = read("./Home.tsx");
-    expect(home).toContain("حضرت مولانا مفتی عبد المنان صاحب جامعہ دارالعلوم کراچی");
-    expect(home).toContain("دارالافتاء کی دینی و شرعی خدمات حضرت مولانا مفتی عبد المنان صاحب کی زیرِ نگرانی");
-    expect(home).toContain("under the supervision and scholarly guidance of Mufti Abdul Mannan Sahib");
-    expect(home).not.toContain("This profile space is intentionally ready for verified biography information when available.");
+    const directory = read("./Scholars.tsx");
+    const profile = read("./ScholarProfile.tsx");
+    const registry = read("../data/scholars.ts");
+    const liveRegistry = read("../data/scholarsApi.ts");
+    const siteShell = read("../components/SiteShell.tsx");
+
+    expect(app).toContain('path={"/scholars"}');
+    expect(app).toContain('path={"/scholars/admin"}');
+    expect(app).toContain('path={"/scholars/:slug"}');
+    expect(app.indexOf('path={"/scholars/admin"}')).toBeLessThan(app.indexOf('path={"/scholars/:slug"}'));
+    expect(home).toContain('href="/scholars"');
+    expect(directory).toContain("usePublishedScholars");
+    expect(directory).toContain("scholars.map");
+    expect(profile).toContain('useRoute("/scholars/:slug")');
+    expect(profile).toContain("usePublishedScholar");
+    expect(liveRegistry).toContain('request<ApiScholar[]>("/api/scholars")');
+    expect(liveRegistry).toContain("/api/scholars/${encodeURIComponent(slug)}");
+    expect(siteShell).toContain('{ href: "/scholars", label: t.scholars }');
+    expect(registry).toContain('slug: "mufti-abdul-mannan"');
+    expect(registry).toContain("isPublished: true");
+    expect(registry).toContain("PUBLISHED_SCHOLARS = SCHOLARS.filter");
+    expect(registry).toContain("حضرت مولانا مفتی عبد المنان صاحب جامعہ دارالعلوم کراچی");
+    expect(registry).toContain("دارالافتاء کی دینی و شرعی خدمات آپ کی زیرِ نگرانی");
+    expect(registry).toContain("under his supervision and scholarly guidance");
+    expect(registry).toContain("No portrait fields are intentionally included");
   });
 });

@@ -25,6 +25,39 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
+/** Public scholar records are editorially managed separately from login identities. Portrait fields are intentionally omitted. */
+export const scholars = mysqlTable("scholars", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 120 }).notNull().unique(),
+  nameEn: varchar("nameEn", { length: 180 }).notNull(),
+  nameUr: varchar("nameUr", { length: 180 }).notNull(),
+  titleEn: varchar("titleEn", { length: 180 }),
+  titleUr: varchar("titleUr", { length: 180 }),
+  organizationEn: varchar("organizationEn", { length: 240 }),
+  organizationUr: varchar("organizationUr", { length: 240 }),
+  shortIntroductionEn: text("shortIntroductionEn"),
+  shortIntroductionUr: text("shortIntroductionUr"),
+  introductionEn: text("introductionEn"),
+  introductionUr: text("introductionUr"),
+  educationalBackgroundEn: text("educationalBackgroundEn"),
+  educationalBackgroundUr: text("educationalBackgroundUr"),
+  islamicQualifications: json("islamicQualifications"),
+  areasOfExpertise: json("areasOfExpertise"),
+  responsibilities: json("responsibilities"),
+  services: json("services"),
+  additionalInformationEn: text("additionalInformationEn"),
+  additionalInformationUr: text("additionalInformationUr"),
+  contactEmail: varchar("contactEmail", { length: 320 }),
+  contactPhone: varchar("contactPhone", { length: 48 }),
+  socialLinks: json("socialLinks"),
+  isPublished: boolean("isPublished").default(false).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [index("scholars_published_idx").on(table.isPublished)]);
+
+export type Scholar = typeof scholars.$inferSelect;
+export type InsertScholar = typeof scholars.$inferInsert;
+
 /** Structured public taxonomy. Categories are administratively managed rather than hard-coded in forms. */
 export const fatwaCategories = mysqlTable("fatwaCategories", {
   id: int("id").autoincrement().primaryKey(),

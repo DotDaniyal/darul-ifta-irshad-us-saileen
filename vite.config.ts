@@ -1,10 +1,12 @@
 import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import express from "express";
 import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+import { createScholarApi } from "./server/app";
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -203,7 +205,18 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+function vitePluginScholarApi(): Plugin {
+  return {
+    name: "scholar-api",
+    configureServer(server: ViteDevServer) {
+      const apiApp = express();
+      apiApp.use(createScholarApi());
+      server.middlewares.use(apiApp);
+    },
+  };
+}
+
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy(), vitePluginScholarApi()];
 
 export default defineConfig({
   plugins,

@@ -138,3 +138,24 @@
 - [x] Verify scholar-section copy, responsive visibility, regression tests, TypeScript, and production build.
 - [x] Publish the verified scholar-section update in a new checkpoint.
 - [x] Save the verified Mufti Abdul Mannan Sahib scholar-profile update in a new checkpoint after completed tests, responsive checks, and bilingual browser verification.
+
+## Scalable Scholars Directory and Profile System Checklist
+
+- [x] Audit existing scholar content, routes, authentication roles, and reusable project components before expanding the scholars system.
+- [x] Define a scalable bilingual scholar record model with profile, qualification, expertise, contact, social, and publication fields.
+- [x] Implement governed scholar storage and protected operations to add, edit, delete, publish, and unpublish scholar records.
+- [x] Migrate the existing Mufti Abdul Mannan Sahib information without loss and preserve its user-supplied wording.
+- [x] Build the public Scholars / علماء کرام listing page with responsive summary cards and clear profile actions.
+- [x] Build reusable individual scholar profile routes with a professional Islamic presentation and a return path to the directory.
+- [x] Convert the homepage scholars section into a limited card preview with a View All Scholars action.
+- [x] Add consistent Scholars navigation on public pages, including scholar directory and individual profiles.
+- [x] Build an administrator-friendly scholar management interface with controlled publication status and content fields.
+- [x] Restore the missing server, database, and authenticated-admin scaffolding before implementing live protected scholar CRUD.
+- [x] Document the current structured scholar content workflow, publication control, no-photo policy, and one-to-one future database handoff.
+- [x] Update the scholar content workflow guide for the completed live database registry, protected administrator access, and public publication controls.
+- [x] Verify bilingual rendering, public and protected routes, responsive layouts, automated tests, TypeScript, and the production build.
+- [x] Exercise protected Scholar Admin create, edit, publish, unpublish, and delete operations with a temporary record, verifying public visibility changes and cleanup.
+- [x] Verify the protected Scholar Admin route remains usable at mobile and tablet breakpoints.
+- [x] Re-check runtime diagnostics after live scholar API exercises and confirm no current response-handler errors remain.
+- [x] Correct Scholar Admin route ordering so `/scholars/admin` reaches the protected management interface instead of the public dynamic profile route.
+- [x] Save and publish a checkpoint containing the verified scalable scholars system.

@@ -10,6 +10,9 @@ import Fatawa from "./pages/Fatawa";
 import FatwaDetail from "./pages/FatwaDetail";
 import AskFatwa from "./pages/AskFatwa";
 import Methodology from "./pages/Methodology";
+import Scholars from "./pages/Scholars";
+import ScholarProfile from "./pages/ScholarProfile";
+import ScholarAdmin from "./pages/ScholarAdmin";
 
 
 function Router() {
@@ -18,6 +21,10 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/fatawa"} component={Fatawa} />
       <Route path={"/fatawa/:slug"} component={FatwaDetail} />
+      <Route path={"/scholars"} component={Scholars} />
+      <Route path={"/scholars/admin"} component={ScholarAdmin} />
+      <Route path={"/scholars/:slug"} component={ScholarProfile} />
+      <Route path={"/admin/scholars"} component={ScholarAdmin} />
       <Route path={"/ask-fatwa"} component={AskFatwa} />
       <Route path={"/methodology"} component={Methodology} />
       <Route path={"/404"} component={NotFound} />

@@ -82,7 +82,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   const homePrefix = location === "/" ? "" : "/";
   const links = [
     { href: `${homePrefix}#about`, label: t.about }, { href: `${homePrefix}#services`, label: t.services },
-    { href: "/fatawa", label: t.fatawa }, { href: "/methodology", label: t.methodology }, { href: `${homePrefix}#scholars`, label: t.scholars },
+    { href: "/fatawa", label: t.fatawa }, { href: "/methodology", label: t.methodology }, { href: "/scholars", label: t.scholars },
     { href: `${homePrefix}#contact`, label: t.contact },
   ];
 
@@ -166,7 +166,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
           <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr]">
             <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon" aria-label="WhatsApp"><MessageCircle className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon" aria-label="Call Darul Ifta"><Phone className="h-4 w-4" /></a><a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="footer-icon" aria-label="Email Darul Ifta"><Mail className="h-4 w-4" /></a></div></div>
-            <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
+            <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 5).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
             <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a><a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a></div></div>
             <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><a href="tel:+923332617671" className="mt-4 block font-sans text-sm font-semibold text-[#E9D4A2]">+92 333 2617671</a><a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="mt-2 block break-all font-sans text-xs text-[#E9D4A2] transition hover:text-white">ask.darulifa.irshadussaaileen@gmail.com</a><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
           </div>
