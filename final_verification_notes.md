@@ -41,3 +41,21 @@ Opening `/workspace` in a public browser session displayed only the intentional 
 ## Final asset-size rationale
 
 The final production build succeeds. Its route-level chunks keep the archive, intake, tracking, methodology, detail, and protected workspace interfaces off the landing-page route. The shared entry JavaScript is **780.23 KB / 210.52 KB gzip** and global CSS is **179.50 KB / 28.77 KB gzip**; Vite’s 500 KB minified-chunk message remains an advisory for the shared dependency bundle. The generated entry document is **368.55 KB / 105.89 KB gzip** because the managed platform injects runtime and development/analytics support scripts. No runtime error or failed public request was observed during the final checks.
+
+## Official enquiry-email validation
+
+The official contact address `ask.darulifa.irshadussaaileen@gmail.com` is delivered through a shared, accessible `mailto:` callout on every public route and is also placed in the homepage contact-card group, the Ask Fatwa guidance sidebar, and the Methodology trust-principles section. Both shared and contextual links expose language-aware accessible labels: **“Written enquiries by email” / “تحریری رہنمائی کے لیے ای میل”** and **“Written enquiries” / “تحریری رابطہ”**, respectively, followed by the full email address.
+
+Desktop and 375 px mobile previews confirmed that the shared callout remains fully legible and does not cause horizontal overflow on the homepage, Ask Fatwa, and Methodology routes. The production build passed after the final context placement; source verification confirms each direct email action uses `mailto:ask.darulifa.irshadussaaileen@gmail.com`.
+
+The automated official-email contract now checks both language variants directly: Urdu and English return the identical official `mailto:` destination while providing distinct complete shared and contextual accessible-label copy. A rendered component test additionally verifies the actual shared callout and contextual card markup in both languages, asserting their `href` and language-specific `aria-label` values. The same rendered test now includes the complete shared layout, confirming that the header, footer icon, and footer contact link also use the language-aware official-email labels and approved `mailto:` target. The project suite passes **14 test files / 43 tests**, including these bilingual contact checks.
+
+### Official enquiry email — route-by-route evidence
+
+| Public route | Direct email surfaces | Urdu and English verification | Responsive verification |
+| --- | --- | --- | --- |
+| Homepage | Shared contact bar and the dedicated `#contact` card group | Rendered route test confirms the approved `mailto:` target plus both Urdu and English shared/contextual accessible labels. | Desktop and mobile captures confirm the contact-card treatment remains legible without wrapping the address into an unusable line. |
+| Ask Fatwa | Shared contact bar and the guidance-sidebar email card | Rendered route test confirms the same approved `mailto:` target plus both Urdu and English labels. | Desktop capture preserves the card in the guidance column; mobile capture confirms it stacks before the form without obscuring intake controls. |
+| Methodology | Shared contact bar and the substantive trust-principles email card | Rendered route test confirms the same approved `mailto:` target plus both Urdu and English labels. | Desktop and mobile captures confirm the card stays inside the trust-content sequence and remains fully readable. |
+
+The route-rendering coverage now exercises **Home**, **Ask Fatwa**, and **Methodology** in both language states with isolated public-query mocks. It asserts at least five approved direct mail links per route (shared header, footer icon, footer contact, shared callout, and contextual card), alongside language-specific accessible labels. The final suite passes **14 test files / 46 tests**.

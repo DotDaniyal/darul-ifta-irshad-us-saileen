@@ -160,3 +160,17 @@
 - [x] Execute and document a full governed scholar drafting, reviewer approval/return, publication, and administrator governance workflow.
 - [x] Complete broader keyboard, form-validation, and screen-reader-label audits across public and protected workspace routes.
 - [x] Document production asset sizes, shared-chunk impact, and the accepted performance rationale for the final release.
+- [x] Add ask.darulifa.irshadussaaileen@gmail.com to all relevant public contact, intake, and trust-content surfaces.
+- [x] Verify accessible mail links, bilingual wording, and responsive rendering for the official enquiry email.
+- [x] Add the official enquiry email directly to the homepage contact, Ask Fatwa guidance, and methodology trust-content sections.
+- [x] Verify the email link on homepage, Ask Fatwa, and methodology routes in Urdu and English, including responsive presentation and accessible link labels.
+- [x] Place a contextual email link in the existing homepage contact block, Ask Fatwa guidance sidebar, and methodology trust section.
+- [x] Verify and document desktop/mobile Urdu and English mail-link behavior on every direct email surface.
+- [x] Move the methodology email card into the substantive trust-content section and verify the Ask Fatwa sidebar placement.
+- [x] Add documented mailto target and Urdu/English accessible-label checks for every direct email surface.
+- [x] Add an automated bilingual rendering check for direct mailto links and record route-by-route responsive verification evidence.
+- [x] Add a rendered public-component test asserting mailto hrefs and language-specific accessible labels for shared and contextual email links.
+- [x] Capture explicit Urdu and English route-level evidence for homepage, Ask Fatwa, and Methodology email surfaces.
+- [x] Make header and footer email-link labels language-aware and cover shared public email-link rendering in Urdu and English.
+- [x] Document route-by-route desktop and mobile Urdu/English evidence for homepage, Ask Fatwa, and Methodology email surfaces.
+- [x] Add rendered route-level bilingual email-link tests for homepage, Ask Fatwa, and Methodology with isolated query mocks.
