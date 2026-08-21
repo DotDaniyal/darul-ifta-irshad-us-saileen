@@ -197,4 +197,4 @@
 - [x] Save and publish the verified shared contextual email-card alignment in a new checkpoint.
 - [x] Add a matching email symbol to the shared contextual Email / ای میل contact card.
 - [x] Verify the email symbol across public placements at desktop and mobile sizes, update coverage, and publish the refinement.
-- [ ] Save and publish the verified matching email-symbol refinement in a new checkpoint.
+- [x] Save and publish the verified matching email-symbol refinement in a new checkpoint.
