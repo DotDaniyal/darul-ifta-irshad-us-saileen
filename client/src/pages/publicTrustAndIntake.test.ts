@@ -24,6 +24,19 @@ describe("public trust and intake safeguards", () => {
     expect(intake).toContain("toast.success");
   });
 
+  it("uses the homepage search entry point to hand visitors into the archive with their query intact", () => {
+    const home = read("./Home.tsx");
+    const archive = read("./Fatawa.tsx");
+
+    expect(home).toContain('id="fatawa"');
+    expect(home).toContain('eyebrow={urdu ? "فتاویٰ" : "FATWA LIBRARY"}');
+    expect(home).toContain("submitArchiveSearch");
+    expect(home).toContain('`/fatawa?q=${encodeURIComponent(query)}`');
+    expect(home).not.toContain("FATAWA.slice(0, 3)");
+    expect(archive).toContain('new URLSearchParams(location.split("?")[1] ?? "").get("q")');
+    expect(archive).toContain("useEffect(() => setQuery(urlQuery), [urlQuery])");
+  });
+
   it("publishes the supplied scholarly supervision profile through reusable directory and detail routes", () => {
     const app = read("../App.tsx");
     const home = read("./Home.tsx");

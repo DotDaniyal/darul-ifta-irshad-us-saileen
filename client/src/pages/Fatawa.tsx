@@ -2,15 +2,18 @@
  * Blue Minbar Heritage: a manuscript-led scholarly catalogue where Urdu titles lead,
  * record folios establish authority, and original-PDF access remains explicit.
  */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, ArrowUpRight, FileText, Filter, ExternalLink } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import SiteShell, { SectionHeading, useLanguage } from "@/components/SiteShell";
 import { CATEGORY_LABELS, FATAWA, type Fatwa } from "@/data/fatawa";
 
 export default function Fatawa() {
   const { language } = useLanguage();
-  const [query, setQuery] = useState("");
+  const [location] = useLocation();
+  const urlQuery = useMemo(() => new URLSearchParams(location.split("?")[1] ?? "").get("q") ?? "", [location]);
+  const [query, setQuery] = useState(urlQuery);
+  useEffect(() => setQuery(urlQuery), [urlQuery]);
   const [category, setCategory] = useState<"All" | Fatwa["category"]>("All");
   const categories = useMemo(() => Object.keys(CATEGORY_LABELS) as Fatwa["category"][], []);
   const result = useMemo(() => FATAWA.filter((item) => (category === "All" || item.category === category) && `${item.number} ${item.titleEn} ${item.titleUr} ${item.questionEn} ${item.questionUr} ${item.topics.join(" ")}`.toLowerCase().includes(query.toLowerCase())), [category, query]);

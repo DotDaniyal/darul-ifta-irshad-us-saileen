@@ -159,3 +159,14 @@
 - [x] Re-check runtime diagnostics after live scholar API exercises and confirm no current response-handler errors remain.
 - [x] Correct Scholar Admin route ordering so `/scholars/admin` reaches the protected management interface instead of the public dynamic profile route.
 - [x] Save and publish a checkpoint containing the verified scalable scholars system.
+
+## Homepage Fatwa Search Refinement Checklist
+
+- [x] Restore the homepage Fatwa panel identity while retaining the new search form and removing only featured individual-Fatwa cards.
+- [x] Re-verify the Fatwa-panel title, search handoff, desktop/mobile presentation, tests, TypeScript, and production build after the clarification.
+- [x] Inspect the homepage target section and confirm why the visual editor could not apply the requested Fatwa-to-search replacement.
+- [x] Document that the visual edit referenced a stale or unmatched homepage location after prior source changes, requiring a manual replacement of the current `#fatawa` section.
+- [x] Replace the homepage Fatwa panel with a visible bilingual archive-search entry point that hands the visitor to the existing Fatwa search page.
+- [x] Verify desktop and mobile homepage presentation, archive-search handoff, automated tests, TypeScript, production build, and deployment readiness.
+- [x] Save and publish a checkpoint containing the verified homepage search refinement.
+- [x] Save the new release checkpoint for the preserved Fatwa panel and archive-search refinement after final verified state confirmation.
