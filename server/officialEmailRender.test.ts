@@ -42,19 +42,19 @@ function renderRoute(Component: React.ComponentType, language: "ur" | "en") {
 afterEach(() => vi.unstubAllGlobals());
 
 describe("rendered official enquiry-email surfaces", () => {
-  it("renders English shared-shell and contextual links with the approved mailto target and labels", () => {
+  it("renders English shared-shell and email-only contextual links with the approved mailto target and labels", () => {
     const markup = renderEmailSurfaces("en");
     expect(markup).toContain(`href="mailto:${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup).toContain(`aria-label="Written enquiries by email: ${OFFICIAL_ENQUIRY_EMAIL}"`);
-    expect(markup).toContain(`aria-label="Written enquiries: ${OFFICIAL_ENQUIRY_EMAIL}"`);
+    expect(markup).toContain(`aria-label="Email: ${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup.match(new RegExp(`href=\"mailto:${OFFICIAL_ENQUIRY_EMAIL}\"`, "g"))?.length).toBeGreaterThanOrEqual(3);
   });
 
-  it("renders Urdu shared-shell and contextual links with the same mailto target and Urdu labels", () => {
+  it("renders Urdu shared-shell and email-only contextual links with the same mailto target and Urdu labels", () => {
     const markup = renderEmailSurfaces("ur");
     expect(markup).toContain(`href="mailto:${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup).toContain(`aria-label="تحریری رہنمائی کے لیے ای میل: ${OFFICIAL_ENQUIRY_EMAIL}"`);
-    expect(markup).toContain(`aria-label="تحریری رابطہ: ${OFFICIAL_ENQUIRY_EMAIL}"`);
+    expect(markup).toContain(`aria-label="ای میل: ${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup.match(new RegExp(`href=\"mailto:${OFFICIAL_ENQUIRY_EMAIL}\"`, "g"))?.length).toBeGreaterThanOrEqual(3);
   });
 });
@@ -76,8 +76,8 @@ describe("rendered official enquiry-email route surfaces", () => {
       expect(urdu.match(new RegExp(href, "g"))?.length).toBeGreaterThanOrEqual(3);
       expect(english).toContain(`aria-label="Written enquiries by email: ${OFFICIAL_ENQUIRY_EMAIL}"`);
       expect(urdu).toContain(`aria-label="تحریری رہنمائی کے لیے ای میل: ${OFFICIAL_ENQUIRY_EMAIL}"`);
-      expect(english).toContain(`aria-label="Written enquiries: ${OFFICIAL_ENQUIRY_EMAIL}"`);
-      expect(urdu).toContain(`aria-label="تحریری رابطہ: ${OFFICIAL_ENQUIRY_EMAIL}"`);
+      expect(english).toContain(`aria-label="Email: ${OFFICIAL_ENQUIRY_EMAIL}"`);
+      expect(urdu).toContain(`aria-label="ای میل: ${OFFICIAL_ENQUIRY_EMAIL}"`);
     });
   }
 });

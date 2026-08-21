@@ -189,3 +189,6 @@
 - [x] Verify the adjusted email and homepage text surfaces at desktop and mobile sizes, run relevant automated checks, and publish the update.
 - [x] Capture and review desktop/mobile evidence for the updated email presentation on Ask Fatwa and Methodology after removing the standalone strip and restyling the contextual card.
 - [x] Document the desktop/mobile review outcome for the updated contextual email presentation on Ask Fatwa and Methodology.
+- [x] Simplify the contextual official-email card so it presents only the email prompt and official address.
+- [x] Verify the email-only card on the affected public routes, update automated coverage, and publish the change.
+- [x] Save and publish the verified email-only contextual-card update in a new checkpoint.
