@@ -215,4 +215,4 @@
 - [x] Redact every non-approved phone number from the new PDFs while preserving 03332617671 and +92 333 2617671 wherever present.
 - [x] Upload the redacted PDFs and import the new Fatwa records into the governed public archive.
 - [x] Verify all new archive records, PDF links, redaction results, approved-number retention, automated coverage, and public presentation.
-- [ ] Save and publish the verified expanded Fatwa archive in a new checkpoint.
+- [x] Save and publish the verified expanded Fatwa archive in a new checkpoint.
