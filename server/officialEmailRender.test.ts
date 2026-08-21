@@ -49,6 +49,7 @@ describe("rendered official enquiry-email surfaces", () => {
     expect(markup).toContain(`aria-label="Email: ${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup).toContain('class="contact-card "');
     expect(markup).toContain("lucide-mail");
+    expect(markup).toContain('data-email-fallback="copy"');
     expect(markup.match(new RegExp(`href=\"mailto:${OFFICIAL_ENQUIRY_EMAIL}\"`, "g"))?.length).toBeGreaterThanOrEqual(3);
   });
 
@@ -59,6 +60,7 @@ describe("rendered official enquiry-email surfaces", () => {
     expect(markup).toContain(`aria-label="ای میل: ${OFFICIAL_ENQUIRY_EMAIL}"`);
     expect(markup).toContain('class="contact-card "');
     expect(markup).toContain("lucide-mail");
+    expect(markup).toContain('data-email-fallback="copy"');
     expect(markup.match(new RegExp(`href=\"mailto:${OFFICIAL_ENQUIRY_EMAIL}\"`, "g"))?.length).toBeGreaterThanOrEqual(3);
   });
 });

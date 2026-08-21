@@ -198,3 +198,9 @@
 - [x] Add a matching email symbol to the shared contextual Email / ای میل contact card.
 - [x] Verify the email symbol across public placements at desktop and mobile sizes, update coverage, and publish the refinement.
 - [x] Save and publish the verified matching email-symbol refinement in a new checkpoint.
+- [x] Diagnose why the official email link is not opening from the public contact cards and shared contact surfaces.
+- [x] Repair the official email-link behavior while retaining clear copy-to-email fallback access.
+- [x] Verify mail-action behavior and fallback access on desktop and mobile, update regression coverage, and publish the repair.
+- [x] Run an interaction-level mobile audit confirming native mailto behavior and the copy-address fallback on every public email surface.
+- [x] Document the verified official email-link repair, including the mailto-only root cause and fallback behavior.
+- [ ] Save and publish the verified official email-link repair in a new checkpoint.
