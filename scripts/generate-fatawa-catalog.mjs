@@ -2,6 +2,9 @@ import fs from "node:fs";
 
 const root = "/home/ubuntu/darul-ifta-irshad-us-saileen";
 const manifest = fs.readFileSync("/home/ubuntu/webdev-static-assets/fatawa/upload_manifest.txt", "utf8");
+const sanitizedPublicPdfUrlBySlug = new Map(
+  Object.entries(JSON.parse(fs.readFileSync(`${root}/scripts/fatwa-public-sanitized-url-manifest.json`, "utf8"))),
+);
 const urlByPosition = new Map(
   [...manifest.matchAll(/Storage Path: \/manus-storage\/fatwa-(\d+)_([^\s]+)/g)].map((match) => [Number(match[1]), `/manus-storage/fatwa-${match[1]}_${match[2]}`]),
 );
@@ -326,16 +329,21 @@ if (a05UrlByAssetKey.size !== importedA05Records.length) {
   throw new Error(`Expected ${importedA05Records.length} supplied A0499/A0503 PDF URLs; found ${a05UrlByAssetKey.size}.`);
 }
 
+if (sanitizedPublicPdfUrlBySlug.size !== allRecords.length) {
+  throw new Error(`Expected ${allRecords.length} sanitized public PDF URLs; found ${sanitizedPublicPdfUrlBySlug.size}.`);
+}
+
 const categories = ["Worship", "Transactions", "Marriage & Divorce", "Inheritance & Wills", "Belief & Conduct"];
 const archiveNoticeUr = "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔";
 const archiveNoticeEn = "Open the original PDF for the complete question, researched answer, and supporting detail.";
 
 const fatawa = allRecords.map(([number, titleUr, category, assetKey], index) => {
-  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number) ?? a04UrlByAssetKey.get(assetKey ?? number) ?? a05UrlByAssetKey.get(assetKey ?? number);
-  if (!pdfUrl) throw new Error(`Missing managed PDF URL for ${number}.`);
+  const slug = `${number.toLowerCase()}-${index + 1}`;
+  const pdfUrl = sanitizedPublicPdfUrlBySlug.get(slug);
+  if (!pdfUrl) throw new Error(`Missing sanitized managed PDF URL for ${number}.`);
 
   return {
-    slug: `${number.toLowerCase()}-${index + 1}`,
+    slug,
     number,
     category,
     date: "PDF Archive",

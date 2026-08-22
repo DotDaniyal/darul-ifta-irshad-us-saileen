@@ -18,7 +18,8 @@ export async function auditFatwaPrivacyImage(imagePath) {
     },
     body: JSON.stringify({
       model: "gemini-3-flash-preview",
-      max_tokens: 1024,
+      max_tokens: 256,
+      temperature: 0,
       response_format: {
         type: "json_schema",
         json_schema: {
@@ -87,5 +88,12 @@ export async function auditFatwaPrivacyImage(imagePath) {
   const result = await response.json();
   const content = result.choices?.[0]?.message?.content;
   if (typeof content !== "string") throw new Error("Privacy audit did not return structured text output.");
-  return JSON.parse(content);
+  const objectStart = content.indexOf("{");
+  const objectEnd = content.lastIndexOf("}");
+  if (objectStart === -1 || objectEnd < objectStart) {
+    throw new Error("Privacy audit response did not contain a JSON object.");
+  }
+  const parsed = JSON.parse(content.slice(objectStart, objectEnd + 1));
+  if (!Array.isArray(parsed.regions)) throw new Error("Privacy audit response did not include regions.");
+  return parsed;
 }

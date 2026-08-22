@@ -20,7 +20,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0001"
     ],
-    "pdfUrl": "/manus-storage/fatwa-001_40c34800.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0001-1_93401ca8.pdf"
   },
   {
     "slug": "a0002-2",
@@ -39,7 +39,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0002"
     ],
-    "pdfUrl": "/manus-storage/fatwa-002_c4b61ccb.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0002-2_9deaa4c0.pdf"
   },
   {
     "slug": "a0003-3",
@@ -58,7 +58,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0003"
     ],
-    "pdfUrl": "/manus-storage/fatwa-003_38badc7e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0003-3_7b3c385c.pdf"
   },
   {
     "slug": "a0004-4",
@@ -77,7 +77,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0004"
     ],
-    "pdfUrl": "/manus-storage/fatwa-004_dfe897c0.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0004-4_2770598e.pdf"
   },
   {
     "slug": "a0005-5",
@@ -96,7 +96,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0005"
     ],
-    "pdfUrl": "/manus-storage/fatwa-005_aad76d0b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0005-5_ff89e14e.pdf"
   },
   {
     "slug": "a0006-6",
@@ -115,7 +115,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0006"
     ],
-    "pdfUrl": "/manus-storage/fatwa-006_a518360c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0006-6_9d17d06d.pdf"
   },
   {
     "slug": "a0007-7",
@@ -134,7 +134,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0007"
     ],
-    "pdfUrl": "/manus-storage/fatwa-007_bb5025aa.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0007-7_a082cf40.pdf"
   },
   {
     "slug": "a0011-8",
@@ -153,7 +153,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0011"
     ],
-    "pdfUrl": "/manus-storage/fatwa-008_5556d799.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0011-8_c221b3e9.pdf"
   },
   {
     "slug": "a0012-9",
@@ -172,7 +172,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0012"
     ],
-    "pdfUrl": "/manus-storage/fatwa-009_ea671e01.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0012-9_6e1eff03.pdf"
   },
   {
     "slug": "a0013-10",
@@ -191,7 +191,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0013"
     ],
-    "pdfUrl": "/manus-storage/fatwa-010_0de19fa4.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0013-10_5b01186e.pdf"
   },
   {
     "slug": "a0015-11",
@@ -210,7 +210,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0015"
     ],
-    "pdfUrl": "/manus-storage/fatwa-011_8db31b51.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0015-11_4efe3a28.pdf"
   },
   {
     "slug": "a0017-12",
@@ -229,7 +229,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0017"
     ],
-    "pdfUrl": "/manus-storage/fatwa-012_8272251b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0017-12_b313e396.pdf"
   },
   {
     "slug": "a0022-13",
@@ -248,7 +248,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0022"
     ],
-    "pdfUrl": "/manus-storage/fatwa-013_5670b121.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0022-13_1866c657.pdf"
   },
   {
     "slug": "a0028-14",
@@ -267,7 +267,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0028"
     ],
-    "pdfUrl": "/manus-storage/fatwa-014_288dd461.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0028-14_8271d3ad.pdf"
   },
   {
     "slug": "a0031-15",
@@ -286,7 +286,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0031"
     ],
-    "pdfUrl": "/manus-storage/fatwa-015_dfaf0056.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0031-15_f19ebd8a.pdf"
   },
   {
     "slug": "a0037-16",
@@ -305,7 +305,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0037"
     ],
-    "pdfUrl": "/manus-storage/fatwa-016_99042d36.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0037-16_2aa35e51.pdf"
   },
   {
     "slug": "a0039-17",
@@ -324,7 +324,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0039"
     ],
-    "pdfUrl": "/manus-storage/fatwa-017_d13e21cd.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0039-17_9e927729.pdf"
   },
   {
     "slug": "a0042-18",
@@ -343,7 +343,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0042"
     ],
-    "pdfUrl": "/manus-storage/fatwa-018_8863306d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0042-18_70071eca.pdf"
   },
   {
     "slug": "a0044-19",
@@ -362,7 +362,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0044"
     ],
-    "pdfUrl": "/manus-storage/fatwa-019_16178539.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0044-19_40b4d7ad.pdf"
   },
   {
     "slug": "a0045-20",
@@ -381,7 +381,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0045"
     ],
-    "pdfUrl": "/manus-storage/fatwa-020_a4e67a17.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0045-20_61c9084e.pdf"
   },
   {
     "slug": "a0046-21",
@@ -400,7 +400,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0046"
     ],
-    "pdfUrl": "/manus-storage/fatwa-021_cb34ff07.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0046-21_061a3f33.pdf"
   },
   {
     "slug": "a0047-22",
@@ -419,7 +419,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0047"
     ],
-    "pdfUrl": "/manus-storage/fatwa-022_24d9dcac.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0047-22_97c55fb7.pdf"
   },
   {
     "slug": "a0048-23",
@@ -438,7 +438,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0048"
     ],
-    "pdfUrl": "/manus-storage/fatwa-023_884d87c4.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0048-23_e44d284c.pdf"
   },
   {
     "slug": "a0051-24",
@@ -457,7 +457,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0051"
     ],
-    "pdfUrl": "/manus-storage/fatwa-024_e567e128.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0051-24_5feed73d.pdf"
   },
   {
     "slug": "a0053-25",
@@ -476,7 +476,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0053"
     ],
-    "pdfUrl": "/manus-storage/fatwa-025_ed617fcd.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0053-25_e9bcd64a.pdf"
   },
   {
     "slug": "a0054-26",
@@ -495,7 +495,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0054"
     ],
-    "pdfUrl": "/manus-storage/fatwa-026_71fe16bd.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0054-26_25b7fa7b.pdf"
   },
   {
     "slug": "a0055-27",
@@ -514,7 +514,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0055"
     ],
-    "pdfUrl": "/manus-storage/fatwa-027_e820595a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0055-27_284fc35b.pdf"
   },
   {
     "slug": "a0056-28",
@@ -533,7 +533,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0056"
     ],
-    "pdfUrl": "/manus-storage/fatwa-028_2f4d1dc7.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0056-28_7640bf89.pdf"
   },
   {
     "slug": "a0057-29",
@@ -552,7 +552,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0057"
     ],
-    "pdfUrl": "/manus-storage/fatwa-029_356edf34.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0057-29_f7795535.pdf"
   },
   {
     "slug": "a0058-30",
@@ -571,7 +571,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0058"
     ],
-    "pdfUrl": "/manus-storage/fatwa-030_5a15755e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0058-30_02b1f7ed.pdf"
   },
   {
     "slug": "a0060-31",
@@ -590,7 +590,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0060"
     ],
-    "pdfUrl": "/manus-storage/fatwa-031_587605c6.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0060-31_c20fac9f.pdf"
   },
   {
     "slug": "a0062-32",
@@ -609,7 +609,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0062"
     ],
-    "pdfUrl": "/manus-storage/fatwa-032_d3f7ea95.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0062-32_98b206b0.pdf"
   },
   {
     "slug": "a0063-33",
@@ -628,7 +628,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0063"
     ],
-    "pdfUrl": "/manus-storage/fatwa-033_95bb8bb3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0063-33_cd725ff4.pdf"
   },
   {
     "slug": "a0064-34",
@@ -647,7 +647,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0064"
     ],
-    "pdfUrl": "/manus-storage/fatwa-034_4cdedff9.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0064-34_28db0068.pdf"
   },
   {
     "slug": "a0065-35",
@@ -666,7 +666,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0065"
     ],
-    "pdfUrl": "/manus-storage/fatwa-035_cc36c077.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0065-35_c4762ab0.pdf"
   },
   {
     "slug": "a0067-36",
@@ -685,7 +685,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0067"
     ],
-    "pdfUrl": "/manus-storage/fatwa-036_360f9da0.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0067-36_80d24c4b.pdf"
   },
   {
     "slug": "a0068-37",
@@ -704,7 +704,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0068"
     ],
-    "pdfUrl": "/manus-storage/fatwa-037_b0e72f80.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0068-37_86f6c794.pdf"
   },
   {
     "slug": "a0069-38",
@@ -723,7 +723,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0069"
     ],
-    "pdfUrl": "/manus-storage/fatwa-038_e064dd70.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0069-38_31b42ebb.pdf"
   },
   {
     "slug": "a0075-39",
@@ -742,7 +742,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0075"
     ],
-    "pdfUrl": "/manus-storage/fatwa-039_0e7c9510.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0075-39_5040d4bf.pdf"
   },
   {
     "slug": "a0076-40",
@@ -761,7 +761,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0076"
     ],
-    "pdfUrl": "/manus-storage/fatwa-040_db072ee7.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0076-40_a925d7f9.pdf"
   },
   {
     "slug": "a0078-41",
@@ -780,7 +780,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0078"
     ],
-    "pdfUrl": "/manus-storage/fatwa-041_587d66a4.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0078-41_cddd28d7.pdf"
   },
   {
     "slug": "a0085-42",
@@ -799,7 +799,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0085"
     ],
-    "pdfUrl": "/manus-storage/fatwa-042_036c3834.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0085-42_6df8497b.pdf"
   },
   {
     "slug": "a0086-43",
@@ -818,7 +818,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0086"
     ],
-    "pdfUrl": "/manus-storage/fatwa-043_94ca4d80.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0086-43_232a4c83.pdf"
   },
   {
     "slug": "a0088-44",
@@ -837,7 +837,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0088"
     ],
-    "pdfUrl": "/manus-storage/fatwa-044_4aff227b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0088-44_3b43569c.pdf"
   },
   {
     "slug": "a0091-45",
@@ -856,7 +856,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0091"
     ],
-    "pdfUrl": "/manus-storage/fatwa-045_a09ee19d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0091-45_b8949ce6.pdf"
   },
   {
     "slug": "a0092-46",
@@ -875,7 +875,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0092"
     ],
-    "pdfUrl": "/manus-storage/fatwa-046_5cbc98b3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0092-46_1f7f41fb.pdf"
   },
   {
     "slug": "a0093-47",
@@ -894,7 +894,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0093"
     ],
-    "pdfUrl": "/manus-storage/fatwa-047_11e0fe5b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0093-47_37f3a88f.pdf"
   },
   {
     "slug": "a0099-48",
@@ -913,7 +913,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0099"
     ],
-    "pdfUrl": "/manus-storage/fatwa-048_2011e318.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0099-48_9c07a6cd.pdf"
   },
   {
     "slug": "a0100-49",
@@ -932,7 +932,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0100"
     ],
-    "pdfUrl": "/manus-storage/fatwa-049_410eb283.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0100-49_9d0884a3.pdf"
   },
   {
     "slug": "a0104-50",
@@ -951,7 +951,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0104"
     ],
-    "pdfUrl": "/manus-storage/fatwa-050_22e2f764.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0104-50_a6376666.pdf"
   },
   {
     "slug": "a0107-51",
@@ -970,7 +970,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0107"
     ],
-    "pdfUrl": "/manus-storage/fatwa-051_ae62f497.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0107-51_23bd3228.pdf"
   },
   {
     "slug": "a0108-52",
@@ -989,7 +989,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0108"
     ],
-    "pdfUrl": "/manus-storage/fatwa-052_e4f402f5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0108-52_4bdde463.pdf"
   },
   {
     "slug": "a0113-53",
@@ -1008,7 +1008,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0113"
     ],
-    "pdfUrl": "/manus-storage/fatwa-053_ba6bef47.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0113-53_4d741922.pdf"
   },
   {
     "slug": "a0115-54",
@@ -1027,7 +1027,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0115"
     ],
-    "pdfUrl": "/manus-storage/fatwa-054_f93e07ff.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0115-54_280c7825.pdf"
   },
   {
     "slug": "a0132-55",
@@ -1046,7 +1046,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0132"
     ],
-    "pdfUrl": "/manus-storage/fatwa-055_5a3cf97e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0132-55_0ebb99d1.pdf"
   },
   {
     "slug": "a0143-56",
@@ -1065,7 +1065,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0143"
     ],
-    "pdfUrl": "/manus-storage/fatwa-056_657b049e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0143-56_10a87589.pdf"
   },
   {
     "slug": "a0153-57",
@@ -1084,7 +1084,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0153"
     ],
-    "pdfUrl": "/manus-storage/fatwa-057_053ec34a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0153-57_ac623738.pdf"
   },
   {
     "slug": "a0158-58",
@@ -1103,7 +1103,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0158"
     ],
-    "pdfUrl": "/manus-storage/fatwa-058_05fbc8af.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0158-58_5b5b8bba.pdf"
   },
   {
     "slug": "a0159-59",
@@ -1122,7 +1122,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0159"
     ],
-    "pdfUrl": "/manus-storage/fatwa-059_e96d9847.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0159-59_c07d7144.pdf"
   },
   {
     "slug": "a0159-60",
@@ -1141,7 +1141,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0159"
     ],
-    "pdfUrl": "/manus-storage/fatwa-060_fdd55bdc.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0159-60_68dc4dd7.pdf"
   },
   {
     "slug": "a0160-61",
@@ -1160,7 +1160,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0160"
     ],
-    "pdfUrl": "/manus-storage/fatwa-061_491bf522.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0160-61_4fec8091.pdf"
   },
   {
     "slug": "a0163-62",
@@ -1179,7 +1179,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0163"
     ],
-    "pdfUrl": "/manus-storage/fatwa-062_3d29f2f1.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0163-62_a843a864.pdf"
   },
   {
     "slug": "a0164-63",
@@ -1198,7 +1198,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0164"
     ],
-    "pdfUrl": "/manus-storage/fatwa-063_3c178929.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0164-63_da93d1e4.pdf"
   },
   {
     "slug": "a0165-64",
@@ -1217,7 +1217,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0165"
     ],
-    "pdfUrl": "/manus-storage/fatwa-064_c46b6400.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0165-64_6a375795.pdf"
   },
   {
     "slug": "a0165-65",
@@ -1236,7 +1236,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0165"
     ],
-    "pdfUrl": "/manus-storage/fatwa-065_052394d2.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0165-65_526889f7.pdf"
   },
   {
     "slug": "a0167-66",
@@ -1255,7 +1255,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0167"
     ],
-    "pdfUrl": "/manus-storage/fatwa-066_a6cc6e4c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0167-66_3a767d06.pdf"
   },
   {
     "slug": "a0171-67",
@@ -1274,7 +1274,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0171"
     ],
-    "pdfUrl": "/manus-storage/fatwa-067_8ac3411a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0171-67_72f83767.pdf"
   },
   {
     "slug": "a0172-68",
@@ -1293,7 +1293,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0172"
     ],
-    "pdfUrl": "/manus-storage/fatwa-068_38f47de8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0172-68_dc5c2dc7.pdf"
   },
   {
     "slug": "a0173-69",
@@ -1312,7 +1312,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0173"
     ],
-    "pdfUrl": "/manus-storage/fatwa-069_9d054710.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0173-69_b4179952.pdf"
   },
   {
     "slug": "a0173-70",
@@ -1331,7 +1331,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0173"
     ],
-    "pdfUrl": "/manus-storage/fatwa-070_16cfa182.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0173-70_8388002a.pdf"
   },
   {
     "slug": "a0182-71",
@@ -1350,7 +1350,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0182"
     ],
-    "pdfUrl": "/manus-storage/fatwa-071_301875e6.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0182-71_87252c92.pdf"
   },
   {
     "slug": "a0197-72",
@@ -1369,7 +1369,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0197"
     ],
-    "pdfUrl": "/manus-storage/fatwa-072_cc9a2f00.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0197-72_1269601f.pdf"
   },
   {
     "slug": "a0198-73",
@@ -1388,7 +1388,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0198"
     ],
-    "pdfUrl": "/manus-storage/fatwa-073_48dd8253.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0198-73_2df5d8ad.pdf"
   },
   {
     "slug": "a0199-74",
@@ -1407,7 +1407,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0199"
     ],
-    "pdfUrl": "/manus-storage/fatwa-074_e76fbe70.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0199-74_4799a9ea.pdf"
   },
   {
     "slug": "a0201-75",
@@ -1426,7 +1426,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0201"
     ],
-    "pdfUrl": "/manus-storage/A0201_bc92ac44.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0201-75_ab46e4ad.pdf"
   },
   {
     "slug": "a0202-76",
@@ -1445,7 +1445,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0202"
     ],
-    "pdfUrl": "/manus-storage/A0202_95348363.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0202-76_c34a404e.pdf"
   },
   {
     "slug": "a0203-77",
@@ -1464,7 +1464,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0203"
     ],
-    "pdfUrl": "/manus-storage/A0203_30d6a0be.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0203-77_bdfd8d3f.pdf"
   },
   {
     "slug": "a0204-78",
@@ -1483,7 +1483,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0204"
     ],
-    "pdfUrl": "/manus-storage/A0204_fd2c74d0.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0204-78_bc3a36e8.pdf"
   },
   {
     "slug": "a0208-79",
@@ -1502,7 +1502,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0208"
     ],
-    "pdfUrl": "/manus-storage/A0208_16a4e395.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0208-79_e49b29df.pdf"
   },
   {
     "slug": "a0211-80",
@@ -1521,7 +1521,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0211"
     ],
-    "pdfUrl": "/manus-storage/A0211_244bded5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0211-80_c1037dd7.pdf"
   },
   {
     "slug": "a0212-81",
@@ -1540,7 +1540,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0212"
     ],
-    "pdfUrl": "/manus-storage/A0212_f3493c9a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0212-81_bc0aa998.pdf"
   },
   {
     "slug": "a0213-82",
@@ -1559,7 +1559,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0213"
     ],
-    "pdfUrl": "/manus-storage/A0213_f443d90e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0213-82_9538139c.pdf"
   },
   {
     "slug": "a0221-83",
@@ -1578,7 +1578,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0221"
     ],
-    "pdfUrl": "/manus-storage/A0221_7d2bbbad.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0221-83_210e0091.pdf"
   },
   {
     "slug": "a0223-84",
@@ -1597,7 +1597,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0223"
     ],
-    "pdfUrl": "/manus-storage/A0223_9fc30f69.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0223-84_eb962ea5.pdf"
   },
   {
     "slug": "a0225-85",
@@ -1616,7 +1616,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0225"
     ],
-    "pdfUrl": "/manus-storage/A0225_1417a9f8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0225-85_41cd3959.pdf"
   },
   {
     "slug": "a0227-86",
@@ -1635,7 +1635,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0227"
     ],
-    "pdfUrl": "/manus-storage/A0227_f93c2460.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0227-86_6cff0b3c.pdf"
   },
   {
     "slug": "a0230-87",
@@ -1654,7 +1654,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0230"
     ],
-    "pdfUrl": "/manus-storage/A0230_259812d6.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0230-87_f94f7a2c.pdf"
   },
   {
     "slug": "a0231-88",
@@ -1673,7 +1673,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0231"
     ],
-    "pdfUrl": "/manus-storage/A0231_43f6f33f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0231-88_b2527f68.pdf"
   },
   {
     "slug": "a0233-89",
@@ -1692,7 +1692,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0233"
     ],
-    "pdfUrl": "/manus-storage/A0233_9edfe9f3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0233-89_a7612ec2.pdf"
   },
   {
     "slug": "a0234-90",
@@ -1711,7 +1711,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0234"
     ],
-    "pdfUrl": "/manus-storage/A0234_5b8e9fd3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0234-90_699d5c82.pdf"
   },
   {
     "slug": "a0235-91",
@@ -1730,7 +1730,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0235"
     ],
-    "pdfUrl": "/manus-storage/A0235_61bd4f65.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0235-91_9fbc798c.pdf"
   },
   {
     "slug": "a0237-92",
@@ -1749,7 +1749,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0237"
     ],
-    "pdfUrl": "/manus-storage/A0237_b49ade97.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0237-92_64d5dcc0.pdf"
   },
   {
     "slug": "a0252-93",
@@ -1768,7 +1768,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0252"
     ],
-    "pdfUrl": "/manus-storage/A0252_4b58bc38.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0252-93_9909bd6f.pdf"
   },
   {
     "slug": "a0254-94",
@@ -1787,7 +1787,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0254"
     ],
-    "pdfUrl": "/manus-storage/A0254_4eba413d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0254-94_e1fd4de9.pdf"
   },
   {
     "slug": "a0268-95",
@@ -1806,7 +1806,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0268"
     ],
-    "pdfUrl": "/manus-storage/A0268_a86784af.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0268-95_f78394fb.pdf"
   },
   {
     "slug": "a0272-96",
@@ -1825,7 +1825,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0272"
     ],
-    "pdfUrl": "/manus-storage/A0272_934efe68.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0272-96_409a7aaa.pdf"
   },
   {
     "slug": "a0281-97",
@@ -1844,7 +1844,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0281"
     ],
-    "pdfUrl": "/manus-storage/A0281_bc9ec9de.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0281-97_1875eae1.pdf"
   },
   {
     "slug": "a0283-98",
@@ -1863,7 +1863,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0283"
     ],
-    "pdfUrl": "/manus-storage/A0283_86b3db94.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0283-98_93172691.pdf"
   },
   {
     "slug": "a0285-99",
@@ -1882,7 +1882,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0285"
     ],
-    "pdfUrl": "/manus-storage/A0285_4b582634.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0285-99_c40e79f3.pdf"
   },
   {
     "slug": "a0286-100",
@@ -1901,7 +1901,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0286"
     ],
-    "pdfUrl": "/manus-storage/A0286_b96d76f5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0286-100_43337f12.pdf"
   },
   {
     "slug": "a0288-101",
@@ -1920,7 +1920,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0288"
     ],
-    "pdfUrl": "/manus-storage/A0288_7acfe9b8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0288-101_b06a50a0.pdf"
   },
   {
     "slug": "a0289-102",
@@ -1939,7 +1939,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0289"
     ],
-    "pdfUrl": "/manus-storage/A0289_9e6fc740.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0289-102_17a9fbfc.pdf"
   },
   {
     "slug": "a0290-103",
@@ -1958,7 +1958,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0290"
     ],
-    "pdfUrl": "/manus-storage/A0290_b41ee9de.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0290-103_eee02829.pdf"
   },
   {
     "slug": "a0291-104",
@@ -1977,7 +1977,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0291"
     ],
-    "pdfUrl": "/manus-storage/A0291_2fdec51d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0291-104_d6f5c5df.pdf"
   },
   {
     "slug": "a0296-105",
@@ -1996,7 +1996,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0296"
     ],
-    "pdfUrl": "/manus-storage/A0296_57f00844.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0296-105_d707edff.pdf"
   },
   {
     "slug": "a0300-106",
@@ -2015,7 +2015,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0300"
     ],
-    "pdfUrl": "/manus-storage/A0300_e3ab9d9d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0300-106_ad73559a.pdf"
   },
   {
     "slug": "a0303-107",
@@ -2034,7 +2034,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0303"
     ],
-    "pdfUrl": "/manus-storage/A0303_e2a55c42.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0303-107_0e175d65.pdf"
   },
   {
     "slug": "a0305-108",
@@ -2053,7 +2053,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0305"
     ],
-    "pdfUrl": "/manus-storage/A0305_cfbe9df3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0305-108_62c9dd2b.pdf"
   },
   {
     "slug": "a0306-109",
@@ -2072,7 +2072,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0306"
     ],
-    "pdfUrl": "/manus-storage/A0306_d9ecdf1f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0306-109_59f97b2a.pdf"
   },
   {
     "slug": "a0307-110",
@@ -2091,7 +2091,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0307"
     ],
-    "pdfUrl": "/manus-storage/A0307_9678eb27.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0307-110_7cd9d852.pdf"
   },
   {
     "slug": "a0308-111",
@@ -2110,7 +2110,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0308"
     ],
-    "pdfUrl": "/manus-storage/A0308_624e9f63.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0308-111_e1671bcf.pdf"
   },
   {
     "slug": "a0309-112",
@@ -2129,7 +2129,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0309"
     ],
-    "pdfUrl": "/manus-storage/A0309_1121cc5a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0309-112_156fc8dd.pdf"
   },
   {
     "slug": "a0313-113",
@@ -2148,7 +2148,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0313"
     ],
-    "pdfUrl": "/manus-storage/A0313_4f38e637.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0313-113_194701ad.pdf"
   },
   {
     "slug": "a0315-114",
@@ -2167,7 +2167,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0315"
     ],
-    "pdfUrl": "/manus-storage/A0315_e8614f0f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0315-114_7490f308.pdf"
   },
   {
     "slug": "a0316-115",
@@ -2186,7 +2186,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0316"
     ],
-    "pdfUrl": "/manus-storage/A0316_9888fcb7.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0316-115_36b36c4f.pdf"
   },
   {
     "slug": "a0317-116",
@@ -2205,7 +2205,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0317"
     ],
-    "pdfUrl": "/manus-storage/A0317_4a70270c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0317-116_dc86b8c4.pdf"
   },
   {
     "slug": "a0318-117",
@@ -2224,7 +2224,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0318"
     ],
-    "pdfUrl": "/manus-storage/A0318_daed927b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0318-117_8552f2dd.pdf"
   },
   {
     "slug": "a0320-118",
@@ -2243,7 +2243,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0320"
     ],
-    "pdfUrl": "/manus-storage/A0320_98a2d1e5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0320-118_e09e1704.pdf"
   },
   {
     "slug": "a0321-119",
@@ -2262,7 +2262,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0321"
     ],
-    "pdfUrl": "/manus-storage/A0321_222ee779.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0321-119_d333b9a0.pdf"
   },
   {
     "slug": "a0322-120",
@@ -2281,7 +2281,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0322"
     ],
-    "pdfUrl": "/manus-storage/A0322_99948997.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0322-120_0d70f928.pdf"
   },
   {
     "slug": "a0323-121",
@@ -2300,7 +2300,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0323"
     ],
-    "pdfUrl": "/manus-storage/A0323_3646c3d8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0323-121_f1f8f4a8.pdf"
   },
   {
     "slug": "a0324-122",
@@ -2319,7 +2319,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0324"
     ],
-    "pdfUrl": "/manus-storage/A0324_13d315f5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0324-122_7976dcbd.pdf"
   },
   {
     "slug": "a0325-123",
@@ -2338,7 +2338,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0325"
     ],
-    "pdfUrl": "/manus-storage/A0325_31bf97bd.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0325-123_3df892cb.pdf"
   },
   {
     "slug": "a0326-124",
@@ -2357,7 +2357,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0326"
     ],
-    "pdfUrl": "/manus-storage/A0326_0b73b516.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0326-124_2f5425d1.pdf"
   },
   {
     "slug": "a0327-125",
@@ -2376,7 +2376,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0327"
     ],
-    "pdfUrl": "/manus-storage/A0327_c763b931.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0327-125_c2be16f3.pdf"
   },
   {
     "slug": "a0328-126",
@@ -2395,7 +2395,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0328"
     ],
-    "pdfUrl": "/manus-storage/A0328_5c92d77b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0328-126_06bc3f36.pdf"
   },
   {
     "slug": "a0330-127",
@@ -2414,7 +2414,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0330"
     ],
-    "pdfUrl": "/manus-storage/A0330_ddd3b8a8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0330-127_c6ffed44.pdf"
   },
   {
     "slug": "a0331-128",
@@ -2433,7 +2433,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0331"
     ],
-    "pdfUrl": "/manus-storage/A0331_981aa053.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0331-128_746970f2.pdf"
   },
   {
     "slug": "a0332-129",
@@ -2452,7 +2452,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0332"
     ],
-    "pdfUrl": "/manus-storage/A0332_e1391457.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0332-129_69c6ebad.pdf"
   },
   {
     "slug": "a0337-130",
@@ -2471,7 +2471,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0337"
     ],
-    "pdfUrl": "/manus-storage/A0337_45e4589f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0337-130_b2e3d5df.pdf"
   },
   {
     "slug": "a0339-131",
@@ -2490,7 +2490,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0339"
     ],
-    "pdfUrl": "/manus-storage/A0339_5b2e671b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0339-131_181d2c81.pdf"
   },
   {
     "slug": "a0340-132",
@@ -2509,7 +2509,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0340"
     ],
-    "pdfUrl": "/manus-storage/A0340_2ba0a162.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0340-132_4297b8a7.pdf"
   },
   {
     "slug": "a0341-133",
@@ -2528,7 +2528,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0341"
     ],
-    "pdfUrl": "/manus-storage/A0341_1bd867ef.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0341-133_fa674b0b.pdf"
   },
   {
     "slug": "a0342-134",
@@ -2547,7 +2547,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0342"
     ],
-    "pdfUrl": "/manus-storage/A0342_e2992ebd.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0342-134_bbc00472.pdf"
   },
   {
     "slug": "a0343-135",
@@ -2566,7 +2566,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0343"
     ],
-    "pdfUrl": "/manus-storage/A0343_af47695b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0343-135_d9fadc5c.pdf"
   },
   {
     "slug": "a0344-136",
@@ -2585,7 +2585,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0344"
     ],
-    "pdfUrl": "/manus-storage/A0344_868b1d50.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0344-136_49073b50.pdf"
   },
   {
     "slug": "a0345-137",
@@ -2604,7 +2604,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0345"
     ],
-    "pdfUrl": "/manus-storage/A0345_c0f62f57.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0345-137_77594320.pdf"
   },
   {
     "slug": "a0347-138",
@@ -2623,7 +2623,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0347"
     ],
-    "pdfUrl": "/manus-storage/A0347_6780984a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0347-138_cc5dae20.pdf"
   },
   {
     "slug": "a0348-139",
@@ -2642,7 +2642,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0348"
     ],
-    "pdfUrl": "/manus-storage/A0348_015351e5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0348-139_9dcd6a45.pdf"
   },
   {
     "slug": "a0349-140",
@@ -2661,7 +2661,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0349"
     ],
-    "pdfUrl": "/manus-storage/A0349_d74ff118.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0349-140_804024f1.pdf"
   },
   {
     "slug": "a0350-141",
@@ -2680,7 +2680,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0350"
     ],
-    "pdfUrl": "/manus-storage/A0350_c7d0381d.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0350-141_82004948.pdf"
   },
   {
     "slug": "a0351-142",
@@ -2699,7 +2699,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0351"
     ],
-    "pdfUrl": "/manus-storage/A0351_985ae32a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0351-142_13fc1bda.pdf"
   },
   {
     "slug": "a0352-143",
@@ -2718,7 +2718,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0352"
     ],
-    "pdfUrl": "/manus-storage/A0352_dd4726cb.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0352-143_46652485.pdf"
   },
   {
     "slug": "a0353-144",
@@ -2737,7 +2737,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0353"
     ],
-    "pdfUrl": "/manus-storage/A0353_de0766b4.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0353-144_15f53c55.pdf"
   },
   {
     "slug": "a0354-145",
@@ -2756,7 +2756,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0354"
     ],
-    "pdfUrl": "/manus-storage/A0354_a8414262.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0354-145_39c1c7de.pdf"
   },
   {
     "slug": "a0355-146",
@@ -2775,7 +2775,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0355"
     ],
-    "pdfUrl": "/manus-storage/A0355_0151cb08.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0355-146_8f033963.pdf"
   },
   {
     "slug": "a0356-147",
@@ -2794,7 +2794,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0356"
     ],
-    "pdfUrl": "/manus-storage/A0356_1cda881f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0356-147_61605288.pdf"
   },
   {
     "slug": "a0357-148",
@@ -2813,7 +2813,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0357"
     ],
-    "pdfUrl": "/manus-storage/A0357_27b14260.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0357-148_23188fd5.pdf"
   },
   {
     "slug": "a0360-149",
@@ -2832,7 +2832,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0360"
     ],
-    "pdfUrl": "/manus-storage/A0360_6f1db80e.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0360-149_e2ca589e.pdf"
   },
   {
     "slug": "a0361-150",
@@ -2851,7 +2851,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0361"
     ],
-    "pdfUrl": "/manus-storage/A0361-coerced-writing_a910ac02.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0361-150_f4da4019.pdf"
   },
   {
     "slug": "a0361-151",
@@ -2870,7 +2870,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0361"
     ],
-    "pdfUrl": "/manus-storage/A0361-written-statement_c8cb87c4.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0361-151_db59d2ad.pdf"
   },
   {
     "slug": "a0363-152",
@@ -2889,7 +2889,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0363"
     ],
-    "pdfUrl": "/manus-storage/A0363_930d0926.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0363-152_abdd1ddb.pdf"
   },
   {
     "slug": "a0365-153",
@@ -2908,7 +2908,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0365"
     ],
-    "pdfUrl": "/manus-storage/A0365_8b7731d2.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0365-153_27aea96d.pdf"
   },
   {
     "slug": "a0366-154",
@@ -2927,7 +2927,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0366"
     ],
-    "pdfUrl": "/manus-storage/A0366_9cad9ad9.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0366-154_4102fd53.pdf"
   },
   {
     "slug": "a0367-155",
@@ -2946,7 +2946,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0367"
     ],
-    "pdfUrl": "/manus-storage/A0367_cf566da0.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0367-155_da97abd2.pdf"
   },
   {
     "slug": "a0369-156",
@@ -2965,7 +2965,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0369"
     ],
-    "pdfUrl": "/manus-storage/A0369_610e329c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0369-156_e2d08e47.pdf"
   },
   {
     "slug": "a0370-157",
@@ -2984,7 +2984,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0370"
     ],
-    "pdfUrl": "/manus-storage/A0370_ba63da14.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0370-157_ea7901bc.pdf"
   },
   {
     "slug": "a0373-158",
@@ -3003,7 +3003,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0373"
     ],
-    "pdfUrl": "/manus-storage/A0373_4f9e047a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0373-158_eebbe8fb.pdf"
   },
   {
     "slug": "a0375-159",
@@ -3022,7 +3022,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0375"
     ],
-    "pdfUrl": "/manus-storage/A0375_1706883a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0375-159_08b3b550.pdf"
   },
   {
     "slug": "a0376-160",
@@ -3041,7 +3041,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0376"
     ],
-    "pdfUrl": "/manus-storage/A0376_afb4e849.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0376-160_763dd343.pdf"
   },
   {
     "slug": "a0378-161",
@@ -3060,7 +3060,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0378"
     ],
-    "pdfUrl": "/manus-storage/A0378_7eb27ae3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0378-161_24e2822c.pdf"
   },
   {
     "slug": "a0379-162",
@@ -3079,7 +3079,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0379"
     ],
-    "pdfUrl": "/manus-storage/A0379_527069ef.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0379-162_722608f9.pdf"
   },
   {
     "slug": "a0380-163",
@@ -3098,7 +3098,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0380"
     ],
-    "pdfUrl": "/manus-storage/A0380_f2638e2f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0380-163_e8199648.pdf"
   },
   {
     "slug": "a0390-164",
@@ -3117,7 +3117,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0390"
     ],
-    "pdfUrl": "/manus-storage/A0390_323e9fe5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0390-164_e1b9a8db.pdf"
   },
   {
     "slug": "a0392-165",
@@ -3136,7 +3136,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0392"
     ],
-    "pdfUrl": "/manus-storage/A0392_2776e056.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0392-165_d37a7bcc.pdf"
   },
   {
     "slug": "a0405-166",
@@ -3155,7 +3155,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0405"
     ],
-    "pdfUrl": "/manus-storage/A0405_3ee5284b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0405-166_15e94314.pdf"
   },
   {
     "slug": "a0411-167",
@@ -3174,7 +3174,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0411"
     ],
-    "pdfUrl": "/manus-storage/A0411_6056a810.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0411-167_c3145878.pdf"
   },
   {
     "slug": "a0430-168",
@@ -3193,7 +3193,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0430"
     ],
-    "pdfUrl": "/manus-storage/A0430_6f66512b.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0430-168_c3a84f95.pdf"
   },
   {
     "slug": "a0439-169",
@@ -3212,7 +3212,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0439"
     ],
-    "pdfUrl": "/manus-storage/A0439_a2930fe5.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0439-169_6f048809.pdf"
   },
   {
     "slug": "a0440-170",
@@ -3231,7 +3231,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0440"
     ],
-    "pdfUrl": "/manus-storage/A0440_59664cfc.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0440-170_c79222f7.pdf"
   },
   {
     "slug": "a0441-171",
@@ -3250,7 +3250,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0441"
     ],
-    "pdfUrl": "/manus-storage/A0441_9a45881a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0441-171_ed7bb70f.pdf"
   },
   {
     "slug": "a0442-172",
@@ -3269,7 +3269,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0442"
     ],
-    "pdfUrl": "/manus-storage/A0442_19a5591c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0442-172_6f7c7f51.pdf"
   },
   {
     "slug": "a0443-173",
@@ -3288,7 +3288,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0443"
     ],
-    "pdfUrl": "/manus-storage/A0443_3caedaf2.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0443-173_9bbdd071.pdf"
   },
   {
     "slug": "a0444-174",
@@ -3307,7 +3307,7 @@ export const FATAWA: Fatwa[] = [
       "Belief & Conduct",
       "A0444"
     ],
-    "pdfUrl": "/manus-storage/A0444_54bdb6f3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0444-174_a93c5e8f.pdf"
   },
   {
     "slug": "a0445-175",
@@ -3326,7 +3326,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0445"
     ],
-    "pdfUrl": "/manus-storage/A0445_8e81a8f6.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0445-175_442a98ac.pdf"
   },
   {
     "slug": "a0447-176",
@@ -3345,7 +3345,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0447"
     ],
-    "pdfUrl": "/manus-storage/A0447_d9db505a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0447-176_8b915fa2.pdf"
   },
   {
     "slug": "a0448-177",
@@ -3364,7 +3364,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0448"
     ],
-    "pdfUrl": "/manus-storage/A0448_2ae49841.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0448-177_18192fd1.pdf"
   },
   {
     "slug": "a0449-178",
@@ -3383,7 +3383,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0449"
     ],
-    "pdfUrl": "/manus-storage/A0449_ff1ddbb7.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0449-178_d70f7d28.pdf"
   },
   {
     "slug": "a0451-179",
@@ -3402,7 +3402,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0451"
     ],
-    "pdfUrl": "/manus-storage/A0451_f1dbe94f.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0451-179_21c821bc.pdf"
   },
   {
     "slug": "a0454-180",
@@ -3421,7 +3421,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0454"
     ],
-    "pdfUrl": "/manus-storage/A0454_c2fb1d38.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0454-180_6b031432.pdf"
   },
   {
     "slug": "a0457-181",
@@ -3440,7 +3440,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0457"
     ],
-    "pdfUrl": "/manus-storage/A0457_2e2f6b86.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0457-181_d81da9fb.pdf"
   },
   {
     "slug": "a0460-182",
@@ -3459,7 +3459,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0460"
     ],
-    "pdfUrl": "/manus-storage/A0460_b3583263.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0460-182_81e36436.pdf"
   },
   {
     "slug": "a0461-183",
@@ -3478,7 +3478,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0461"
     ],
-    "pdfUrl": "/manus-storage/A0461_5add01be.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0461-183_45bbb08c.pdf"
   },
   {
     "slug": "a0462-184",
@@ -3497,7 +3497,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0462"
     ],
-    "pdfUrl": "/manus-storage/A0462_426bac52.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0462-184_6e9e9312.pdf"
   },
   {
     "slug": "a0463-185",
@@ -3516,7 +3516,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0463"
     ],
-    "pdfUrl": "/manus-storage/A0463_27713f53.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0463-185_9c9c83c2.pdf"
   },
   {
     "slug": "a0464-186",
@@ -3535,7 +3535,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0464"
     ],
-    "pdfUrl": "/manus-storage/A0464_40a076c2.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0464-186_0d7f59ef.pdf"
   },
   {
     "slug": "a0466-187",
@@ -3554,7 +3554,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0466"
     ],
-    "pdfUrl": "/manus-storage/A0466_c38fc30c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0466-187_a032d76b.pdf"
   },
   {
     "slug": "a0467-188",
@@ -3573,7 +3573,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0467"
     ],
-    "pdfUrl": "/manus-storage/A0467_1751202a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0467-188_dd00af8c.pdf"
   },
   {
     "slug": "a0468-189",
@@ -3592,7 +3592,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0468"
     ],
-    "pdfUrl": "/manus-storage/A0468_fee4b958.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0468-189_9d14286f.pdf"
   },
   {
     "slug": "a0469-190",
@@ -3611,7 +3611,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0469"
     ],
-    "pdfUrl": "/manus-storage/A0469_9daf56d0.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0469-190_af59de60.pdf"
   },
   {
     "slug": "a0470-191",
@@ -3630,7 +3630,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0470"
     ],
-    "pdfUrl": "/manus-storage/A0470_569097b3.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0470-191_8aa019bb.pdf"
   },
   {
     "slug": "a0471-192",
@@ -3649,7 +3649,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0471"
     ],
-    "pdfUrl": "/manus-storage/A0471_1e562b86.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0471-192_a6171f34.pdf"
   },
   {
     "slug": "a0472-193",
@@ -3668,7 +3668,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0472"
     ],
-    "pdfUrl": "/manus-storage/A0472_c4f25b13.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0472-193_568d2019.pdf"
   },
   {
     "slug": "a0473-194",
@@ -3687,7 +3687,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0473"
     ],
-    "pdfUrl": "/manus-storage/A0473_d97e30de.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0473-194_7fc019b7.pdf"
   },
   {
     "slug": "a0474-195",
@@ -3706,7 +3706,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0474"
     ],
-    "pdfUrl": "/manus-storage/A0474_ede210ef.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0474-195_418f3b75.pdf"
   },
   {
     "slug": "a0481-196",
@@ -3725,7 +3725,7 @@ export const FATAWA: Fatwa[] = [
       "Inheritance & Wills",
       "A0481"
     ],
-    "pdfUrl": "/manus-storage/A0481_c6b4833c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0481-196_737bdf58.pdf"
   },
   {
     "slug": "a0482-197",
@@ -3744,7 +3744,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0482"
     ],
-    "pdfUrl": "/manus-storage/A0482_0d824609.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0482-197_82602f8d.pdf"
   },
   {
     "slug": "a0483-198",
@@ -3763,7 +3763,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0483"
     ],
-    "pdfUrl": "/manus-storage/A0483_f1ad2ba7.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0483-198_68c93f88.pdf"
   },
   {
     "slug": "a0484-199",
@@ -3782,7 +3782,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0484"
     ],
-    "pdfUrl": "/manus-storage/A0484_4d7e121c.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0484-199_052b2621.pdf"
   },
   {
     "slug": "a0485-200",
@@ -3801,7 +3801,7 @@ export const FATAWA: Fatwa[] = [
       "Worship",
       "A0485"
     ],
-    "pdfUrl": "/manus-storage/A0485_956a4515.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0485-200_5d96da63.pdf"
   },
   {
     "slug": "a0487-201",
@@ -3820,7 +3820,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0487"
     ],
-    "pdfUrl": "/manus-storage/A0487_c3431f5a.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0487-201_3656b762.pdf"
   },
   {
     "slug": "a0489-202",
@@ -3839,7 +3839,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0489"
     ],
-    "pdfUrl": "/manus-storage/A0489_b90886e8.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0489-202_68a68e79.pdf"
   },
   {
     "slug": "a0499-203",
@@ -3858,7 +3858,7 @@ export const FATAWA: Fatwa[] = [
       "Transactions",
       "A0499"
     ],
-    "pdfUrl": "/manus-storage/A0499_232324ea.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0499-203_c69c304b.pdf"
   },
   {
     "slug": "a0503-204",
@@ -3877,7 +3877,7 @@ export const FATAWA: Fatwa[] = [
       "Marriage & Divorce",
       "A0503"
     ],
-    "pdfUrl": "/manus-storage/A0503_c28212a6.pdf"
+    "pdfUrl": "/manus-storage/sanitized-fatwa-a0503-204_bffb6271.pdf"
   }
 ];
 
