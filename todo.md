@@ -223,5 +223,5 @@
 - [x] Create ASCII-safe managed-storage copies because the storage uploader rejects non-ASCII source filenames, while preserving the verified PDFs and their Urdu archive metadata.
 - [x] Verify each newly supplied PDF’s archive search discovery and direct public document access, including mobile presentation.
 - [x] Diagnose and repair the public archive query parameter failing to filter the imported A0300 record during direct search-link validation.
-- [ ] Document the supplied-PDF import outcome and save a published checkpoint.
+- [x] Document the supplied-PDF import outcome and save a published checkpoint.
 - [x] Document the supplied-PDF import outcome, direct-link checks, and final release validation.
