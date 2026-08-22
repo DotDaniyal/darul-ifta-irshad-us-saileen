@@ -20,14 +20,38 @@
   .bismillah-bar { position: relative; overflow: hidden; background: linear-gradient(90deg, #02040A, #071B45 48%, #02040A); border-bottom: 1px solid rgba(209,172,91,.34); }
   .bismillah-bar::after { content: ""; position: absolute; bottom: 0; left: -25%; height: 1px; width: 28%; background: linear-gradient(90deg, transparent, #FFE4A3, transparent); opacity: .9; }
   .bismillah-script { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFD77D; font-size: 18px; line-height: 1.3; letter-spacing: .035em; text-shadow: 0 1px 0 rgba(255,255,255,.15), 0 5px 18px rgba(214,162,53,.35); }
-  .royal-masthead { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; overflow: hidden; background: #FFF; border-bottom: 0; }
-  .royal-masthead::before, .royal-masthead::after { display: none; }
-  .institutional-letterhead { display: flex; width: 100%; justify-content: center; padding: .2rem .5rem 0; background: #FFF; }
-  .letterhead-reference-link { display: block; width: min(100%, 900px); line-height: 0; transition: transform .22s cubic-bezier(.23,1,.32,1); }
-  .letterhead-reference-link:hover { transform: translateY(-1px); }
-  .letterhead-reference-link:active { transform: scale(.995); }
-  .letterhead-reference-image { display: block; width: 100%; height: auto; }
-  @media (max-width: 720px) { .institutional-letterhead { padding: .15rem 0 0; } .letterhead-reference-link { width: 100%; } }
+  .royal-masthead { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #FFF; }
+  .institutional-letterhead { width: min(100%, 1120px); padding: .45rem 1rem .32rem; color: #075E9D; }
+  .letterhead-grid { display: grid; direction: ltr; grid-template-columns: minmax(0, 1fr) 126px minmax(0, 1fr); align-items: center; gap: clamp(.65rem, 2vw, 2.25rem); }
+  .letterhead-english, .letterhead-urdu { min-width: 0; }
+  .letterhead-english { max-width: 300px; justify-self: start; text-align: left; }
+  .letterhead-urdu { max-width: 440px; justify-self: end; text-align: right; }
+  .letterhead-english-name { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1rem, 2.05vw, 1.86rem); font-weight: 700; line-height: .86; letter-spacing: -.035em; color: #075E9D; text-transform: uppercase; }
+  .letterhead-english-name span { display: block; }
+  .letterhead-english-name small { display: block; margin-top: .26rem; padding-right: .08rem; font-family: "Manrope", sans-serif; font-size: .38em; font-weight: 800; letter-spacing: .09em; text-align: right; }
+  .letterhead-urdu-name { margin: 0; font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(1rem, 2.1vw, 1.92rem); font-weight: 700; line-height: 1.3; color: #075E9D; }
+  .letterhead-address { display: inline-flex; max-width: 100%; align-items: center; justify-content: center; margin: .42rem 0 0; padding: .32rem .68rem .36rem; border-radius: 999px; background: #075E9D; color: #FFF; font-family: "Manrope", sans-serif; font-size: clamp(.38rem, .74vw, .59rem); font-weight: 800; line-height: 1.2; letter-spacing: .035em; text-align: center; text-transform: uppercase; }
+  .letterhead-address-ur { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(.55rem, 1vw, .77rem); font-weight: 600; letter-spacing: 0; text-transform: none; }
+  .letterhead-logo-link { display: flex; min-width: 0; flex-direction: column; align-items: center; color: #075E9D; line-height: 1; text-align: center; transition: transform .2s cubic-bezier(.23,1,.32,1); }
+  .letterhead-logo-link:hover { transform: translateY(-1px); }
+  .letterhead-logo-link:active { transform: scale(.98); }
+  .letterhead-logo-frame { display: grid; width: clamp(68px, 10.4vw, 108px); height: clamp(58px, 8.7vw, 92px); place-items: center; }
+  .letterhead-logo { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .letterhead-logo-caption { margin-top: -.1rem; font-family: "Manrope", sans-serif; font-size: clamp(.3rem, .52vw, .45rem); font-weight: 800; line-height: 1.15; letter-spacing: .13em; text-transform: uppercase; white-space: nowrap; }
+  .letterhead-baseline { display: block; width: 100%; height: 3px; margin-top: .35rem; background: #075E9D; }
+  @media (max-width: 720px) {
+    .institutional-letterhead { padding: .35rem .55rem .25rem; }
+    .letterhead-grid { grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr); gap: .45rem; }
+    .letterhead-english, .letterhead-urdu { max-width: none; }
+    .letterhead-english-name { font-size: clamp(.67rem, 3.3vw, 1rem); line-height: .92; }
+    .letterhead-english-name small { margin-top: .2rem; font-size: .42em; }
+    .letterhead-urdu-name { font-size: clamp(.72rem, 3.55vw, 1.06rem); line-height: 1.35; }
+    .letterhead-address { width: 100%; margin-top: .3rem; padding: .24rem .38rem .27rem; font-size: clamp(.31rem, 1.65vw, .44rem); overflow-wrap: anywhere; }
+    .letterhead-address-ur { font-size: clamp(.45rem, 2.1vw, .6rem); }
+    .letterhead-logo-frame { width: 70px; height: 59px; }
+    .letterhead-logo-caption { font-size: .31rem; letter-spacing: .085em; }
+    .letterhead-baseline { height: 2px; margin-top: .27rem; }
+  }
   .brand-mark-center { align-items: center; justify-content: center; text-align: center; }
   .brand-mark-center > span:last-child { display: flex; flex-direction: column; align-items: center; gap: .15rem; }
   .brand-urdu-name { text-shadow: 0 1px 0 rgba(255,255,255,.75); }
@@ -198,8 +222,8 @@
   .service-card:nth-child(4) { animation-delay: 190ms; }
   .bismillah-bar::after { animation: gold-sweep 6.4s ease-in-out infinite; }
   .bismillah-script { animation: bismillah-glow 4.6s ease-in-out infinite; }
-  .royal-masthead .brand-mark-center { animation: mark-settle .75s cubic-bezier(.23,1,.32,1) both; }
-  .royal-masthead .brand-mark-center > span { animation: mark-breathe 5.5s ease-in-out 1s infinite; }
+  .royal-masthead .letterhead-logo-link { animation: mark-settle .75s cubic-bezier(.23,1,.32,1) both; }
+  .royal-masthead .letterhead-logo-frame { animation: mark-breathe 5.5s ease-in-out 1s infinite; }
   .hero-watermark { animation: watermark-drift 14s ease-in-out infinite; }
   .page-hero::before, #donate::before { animation: arch-breathe 7s ease-in-out infinite; }
   .page-hero::after { animation: calligraphy-arrive .75s cubic-bezier(.23,1,.32,1) .18s both; }

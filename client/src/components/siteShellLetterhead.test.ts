@@ -4,27 +4,34 @@ import { describe, expect, it } from "vitest";
 const styles = readFileSync(new URL("../index.css", import.meta.url), "utf8");
 const siteShell = readFileSync(new URL("./SiteShell.tsx", import.meta.url), "utf8");
 
-describe("official blue institutional letterhead", () => {
-  it("uses the supplied official artwork as a clickable, accessible SiteShell masthead", () => {
+describe("accessible text-based institutional letterhead", () => {
+  it("uses a separate official logo with selectable English and Urdu institutional text", () => {
     expect(siteShell).toContain("function InstitutionalLetterhead()");
-    expect(siteShell).toContain('const officialLetterhead = "/manus-storage/official-blue-letterhead_9619ccc2.png"');
-    expect(siteShell).toContain('className="letterhead-reference-link"');
-    expect(siteShell).toContain('className="letterhead-reference-image"');
-    expect(siteShell).toContain('alt="Darul Ifta Irshad-us-Saileen Karachi official letterhead"');
+    expect(siteShell).toContain('className="letterhead-grid"');
+    expect(siteShell).toContain('className="letterhead-logo-link"');
+    expect(siteShell).toContain('src={officialLogo}');
+    expect(siteShell).toContain('Darul Ifta <span>Irshad-us-Saileen</span>');
+    expect(siteShell).toContain('دارالافتاء ارشاد السائلین کراچی');
+    expect(siteShell).toContain('Al-Mujeeb Garden A-31, Model Colony, Karachi');
     expect(siteShell).toContain("<InstitutionalLetterhead />");
+    expect(siteShell).not.toContain("officialLetterhead");
+    expect(siteShell).not.toContain("letterhead-reference-image");
   });
 
-  it("keeps the official image proportional, centred, and responsive without a recreated-text layout", () => {
-    expect(styles).toContain("width: min(100%, 900px);");
-    expect(styles).toContain(".letterhead-reference-image");
-    expect(styles).toContain("width: 100%; height: auto;");
+  it("keeps the three-part header compact, responsive, and free from combined text imagery", () => {
+    expect(styles).toContain("grid-template-columns: minmax(0, 1fr) 126px minmax(0, 1fr);");
+    expect(styles).toContain(".letterhead-english-name");
+    expect(styles).toContain(".letterhead-urdu-name");
+    expect(styles).toContain(".letterhead-logo-frame");
+    expect(styles).toContain(".letterhead-baseline");
     expect(styles).toContain(".institutional-letterhead");
     expect(styles).toContain("@media (max-width: 720px)");
+    expect(styles).not.toContain(".letterhead-reference-image");
   });
 
-  it("does not apply the earlier charcoal, reconstructed-seal, or decorative baseline treatment", () => {
-    expect(styles).toContain(".royal-masthead::before, .royal-masthead::after { display: none; }");
-    expect(styles).not.toContain(".letterhead-seal::before");
-    expect(styles).not.toContain("grid-template-columns: minmax(0, 1fr) 152px minmax(0, 1fr)");
+  it("retains an accessible home link on the independent logo asset", () => {
+    expect(siteShell).toContain('aria-label="Darul Ifta Irshad-us-Saileen home"');
+    expect(siteShell).toContain('alt="Darul Ifta Irshad-us-Saileen official logo"');
+    expect(siteShell).toContain('lang="ur" dir="rtl"');
   });
 });

@@ -268,3 +268,12 @@
 - [x] Preserve the existing navigation outside the letterhead treatment and ensure no clipping, wrapping, distortion, horizontal scrolling, or loss of mobile readability.
 - [x] Update targeted regression coverage and validate desktop, tablet, mobile, privacy-safe Fatwa archive routes, diagnostics, TypeScript, tests, and production build.
 - [x] Save and publish the verified official-blue letterhead recreation checkpoint.
+
+## Accessible Text-Based Header Replacement Checklist
+
+- [x] Remove the combined official-blue letterhead image from the masthead and retain only the existing standalone official logo asset.
+- [x] Rebuild the English identity, Urdu institutional name, address capsules, and lower rule as separate, selectable, searchable, accessible HTML text elements.
+- [x] Retain the official three-part left-English, centered-logo, right-Urdu composition and restrained royal-blue visual language without recreating header text as an image.
+- [x] Make the masthead compact and responsive at desktop, tablet, and mobile widths with no clipping, overlap, distortion, horizontal scrolling, or inaccessible text.
+- [x] Update regression coverage and verify keyboard/accessibility semantics, public navigation, privacy-safe Fatwa archive routes, diagnostics, TypeScript, tests, and production build.
+- [x] Save and publish the verified accessible text-based header replacement checkpoint.

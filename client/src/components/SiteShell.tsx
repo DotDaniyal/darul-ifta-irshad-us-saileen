@@ -7,7 +7,6 @@ import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, Book
 import { Link, useLocation } from "wouter";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
-const officialLetterhead = "/manus-storage/official-blue-letterhead_9619ccc2.png";
 const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
 
 type Language = "ur" | "en";
@@ -66,9 +65,25 @@ export function BrandMark({ compact = false, centered = false }: { compact?: boo
 function InstitutionalLetterhead() {
   return (
     <div className="institutional-letterhead">
-      <Link href="/" className="letterhead-reference-link" aria-label="Darul Ifta Irshad-us-Saileen home">
-        <img src={officialLetterhead} alt="Darul Ifta Irshad-us-Saileen Karachi official letterhead" className="letterhead-reference-image" />
-      </Link>
+      <div className="letterhead-grid">
+        <div className="letterhead-english" lang="en">
+          <p className="letterhead-english-name">Darul Ifta <span>Irshad-us-Saileen</span><small>Karachi</small></p>
+          <p className="letterhead-address letterhead-address-en">Al-Mujeeb Garden A-31, Model Colony, Karachi</p>
+        </div>
+
+        <Link href="/" className="letterhead-logo-link" aria-label="Darul Ifta Irshad-us-Saileen home">
+          <span className="letterhead-logo-frame">
+            <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" className="letterhead-logo" />
+          </span>
+          <span className="letterhead-logo-caption" aria-hidden="true">Darul Ifta<br />Irshad-us-Saileen</span>
+        </Link>
+
+        <div className="letterhead-urdu" lang="ur" dir="rtl">
+          <p className="letterhead-urdu-name">دارالافتاء ارشاد السائلین کراچی</p>
+          <p className="letterhead-address letterhead-address-ur">المجیب گارڈن اے-31 ماڈل کالونی کراچی</p>
+        </div>
+      </div>
+      <span className="letterhead-baseline" aria-hidden="true" />
     </div>
   );
 }
