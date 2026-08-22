@@ -19,4 +19,12 @@ describe("formal institutional letterhead", () => {
     expect(styles).toContain(".letterhead-urdu");
     expect(styles).toContain("@media (max-width: 720px)");
   });
+
+  it("retains the formal letterpress refinements from the supplied reference", () => {
+    expect(styles).toContain('"Cormorant Garamond"');
+    expect(styles).toContain(".letterhead-seal::before");
+    expect(styles).toContain("clip-path: polygon");
+    expect(styles).toContain(".royal-masthead::after");
+    expect(styles).toContain("min-height: 102px");
+  });
 });

@@ -249,3 +249,4 @@
 - [ ] Enforce the user-approved controlled pre-publication workflow so only validated sanitized derivatives can be added to the public Fatwa catalog.
 - [x] Review the SiteShell visual-edit target, identify the missing visual reference, and apply only a confirmed change before checkpointing.
 - [x] Rebuild the SiteShell masthead as a slim formal letterhead inspired by the supplied reference, preserving accessible bilingual navigation and institutional contact details.
+- [x] Refine the SiteShell masthead to more closely match the supplied reference’s compact black letterpress typography, ruled composition, and formal crest treatment.

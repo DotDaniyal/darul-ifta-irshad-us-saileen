@@ -1,5 +1,5 @@
 {
-  "auditedAt": "2026-08-22T08:55:46.051Z",
+  "auditedAt": "2026-08-22T09:29:39.800Z",
   "documents": [
     {
       "slug": "a0001-1",
@@ -1140,27 +1140,25 @@
           "regions": [
             {
               "kind": "customer_name",
-              "leftPercent": 14.7,
+              "leftPercent": 14.5,
               "topPercent": 54.2,
-              "widthPercent": 6.1,
+              "widthPercent": 9.2,
               "heightPercent": 2.2,
-              "confidence": 0.95,
-              "rationale": "Identifies the name of the question submitter (Mustafti: Rehan)."
+              "confidence": 0.95
             },
             {
               "kind": "customer_phone",
-              "leftPercent": 14.7,
+              "leftPercent": 14.5,
               "topPercent": 57.7,
-              "widthPercent": 12.6,
+              "widthPercent": 12.8,
               "heightPercent": 2.2,
-              "confidence": 0.98,
-              "rationale": "Identifies the personal mobile number of the submitter."
+              "confidence": 0.95
             }
           ]
         },
         {
           "page": 2,
-          "error": "Unterminated string in JSON at position 259 (line 1 column 260)",
+          "error": "Unterminated fractional number in JSON at position 77 (line 1 column 78)",
           "regions": []
         },
         {
@@ -2681,143 +2679,6 @@
         },
         {
           "page": 3,
-          "regions": []
-        }
-      ]
-    },
-    {
-      "slug": "a0163-62",
-      "number": "A0163",
-      "rawPdfUrl": "/manus-storage/fatwa-062_3d29f2f1.pdf",
-      "sourcePdf": "/home/ubuntu/webdev-static-assets/fatawa/fatwa-062.pdf",
-      "sourceSha256": "b93e50ce0e4d9d04518d8bd36e8de85f9157c3775de4949986ff0be13a72b4a0",
-      "pages": 17,
-      "status": "failed",
-      "pageAudits": [
-        {
-          "page": 1,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 41.5,
-              "topPercent": 51.5,
-              "widthPercent": 12,
-              "heightPercent": 2.8,
-              "confidence": 0.95,
-              "rationale": "This identifies the name of the question submitter, which is PII."
-            },
-            {
-              "kind": "customer_phone",
-              "leftPercent": 38,
-              "topPercent": 54.5,
-              "widthPercent": 17,
-              "heightPercent": 2.5,
-              "confidence": 0.95,
-              "rationale": "This identifies a personal mobile number of the submitter, which is PII."
-            }
-          ]
-        },
-        {
-          "page": 2,
-          "regions": []
-        },
-        {
-          "page": 3,
-          "regions": []
-        },
-        {
-          "page": 4,
-          "regions": []
-        },
-        {
-          "page": 5,
-          "regions": []
-        },
-        {
-          "page": 6,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 14.1,
-              "topPercent": 26.6,
-              "widthPercent": 16.5,
-              "heightPercent": 3.5,
-              "confidence": 0.95,
-              "rationale": "Identifies the name of the question submitter (سائل: محمد یوسف) handwritten at the top left."
-            }
-          ]
-        },
-        {
-          "page": 7,
-          "error": "Unterminated string in JSON at position 195 (line 1 column 196)",
-          "regions": []
-        },
-        {
-          "page": 8,
-          "regions": []
-        },
-        {
-          "page": 9,
-          "regions": []
-        },
-        {
-          "page": 10,
-          "regions": []
-        },
-        {
-          "page": 11,
-          "regions": []
-        },
-        {
-          "page": 12,
-          "regions": []
-        },
-        {
-          "page": 13,
-          "regions": []
-        },
-        {
-          "page": 14,
-          "regions": []
-        },
-        {
-          "page": 15,
-          "regions": []
-        },
-        {
-          "page": 16,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 17.5,
-              "topPercent": 13.5,
-              "widthPercent": 15,
-              "heightPercent": 2,
-              "confidence": 0.95,
-              "rationale": "Identifies the name of the first plaintiff, who is the primary submitter of the legal suit."
-            },
-            {
-              "kind": "customer_name",
-              "leftPercent": 17.5,
-              "topPercent": 20.9,
-              "widthPercent": 23,
-              "heightPercent": 2,
-              "confidence": 0.95,
-              "rationale": "Identifies the name of the second plaintiff (a minor), who is also a party to the suit."
-            },
-            {
-              "kind": "customer_name",
-              "leftPercent": 14.2,
-              "topPercent": 27.1,
-              "widthPercent": 9,
-              "heightPercent": 2,
-              "confidence": 0.95,
-              "rationale": "Identifies the name of the defendant, which is sensitive PII in the context of a private legal decree."
-            }
-          ]
-        },
-        {
-          "page": 17,
           "regions": []
         }
       ]
@@ -6101,15 +5962,23 @@
       "sourcePdf": "/home/ubuntu/webdev-static-assets/fatawa-a03/A0363.pdf",
       "sourceSha256": "9d060345791dea69e7ae113ab8c5f8f27bd3107e7638197cf6de15333292f497",
       "pages": 3,
-      "status": "failed",
+      "status": "ok",
       "pageAudits": [
         {
           "page": 1,
-          "regions": []
+          "regions": [
+            {
+              "kind": "customer_name",
+              "leftPercent": 42.6,
+              "topPercent": 37.2,
+              "widthPercent": 9.8,
+              "heightPercent": 3.2,
+              "confidence": 0.9
+            }
+          ]
         },
         {
           "page": 2,
-          "error": "Unterminated string in JSON at position 198 (line 1 column 199)",
           "regions": []
         },
         {
@@ -6176,107 +6045,6 @@
         },
         {
           "page": 3,
-          "regions": []
-        }
-      ]
-    },
-    {
-      "slug": "a0367-155",
-      "number": "A0367",
-      "rawPdfUrl": "/manus-storage/A0367_cf566da0.pdf",
-      "sourcePdf": "/home/ubuntu/webdev-static-assets/fatawa-a03/A0367.pdf",
-      "sourceSha256": "3d316f872ec8dd0add98cf8efaa1a9eb9c673ec74cd284d9c3157e9e7a5c3622",
-      "pages": 12,
-      "status": "failed",
-      "pageAudits": [
-        {
-          "page": 1,
-          "regions": []
-        },
-        {
-          "page": 2,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 33.7,
-              "topPercent": 27.2,
-              "widthPercent": 12.8,
-              "heightPercent": 2.1,
-              "confidence": 0.95,
-              "rationale": "This is the printed name of the affiant who is the submitter of this legal document."
-            }
-          ]
-        },
-        {
-          "page": 3,
-          "error": "Unterminated string in JSON at position 246 (line 1 column 247)",
-          "regions": []
-        },
-        {
-          "page": 4,
-          "error": "Unterminated string in JSON at position 261 (line 1 column 262)",
-          "regions": []
-        },
-        {
-          "page": 5,
-          "error": "Unterminated string in JSON at position 241 (line 1 column 242)",
-          "regions": []
-        },
-        {
-          "page": 6,
-          "regions": []
-        },
-        {
-          "page": 7,
-          "regions": []
-        },
-        {
-          "page": 8,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 67.7,
-              "topPercent": 30.7,
-              "widthPercent": 8.5,
-              "heightPercent": 2.2,
-              "confidence": 0.95,
-              "rationale": "Identifies the submitter at the beginning of the written statement."
-            },
-            {
-              "kind": "customer_name",
-              "leftPercent": 67.2,
-              "topPercent": 49.4,
-              "widthPercent": 8.5,
-              "heightPercent": 2.2,
-              "confidence": 0.95,
-              "rationale": "Identifies the submitter in the signature line at the end of the request."
-            }
-          ]
-        },
-        {
-          "page": 9,
-          "regions": [
-            {
-              "kind": "customer_name",
-              "leftPercent": 44.2,
-              "topPercent": 70.9,
-              "widthPercent": 4.8,
-              "heightPercent": 2.2,
-              "confidence": 0.95,
-              "rationale": "This identifies the name of the female question submitter (Fatima) following the label 'Mustaftia'."
-            }
-          ]
-        },
-        {
-          "page": 10,
-          "regions": []
-        },
-        {
-          "page": 11,
-          "regions": []
-        },
-        {
-          "page": 12,
           "regions": []
         }
       ]
@@ -7761,6 +7529,86 @@
         },
         {
           "page": 2,
+          "regions": []
+        }
+      ]
+    },
+    {
+      "slug": "a0499-203",
+      "number": "A0499",
+      "rawPdfUrl": "/manus-storage/A0499_232324ea.pdf",
+      "sourcePdf": "/home/ubuntu/webdev-static-assets/fatawa-a05/A0499.pdf",
+      "sourceSha256": "bfd817e6a7d3ce887c7f19a6e1d8007797e5b7cca74c654936a0328b531c6f03",
+      "pages": 4,
+      "status": "ok",
+      "pageAudits": [
+        {
+          "page": 1,
+          "regions": [
+            {
+              "kind": "customer_name",
+              "leftPercent": 45.8,
+              "topPercent": 21.2,
+              "widthPercent": 8.2,
+              "heightPercent": 2.3,
+              "confidence": 0.95,
+              "rationale": "Identified the name of the question submitter (Muhammad Asaf) within the introductory sentence of the inquiry."
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "regions": [
+            {
+              "kind": "customer_name",
+              "leftPercent": 47.4,
+              "topPercent": 29.2,
+              "widthPercent": 10.8,
+              "heightPercent": 2.5,
+              "confidence": 0.95,
+              "rationale": "Identified the question submitter's name 'Muhammad Asif' following the term 'Mustafti'."
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "regions": []
+        },
+        {
+          "page": 4,
+          "regions": []
+        }
+      ]
+    },
+    {
+      "slug": "a0503-204",
+      "number": "A0503",
+      "rawPdfUrl": "/manus-storage/A0503_c28212a6.pdf",
+      "sourcePdf": "/home/ubuntu/webdev-static-assets/fatawa-a05/A0503.pdf",
+      "sourceSha256": "a93b5be97772aded2d02ebbf2eae65d630823efc8aa8273991626ab8df90e032",
+      "pages": 3,
+      "status": "ok",
+      "pageAudits": [
+        {
+          "page": 1,
+          "regions": [
+            {
+              "kind": "customer_phone",
+              "leftPercent": 43.5,
+              "topPercent": 59.5,
+              "widthPercent": 11,
+              "heightPercent": 2.2,
+              "confidence": 0.95,
+              "rationale": "This is a non-official mobile phone number provided by the question submitter, which constitutes private information."
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "regions": []
+        },
+        {
+          "page": 3,
           "regions": []
         }
       ]

@@ -18,7 +18,7 @@ export async function auditFatwaPrivacyImage(imagePath) {
     },
     body: JSON.stringify({
       model: "gemini-3-flash-preview",
-      max_tokens: 2048,
+      max_tokens: 1024,
       response_format: {
         type: "json_schema",
         json_schema: {
@@ -38,7 +38,6 @@ export async function auditFatwaPrivacyImage(imagePath) {
                     widthPercent: { type: "number" },
                     heightPercent: { type: "number" },
                     confidence: { type: "number" },
-                    rationale: { type: "string" },
                   },
                   required: [
                     "kind",
@@ -47,7 +46,6 @@ export async function auditFatwaPrivacyImage(imagePath) {
                     "widthPercent",
                     "heightPercent",
                     "confidence",
-                    "rationale",
                   ],
                   additionalProperties: false,
                 },
@@ -62,7 +60,7 @@ export async function auditFatwaPrivacyImage(imagePath) {
         {
           role: "system",
           content:
-            "You are a precise privacy auditor for scanned Urdu Fatwa PDFs. Identify only regions that expose a question submitter’s name or a non-official customer/mobile phone number. Do not flag names within the substantive legal question, answer, references, scholarly signatory, institutional logo, address, or footer. Do not flag the Darul Ifta official contact number in any printed form, including 03332617671, 0332617671, or +92 333 2617671. Bounding boxes must tightly cover the visible text with a 1–2% safety margin and use percentages of the full image from the top-left.",
+            "You are a precise privacy auditor for scanned Urdu Fatwa PDFs. Identify only regions that expose a question submitter’s name or a non-official customer/mobile phone number. Do not flag names within the substantive legal question, answer, references, scholarly signatory, institutional logo, address, or footer. Do not flag the Darul Ifta official contact number in any printed form, including 03332617671, 0332617671, or +92 333 2617671. Return at most eight tight boxes. If more text occurs in one customer-detail line, use one box that covers that line. Bounding boxes must use percentages of the full image from the top-left, with a 1–2% safety margin.",
         },
         {
           role: "user",
