@@ -26,7 +26,7 @@
   .letterhead-english, .letterhead-urdu { min-width: 0; }
   .letterhead-english { max-width: 300px; justify-self: start; text-align: left; }
   .letterhead-urdu { max-width: 440px; justify-self: end; text-align: right; }
-  .letterhead-english-name { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1rem, 2.05vw, 1.86rem); font-weight: 700; line-height: .86; letter-spacing: -.035em; color: #075E9D; text-transform: uppercase; }
+  .letterhead-english-name { margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1rem, 2.05vw, 1.86rem); font-weight: 700; line-height: .86; letter-spacing: -.035em; color: #075E9D; text-transform: uppercase; }
   .letterhead-english-name span { display: block; }
   .letterhead-english-name small { display: block; margin-top: .26rem; padding-right: .08rem; font-family: "Manrope", sans-serif; font-size: .38em; font-weight: 800; letter-spacing: .09em; text-align: right; }
   .letterhead-urdu-name { margin: 0; font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(1rem, 2.1vw, 1.92rem); font-weight: 700; line-height: 1.3; color: #075E9D; }

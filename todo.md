@@ -277,3 +277,11 @@
 - [x] Make the masthead compact and responsive at desktop, tablet, and mobile widths with no clipping, overlap, distortion, horizontal scrolling, or inaccessible text.
 - [x] Update regression coverage and verify keyboard/accessibility semantics, public navigation, privacy-safe Fatwa archive routes, diagnostics, TypeScript, tests, and production build.
 - [x] Save and publish the verified accessible text-based header replacement checkpoint.
+
+## Masthead Heading Font Restoration Checklist
+
+- [x] Identify the exact previously approved heading font from the immediately preceding masthead version and compare it with the current selectable-text implementation.
+- [x] Restore only the English and Urdu masthead heading font families to the prior approved treatment; do not change wording, size, spacing, colour, logo, navigation, address capsules, or responsive structure.
+- [x] Retain selectable, searchable, accessible HTML heading text and existing keyboard semantics after restoring the font.
+- [x] Verify the restored typography at desktop and mobile widths, the public Fatwa archive route, targeted regression coverage, TypeScript, and production build.
+- [x] Save and publish the verified masthead heading-font restoration checkpoint.
