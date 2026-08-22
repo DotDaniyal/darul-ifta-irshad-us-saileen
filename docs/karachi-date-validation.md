@@ -14,4 +14,10 @@ The Urdu presentation was verified through the live language toggle. It renders 
 
 ## Automated boundary and resilience coverage
 
-The full validation suite passed with **8 test files and 22 tests**. The institutional-date tests cover pre-Maghrib behavior, the Maghrib boundary, post-Maghrib effective-date selection, midnight handling, valid-source behavior, non-Karachi and malformed-source rejection, source outage fallback, source/fallback disagreement disclosure, date-scoped official override behavior, and client resynchronization scheduling. Strict TypeScript validation, the production build, and the production dependency audit also passed.
+The full validation suite passed with **8 test files and 23 tests**. The institutional-date tests cover pre-Maghrib behavior, the Maghrib boundary, post-Maghrib effective-date selection, midnight handling, valid-source behavior, non-Karachi and malformed-source rejection, source outage fallback, source/fallback disagreement disclosure, date-scoped official override behavior, the configured server-environment override, and client resynchronization scheduling. Strict TypeScript validation, the production build, and the production dependency audit also passed.
+
+## Official Karachi Date Correction — 22 August 2026
+
+Following the institution’s confirmed correction, the server environment now contains a **date-scoped** official decision for **8 Rabi al-Awwal 1448 AH** on **22 August 2026** in Karachi. The live endpoint returned `manual_override` status, Hijri day `8`, the English value `8 Rabi al-Awwal 1448 AH`, the Urdu value `۸ ربیع الاول ۱٬۴۴۸ ھ`, and the scheduled Karachi Maghrib boundary of `19:01`.
+
+The homepage was then verified after its asynchronous request settled. It displayed the same Urdu date alongside the official-decision status. Stored Fatwa dates were not changed; this correction applies only to the live institutional date display for the configured Gregorian day.

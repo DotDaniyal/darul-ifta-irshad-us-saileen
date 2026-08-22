@@ -212,3 +212,8 @@
 - [x] Add deterministic tests for before-Maghrib, at/after-Maghrib, midnight, source mismatch, source outage, invalid source data, and browser resynchronization timing.
 - [x] Verify the updated date component and core public routes at desktop and mobile breakpoints, then document date authority and fallback behavior.
 - [x] Save and publish the verified Karachi Maghrib Hijri-date update.
+- [x] Inspect the live Karachi date authority and confirm the existing official-override input before correcting the user-confirmed Hijri date to 8.
+- [x] Apply the date-scoped official Karachi Hijri-date decision for 8 while preserving Maghrib handling and stored Fatwa dates.
+- [x] Verify the corrected English and Urdu homepage display and publish the institutional date correction.
+- [x] Isolate deterministic date-service tests from the configured live override while retaining a dedicated environment-override regression.
+- [ ] Save and publish the verified official Karachi Hijri-date correction.
