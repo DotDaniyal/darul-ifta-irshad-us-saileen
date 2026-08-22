@@ -3137,6 +3137,709 @@ export const FATAWA: Fatwa[] = [
       "A0392"
     ],
     "pdfUrl": "/manus-storage/A0392_2776e056.pdf"
+  },
+  {
+    "slug": "a0405-166",
+    "number": "A0405",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0405",
+    "titleUr": "میں نے تجھے تیسری دفعہ بھی دیکھا کہنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0405"
+    ],
+    "pdfUrl": "/manus-storage/A0405_3ee5284b.pdf"
+  },
+  {
+    "slug": "a0411-167",
+    "number": "A0411",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0411",
+    "titleUr": "بغیر تصریحِ کرایہ مشترکہ مکان میں رہائش کا کرایہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0411"
+    ],
+    "pdfUrl": "/manus-storage/A0411_6056a810.pdf"
+  },
+  {
+    "slug": "a0430-168",
+    "number": "A0430",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0430",
+    "titleUr": "بورنگ کے پانی کو آر او پلانٹ سے میٹھا اور صاف کرکے فروخت کرنا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0430"
+    ],
+    "pdfUrl": "/manus-storage/A0430_6f66512b.pdf"
+  },
+  {
+    "slug": "a0439-169",
+    "number": "A0439",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0439",
+    "titleUr": "بیٹی کی وفات کے بعد والدین کا اس کے جہیز کا سامان واپس طلب کرنا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0439"
+    ],
+    "pdfUrl": "/manus-storage/A0439_a2930fe5.pdf"
+  },
+  {
+    "slug": "a0440-170",
+    "number": "A0440",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0440",
+    "titleUr": "اگر امانت کے سامان کی وجہ سے تکلیف پہنچ رہی ہو اور مالک اسے اٹھانے پر تیار نہ ہو، تو ایسی صورت میں امانت کا کیا حکم ہے؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0440"
+    ],
+    "pdfUrl": "/manus-storage/A0440_59664cfc.pdf"
+  },
+  {
+    "slug": "a0441-171",
+    "number": "A0441",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0441",
+    "titleUr": "خلوت کے بعد، جماع سے پہلے تین دفعہ طلاق دیتا ہوں کہنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0441"
+    ],
+    "pdfUrl": "/manus-storage/A0441_9a45881a.pdf"
+  },
+  {
+    "slug": "a0442-172",
+    "number": "A0442",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0442",
+    "titleUr": "محض شک کی وجہ سے دیت اور کفارے کے وجوب کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0442"
+    ],
+    "pdfUrl": "/manus-storage/A0442_19a5591c.pdf"
+  },
+  {
+    "slug": "a0443-173",
+    "number": "A0443",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0443",
+    "titleUr": "بچے کی پیدائش کے موقع پر گھر میں غبارے لگانے، ویلکم کہنے اور کیک کاٹنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0443"
+    ],
+    "pdfUrl": "/manus-storage/A0443_3caedaf2.pdf"
+  },
+  {
+    "slug": "a0444-174",
+    "number": "A0444",
+    "category": "Belief & Conduct",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0444",
+    "titleUr": "ایستھیٹک (جلد کی خوبصورتی کا علاج معالجہ) کلینک میں ملازمت کا شرعی حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Belief & Conduct",
+      "A0444"
+    ],
+    "pdfUrl": "/manus-storage/A0444_54bdb6f3.pdf"
+  },
+  {
+    "slug": "a0445-175",
+    "number": "A0445",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0445",
+    "titleUr": "لائن کے پانی میں بدبو (سمیل) پیدا ہونے کی صورت میں پانی کی پاکی و ناپاکی کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0445"
+    ],
+    "pdfUrl": "/manus-storage/A0445_8e81a8f6.pdf"
+  },
+  {
+    "slug": "a0447-176",
+    "number": "A0447",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0447",
+    "titleUr": "حیض کی عادت کے بعد زرد رنگ نظر آنے پر نماز کب پڑھیں؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0447"
+    ],
+    "pdfUrl": "/manus-storage/A0447_d9db505a.pdf"
+  },
+  {
+    "slug": "a0448-177",
+    "number": "A0448",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0448",
+    "titleUr": "اگر تم نے مفتی سے بات کی، تو ہمارا رشتہ ختم کہنے کا حکم اور عدتِ طلاق کب سے شروع ہوگی؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0448"
+    ],
+    "pdfUrl": "/manus-storage/A0448_2ae49841.pdf"
+  },
+  {
+    "slug": "a0449-178",
+    "number": "A0449",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0449",
+    "titleUr": "دورانِ عدت ملازمت اور زمین کی خریداری میں شوہر کی طرف سے دی گئی رقم کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0449"
+    ],
+    "pdfUrl": "/manus-storage/A0449_ff1ddbb7.pdf"
+  },
+  {
+    "slug": "a0451-179",
+    "number": "A0451",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0451",
+    "titleUr": "اقامت کے وقت کب کھڑا ہونا سنت ہے؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0451"
+    ],
+    "pdfUrl": "/manus-storage/A0451_f1dbe94f.pdf"
+  },
+  {
+    "slug": "a0454-180",
+    "number": "A0454",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0454",
+    "titleUr": "جس جانور کے سینگ کاٹ دیئے گئے ہوں اس کی قربانی کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0454"
+    ],
+    "pdfUrl": "/manus-storage/A0454_c2fb1d38.pdf"
+  },
+  {
+    "slug": "a0457-181",
+    "number": "A0457",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0457",
+    "titleUr": "بیوہ، دو بیٹیوں، 13 بھتیجوں اور 7 بھتیجیوں میں تقسیمِ میراث",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0457"
+    ],
+    "pdfUrl": "/manus-storage/A0457_2e2f6b86.pdf"
+  },
+  {
+    "slug": "a0460-182",
+    "number": "A0460",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0460",
+    "titleUr": "ریٹائرڈ ملازم کے لئے محکمہ کے دستاویزات لکھنے اور اس پر اجرت لینے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0460"
+    ],
+    "pdfUrl": "/manus-storage/A0460_b3583263.pdf"
+  },
+  {
+    "slug": "a0461-183",
+    "number": "A0461",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0461",
+    "titleUr": "ساڑھے سات تولہ سے کم سونے پر زکوٰۃ اور ایک ہی مستحق کو نصاب سے زیادہ دینا",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0461"
+    ],
+    "pdfUrl": "/manus-storage/A0461_5add01be.pdf"
+  },
+  {
+    "slug": "a0462-184",
+    "number": "A0462",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0462",
+    "titleUr": "عرفات میں ظہر اور عصر کی نمازیں جمع کرکے پڑھنے کی شرعی حیثیت اور خیموں میں ادائیگی کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0462"
+    ],
+    "pdfUrl": "/manus-storage/A0462_426bac52.pdf"
+  },
+  {
+    "slug": "a0463-185",
+    "number": "A0463",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0463",
+    "titleUr": "رمی، قربانی اور حلق یا قصر میں ترتیب کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0463"
+    ],
+    "pdfUrl": "/manus-storage/A0463_27713f53.pdf"
+  },
+  {
+    "slug": "a0464-186",
+    "number": "A0464",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0464",
+    "titleUr": "گلوبل مون سائٹنگ یعنی ایک مقام کی رؤیت کو پوری دنیا کے لئے کافی سمجھنے پر عمل کرنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0464"
+    ],
+    "pdfUrl": "/manus-storage/A0464_40a076c2.pdf"
+  },
+  {
+    "slug": "a0466-187",
+    "number": "A0466",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0466",
+    "titleUr": "تجارتی سامان پر زکوٰۃ کس قیمت (خرید یا فروخت) سے ادا کی جائے گی؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0466"
+    ],
+    "pdfUrl": "/manus-storage/A0466_c38fc30c.pdf"
+  },
+  {
+    "slug": "a0467-188",
+    "number": "A0467",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0467",
+    "titleUr": "سودی ملازمت کی آمدنی اور اس سے حاصل شدہ نفع کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0467"
+    ],
+    "pdfUrl": "/manus-storage/A0467_1751202a.pdf"
+  },
+  {
+    "slug": "a0468-189",
+    "number": "A0468",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0468",
+    "titleUr": "دورانِ عدت گھر کے دوسرے حصے میں جانے اور وازلین استعمال کرنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0468"
+    ],
+    "pdfUrl": "/manus-storage/A0468_fee4b958.pdf"
+  },
+  {
+    "slug": "a0469-190",
+    "number": "A0469",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0469",
+    "titleUr": "بھینس یا گائے کو دودھ کے لیے کرائے پر دینے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0469"
+    ],
+    "pdfUrl": "/manus-storage/A0469_9daf56d0.pdf"
+  },
+  {
+    "slug": "a0470-191",
+    "number": "A0470",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0470",
+    "titleUr": "پانچ بطن کا مناسخہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0470"
+    ],
+    "pdfUrl": "/manus-storage/A0470_569097b3.pdf"
+  },
+  {
+    "slug": "a0471-192",
+    "number": "A0471",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0471",
+    "titleUr": "آن لائن نکاح کی ایک صورت کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0471"
+    ],
+    "pdfUrl": "/manus-storage/A0471_1e562b86.pdf"
+  },
+  {
+    "slug": "a0472-193",
+    "number": "A0472",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0472",
+    "titleUr": "باپ کی زندگی میں انتقال کر جانے والے بیٹے کا وراثت میں حصہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0472"
+    ],
+    "pdfUrl": "/manus-storage/A0472_c4f25b13.pdf"
+  },
+  {
+    "slug": "a0473-194",
+    "number": "A0473",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0473",
+    "titleUr": "گریجویٹی، کمیوٹیشن، پینشن، لیو انکیشمنٹ اور بینک بیلنس کی شرعی تقسیم کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0473"
+    ],
+    "pdfUrl": "/manus-storage/A0473_d97e30de.pdf"
+  },
+  {
+    "slug": "a0474-195",
+    "number": "A0474",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0474",
+    "titleUr": "ڈپریشن کی وجہ سے دورہ پڑنے کے دوران جو نمازیں قضا ہوئیں ان کا حکم اور زبان ہلائے بغیر نماز پڑھنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0474"
+    ],
+    "pdfUrl": "/manus-storage/A0474_ede210ef.pdf"
+  },
+  {
+    "slug": "a0481-196",
+    "number": "A0481",
+    "category": "Inheritance & Wills",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0481",
+    "titleUr": "وارث کے لیے وصیت کرنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Inheritance & Wills",
+      "A0481"
+    ],
+    "pdfUrl": "/manus-storage/A0481_c6b4833c.pdf"
+  },
+  {
+    "slug": "a0482-197",
+    "number": "A0482",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0482",
+    "titleUr": "تمہیں جو چاہئے لے جاؤ، میں چلا دوستوں کے ساتھ، کہنے سے وقوعِ طلاق کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0482"
+    ],
+    "pdfUrl": "/manus-storage/A0482_0d824609.pdf"
+  },
+  {
+    "slug": "a0483-198",
+    "number": "A0483",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0483",
+    "titleUr": "مالک کی اجازت کے بغیر جھولے استعمال کرنے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0483"
+    ],
+    "pdfUrl": "/manus-storage/A0483_f1ad2ba7.pdf"
+  },
+  {
+    "slug": "a0484-199",
+    "number": "A0484",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0484",
+    "titleUr": "کیا شوہر کو تعلیقِ طلاق ختم کرنے کا اختیار ہے؟",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0484"
+    ],
+    "pdfUrl": "/manus-storage/A0484_4d7e121c.pdf"
+  },
+  {
+    "slug": "a0485-200",
+    "number": "A0485",
+    "category": "Worship",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0485",
+    "titleUr": "جس مرد یا عورت کے سر پر بال نہ ہوں، ان کے احرام سے نکلنے کا شرعی طریقہ",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Worship",
+      "A0485"
+    ],
+    "pdfUrl": "/manus-storage/A0485_956a4515.pdf"
+  },
+  {
+    "slug": "a0487-201",
+    "number": "A0487",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0487",
+    "titleUr": "جانور آدھے پر دینے کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0487"
+    ],
+    "pdfUrl": "/manus-storage/A0487_c3431f5a.pdf"
+  },
+  {
+    "slug": "a0489-202",
+    "number": "A0489",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0489",
+    "titleUr": "بیوی کے دعویٰ طلاق کی صورت میں وقوعِ طلاق کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0489"
+    ],
+    "pdfUrl": "/manus-storage/A0489_b90886e8.pdf"
   }
 ];
 

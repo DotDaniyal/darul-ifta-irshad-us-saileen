@@ -232,7 +232,69 @@ const a03UrlByAssetKey = new Map([
   ["A0392", "/manus-storage/A0392_2776e056.pdf"],
 ]);
 
-const allRecords = [...records, ...importedA02Records, ...importedA03Records];
+const importedA04Records = [
+  ["A0405", "میں نے تجھے تیسری دفعہ بھی دیکھا کہنے کا حکم", "Marriage & Divorce", "A0405"],
+  ["A0411", "بغیر تصریحِ کرایہ مشترکہ مکان میں رہائش کا کرایہ", "Transactions", "A0411"],
+  ["A0430", "بورنگ کے پانی کو آر او پلانٹ سے میٹھا اور صاف کرکے فروخت کرنا", "Transactions", "A0430"],
+  ["A0439", "بیٹی کی وفات کے بعد والدین کا اس کے جہیز کا سامان واپس طلب کرنا", "Inheritance & Wills", "A0439"],
+  ["A0440", "اگر امانت کے سامان کی وجہ سے تکلیف پہنچ رہی ہو اور مالک اسے اٹھانے پر تیار نہ ہو، تو ایسی صورت میں امانت کا کیا حکم ہے؟", "Transactions", "A0440"],
+  ["A0441", "خلوت کے بعد، جماع سے پہلے تین دفعہ طلاق دیتا ہوں کہنے کا حکم", "Marriage & Divorce", "A0441"],
+  ["A0442", "محض شک کی وجہ سے دیت اور کفارے کے وجوب کا حکم", "Worship", "A0442"],
+  ["A0443", "بچے کی پیدائش کے موقع پر گھر میں غبارے لگانے، ویلکم کہنے اور کیک کاٹنے کا حکم", "Belief & Conduct", "A0443"],
+  ["A0444", "ایستھیٹک (جلد کی خوبصورتی کا علاج معالجہ) کلینک میں ملازمت کا شرعی حکم", "Belief & Conduct", "A0444"],
+  ["A0445", "لائن کے پانی میں بدبو (سمیل) پیدا ہونے کی صورت میں پانی کی پاکی و ناپاکی کا حکم", "Worship", "A0445"],
+  ["A0447", "حیض کی عادت کے بعد زرد رنگ نظر آنے پر نماز کب پڑھیں؟", "Worship", "A0447"],
+  ["A0448", "اگر تم نے مفتی سے بات کی، تو ہمارا رشتہ ختم کہنے کا حکم اور عدتِ طلاق کب سے شروع ہوگی؟", "Marriage & Divorce", "A0448"],
+  ["A0449", "دورانِ عدت ملازمت اور زمین کی خریداری میں شوہر کی طرف سے دی گئی رقم کا حکم", "Marriage & Divorce", "A0449"],
+  ["A0451", "اقامت کے وقت کب کھڑا ہونا سنت ہے؟", "Worship", "A0451"],
+  ["A0454", "جس جانور کے سینگ کاٹ دیئے گئے ہوں اس کی قربانی کا حکم", "Worship", "A0454"],
+  ["A0457", "بیوہ، دو بیٹیوں، 13 بھتیجوں اور 7 بھتیجیوں میں تقسیمِ میراث", "Inheritance & Wills", "A0457"],
+  ["A0460", "ریٹائرڈ ملازم کے لئے محکمہ کے دستاویزات لکھنے اور اس پر اجرت لینے کا حکم", "Transactions", "A0460"],
+  ["A0461", "ساڑھے سات تولہ سے کم سونے پر زکوٰۃ اور ایک ہی مستحق کو نصاب سے زیادہ دینا", "Worship", "A0461"],
+  ["A0462", "عرفات میں ظہر اور عصر کی نمازیں جمع کرکے پڑھنے کی شرعی حیثیت اور خیموں میں ادائیگی کا حکم", "Worship", "A0462"],
+  ["A0463", "رمی، قربانی اور حلق یا قصر میں ترتیب کا حکم", "Worship", "A0463"],
+  ["A0464", "گلوبل مون سائٹنگ یعنی ایک مقام کی رؤیت کو پوری دنیا کے لئے کافی سمجھنے پر عمل کرنے کا حکم", "Worship", "A0464"],
+  ["A0466", "تجارتی سامان پر زکوٰۃ کس قیمت (خرید یا فروخت) سے ادا کی جائے گی؟", "Worship", "A0466"],
+  ["A0467", "سودی ملازمت کی آمدنی اور اس سے حاصل شدہ نفع کا حکم", "Transactions", "A0467"],
+  ["A0468", "دورانِ عدت گھر کے دوسرے حصے میں جانے اور وازلین استعمال کرنے کا حکم", "Worship", "A0468"],
+  ["A0469", "بھینس یا گائے کو دودھ کے لیے کرائے پر دینے کا حکم", "Transactions", "A0469"],
+  ["A0470", "پانچ بطن کا مناسخہ", "Inheritance & Wills", "A0470"],
+  ["A0471", "آن لائن نکاح کی ایک صورت کا حکم", "Transactions", "A0471"],
+  ["A0472", "باپ کی زندگی میں انتقال کر جانے والے بیٹے کا وراثت میں حصہ", "Inheritance & Wills", "A0472"],
+  ["A0473", "گریجویٹی، کمیوٹیشن، پینشن، لیو انکیشمنٹ اور بینک بیلنس کی شرعی تقسیم کا حکم", "Inheritance & Wills", "A0473"],
+  ["A0474", "ڈپریشن کی وجہ سے دورہ پڑنے کے دوران جو نمازیں قضا ہوئیں ان کا حکم اور زبان ہلائے بغیر نماز پڑھنے کا حکم", "Worship", "A0474"],
+  ["A0481", "وارث کے لیے وصیت کرنے کا حکم", "Inheritance & Wills", "A0481"],
+  ["A0482", "تمہیں جو چاہئے لے جاؤ، میں چلا دوستوں کے ساتھ، کہنے سے وقوعِ طلاق کا حکم", "Marriage & Divorce", "A0482"],
+  ["A0483", "مالک کی اجازت کے بغیر جھولے استعمال کرنے کا حکم", "Transactions", "A0483"],
+  ["A0484", "کیا شوہر کو تعلیقِ طلاق ختم کرنے کا اختیار ہے؟", "Marriage & Divorce", "A0484"],
+  ["A0485", "جس مرد یا عورت کے سر پر بال نہ ہوں، ان کے احرام سے نکلنے کا شرعی طریقہ", "Worship", "A0485"],
+  ["A0487", "جانور آدھے پر دینے کا حکم", "Transactions", "A0487"],
+  ["A0489", "بیوی کے دعویٰ طلاق کی صورت میں وقوعِ طلاق کا حکم", "Marriage & Divorce", "A0489"],
+];
+
+const a04UrlByAssetKey = new Map([
+  ["A0405", "/manus-storage/A0405_3ee5284b.pdf"], ["A0411", "/manus-storage/A0411_6056a810.pdf"],
+  ["A0430", "/manus-storage/A0430_6f66512b.pdf"], ["A0439", "/manus-storage/A0439_a2930fe5.pdf"],
+  ["A0440", "/manus-storage/A0440_59664cfc.pdf"], ["A0441", "/manus-storage/A0441_9a45881a.pdf"],
+  ["A0442", "/manus-storage/A0442_19a5591c.pdf"], ["A0443", "/manus-storage/A0443_3caedaf2.pdf"],
+  ["A0444", "/manus-storage/A0444_54bdb6f3.pdf"], ["A0445", "/manus-storage/A0445_8e81a8f6.pdf"],
+  ["A0447", "/manus-storage/A0447_d9db505a.pdf"], ["A0448", "/manus-storage/A0448_2ae49841.pdf"],
+  ["A0449", "/manus-storage/A0449_ff1ddbb7.pdf"], ["A0451", "/manus-storage/A0451_f1dbe94f.pdf"],
+  ["A0454", "/manus-storage/A0454_c2fb1d38.pdf"], ["A0457", "/manus-storage/A0457_2e2f6b86.pdf"],
+  ["A0460", "/manus-storage/A0460_b3583263.pdf"], ["A0461", "/manus-storage/A0461_5add01be.pdf"],
+  ["A0462", "/manus-storage/A0462_426bac52.pdf"], ["A0463", "/manus-storage/A0463_27713f53.pdf"],
+  ["A0464", "/manus-storage/A0464_40a076c2.pdf"], ["A0466", "/manus-storage/A0466_c38fc30c.pdf"],
+  ["A0467", "/manus-storage/A0467_1751202a.pdf"], ["A0468", "/manus-storage/A0468_fee4b958.pdf"],
+  ["A0469", "/manus-storage/A0469_9daf56d0.pdf"], ["A0470", "/manus-storage/A0470_569097b3.pdf"],
+  ["A0471", "/manus-storage/A0471_1e562b86.pdf"], ["A0472", "/manus-storage/A0472_c4f25b13.pdf"],
+  ["A0473", "/manus-storage/A0473_d97e30de.pdf"], ["A0474", "/manus-storage/A0474_ede210ef.pdf"],
+  ["A0481", "/manus-storage/A0481_c6b4833c.pdf"], ["A0482", "/manus-storage/A0482_0d824609.pdf"],
+  ["A0483", "/manus-storage/A0483_f1ad2ba7.pdf"], ["A0484", "/manus-storage/A0484_4d7e121c.pdf"],
+  ["A0485", "/manus-storage/A0485_956a4515.pdf"], ["A0487", "/manus-storage/A0487_c3431f5a.pdf"],
+  ["A0489", "/manus-storage/A0489_b90886e8.pdf"],
+]);
+
+const allRecords = [...records, ...importedA02Records, ...importedA03Records, ...importedA04Records];
 
 if (urlByPosition.size !== records.length) {
   throw new Error(`Expected ${records.length} uploaded PDFs; found ${urlByPosition.size}.`);
@@ -246,12 +308,16 @@ if (a03UrlByAssetKey.size !== importedA03Records.length) {
   throw new Error(`Expected ${importedA03Records.length} supplied A03-series PDF URLs; found ${a03UrlByAssetKey.size}.`);
 }
 
+if (a04UrlByAssetKey.size !== importedA04Records.length) {
+  throw new Error(`Expected ${importedA04Records.length} supplied A04-series PDF URLs; found ${a04UrlByAssetKey.size}.`);
+}
+
 const categories = ["Worship", "Transactions", "Marriage & Divorce", "Inheritance & Wills", "Belief & Conduct"];
 const archiveNoticeUr = "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔";
 const archiveNoticeEn = "Open the original PDF for the complete question, researched answer, and supporting detail.";
 
 const fatawa = allRecords.map(([number, titleUr, category, assetKey], index) => {
-  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number);
+  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number) ?? a04UrlByAssetKey.get(assetKey ?? number);
   if (!pdfUrl) throw new Error(`Missing managed PDF URL for ${number}.`);
 
   return {
