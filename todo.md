@@ -309,3 +309,10 @@
 - [x] Replace the invalid duplicate inline style attributes with one valid, responsive 29px desktop-size treatment without altering wording, font family, layout, or other masthead content.
 - [x] Add or update a focused regression assertion and validate desktop and mobile masthead presentation without clipping or horizontal overflow.
 - [x] Save and publish the verified Arabic masthead heading-size update checkpoint.
+
+## Tarde Arabic Bold Masthead Font Verification Checklist
+
+- [x] Inspect the visual-editor font-family change and confirm whether Tarde Arabic Bold is actually available to public website visitors.
+- [x] Apply the requested font only if it can be reliably delivered with an appropriate license; otherwise retain a deployed Arabic Bold fallback without changing heading wording, layout, or accessibility semantics.
+- [x] Add or update focused masthead regression coverage and verify the heading at desktop and mobile widths without clipping or overflow.
+- [x] Save and publish the verified Arabic Bold masthead font treatment checkpoint.

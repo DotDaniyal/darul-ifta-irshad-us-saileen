@@ -33,10 +33,12 @@ describe("accessible text-based institutional letterhead", () => {
     expect(styles).toMatch(/\.letterhead-english-name \{[^}]*font-family: "Cormorant Garamond", Georgia, serif;/);
   });
 
-  it("uses the scoped Thuluth-inspired font treatment only for the selectable Urdu masthead heading", () => {
-    expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-family: "Katibeh", "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;/);
+  it("uses the requested Arabic Bold stack only for the selectable Urdu masthead heading", () => {
+    expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-family: "Tarde Arabic Bold", "Noto Naskh Arabic", "Katibeh", serif;/);
+    expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-weight: 700;/);
     expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-size: clamp\(1rem, 2\.27vw, 29px\);/);
     expect(siteShell).not.toContain('style={{fontSize:');
+    expect(siteShell).not.toContain('style={{fontFamily:');
   });
 
   it("retains an accessible home link on the independent logo asset", () => {
