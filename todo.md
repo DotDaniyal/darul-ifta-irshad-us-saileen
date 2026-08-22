@@ -240,4 +240,4 @@
 - [x] Upload only verified missing A0499 and A0503 PDFs using ASCII-safe managed-storage filenames while retaining conservative Urdu metadata.
 - [x] Add the verified A0499 and A0503 records through the repeatable Fatwa catalog generator without modifying existing records or dates.
 - [x] Extend regression coverage and validate direct query filtering, public PDF access, and responsive presentation for A0499 and A0503.
-- [ ] Document the two-document import outcome and save a published checkpoint.
+- [x] Document the two-document import outcome and save a published checkpoint.
