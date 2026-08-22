@@ -302,3 +302,10 @@
 - [x] Add or update targeted regression tests for each confirmed repair, then rerun the full validation set and responsive checks.
 - [x] Write an audit record detailing findings, actual fixes, retained safeguards, verification results, and any remaining limitations.
 - [x] Save and publish the verified targeted audit, repair, and cleanup checkpoint.
+
+## Arabic Masthead Heading Size Verification Checklist
+
+- [x] Inspect the visual-editor result and current shared masthead sizing rules for the right-side Arabic/Urdu institutional heading.
+- [x] Replace the invalid duplicate inline style attributes with one valid, responsive 29px desktop-size treatment without altering wording, font family, layout, or other masthead content.
+- [x] Add or update a focused regression assertion and validate desktop and mobile masthead presentation without clipping or horizontal overflow.
+- [x] Save and publish the verified Arabic masthead heading-size update checkpoint.

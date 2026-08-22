@@ -29,7 +29,7 @@
   .letterhead-english-name { margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1rem, 2.05vw, 1.86rem); font-weight: 700; line-height: .86; letter-spacing: -.035em; color: #075E9D; text-transform: uppercase; }
   .letterhead-english-name span { display: block; }
   .letterhead-english-name small { display: block; margin-top: .26rem; padding-right: .08rem; font-family: "Manrope", sans-serif; font-size: .38em; font-weight: 800; letter-spacing: .09em; text-align: right; }
-  .letterhead-urdu-name { margin: 0; font-family: "Katibeh", "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(1rem, 2.1vw, 1.92rem); font-weight: 400; line-height: 1.3; color: #075E9D; }
+  .letterhead-urdu-name { margin: 0; font-family: "Katibeh", "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(1rem, 2.27vw, 29px); font-weight: 400; line-height: 1.3; color: #075E9D; }
   .letterhead-address { display: inline-flex; max-width: 100%; align-items: center; justify-content: center; margin: .42rem 0 0; padding: .32rem .68rem .36rem; border-radius: 999px; background: #075E9D; color: #FFF; font-family: "Manrope", sans-serif; font-size: clamp(.38rem, .74vw, .59rem); font-weight: 800; line-height: 1.2; letter-spacing: .035em; text-align: center; text-transform: uppercase; }
   .letterhead-address-ur { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; font-size: clamp(.55rem, 1vw, .77rem); font-weight: 600; letter-spacing: 0; text-transform: none; }
   .letterhead-logo-link { display: flex; min-width: 0; flex-direction: column; align-items: center; color: #075E9D; line-height: 1; text-align: center; transition: transform .2s cubic-bezier(.23,1,.32,1); }
