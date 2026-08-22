@@ -330,3 +330,11 @@
 - [x] Repair only the confirmed search-flow defect without changing Fatwa records, public managed PDF URLs, privacy sanitization safeguards, routes, or archive metadata.
 - [x] Add or update focused regression coverage and verify query results, no-result state, and public PDF actions at desktop and mobile widths.
 - [x] Save and publish the verified Fatwa archive search repair checkpoint.
+
+## Archive-Wide Fatwa PDF Privacy Reverification Checklist
+
+- [x] Audit every public catalog URL against the approved sanitized-manifest boundary and inspect the existing redaction and publication controls.
+- [x] Verify that representative public PDFs contain no customer/question-submitter names or non-official phone numbers in rendered pages or extracted text, while retaining only the official `0332617671` contact number where intentionally published.
+- [x] Repair only confirmed privacy-boundary gaps, preserve Fatwa questions, answers, references, dates, records, routes, and managed storage controls, and maintain a fail-closed process for future uploads.
+- [x] Add or update deterministic privacy regressions, recheck archive search and public PDF actions, and document the audit evidence and inherent historic raw-link cache limitation.
+- [x] Save and publish the verified archive-wide Fatwa PDF privacy reverification checkpoint.
