@@ -285,3 +285,11 @@
 - [x] Retain selectable, searchable, accessible HTML heading text and existing keyboard semantics after restoring the font.
 - [x] Verify the restored typography at desktop and mobile widths, the public Fatwa archive route, targeted regression coverage, TypeScript, and production build.
 - [x] Save and publish the verified masthead heading-font restoration checkpoint.
+
+## Urdu Masthead Thuluth Font Checklist
+
+- [x] Confirm the stale visual-editor target corresponds to the right-side Urdu institutional masthead heading and identify an appropriate browser-available Thuluth treatment.
+- [x] Apply the Arabic Thuluth (خط الثلث) treatment only to that Urdu heading; retain the restored English Cormorant Garamond heading and every other masthead property.
+- [x] Preserve selectable, searchable, accessible Urdu text, existing keyboard semantics, reference order, logo, address capsules, and responsive layout.
+- [x] Verify desktop and mobile presentation, targeted masthead regression coverage, public Fatwa archive behavior, TypeScript, and production build.
+- [x] Save and publish the verified Urdu Thuluth-heading update checkpoint.

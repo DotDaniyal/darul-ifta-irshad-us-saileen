@@ -33,6 +33,10 @@ describe("accessible text-based institutional letterhead", () => {
     expect(styles).toMatch(/\.letterhead-english-name \{[^}]*font-family: "Cormorant Garamond", Georgia, serif;/);
   });
 
+  it("uses the scoped Thuluth-inspired font treatment only for the selectable Urdu masthead heading", () => {
+    expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-family: "Katibeh", "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;/);
+  });
+
   it("retains an accessible home link on the independent logo asset", () => {
     expect(siteShell).toContain('aria-label="Darul Ifta Irshad-us-Saileen home"');
     expect(siteShell).toContain('alt="Darul Ifta Irshad-us-Saileen official logo"');
