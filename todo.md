@@ -211,4 +211,4 @@
 - [x] Preserve permanently recorded Fatwa dates separately from the live institutional Hijri-date display.
 - [x] Add deterministic tests for before-Maghrib, at/after-Maghrib, midnight, source mismatch, source outage, invalid source data, and browser resynchronization timing.
 - [x] Verify the updated date component and core public routes at desktop and mobile breakpoints, then document date authority and fallback behavior.
-- [ ] Save and publish the verified Karachi Maghrib Hijri-date update.
+- [x] Save and publish the verified Karachi Maghrib Hijri-date update.
