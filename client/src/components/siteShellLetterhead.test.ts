@@ -9,13 +9,18 @@ describe("formal institutional letterhead", () => {
     expect(siteShell).toContain("function InstitutionalLetterhead()");
     expect(siteShell).toContain("Irshad-us-Saileen");
     expect(siteShell).toContain("دارالافتاء ارشاد السائلین");
+    expect(siteShell).toContain('className="letterhead-centre"');
     expect(siteShell).toContain('className="letterhead-seal"');
+    expect(siteShell).toContain('className="letterhead-seal-caption"');
+    expect(siteShell).toContain('className="letterhead-urdu-city"');
     expect(siteShell).toContain("<InstitutionalLetterhead />");
   });
 
   it("keeps the reference-inspired English-left, central-seal, Urdu-right layout responsive", () => {
-    expect(styles).toContain("grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.45fr)");
+    expect(styles).toContain("grid-template-columns: minmax(0, 1fr) 146px minmax(0, 1fr)");
     expect(styles).toContain("direction: ltr;");
+    expect(styles).toContain(".letterhead-centre");
+    expect(styles).toContain(".letterhead-urdu-city { display: none; }");
     expect(styles).toContain(".letterhead-urdu");
     expect(styles).toContain("@media (max-width: 720px)");
   });
@@ -24,7 +29,8 @@ describe("formal institutional letterhead", () => {
     expect(styles).toContain('"Cormorant Garamond"');
     expect(styles).toContain(".letterhead-seal::before");
     expect(styles).toContain("clip-path: polygon");
+    expect(styles).toContain(".letterhead-seal-caption");
     expect(styles).toContain(".royal-masthead::after");
-    expect(styles).toContain("min-height: 102px");
+    expect(styles).toContain("min-height: 118px");
   });
 });

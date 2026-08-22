@@ -250,3 +250,12 @@
 - [x] Review the SiteShell visual-edit target, identify the missing visual reference, and apply only a confirmed change before checkpointing.
 - [x] Rebuild the SiteShell masthead as a slim formal letterhead inspired by the supplied reference, preserving accessible bilingual navigation and institutional contact details.
 - [x] Refine the SiteShell masthead to more closely match the supplied reference’s compact black letterpress typography, ruled composition, and formal crest treatment.
+
+## Exact Three-Part Letterhead Reference Refinement Checklist
+
+- [x] Inspect the supplied reference in readable crops and compare it with the current SiteShell masthead structure and typography.
+- [x] Retain the existing website logo while matching the reference’s left-English, centered-seal, right-Urdu three-part proportions, address strips, and lower rule.
+- [x] Refine only the masthead typography, spacing, and formal color integration using closest available traditional web fonts; preserve all navigation and public-site behavior.
+- [x] Implement responsive desktop, tablet, and mobile layouts with no clipping, overlap, horizontal scroll, or excessive header height.
+- [x] Update masthead regression coverage and verify representative public routes, privacy-safe Fatwa actions, diagnostics, TypeScript, tests, and production build.
+- [x] Save and publish the verified reference-faithful masthead refinement checkpoint.

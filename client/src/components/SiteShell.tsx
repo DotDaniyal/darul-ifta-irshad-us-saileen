@@ -72,12 +72,15 @@ function InstitutionalLetterhead() {
         <span className="letterhead-address-lettering">Al Mujeeb Garden A-31 · Model Colony · Karachi</span>
       </div>
 
-      <Link href="/" className="letterhead-seal" aria-label="Darul Ifta Irshad-us-Saileen home">
-        <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" />
-      </Link>
+      <div className="letterhead-centre">
+        <Link href="/" className="letterhead-seal" aria-label="Darul Ifta Irshad-us-Saileen home">
+          <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" />
+        </Link>
+        <span className="letterhead-seal-caption"><span>Darul Ifta</span><small>Karachi</small></span>
+      </div>
 
       <div className="letterhead-urdu" dir="rtl">
-        <span className="letterhead-urdu-title">دارالافتاء ارشاد السائلین</span>
+        <span className="letterhead-urdu-title"><span>دارالافتاء ارشاد السائلین</span><span className="letterhead-urdu-city">، کراچی</span></span>
         <span className="letterhead-urdu-address">المجیب گارڈن اے-31، ماڈل کالونی، کراچی</span>
       </div>
     </div>
