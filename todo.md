@@ -259,3 +259,12 @@
 - [x] Implement responsive desktop, tablet, and mobile layouts with no clipping, overlap, horizontal scroll, or excessive header height.
 - [x] Update masthead regression coverage and verify representative public routes, privacy-safe Fatwa actions, diagnostics, TypeScript, tests, and production build.
 - [x] Save and publish the verified reference-faithful masthead refinement checkpoint.
+
+## Official Blue Letterhead Recreation Checklist
+
+- [x] Compare the supplied official-blue reference against the current masthead’s exact three-part proportions, wording, colour, address capsules, and baseline rule.
+- [x] Match the reference’s unified royal-blue ink treatment without gradients, shadows, replacement artwork, revised wording, or added decorative elements.
+- [x] Tune the retained English and Urdu web typography, sizing, spacing, logo scale, and horizontal alignment to reproduce the reference as closely as browser fonts allow.
+- [x] Preserve the existing navigation outside the letterhead treatment and ensure no clipping, wrapping, distortion, horizontal scrolling, or loss of mobile readability.
+- [x] Update targeted regression coverage and validate desktop, tablet, mobile, privacy-safe Fatwa archive routes, diagnostics, TypeScript, tests, and production build.
+- [x] Save and publish the verified official-blue letterhead recreation checkpoint.

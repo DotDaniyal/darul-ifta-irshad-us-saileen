@@ -7,6 +7,7 @@ import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, Book
 import { Link, useLocation } from "wouter";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
+const officialLetterhead = "/manus-storage/official-blue-letterhead_9619ccc2.png";
 const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
 
 type Language = "ur" | "en";
@@ -65,24 +66,9 @@ export function BrandMark({ compact = false, centered = false }: { compact?: boo
 function InstitutionalLetterhead() {
   return (
     <div className="institutional-letterhead">
-      <div className="letterhead-english" aria-label="Darul Ifta Irshad-us-Saileen Karachi">
-        <span className="letterhead-english-overline">Darul Ifta</span>
-        <span className="letterhead-english-title">Irshad-us-Saileen</span>
-        <span className="letterhead-english-city">Karachi</span>
-        <span className="letterhead-address-lettering">Al Mujeeb Garden A-31 · Model Colony · Karachi</span>
-      </div>
-
-      <div className="letterhead-centre">
-        <Link href="/" className="letterhead-seal" aria-label="Darul Ifta Irshad-us-Saileen home">
-          <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" />
-        </Link>
-        <span className="letterhead-seal-caption"><span>Darul Ifta</span><small>Karachi</small></span>
-      </div>
-
-      <div className="letterhead-urdu" dir="rtl">
-        <span className="letterhead-urdu-title"><span>دارالافتاء ارشاد السائلین</span><span className="letterhead-urdu-city">، کراچی</span></span>
-        <span className="letterhead-urdu-address">المجیب گارڈن اے-31، ماڈل کالونی، کراچی</span>
-      </div>
+      <Link href="/" className="letterhead-reference-link" aria-label="Darul Ifta Irshad-us-Saileen home">
+        <img src={officialLetterhead} alt="Darul Ifta Irshad-us-Saileen Karachi official letterhead" className="letterhead-reference-image" />
+      </Link>
     </div>
   );
 }
