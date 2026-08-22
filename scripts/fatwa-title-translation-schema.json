@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "titleEn": {
+      "type": "string",
+      "description": "Concise English title preserving the original Urdu Fatwa subject and Islamic terminology where needed."
+    },
+    "reviewNote": {
+      "type": "string",
+      "description": "A brief note identifying terminology that should be verified by a qualified reviewer, or an empty string when none is needed."
+    }
+  },
+  "required": ["titleEn", "reviewNote"],
+  "additionalProperties": false
+}

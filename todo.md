@@ -338,3 +338,12 @@
 - [x] Repair only confirmed privacy-boundary gaps, preserve Fatwa questions, answers, references, dates, records, routes, and managed storage controls, and maintain a fail-closed process for future uploads.
 - [x] Add or update deterministic privacy regressions, recheck archive search and public PDF actions, and document the audit evidence and inherent historic raw-link cache limitation.
 - [x] Save and publish the verified archive-wide Fatwa PDF privacy reverification checkpoint.
+
+## Review-Safe Bilingual Fatwa Foundation Checklist
+
+- [x] Inspect the existing language-switcher persistence, Fatwa listing and detail data paths, search, categories, public PDF notices, and available English translation sources.
+- [x] Define a normalized bilingual Fatwa content structure that preserves every Urdu original, supports English title/question/answer/scholar/reference/category/date fields, and records translation review status without duplicating the archive or PDFs.
+- [x] Update the language-aware Fatwa listing, detail route, categories, metadata, notices, and search to select the active language while retaining Arabic text where appropriate and preserving direct PDF actions.
+- [x] Prepare English translation entries only as review-required drafts unless authoritative approved translations are supplied; do not represent drafts as scholarly approved or overwrite Urdu originals.
+- [x] Add deterministic coverage for language switching, refresh persistence, direct detail routes, both-language search and categories, review status, desktop/mobile layouts, and preserved privacy-safe PDF links.
+- [x] Document the scholar-review and publication workflow for English Fatwa translations, then save and publish the verified bilingual Fatwa foundation checkpoint.

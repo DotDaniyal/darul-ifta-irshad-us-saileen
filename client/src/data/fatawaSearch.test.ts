@@ -9,7 +9,7 @@ describe("Fatwa archive search", () => {
   });
 
   it("finds a known sanitized archive record by its reference without altering catalog data", () => {
-    const matches = filterFatawa(FATAWA, "A0367", "All");
+    const matches = filterFatawa(FATAWA, "A0367", "All", "ur");
     expect(matches).toHaveLength(1);
     expect(matches[0]?.number).toBe("A0367");
     expect(matches[0]?.pdfUrl).toContain("/manus-storage/");
@@ -18,7 +18,14 @@ describe("Fatwa archive search", () => {
   it("combines category and query constraints while retaining an empty-query category view", () => {
     const marriageRecord = FATAWA.find((item) => item.number === "A0367");
     expect(marriageRecord).toBeDefined();
-    expect(filterFatawa(FATAWA, "", marriageRecord!.category)).toContainEqual(marriageRecord);
-    expect(filterFatawa(FATAWA, "A0367", "Worship")).toHaveLength(0);
+    expect(filterFatawa(FATAWA, "", marriageRecord!.category, "ur")).toContainEqual(marriageRecord);
+    expect(filterFatawa(FATAWA, "A0367", "Worship", "ur")).toHaveLength(0);
+  });
+
+  it("indexes only the selected language while retaining Fatwa numbers in both modes", () => {
+    const englishMatches = filterFatawa(FATAWA, "golden handshake", "All", "en");
+    expect(englishMatches.map((fatwa) => fatwa.number)).toContain("A0006");
+    expect(filterFatawa(FATAWA, "golden handshake", "All", "ur")).toHaveLength(0);
+    expect(filterFatawa(FATAWA, "A0006", "All", "en")).toHaveLength(1);
   });
 });
