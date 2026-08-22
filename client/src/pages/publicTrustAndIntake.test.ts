@@ -37,6 +37,14 @@ describe("public trust and intake safeguards", () => {
     expect(archive).toContain("useEffect(() => setQuery(urlQuery), [urlQuery])");
   });
 
+  it("handles unavailable or rejected clipboard access without an unhandled copy-action failure", () => {
+    const home = read("./Home.tsx");
+
+    expect(home).toContain("if (!navigator.clipboard?.writeText)");
+    expect(home).toContain("await navigator.clipboard.writeText(value)");
+    expect(home).toContain("toast.error");
+  });
+
   it("publishes the supplied scholarly supervision profile through reusable directory and detail routes", () => {
     const app = read("../App.tsx");
     const home = read("./Home.tsx");

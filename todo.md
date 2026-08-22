@@ -293,3 +293,12 @@
 - [x] Preserve selectable, searchable, accessible Urdu text, existing keyboard semantics, reference order, logo, address capsules, and responsive layout.
 - [x] Verify desktop and mobile presentation, targeted masthead regression coverage, public Fatwa archive behavior, TypeScript, and production build.
 - [x] Save and publish the verified Urdu Thuluth-heading update checkpoint.
+
+## Evidence-Based Project Audit, Repair, and Cleanup Checklist
+
+- [x] Establish the current restored-version baseline: project structure, dependencies, routes, diagnostics, tests, type checking, production build, and dependency audit.
+- [x] Inspect public routes, navigation, search, forms, core interactions, asset loading, responsive layouts, and accessible semantics without changing established design or content.
+- [x] Fix only confirmed defects and safely remove or consolidate only proven-unused code, styles, or dependencies; preserve all archive privacy safeguards and working features.
+- [x] Add or update targeted regression tests for each confirmed repair, then rerun the full validation set and responsive checks.
+- [x] Write an audit record detailing findings, actual fixes, retained safeguards, verification results, and any remaining limitations.
+- [x] Save and publish the verified targeted audit, repair, and cleanup checkpoint.

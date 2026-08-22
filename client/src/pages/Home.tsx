@@ -2,7 +2,7 @@
  * Royal Calligraphy House: a centered-brand homepage with royal blue, navy, black, white, and gold;
  * premium calligraphy, ceremonial Bismillah placement, and polished scholarly service interactions.
  */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowUpRight, BookOpenCheck, CalendarDays, Copy, GraduationCap, Mail, MessageCircle, Phone, Radio, ScrollText, Search, Send, UsersRound } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
@@ -50,7 +50,19 @@ export default function Home() {
     { icon: ScrollText, en: "Publications", ur: "اشاعت و طباعت", descEn: "Articles, booklets, and scholarly resources prepared for useful everyday reference.", descUr: "مضامین، رسائل اور علمی مواد جو روزمرہ رہنمائی کے لیے مرتب کیا جاتا ہے۔" },
     { icon: UsersRound, en: "Scholarly Consultation", ur: "علمی مشاورت", descEn: "A clear route to seek responsible consultation from recognised scholars.", descUr: "مستند علماء سے ذمہ دار علمی مشاورت کے لیے واضح رابطہ۔" },
   ];
-  const copyValue = (value: string, label: string) => { navigator.clipboard.writeText(value); toast.success(urdu ? `${label} نقل کر لیا گیا ہے` : `${label} copied`); };
+  const copyValue = async (value: string, label: string) => {
+    if (!navigator.clipboard?.writeText) {
+      toast.error(urdu ? `${label} نقل نہیں ہو سکا` : `Unable to copy ${label}`);
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(value);
+      toast.success(urdu ? `${label} نقل کر لیا گیا ہے` : `${label} copied`);
+    } catch {
+      toast.error(urdu ? `${label} نقل نہیں ہو سکا` : `Unable to copy ${label}`);
+    }
+  };
   const submitArchiveSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const query = archiveSearch.trim();
