@@ -217,3 +217,11 @@
 - [x] Verify the corrected English and Urdu homepage display and publish the institutional date correction.
 - [x] Isolate deterministic date-service tests from the configured live override while retaining a dedicated environment-override regression.
 - [x] Save and publish the verified official Karachi Hijri-date correction.
+- [x] Inventory the 32 supplied Fatwa PDFs, validate they are readable PDFs, and compare their A02-series references against the existing governed archive.
+- [x] Extract and verify conservative bilingual archive metadata from the supplied PDFs without altering existing published records or their date fields.
+- [x] Upload only missing verified documents to managed public storage and create or update the corresponding governed archive records.
+- [x] Create ASCII-safe managed-storage copies because the storage uploader rejects non-ASCII source filenames, while preserving the verified PDFs and their Urdu archive metadata.
+- [x] Verify each newly supplied PDF’s archive search discovery and direct public document access, including mobile presentation.
+- [x] Diagnose and repair the public archive query parameter failing to filter the imported A0300 record during direct search-link validation.
+- [ ] Document the supplied-PDF import outcome and save a published checkpoint.
+- [x] Document the supplied-PDF import outcome, direct-link checks, and final release validation.

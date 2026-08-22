@@ -11,7 +11,7 @@ import { CATEGORY_LABELS, FATAWA, type Fatwa } from "@/data/fatawa";
 export default function Fatawa() {
   const { language } = useLanguage();
   const [location] = useLocation();
-  const urlQuery = useMemo(() => new URLSearchParams(location.split("?")[1] ?? "").get("q") ?? "", [location]);
+  const urlQuery = useMemo(() => new URLSearchParams(window.location.search).get("q") ?? "", [location]);
   const [query, setQuery] = useState(urlQuery);
   useEffect(() => setQuery(urlQuery), [urlQuery]);
   const [category, setCategory] = useState<"All" | Fatwa["category"]>("All");

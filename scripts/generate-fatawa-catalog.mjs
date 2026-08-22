@@ -83,30 +83,95 @@ const records = [
   ["A0199", "دو بیویاں، 4 بیٹے اور 6 بیٹیوں میں تقسیمِ میراث", "Inheritance & Wills"],
 ];
 
+const importedA02Records = [
+  ["A0201", "تین طلاق اور نفاذِ طلاق کے لیے گواہی کا حکم", "Marriage & Divorce"],
+  ["A0202", "سرمایہ کاری میں منافع کی تقسیم اور سرمایہ کاری واپس نکالنے کا معاملہ", "Transactions"],
+  ["A0203", "آنکھ میں زخم کی صورت میں وضو کا حکم", "Worship"],
+  ["A0204", "مفقودہ کا شوہر واپس آنے کا حکم", "Marriage & Divorce"],
+  ["A0208", "زکوٰۃ کی عدم ادائیگی کا شبہ ہو", "Worship"],
+  ["A0211", "مجبوری میں حرام کھانے والے کے احکام", "Belief & Conduct"],
+  ["A0212", "جگہ تنگ ہونے کی بنا پر ایک مسجد میں دو جماعتیں کروانا", "Worship"],
+  ["A0213", "پانچ بندوں کی بکنگ میں چھ بندوں کا کھانا", "Transactions"],
+  ["A0221", "کاروبار میں سرمایہ کاری کی شرائط", "Transactions"],
+  ["A0223", "حالتِ حمل اور نشہ کی حالت میں طلاق کا حکم", "Marriage & Divorce"],
+  ["A0225", "دماغی معذور سے پردے کا حکم", "Belief & Conduct"],
+  ["A0227", "نفلی عمرہ و طواف میں تعددِ نیت اور مصلی کے سامنے سے گزرنا", "Worship"],
+  ["A0230", "دانت پر بینڈج کی صورت میں روزہ کے حکم", "Worship"],
+  ["A0231", "بچی کی نانی کا زیادہ خرچ مانگنا اور بیٹی کی کفالت", "Belief & Conduct"],
+  ["A0233", "زندگی میں تقسیمِ جائیداد", "Inheritance & Wills"],
+  ["A0234", "کورٹ کی یک طرفہ خلع، متعنت شوہر کے حوالے سے (مختصر)", "Marriage & Divorce"],
+  ["A0235", "کھاد کی رقم ادھار دینے پر معاہدہ طے کرنا", "Transactions"],
+  ["A0237", "سالگرہ منانے کی شرعی حیثیت", "Belief & Conduct"],
+  ["A0252", "دو حصوں میں تقسیمِ وراثت", "Inheritance & Wills"],
+  ["A0254", "حیض میں کبھی ابتداء بالطہر بھی ہوتی ہے", "Worship"],
+  ["A0268", "آسٹریلیا میں ڈاکٹروں کا ٹیکس بچانے کے لیے قانونی حیلہ اختیار کرنے کی شرعی حیثیت", "Transactions"],
+  ["A0272", "ذہنی معذور بوڑھے کے لیے عمرے کے احکام", "Worship"],
+  ["A0281", "ملازم کی تنخواہ سے کٹوتی کا معاملہ", "Transactions"],
+  ["A0283", "اٹھائیس سال سے رکھے زیور کی زکوٰۃ کا مسئلہ", "Worship"],
+  ["A0285", "مختلف مواقع پر طلاق کا حکم", "Marriage & Divorce"],
+  ["A0286", "فجر کی جماعت کے وقت سنت ادا کرنا", "Worship"],
+  ["A0288", "ثبوتِ رضاعت کے لیے بنیادی شرائط", "Marriage & Divorce"],
+  ["A0289", "گندم قرض کے طور پر دینا اور پھر کرایہ وصول کرنا", "Transactions"],
+  ["A0290", "گندم کے ریٹ اور عشر کا مسئلہ", "Worship"],
+  ["A0291", "دعائے عاشوراء کی تحقیق", "Worship"],
+  ["A0296", "ایک ہی راستے میں دوبارہ آنا پھر جانا سفرِ شرعی شمار ہو گا یا نہیں", "Worship"],
+  ["A0300", "قبرستان میں داخل ہونے والی دعا کی تحقیق", "Worship"],
+];
+
+const a02UrlByNumber = new Map([
+  ["A0201", "/manus-storage/A0201_bc92ac44.pdf"], ["A0202", "/manus-storage/A0202_95348363.pdf"],
+  ["A0203", "/manus-storage/A0203_30d6a0be.pdf"], ["A0204", "/manus-storage/A0204_fd2c74d0.pdf"],
+  ["A0208", "/manus-storage/A0208_16a4e395.pdf"], ["A0211", "/manus-storage/A0211_244bded5.pdf"],
+  ["A0212", "/manus-storage/A0212_f3493c9a.pdf"], ["A0213", "/manus-storage/A0213_f443d90e.pdf"],
+  ["A0221", "/manus-storage/A0221_7d2bbbad.pdf"], ["A0223", "/manus-storage/A0223_9fc30f69.pdf"],
+  ["A0225", "/manus-storage/A0225_1417a9f8.pdf"], ["A0227", "/manus-storage/A0227_f93c2460.pdf"],
+  ["A0230", "/manus-storage/A0230_259812d6.pdf"], ["A0231", "/manus-storage/A0231_43f6f33f.pdf"],
+  ["A0233", "/manus-storage/A0233_9edfe9f3.pdf"], ["A0234", "/manus-storage/A0234_5b8e9fd3.pdf"],
+  ["A0235", "/manus-storage/A0235_61bd4f65.pdf"], ["A0237", "/manus-storage/A0237_b49ade97.pdf"],
+  ["A0252", "/manus-storage/A0252_4b58bc38.pdf"], ["A0254", "/manus-storage/A0254_4eba413d.pdf"],
+  ["A0268", "/manus-storage/A0268_a86784af.pdf"], ["A0272", "/manus-storage/A0272_934efe68.pdf"],
+  ["A0281", "/manus-storage/A0281_bc9ec9de.pdf"], ["A0283", "/manus-storage/A0283_86b3db94.pdf"],
+  ["A0285", "/manus-storage/A0285_4b582634.pdf"], ["A0286", "/manus-storage/A0286_b96d76f5.pdf"],
+  ["A0288", "/manus-storage/A0288_7acfe9b8.pdf"], ["A0289", "/manus-storage/A0289_9e6fc740.pdf"],
+  ["A0290", "/manus-storage/A0290_b41ee9de.pdf"], ["A0291", "/manus-storage/A0291_2fdec51d.pdf"],
+  ["A0296", "/manus-storage/A0296_57f00844.pdf"], ["A0300", "/manus-storage/A0300_e3ab9d9d.pdf"],
+]);
+
+const allRecords = [...records, ...importedA02Records];
+
 if (urlByPosition.size !== records.length) {
   throw new Error(`Expected ${records.length} uploaded PDFs; found ${urlByPosition.size}.`);
+}
+
+if (a02UrlByNumber.size !== importedA02Records.length) {
+  throw new Error(`Expected ${importedA02Records.length} supplied A02-series PDF URLs; found ${a02UrlByNumber.size}.`);
 }
 
 const categories = ["Worship", "Transactions", "Marriage & Divorce", "Inheritance & Wills", "Belief & Conduct"];
 const archiveNoticeUr = "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔";
 const archiveNoticeEn = "Open the original PDF for the complete question, researched answer, and supporting detail.";
 
-const fatawa = records.map(([number, titleUr, category], index) => ({
-  slug: `${number.toLowerCase()}-${index + 1}`,
-  number,
-  category,
-  date: "PDF Archive",
-  scholar: "دارالافتاء ارشاد السائلین",
-  titleEn: `Fatwa Archive · ${number}`,
-  titleUr,
-  questionEn: archiveNoticeEn,
-  questionUr: archiveNoticeUr,
-  answerEn: archiveNoticeEn,
-  answerUr: archiveNoticeUr,
-  reference: "Original Darul Ifta PDF document.",
-  topics: [category, number],
-  pdfUrl: urlByPosition.get(index + 1),
-}));
+const fatawa = allRecords.map(([number, titleUr, category], index) => {
+  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number);
+  if (!pdfUrl) throw new Error(`Missing managed PDF URL for ${number}.`);
+
+  return {
+    slug: `${number.toLowerCase()}-${index + 1}`,
+    number,
+    category,
+    date: "PDF Archive",
+    scholar: "دارالافتاء ارشاد السائلین",
+    titleEn: `Fatwa Archive · ${number}`,
+    titleUr,
+    questionEn: archiveNoticeEn,
+    questionUr: archiveNoticeUr,
+    answerEn: archiveNoticeEn,
+    answerUr: archiveNoticeUr,
+    reference: "Original Darul Ifta PDF document.",
+    topics: [category, number],
+    pdfUrl,
+  };
+});
 
 const file = `/** Royal Calligraphy House: complete user-supplied Darul Ifta PDF archive, searchable by Urdu title and category. */
 export type FatwaCategory = ${categories.map((category) => JSON.stringify(category)).join(" | ")};
