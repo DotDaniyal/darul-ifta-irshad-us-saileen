@@ -72,10 +72,10 @@ describe("Karachi Maghrib institutional date", () => {
   });
 
   it("reads the configured official Karachi date decision from the server environment", async () => {
-    const configured = await getInstitutionalDateStatus({ now: new Date("2026-08-22T12:00:00.000Z"), fetchSource: sourceFor(days) });
-    expect(configured.hijri.day).toBe(8);
+    const configured = await getInstitutionalDateStatus({ now: new Date("2026-08-23T12:00:00.000Z"), fetchSource: sourceFor(days) });
+    expect(configured.hijri.day).toBe(9);
     expect(configured.verification.status).toBe("manual_override");
-    expect(configured.verification.message).toContain("Official Karachi Hijri date confirmation");
+    expect(configured.verification.message).toContain("Pakistan Central Ruet-e-Hilal Committee");
   });
 
   it("schedules browser resynchronization at Maghrib or within the periodic safety window", () => {

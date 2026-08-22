@@ -316,3 +316,10 @@
 - [x] Apply the requested font only if it can be reliably delivered with an appropriate license; otherwise retain a deployed Arabic Bold fallback without changing heading wording, layout, or accessibility semantics.
 - [x] Add or update focused masthead regression coverage and verify the heading at desktop and mobile widths without clipping or overflow.
 - [x] Save and publish the verified Arabic Bold masthead font treatment checkpoint.
+
+## Reported Institutional Islamic-Date Correction Checklist
+
+- [x] Inspect the current live Karachi Islamic-date display, configured override, date-service output, and Maghrib transition inputs to identify the mismatch.
+- [x] Apply only the verified current institutional date correction while preserving Karachi Maghrib timing, source-discrepancy handling, and permanently recorded Fatwa dates.
+- [x] Add or update deterministic coverage and verify the English and Urdu date display on desktop and mobile without regressing public routes.
+- [x] Save and publish the verified institutional Islamic-date correction checkpoint.
