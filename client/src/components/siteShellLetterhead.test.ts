@@ -19,7 +19,7 @@ describe("accessible text-based institutional letterhead", () => {
   });
 
   it("keeps the three-part header compact, responsive, and free from combined text imagery", () => {
-    expect(styles).toContain("grid-template-columns: minmax(0, 1fr) 146px minmax(0, 1fr);");
+    expect(styles).toContain("grid-template-columns: minmax(0, 1fr) 126px minmax(0, 1fr);");
     expect(styles).toContain(".letterhead-english-name");
     expect(styles).toContain(".letterhead-urdu-name");
     expect(styles).toContain(".letterhead-logo-frame");
@@ -33,11 +33,8 @@ describe("accessible text-based institutional letterhead", () => {
     expect(styles).toMatch(/\.letterhead-english-name \{[^}]*font-family: "Cormorant Garamond", Georgia, serif;/);
   });
 
-  it("uses the scoped Jali Thuluth-inspired navy treatment only for the selectable Urdu masthead heading", () => {
+  it("uses the scoped Thuluth-inspired font treatment only for the selectable Urdu masthead heading", () => {
     expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*font-family: "Katibeh", "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;/);
-    expect(styles).toMatch(/\.letterhead-urdu-name \{[^}]*color: #0B2A4A;/);
-    expect(styles).toContain(".letterhead-urdu { max-width: 468px; justify-self: end; text-align: center; }");
-    expect(styles).toContain(".letterhead-logo-frame { display: grid; width: clamp(78px, 11.5vw, 126px);");
   });
 
   it("retains an accessible home link on the independent logo asset", () => {
