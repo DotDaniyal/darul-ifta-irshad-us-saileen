@@ -202,3 +202,13 @@
 - [x] Record a concise final interaction checklist for homepage search handoff, live scholar directory/profile loading, protected Scholar Admin access, Ask Fatwa email-draft handoff, and public methodology/contact actions.
 - [x] Diagnose the homepage search handoff after browser entry and button activation did not visibly navigate to the archive in the final interaction pass.
 - [x] Clarify in the audit record that the blank preview was a transient shared Vite optimizer-cache side effect from the first isolated middleware test, with a temporary-cache mitigation and successful post-test render evidence.
+- [x] Inspect the current Hijri-date display and identify the existing source of date, timezone, and transition behavior.
+- [x] Build a server-authoritative Karachi Maghrib and Hijri-date endpoint with structured-source verification, explicit discrepancy status, and safe fallback behavior.
+- [x] Provide a documented, date-scoped manual institutional override for an officially announced Hijri decision without changing Fatwa-record dates.
+- [x] Update the bilingual public Hijri display to synchronize with the server and switch at Karachi Maghrib without relying on visitor timezone or page refresh.
+- [x] Localize the Urdu date card’s city and Maghrib-clock label with Urdu text and Urdu numerals while retaining the server-provided Karachi time.
+- [x] Diagnose and repair the homepage date card remaining in its synchronization state despite the verified live date endpoint response; confirmed as a normal initial asynchronous state, with the verified Karachi date rendering after the request settles.
+- [x] Preserve permanently recorded Fatwa dates separately from the live institutional Hijri-date display.
+- [x] Add deterministic tests for before-Maghrib, at/after-Maghrib, midnight, source mismatch, source outage, invalid source data, and browser resynchronization timing.
+- [x] Verify the updated date component and core public routes at desktop and mobile breakpoints, then document date authority and fallback behavior.
+- [ ] Save and publish the verified Karachi Maghrib Hijri-date update.

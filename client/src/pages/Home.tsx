@@ -7,6 +7,7 @@ import { ArrowUpRight, BookOpenCheck, CalendarDays, Copy, GraduationCap, Mail, M
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 import SiteShell, { SectionHeading, useLanguage } from "@/components/SiteShell";
+import { useInstitutionalDate } from "@/data/institutionalDateApi";
 import { usePublishedScholars } from "@/data/scholarsApi";
 
 const heroImg = "/manus-storage/darul-ifta-hero-courtyard_6ff59e90.jpg";
@@ -14,7 +15,29 @@ const libraryImg = "/manus-storage/darul-ifta-library_bc806dd9.jpg";
 const logoImg = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
 const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
 
-function IslamicDate() { const { language } = useLanguage(); const [date, setDate] = useState(new Date()); useEffect(() => { const timer = window.setInterval(() => setDate(new Date()), 60 * 60 * 1000); return () => window.clearInterval(timer); }, []); const options: Intl.DateTimeFormatOptions = { timeZone: "Asia/Karachi", day: "numeric", month: "long", year: "numeric" }; let hijri = ""; try { hijri = new Intl.DateTimeFormat(language === "ur" ? "ur-PK-u-ca-islamic-umalqura" : "en-GB-u-ca-islamic-umalqura", options).format(date); } catch { hijri = new Intl.DateTimeFormat(language === "ur" ? "ur-PK-u-ca-islamic" : "en-GB-u-ca-islamic", options).format(date); } const gregorian = new Intl.DateTimeFormat(language === "ur" ? "ur-PK" : "en-GB", options).format(date); return <div className="date-card"><div className="date-icon"><CalendarDays className="h-5 w-5" /></div><div><p className="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-[#738197]">{language === "ur" ? "آج کی اسلامی تاریخ" : "Today’s Islamic date"}</p><p className={language === "ur" ? "mt-1 font-urdu text-xl text-[#10223A]" : "mt-1 font-display text-xl text-[#10223A]"}>{hijri}</p><p className="mt-1 font-sans text-xs text-[#5E6D80]">{gregorian} · Karachi</p></div></div>; }
+function IslamicDate() {
+  const { language } = useLanguage();
+  const { status, loading, failed } = useInstitutionalDate();
+  const urdu = language === "ur";
+  const date = status?.hijri[language];
+  const gregorian = status?.gregorian[language];
+  const sourceState = status?.verification.status;
+  const maghribTime = status?.maghrib.time
+    ? status.maghrib.time.split(":").map(part => new Intl.NumberFormat("ur-PK-u-nu-arabext", { minimumIntegerDigits: 2, useGrouping: false }).format(Number(part))).join(":")
+    : undefined;
+  return <div className="date-card" aria-live="polite">
+    <div className="date-icon"><CalendarDays className="h-5 w-5" /></div>
+    <div>
+      <p className="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-[#738197]">{urdu ? "کراچی کی اسلامی تاریخ" : "Karachi Islamic date"}</p>
+      <p className={urdu ? "mt-1 font-urdu text-xl leading-9 text-[#10223A]" : "mt-1 font-display text-xl text-[#10223A]"}>{date || (urdu ? "تاریخ ہم آہنگ کی جا رہی ہے" : "Synchronizing date")}</p>
+      <p className="mt-1 font-sans text-xs text-[#5E6D80]">{gregorian ? `${gregorian} · ${urdu ? "کراچی" : "Karachi"}` : urdu ? "کراچی · ایشیا/کراچی" : "Karachi · Asia/Karachi"}</p>
+      <p className="mt-1 font-sans text-[10px] leading-4 text-[#738197]">{status ? (urdu ? `مغرب کے بعد تبدیلی · ${maghribTime}` : `Changes at Maghrib · ${status.maghrib.time}`) : loading ? (urdu ? "سرور سے تصدیق ہو رہی ہے" : "Verifying with server") : (urdu ? "دوبارہ تصدیق کی کوشش ہو رہی ہے" : "Retrying verification")}</p>
+      {sourceState === "source_mismatch" && <p className="mt-1 font-sans text-[10px] leading-4 text-[#9A5B18]">{urdu ? "تاریخ کا فرق درج کر لیا گیا ہے" : "Date discrepancy logged"}</p>}
+      {sourceState === "manual_override" && <p className="mt-1 font-sans text-[10px] leading-4 text-[#1C4399]">{urdu ? "ادارتی تاریخ کا فیصلہ نافذ ہے" : "Official date decision applied"}</p>}
+      {failed && status && <p className="mt-1 font-sans text-[10px] leading-4 text-[#9A5B18]">{urdu ? "آخری تصدیق شدہ تاریخ دکھائی جا رہی ہے" : "Showing the last verified date"}</p>}
+    </div>
+  </div>;
+}
 
 export default function Home() {
   const { language } = useLanguage(); const urdu = language === "ur";

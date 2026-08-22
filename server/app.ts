@@ -2,6 +2,7 @@ import { timingSafeEqual } from "crypto";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { getInstitutionalDateStatus } from "./institutionalDate";
 import { createScholar, deleteScholar, getPublishedScholar, getScholarById, listAllScholars, listPublishedScholars, parseScholarInput, updateScholar } from "./scholars";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,6 +11,11 @@ const __dirname = path.dirname(__filename);
 export function createScholarApi() {
   const api = express.Router();
   api.use(express.json({ limit: "256kb" }));
+
+  api.get("/api/institutional-date", async (_req, res) => {
+    res.setHeader("Cache-Control", "no-store");
+    return res.json(await getInstitutionalDateStatus());
+  });
 
   const hasAdministratorAccess = (req: express.Request) => {
     const configuredKey = process.env.SCHOLAR_ADMIN_ACCESS_KEY;
