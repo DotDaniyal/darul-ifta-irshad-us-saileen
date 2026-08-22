@@ -230,4 +230,4 @@
 - [x] Upload only verified missing PDFs using ASCII-safe managed-storage filenames while retaining their Urdu public metadata.
 - [x] Add the verified additional records through the repeatable Fatwa catalog generator without modifying existing records or date fields.
 - [x] Extend archive regression coverage and validate direct query filtering, public PDF access, and desktop/mobile presentation for the additional batch.
-- [ ] Document the additional import outcome and save a published checkpoint.
+- [x] Document the additional import outcome and save a published checkpoint.
