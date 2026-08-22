@@ -33,7 +33,10 @@ describe("public trust and intake safeguards", () => {
     expect(home).toContain("submitArchiveSearch");
     expect(home).toContain('`/fatawa?q=${encodeURIComponent(query)}`');
     expect(home).not.toContain("FATAWA.slice(0, 3)");
-    expect(archive).toContain('new URLSearchParams(window.location.search).get("q")');
+    expect(archive).toContain('import { Link, useLocation, useSearch } from "wouter";');
+    expect(archive).toContain("const search = useSearch()");
+    expect(archive).toContain("readArchiveSearchQuery(search)");
+    expect(archive).toContain("<form onSubmit={submitArchiveSearch}");
     expect(archive).toContain("useEffect(() => setQuery(urlQuery), [urlQuery])");
   });
 

@@ -323,3 +323,10 @@
 - [x] Apply only the verified current institutional date correction while preserving Karachi Maghrib timing, source-discrepancy handling, and permanently recorded Fatwa dates.
 - [x] Add or update deterministic coverage and verify the English and Urdu date display on desktop and mobile without regressing public routes.
 - [x] Save and publish the verified institutional Islamic-date correction checkpoint.
+
+## Reported Fatwa Archive Search Repair Checklist
+
+- [x] Reproduce the search failure from homepage and direct `/fatawa?q=` archive URLs, then trace query parsing, input state, route updates, and result filtering.
+- [x] Repair only the confirmed search-flow defect without changing Fatwa records, public managed PDF URLs, privacy sanitization safeguards, routes, or archive metadata.
+- [x] Add or update focused regression coverage and verify query results, no-result state, and public PDF actions at desktop and mobile widths.
+- [x] Save and publish the verified Fatwa archive search repair checkpoint.
