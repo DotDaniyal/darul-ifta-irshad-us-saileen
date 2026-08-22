@@ -137,7 +137,102 @@ const a02UrlByNumber = new Map([
   ["A0296", "/manus-storage/A0296_57f00844.pdf"], ["A0300", "/manus-storage/A0300_e3ab9d9d.pdf"],
 ]);
 
-const allRecords = [...records, ...importedA02Records];
+const importedA03Records = [
+  ["A0303", "غیر حاضری کے باوجود حاضری کے دستخط کرنا", "Belief & Conduct", "A0303"],
+  ["A0305", "اپنے مسلک کے کسی مدرسے یا اجتماع میں گئی تو تمہیں طلاق", "Marriage & Divorce", "A0305"],
+  ["A0306", "ایک ہی عقد میں وکالت و اجارہ اور فیصدی اجرت طے کرنا", "Transactions", "A0306"],
+  ["A0307", "بغیر انویسٹمنٹ کے صرف معرفت کی بنیاد پر نفع لینا", "Transactions", "A0307"],
+  ["A0308", "غیبت کی تعریف، مستثنیٰ صورتوں کی شرائط اور غیبت سے توبہ کا طریقہ", "Belief & Conduct", "A0308"],
+  ["A0309", "تجارتی و غیر تجارتی مخلوط پلاٹوں کی زکوٰۃ کا حکم", "Worship", "A0309"],
+  ["A0313", "جدہ سے طائف، ریاض اور مکہ مکرمہ کے سفر میں احرام کے احکام", "Worship", "A0313"],
+  ["A0315", "میقات سے عمرے کی نیت کی مگر تلبیہ کا یاد نہیں", "Worship", "A0315"],
+  ["A0316", "حج کی اقسام (قران، تمتع، افراد) میں رینٹل کی تبدیلی کے شرعی احکام", "Worship", "A0316"],
+  ["A0317", "جانور کے کیے نقصان پر ضمان کی تفصیل", "Transactions", "A0317"],
+  ["A0318", "بڑی جامع مسجد کے ہوتے ہوئے چھوٹی مسجد میں جمعہ شروع کرنے کا حکم", "Worship", "A0318"],
+  ["A0320", "ایک بیوی، دو بیٹوں اور چھ بہنوں میں تقسیمِ میراث", "Inheritance & Wills", "A0320"],
+  ["A0321", "تعلیقِ طلاق میں غلطی سے شرط پوری ہو جانا", "Marriage & Divorce", "A0321"],
+  ["A0322", "ورثہ کا جائیداد میں اختلاف اور تقسیمِ میراث", "Inheritance & Wills", "A0322"],
+  ["A0323", "لڑکی والوں کے دھمکانے پر خلوت سے پہلے تین طلاق کا حکم", "Marriage & Divorce", "A0323"],
+  ["A0324", "متعدد ذاتی گھروں میں قیام اور نماز قصر کرنا", "Worship", "A0324"],
+  ["A0325", "قسطوں پر نفع کے ساتھ فروخت کرنے کا حکم", "Transactions", "A0325"],
+  ["A0326", "آن لائن اکیڈمی کا غیر شرعی معاہدہ اور طلاقِ کلّما کا نفاذ", "Marriage & Divorce", "A0326"],
+  ["A0327", "امریکی قانون کے مطابق تقسیمِ مال، نان نفقہ، اور عدالتی طلاق کا اسلامی حکم", "Marriage & Divorce", "A0327"],
+  ["A0328", "آؤٹ سورسنگ کمیشن اور مالک کی لاعلمی کا شرعی حکم", "Transactions", "A0328"],
+  ["A0330", "نشے کی وجہ سے ذہنی دباؤ کی کیفیت میں طلاق اور اس میں شک", "Marriage & Divorce", "A0330"],
+  ["A0331", "دکان سے پیسے اٹھانے پر تعلیقِ طلاق", "Marriage & Divorce", "A0331"],
+  ["A0332", "آن لائن شاپنگ میں ریفنڈ کے غلط استعمال کا حکم", "Transactions", "A0332"],
+  ["A0337", "بے نمازی بیوی اور شوہر کی شرعی ذمہ داری", "Belief & Conduct", "A0337"],
+  ["A0339", "تقسیمِ میراث اور مسقط حکومت کی طرف سے میت کو ملنے والی رقم کا حکم", "Inheritance & Wills", "A0339"],
+  ["A0340", "قتلِ جاری مجری الخطاء کا کفارہ", "Belief & Conduct", "A0340"],
+  ["A0341", "بیماری کی وجہ سے شوہر کے حقوق ادا نہ کر سکنا", "Marriage & Divorce", "A0341"],
+  ["A0342", "وکیل کی نیت کے بغیر موکل کی زکوٰۃ کی ادائیگی کا مسئلہ", "Worship", "A0342"],
+  ["A0343", "معدنیات والی زمین رائلٹی پر دینے کا شرعی حکم", "Transactions", "A0343"],
+  ["A0344", "بیوی سے علیحدگی اختیار کرنے پر تعلیقِ طلاق", "Marriage & Divorce", "A0344"],
+  ["A0345", "تجھے طلاق، ایک، دو، تین کہنے کا حکم", "Marriage & Divorce", "A0345"],
+  ["A0347", "شوہر کی اجازت کے بغیر ہسپتال وغیرہ جانے پر تعلیقِ طلاق", "Marriage & Divorce", "A0347"],
+  ["A0348", "نابالغ کی ملکیت سے لی گئی رقم کا حکم", "Transactions", "A0348"],
+  ["A0349", "تقسیمِ وراثت اور والدین کے گھر عدت گزارنے کا مسئلہ", "Inheritance & Wills", "A0349"],
+  ["A0350", "ورثاء کا وراثت سے دستبردار ہونا، حقیقی بھائی اور علاتی بھائی بہن کے لیے حاجب ہونا، ولدیت", "Inheritance & Wills", "A0350"],
+  ["A0351", "ہمارے درمیان جو رشتہ تھا وہ ختم کہنے سے طلاق کا حکم", "Marriage & Divorce", "A0351"],
+  ["A0352", "محکمہ ڈاک کا پارسل کی حفاظت کے لیے الگ سے انشورڈ فیس لینا", "Transactions", "A0352"],
+  ["A0353", "قضا روزے کی نیت کا وقت", "Worship", "A0353"],
+  ["A0354", "والدہ کے کہنے پر طلاق نامے پر دستخط کرنا", "Marriage & Divorce", "A0354"],
+  ["A0355", "خلافِ معاہدہ کرایہ بڑھانے کا حکم", "Transactions", "A0355"],
+  ["A0356", "عدالت کی طرف سے یک طرفہ خلع کا حکم", "Marriage & Divorce", "A0356"],
+  ["A0357", "ذی رحم محرم کو ہدیہ دینے کے بعد واپس لینا", "Transactions", "A0357"],
+  ["A0360", "صریح طلاق کے ساتھ متصل کنایہ الفاظ کہنے کا حکم", "Marriage & Divorce", "A0360"],
+  ["A0361", "جان سے مارنے کی دھمکی دے کر طلاق لکھوانا", "Marriage & Divorce", "A0361-coerced-writing"],
+  ["A0361", "جان سے مارنے کی دھمکی دے کر طلاق لکھونا", "Marriage & Divorce", "A0361-written-statement"],
+  ["A0363", "عدالت کی یک طرفہ خلع کا شرعی حکم", "Marriage & Divorce", "A0363"],
+  ["A0365", "زبانی رشتہ کی بات ہو جانے کے بعد لڑکے میں عیوب ظاہر ہونا", "Marriage & Divorce", "A0365"],
+  ["A0366", "تقسیمِ وراثت معدوم ناسخہ", "Inheritance & Wills", "A0366"],
+  ["A0367", "امریکن عدالتی طلاق کے بعد شوہر کا اپنے شرعی حق کا دعویٰ کرنا", "Marriage & Divorce", "A0367"],
+  ["A0369", "دماغ پر برے اثرات کے دباؤ میں دی گئی طلاق کا حکم", "Marriage & Divorce", "A0369"],
+  ["A0370", "طبی کتب میں تصاویر چسپاں کرنے کا حکم", "Belief & Conduct", "A0370"],
+  ["A0373", "طلاقِ رجعی کے ایک ہفتے بعد رجوع کرنا", "Marriage & Divorce", "A0373"],
+  ["A0375", "غصے کی حالت میں تین طلاق بھیجنا", "Marriage & Divorce", "A0375"],
+  ["A0376", "دو بیویوں سے نو بیٹوں اور دو بیٹیوں کے درمیان تقسیمِ میراث", "Inheritance & Wills", "A0376"],
+  ["A0378", "فسخِ بیع میں بائع کا کچھ پیسے رکھنا", "Transactions", "A0378"],
+  ["A0379", "سلس البول معذور کا اقامت کہنا", "Worship", "A0379"],
+  ["A0380", "پلستر (پٹی) پر نجس قطرے لگ جائیں تو کیا کریں", "Worship", "A0380"],
+  ["A0390", "گندم کی خریداری اور عشر کا مسئلہ", "Worship", "A0390"],
+  ["A0392", "سسر کے اصرار پر غصے میں قصداً بیوی کا غلط نام لے کر طلاق دینا", "Marriage & Divorce", "A0392"],
+];
+
+const a03UrlByAssetKey = new Map([
+  ["A0303", "/manus-storage/A0303_e2a55c42.pdf"], ["A0305", "/manus-storage/A0305_cfbe9df3.pdf"],
+  ["A0306", "/manus-storage/A0306_d9ecdf1f.pdf"], ["A0307", "/manus-storage/A0307_9678eb27.pdf"],
+  ["A0308", "/manus-storage/A0308_624e9f63.pdf"], ["A0309", "/manus-storage/A0309_1121cc5a.pdf"],
+  ["A0313", "/manus-storage/A0313_4f38e637.pdf"], ["A0315", "/manus-storage/A0315_e8614f0f.pdf"],
+  ["A0316", "/manus-storage/A0316_9888fcb7.pdf"], ["A0317", "/manus-storage/A0317_4a70270c.pdf"],
+  ["A0318", "/manus-storage/A0318_daed927b.pdf"], ["A0320", "/manus-storage/A0320_98a2d1e5.pdf"],
+  ["A0321", "/manus-storage/A0321_222ee779.pdf"], ["A0322", "/manus-storage/A0322_99948997.pdf"],
+  ["A0323", "/manus-storage/A0323_3646c3d8.pdf"], ["A0324", "/manus-storage/A0324_13d315f5.pdf"],
+  ["A0325", "/manus-storage/A0325_31bf97bd.pdf"], ["A0326", "/manus-storage/A0326_0b73b516.pdf"],
+  ["A0327", "/manus-storage/A0327_c763b931.pdf"], ["A0328", "/manus-storage/A0328_5c92d77b.pdf"],
+  ["A0330", "/manus-storage/A0330_ddd3b8a8.pdf"], ["A0331", "/manus-storage/A0331_981aa053.pdf"],
+  ["A0332", "/manus-storage/A0332_e1391457.pdf"], ["A0337", "/manus-storage/A0337_45e4589f.pdf"],
+  ["A0339", "/manus-storage/A0339_5b2e671b.pdf"], ["A0340", "/manus-storage/A0340_2ba0a162.pdf"],
+  ["A0341", "/manus-storage/A0341_1bd867ef.pdf"], ["A0342", "/manus-storage/A0342_e2992ebd.pdf"],
+  ["A0343", "/manus-storage/A0343_af47695b.pdf"], ["A0344", "/manus-storage/A0344_868b1d50.pdf"],
+  ["A0345", "/manus-storage/A0345_c0f62f57.pdf"], ["A0347", "/manus-storage/A0347_6780984a.pdf"],
+  ["A0348", "/manus-storage/A0348_015351e5.pdf"], ["A0349", "/manus-storage/A0349_d74ff118.pdf"],
+  ["A0350", "/manus-storage/A0350_c7d0381d.pdf"], ["A0351", "/manus-storage/A0351_985ae32a.pdf"],
+  ["A0352", "/manus-storage/A0352_dd4726cb.pdf"], ["A0353", "/manus-storage/A0353_de0766b4.pdf"],
+  ["A0354", "/manus-storage/A0354_a8414262.pdf"], ["A0355", "/manus-storage/A0355_0151cb08.pdf"],
+  ["A0356", "/manus-storage/A0356_1cda881f.pdf"], ["A0357", "/manus-storage/A0357_27b14260.pdf"],
+  ["A0360", "/manus-storage/A0360_6f1db80e.pdf"], ["A0361-coerced-writing", "/manus-storage/A0361-coerced-writing_a910ac02.pdf"],
+  ["A0361-written-statement", "/manus-storage/A0361-written-statement_c8cb87c4.pdf"], ["A0363", "/manus-storage/A0363_930d0926.pdf"],
+  ["A0365", "/manus-storage/A0365_8b7731d2.pdf"], ["A0366", "/manus-storage/A0366_9cad9ad9.pdf"],
+  ["A0367", "/manus-storage/A0367_cf566da0.pdf"], ["A0369", "/manus-storage/A0369_610e329c.pdf"],
+  ["A0370", "/manus-storage/A0370_ba63da14.pdf"], ["A0373", "/manus-storage/A0373_4f9e047a.pdf"],
+  ["A0375", "/manus-storage/A0375_1706883a.pdf"], ["A0376", "/manus-storage/A0376_afb4e849.pdf"],
+  ["A0378", "/manus-storage/A0378_7eb27ae3.pdf"], ["A0379", "/manus-storage/A0379_527069ef.pdf"],
+  ["A0380", "/manus-storage/A0380_f2638e2f.pdf"], ["A0390", "/manus-storage/A0390_323e9fe5.pdf"],
+  ["A0392", "/manus-storage/A0392_2776e056.pdf"],
+]);
+
+const allRecords = [...records, ...importedA02Records, ...importedA03Records];
 
 if (urlByPosition.size !== records.length) {
   throw new Error(`Expected ${records.length} uploaded PDFs; found ${urlByPosition.size}.`);
@@ -147,12 +242,16 @@ if (a02UrlByNumber.size !== importedA02Records.length) {
   throw new Error(`Expected ${importedA02Records.length} supplied A02-series PDF URLs; found ${a02UrlByNumber.size}.`);
 }
 
+if (a03UrlByAssetKey.size !== importedA03Records.length) {
+  throw new Error(`Expected ${importedA03Records.length} supplied A03-series PDF URLs; found ${a03UrlByAssetKey.size}.`);
+}
+
 const categories = ["Worship", "Transactions", "Marriage & Divorce", "Inheritance & Wills", "Belief & Conduct"];
 const archiveNoticeUr = "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔";
 const archiveNoticeEn = "Open the original PDF for the complete question, researched answer, and supporting detail.";
 
-const fatawa = allRecords.map(([number, titleUr, category], index) => {
-  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number);
+const fatawa = allRecords.map(([number, titleUr, category, assetKey], index) => {
+  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number);
   if (!pdfUrl) throw new Error(`Missing managed PDF URL for ${number}.`);
 
   return {

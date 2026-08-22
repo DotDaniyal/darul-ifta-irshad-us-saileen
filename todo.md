@@ -225,3 +225,9 @@
 - [x] Diagnose and repair the public archive query parameter failing to filter the imported A0300 record during direct search-link validation.
 - [x] Document the supplied-PDF import outcome and save a published checkpoint.
 - [x] Document the supplied-PDF import outcome, direct-link checks, and final release validation.
+- [x] Inventory the additional supplied A03-series Fatwa PDFs, validate readability, and compare every reference with the 106-record archive.
+- [x] Identify and document any duplicate or variant files, especially the two supplied A0361 documents, before creating archive records.
+- [x] Upload only verified missing PDFs using ASCII-safe managed-storage filenames while retaining their Urdu public metadata.
+- [x] Add the verified additional records through the repeatable Fatwa catalog generator without modifying existing records or date fields.
+- [x] Extend archive regression coverage and validate direct query filtering, public PDF access, and desktop/mobile presentation for the additional batch.
+- [ ] Document the additional import outcome and save a published checkpoint.
