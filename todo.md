@@ -241,3 +241,11 @@
 - [x] Add the verified A0499 and A0503 records through the repeatable Fatwa catalog generator without modifying existing records or dates.
 - [x] Extend regression coverage and validate direct query filtering, public PDF access, and responsive presentation for A0499 and A0503.
 - [x] Document the two-document import outcome and save a published checkpoint.
+- [ ] Audit the 204 public Fatwa PDFs for question-submitter names, non-official phone numbers, text extraction, and document-format constraints.
+- [ ] Define and implement a durable sanitization workflow that preserves only the approved official Darul Ifta contact number `0332617671`.
+- [ ] Generate and validate sanitized public derivatives for every existing Fatwa PDF without modifying the substantive questions, answers, or references.
+- [ ] Switch every archive record to its sanitized public PDF and prevent raw identifiers from appearing through viewer, preview, download, search, or extracted text.
+- [ ] Add future-upload privacy safeguards, regression coverage, documentation, and a published privacy-release checkpoint.
+- [ ] Enforce the user-approved controlled pre-publication workflow so only validated sanitized derivatives can be added to the public Fatwa catalog.
+- [x] Review the SiteShell visual-edit target, identify the missing visual reference, and apply only a confirmed change before checkpointing.
+- [x] Rebuild the SiteShell masthead as a slim formal letterhead inspired by the supplied reference, preserving accessible bilingual navigation and institutional contact details.

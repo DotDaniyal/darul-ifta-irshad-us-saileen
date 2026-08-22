@@ -62,6 +62,28 @@ export function BrandMark({ compact = false, centered = false }: { compact?: boo
   );
 }
 
+function InstitutionalLetterhead() {
+  return (
+    <div className="institutional-letterhead">
+      <div className="letterhead-english" aria-label="Darul Ifta Irshad-us-Saileen Karachi">
+        <span className="letterhead-english-overline">Darul Ifta</span>
+        <span className="letterhead-english-title">Irshad-us-Saileen</span>
+        <span className="letterhead-english-city">Karachi</span>
+        <span className="letterhead-address-lettering">Al Mujeeb Garden A-31 · Model Colony · Karachi</span>
+      </div>
+
+      <Link href="/" className="letterhead-seal" aria-label="Darul Ifta Irshad-us-Saileen home">
+        <img src={officialLogo} alt="Darul Ifta Irshad-us-Saileen official logo" />
+      </Link>
+
+      <div className="letterhead-urdu" dir="rtl">
+        <span className="letterhead-urdu-title">دارالافتاء ارشاد السائلین</span>
+        <span className="letterhead-urdu-address">المجیب گارڈن اے-31، ماڈل کالونی، کراچی</span>
+      </div>
+    </div>
+  );
+}
+
 export function SectionHeading({ eyebrow, title, description, align = "start" }: { eyebrow: string; title: string; description?: string; align?: "start" | "center" }) {
   return (
     <div className={`section-heading ${align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}`}>
@@ -143,7 +165,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         </div>
       </div>
       <header className="sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
-        <div className="royal-masthead"><BrandMark centered /></div>
+        <div className="royal-masthead"><InstitutionalLetterhead /></div>
         <div className="royal-nav">
           <div className="relative mx-auto flex min-h-[57px] max-w-[1360px] items-center justify-center px-4 sm:px-8">
             <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">

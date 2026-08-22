@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "kind": "customer_name",
+      "leftPercent": 13.9,
+      "topPercent": 73,
+      "widthPercent": 5.6,
+      "heightPercent": 3,
+      "confidence": 0.95,
+      "rationale": "Identifies the question submitter's name ('Shaista') following the label 'Mustafti'."
+    },
+    {
+      "kind": "customer_phone",
+      "leftPercent": 13.7,
+      "topPercent": 76.8,
+      "widthPercent": 13,
+      "heightPercent": 2.5,
+      "confidence": 0.98,
+      "rationale": "Identifies a non-official mobile phone number associated with the submitter."
+    }
+  ]
+}
