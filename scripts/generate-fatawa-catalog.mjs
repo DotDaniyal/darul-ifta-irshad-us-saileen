@@ -294,7 +294,17 @@ const a04UrlByAssetKey = new Map([
   ["A0489", "/manus-storage/A0489_b90886e8.pdf"],
 ]);
 
-const allRecords = [...records, ...importedA02Records, ...importedA03Records, ...importedA04Records];
+const importedA05Records = [
+  ["A0499", "زوجین کی مشترکہ رقم سے خریدے گئے مکان کی ملکیت کا شرعی حکم", "Transactions", "A0499"],
+  ["A0503", "شرط پر معلق تین طلاقوں کے وقوع کا حکم", "Marriage & Divorce", "A0503"],
+];
+
+const a05UrlByAssetKey = new Map([
+  ["A0499", "/manus-storage/A0499_232324ea.pdf"],
+  ["A0503", "/manus-storage/A0503_c28212a6.pdf"],
+]);
+
+const allRecords = [...records, ...importedA02Records, ...importedA03Records, ...importedA04Records, ...importedA05Records];
 
 if (urlByPosition.size !== records.length) {
   throw new Error(`Expected ${records.length} uploaded PDFs; found ${urlByPosition.size}.`);
@@ -312,12 +322,16 @@ if (a04UrlByAssetKey.size !== importedA04Records.length) {
   throw new Error(`Expected ${importedA04Records.length} supplied A04-series PDF URLs; found ${a04UrlByAssetKey.size}.`);
 }
 
+if (a05UrlByAssetKey.size !== importedA05Records.length) {
+  throw new Error(`Expected ${importedA05Records.length} supplied A0499/A0503 PDF URLs; found ${a05UrlByAssetKey.size}.`);
+}
+
 const categories = ["Worship", "Transactions", "Marriage & Divorce", "Inheritance & Wills", "Belief & Conduct"];
 const archiveNoticeUr = "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔";
 const archiveNoticeEn = "Open the original PDF for the complete question, researched answer, and supporting detail.";
 
 const fatawa = allRecords.map(([number, titleUr, category, assetKey], index) => {
-  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number) ?? a04UrlByAssetKey.get(assetKey ?? number);
+  const pdfUrl = urlByPosition.get(index + 1) ?? a02UrlByNumber.get(number) ?? a03UrlByAssetKey.get(assetKey ?? number) ?? a04UrlByAssetKey.get(assetKey ?? number) ?? a05UrlByAssetKey.get(assetKey ?? number);
   if (!pdfUrl) throw new Error(`Missing managed PDF URL for ${number}.`);
 
   return {

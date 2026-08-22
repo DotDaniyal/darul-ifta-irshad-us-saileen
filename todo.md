@@ -236,3 +236,8 @@
 - [x] Add verified A04-series records through the repeatable Fatwa catalog generator without modifying existing records or date fields.
 - [x] Extend archive regression coverage and validate direct query filtering, public PDF access, and desktop/mobile presentation for the A04-series batch.
 - [x] Document the A04-series import outcome and save a published checkpoint.
+- [x] Inventory the supplied A0499 and A0503 Fatwa PDFs, validate readability, and compare each reference with the 202-record archive.
+- [x] Upload only verified missing A0499 and A0503 PDFs using ASCII-safe managed-storage filenames while retaining conservative Urdu metadata.
+- [x] Add the verified A0499 and A0503 records through the repeatable Fatwa catalog generator without modifying existing records or dates.
+- [x] Extend regression coverage and validate direct query filtering, public PDF access, and responsive presentation for A0499 and A0503.
+- [ ] Document the two-document import outcome and save a published checkpoint.

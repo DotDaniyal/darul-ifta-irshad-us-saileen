@@ -3840,6 +3840,44 @@ export const FATAWA: Fatwa[] = [
       "A0489"
     ],
     "pdfUrl": "/manus-storage/A0489_b90886e8.pdf"
+  },
+  {
+    "slug": "a0499-203",
+    "number": "A0499",
+    "category": "Transactions",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0499",
+    "titleUr": "زوجین کی مشترکہ رقم سے خریدے گئے مکان کی ملکیت کا شرعی حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Transactions",
+      "A0499"
+    ],
+    "pdfUrl": "/manus-storage/A0499_232324ea.pdf"
+  },
+  {
+    "slug": "a0503-204",
+    "number": "A0503",
+    "category": "Marriage & Divorce",
+    "date": "PDF Archive",
+    "scholar": "دارالافتاء ارشاد السائلین",
+    "titleEn": "Fatwa Archive · A0503",
+    "titleUr": "شرط پر معلق تین طلاقوں کے وقوع کا حکم",
+    "questionEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "questionUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "answerEn": "Open the original PDF for the complete question, researched answer, and supporting detail.",
+    "answerUr": "مکمل سوال، جواب اور تحقیقی تفصیل کے لیے اصل پی ڈی ایف فتویٰ ملاحظہ کریں۔",
+    "reference": "Original Darul Ifta PDF document.",
+    "topics": [
+      "Marriage & Divorce",
+      "A0503"
+    ],
+    "pdfUrl": "/manus-storage/A0503_c28212a6.pdf"
   }
 ];
 
