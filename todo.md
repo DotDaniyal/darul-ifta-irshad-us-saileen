@@ -371,3 +371,15 @@
 - [x] Apply the visual reference only to the right-side institutional masthead heading while retaining the approved wording in an accessible text equivalent, preserving the English heading, official logo, navigation, and address capsules.
 - [x] Add or update focused regression coverage and verify the calligraphic treatment at desktop and mobile widths without clipping, distortion, or horizontal overflow.
 - [x] Save and publish the verified supplied-calligraphy masthead checkpoint.
+
+## Exact Calligraphy Wordmark Verification Checklist
+
+- [x] Reinspect the reattached wide calligraphy image in ordered crops and compare it with the restored right-side masthead asset reference.
+- [x] Confirm the shared masthead treats the artwork as a fixed wordmark rather than a substituted web-font heading, without changing the header, navigation, hero, English text, or layout.
+- [x] Verify the wordmark remains sharp, correctly proportioned, and aligned on the home page at desktop and mobile widths.
+
+## Failed Visual-Editor Target Verification Checklist
+
+- [x] Confirm the reported `SiteShell.tsx:84` target is already the fixed managed calligraphy wordmark and explain the visual-editor no-op as a stale or unsupported comment target.
+- [x] Re-run focused masthead regression, responsive browser verification, TypeScript, production build, dependency audit, diff integrity, and current diagnostic checks without changing unrelated site content.
+- [x] Save and publish the requested checkpoint of the verified fixed-wordmark state.
