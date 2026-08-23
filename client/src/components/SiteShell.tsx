@@ -79,15 +79,7 @@ function InstitutionalLetterhead() {
         </Link>
 
         <div className="letterhead-urdu" lang="ur" dir="rtl">
-          <p className="letterhead-urdu-name">
-            <span className="letterhead-urdu-accessible-text">دارالافتاء ارشاد السائلین کراچی</span>
-            <img
-              src="/manus-storage/masthead-urdu-calligraphy-reference_da060155.png"
-              alt=""
-              aria-hidden="true"
-              className="letterhead-urdu-calligraphy-image"
-            />
-          </p>
+          <p className="letterhead-urdu-name">دارالافتاء ارشاد السائلین کراچی</p>
           <p className="letterhead-address letterhead-address-ur">المجیب گارڈن اے-31 ماڈل کالونی کراچی</p>
         </div>
       </div>
