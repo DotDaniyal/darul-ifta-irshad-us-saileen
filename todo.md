@@ -383,3 +383,16 @@
 - [x] Confirm the reported `SiteShell.tsx:84` target is already the fixed managed calligraphy wordmark and explain the visual-editor no-op as a stale or unsupported comment target.
 - [x] Re-run focused masthead regression, responsive browser verification, TypeScript, production build, dependency audit, diff integrity, and current diagnostic checks without changing unrelated site content.
 - [x] Save and publish the requested checkpoint of the verified fixed-wordmark state.
+
+## Premium Bilingual Scholarly Platform Redesign Checklist
+
+- [x] Audit the current shared shell, public and protected routes, language behavior, Fatwa archive/search/detail flows, Ask-a-Fatwa form, Methodology page, scholar interfaces, runtime diagnostics, and responsive layouts before redesigning.
+- [x] Establish a calm premium Islamic design system with deep navy, restrained green, muted gold, warm ivory, readable editorial typography, native RTL/LTR behavior, and preserved fixed calligraphic wordmark branding.
+- [x] Rebuild the shared header, desktop and mobile navigation, footer, reusable buttons, form controls, cards, labels, focus states, and motion foundations without breaking existing routes or interactions.
+- [x] Upgrade the home-page hierarchy, hero entrance, services, Fatwa entry points, and trust surfaces with purposeful lightweight animation and no blocking of readable content.
+- [x] Transform the Methodology route into a structured long-form reading experience with progress feedback, responsive section navigation, comfortable measure, and scholarly visual hierarchy while preserving all wording.
+- [x] Refine the Fatawa archive, detail reading experience, search, filters, results, loading/empty/error states, privacy-safe PDF actions, and localization without altering records, translations, or sanitized document URLs.
+- [x] Refine the Ask-a-Fatwa experience, input focus/validation states, contact handoff, and success/error handling while retaining the existing operational flow and message semantics.
+- [x] Add restrained reading, navigation, scroll, and micro-interaction polish that honors `prefers-reduced-motion`, keyboard use, contrast, screen readers, and mobile performance.
+- [x] Add and update focused automated coverage for new shared UI behavior and run a complete functional, bilingual, RTL/LTR, responsive, accessibility, diagnostics, TypeScript, build, audit, and diff-integrity validation pass.
+- [x] Save and publish the verified premium platform redesign checkpoint.

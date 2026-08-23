@@ -8,7 +8,7 @@
   --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; --font-calligraphy: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; --font-arabic-display: "Reem Kufi", "Amiri", "Noto Naskh Arabic", serif;
 }
 
-:root { --background: #FFFFFF; --foreground: #0A1634; --card: #FFFFFF; --card-foreground: #0A1634; --popover: #FFFFFF; --popover-foreground: #0A1634; --primary: #1C4399; --primary-foreground: #FFFFFF; --secondary: #EEF3FF; --secondary-foreground: #0A1634; --muted: #F5F7FC; --muted-foreground: #65718A; --accent: #F2E7C9; --accent-foreground: #0A1634; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #D8DFED; --input: #BBC8DC; --ring: #1C4399; }
+:root { --background: #FCFAF4; --foreground: #081B30; --card: #FFFEFA; --card-foreground: #081B30; --popover: #FFFEFA; --popover-foreground: #081B30; --primary: #0B345B; --primary-foreground: #FFFFFF; --secondary: #EDF2EF; --secondary-foreground: #0C3F36; --muted: #F1F0EA; --muted-foreground: #64748B; --accent: #E7D7AE; --accent-foreground: #102238; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #D7D6CB; --input: #BBC8DC; --ring: #0B6756; --ink-950: #06172A; --ink-900: #0B2D50; --ink-700: #1B517E; --green-700: #0B6756; --gold-500: #B88A43; --gold-200: #F2E3BC; --paper: #FCFAF4; --paper-strong: #FFFEFA; }
 
 @layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #DDE6FF; color: #06152E; } }
 
@@ -107,6 +107,14 @@
   .archive-tools::before { content: "۞  فہرستِ فتاویٰ  ۞"; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); color: rgba(145,108,39,.68); font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; font-size: 14px; white-space: nowrap; }
   .archive-search { @apply border-b border-[#D7C897] px-2 pt-3 lg:border-b-0 lg:border-r; }
   .archive-filter-group { @apply relative; }
+  .archive-introduction { display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; }
+  .archive-introduction-note { margin: 0; color: #68778A; font-family: "Manrope", sans-serif; font-size: .72rem; line-height: 1.7; }
+  .archive-clear-search { display: grid; width: 1.75rem; height: 1.75rem; place-items: center; border: 1px solid #D7C897; color: #68778A; transition: color 160ms ease-out, border-color 160ms ease-out; }
+  .archive-clear-search:hover { border-color: #0B6756; color: #0B6756; }
+  .archive-result-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem 1.25rem; color: #667389; font-family: "Manrope", sans-serif; font-size: .72rem; }
+  .archive-result-count { color: #0B345B; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .archive-result-query { border-left: 2px solid #D7C08A; padding-left: .65rem; }
+  .archive-result-query b { color: #0B6756; }
   .filter-pill { @apply border border-[#CFD6DB] bg-white/85 px-3 py-2 font-sans text-[10px] font-semibold text-[#55667C] transition hover:border-[#B28A3D] hover:text-[#075A9B]; clip-path: polygon(0 18%, 9% 0, 91% 0, 100% 18%, 100% 82%, 91% 100%, 9% 100%, 0 82%); }
   .filter-pill-active { @apply border-[#075A9B] bg-[#075A9B] text-white hover:text-white; }
   .fatwa-catalogue-list { @apply relative space-y-4; }
@@ -164,12 +172,30 @@
   .detail-urdu-title { @apply mt-4 max-w-4xl font-urdu text-4xl leading-[2.05] text-[#FFF7DB] sm:text-5xl; text-shadow: 0 5px 22px rgba(0,0,0,.24); }
   .detail-english-reference { @apply mt-2 font-sans text-[11px] font-bold uppercase tracking-[.16em] text-[#D7E7F8]/80; }
   .fatwa-record-body { @apply relative; }
+  .fatwa-record-body::before { content: ""; position: absolute; top: 0; bottom: 0; left: -.9rem; width: 1px; background: linear-gradient(180deg, #D7C08A, rgba(215,192,138,.08)); }
+  .fatwa-record-body article { max-width: 47rem; }
+  .fatwa-record-body article > .fatwa-reading, .fatwa-record-body article > .guidance-manuscript { transition: transform 220ms cubic-bezier(.23,1,.32,1), box-shadow 220ms cubic-bezier(.23,1,.32,1); }
+  .fatwa-record-body article > .fatwa-reading:hover, .fatwa-record-body article > .guidance-manuscript:hover { transform: translateY(-2px); box-shadow: 0 20px 42px rgba(10,22,52,.08); }
   .fatwa-actions-panel { @apply relative overflow-hidden border border-[#CDB574] bg-[#FFFDF8] p-5 shadow-[0_12px_28px_rgba(10,22,52,.06)]; background-image: radial-gradient(circle at 92% 8%, rgba(225,195,125,.18), transparent 8rem); }
   .fatwa-actions-panel::before { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(209,172,91,.30); border-bottom: 0; border-radius: 105px 105px 0 0 / 75px 75px 0 0; pointer-events: none; }
   .fatwa-actions-panel > * { @apply relative; }
   .record-topic { @apply border border-[#C9D4E1] bg-[#EEF3F8] px-3 py-1 font-sans text-[10px] font-semibold text-[#48617A]; clip-path: polygon(0 20%, 8% 0, 92% 0, 100% 20%, 100% 80%, 92% 100%, 8% 100%, 0 80%); }
   .utility-button { @apply flex items-center gap-2 border border-[#D7DFE6] px-3 py-2.5 font-sans text-xs font-semibold text-[#40556C] transition hover:border-[#075A9B] hover:bg-[#EEF3F8] hover:text-[#075A9B]; }
+  .utility-button { min-height: 2.75rem; }
+  .utility-button:hover { border-color: #0B6756; background: #F2F7F4; color: #0B6756; }
   .utility-button-primary { @apply border-[#CDB574] bg-[#FFF4D7] text-[#173A78] hover:border-[#173A78] hover:bg-[#FFF9E7] hover:text-[#06152E]; }
+  .archive-empty-state { display: grid; min-height: 18rem; place-items: center; border: 1px dashed #C7B67F; background: #FFFEFA; padding: 2rem; text-align: center; box-shadow: inset 0 0 0 8px rgba(184,138,67,.035); }
+  .archive-empty-seal { color: #B88A43; font-family: "Amiri", serif; font-size: 1.9rem; }
+  .archive-empty-action { margin-top: 1rem; border-bottom: 1px solid #0B6756; padding-bottom: .3rem; color: #0B6756; font-family: "Manrope", sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: color 160ms ease-out; }
+  .archive-empty-action:hover { color: #B88A43; }
+  .scholar-loading-grid { display: grid; gap: 1.25rem; }
+  .scholar-skeleton { min-height: 19rem; padding: 1.8rem; border: 1px solid #DED6C3; background: #FFFEFA; box-shadow: 0 10px 28px rgba(10,22,52,.04); }
+  .scholar-skeleton span { display: block; height: .72rem; margin-top: 1.1rem; background: linear-gradient(90deg, #EEF0EE 25%, #F8F6EF 45%, #EEF0EE 65%); background-size: 200% 100%; }
+  .scholar-skeleton span:first-child { width: 2.6rem; height: 2.6rem; margin-top: 0; border-radius: 999px; }
+  .scholar-skeleton span:nth-child(2) { width: 62%; }
+  .scholar-skeleton span:nth-child(3) { width: 86%; }
+  .scholar-skeleton span:nth-child(4) { width: 72%; }
+  .scholar-empty-state { padding: clamp(2rem, 5vw, 4rem); border: 1px dashed #C7B67F; background: #FFFEFA; text-align: center; box-shadow: inset 0 0 0 8px rgba(184,138,67,.035); }
   .form-label { @apply mb-2 flex items-center gap-2 font-sans text-[11px] font-bold text-[#243D62]; }
   .form-label::before { content: "✦"; color: #C89C46; font-size: 9px; }
   .form-control { @apply h-12 w-full rounded-none border border-[#BFC9D8] bg-[#FFFEFA] px-3 font-sans text-sm text-[#10223A] outline-none transition placeholder:text-[#98A3B1] focus:border-[#075A9B] focus:ring-2 focus:ring-[#075A9B]/10; background-image: linear-gradient(transparent 91%, rgba(193,157,79,.24) 92%, transparent 93%); background-size: 100% 1.72rem; box-shadow: inset 0 0 0 3px rgba(243,231,198,.22); }
@@ -186,6 +212,113 @@
   .contact-card::before { content: ""; position: absolute; left: 0; top: 20px; bottom: 20px; width: 2px; background: #D1AC5B; }
   .contact-card h3 { @apply mt-7 font-display text-2xl text-[#10223A]; }
   .contact-card p { @apply mt-2 font-sans text-xs leading-5 text-[#637187]; }
+  .methodology-hero { background-image: radial-gradient(circle at 83% 16%, rgba(184,138,67,.18), transparent 22rem), linear-gradient(120deg, #06172A, #143D64 58%, #092C4C); }
+  .methodology-hero-meta { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem; color: rgba(242,227,188,.88); font-family: "Manrope", sans-serif; font-size: .64rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .methodology-reading-grid { display: grid; gap: 2rem; align-items: start; }
+  .methodology-index-shell { order: 1; }
+  .methodology-index { overflow: hidden; border: 1px solid #D9CEB3; background: #FFFEFA; box-shadow: 0 14px 34px rgba(10,22,52,.06); }
+  .methodology-index summary { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.1rem; color: #0B345B; cursor: pointer; font-family: "Manrope", sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .methodology-index summary::after { content: "+"; color: #B88A43; font-size: 1.15rem; }
+  .methodology-index[open] summary::after { content: "−"; }
+  .methodology-index nav { display: grid; padding: 0 .7rem .7rem; border-top: 1px solid #E5DDC9; }
+  .methodology-index nav a { display: grid; grid-template-columns: 1.6rem 1fr; gap: .5rem; padding: .7rem .45rem; border-bottom: 1px solid #EDE7D8; color: #40556C; font-family: "Manrope", sans-serif; font-size: .76rem; font-weight: 700; text-decoration: none; transition: color 160ms ease-out, background 160ms ease-out; }
+  .methodology-index nav a:hover { background: #F6F1E4; color: #0B6756; }
+  .methodology-index nav a span:first-child { color: #B88A43; font-size: .66rem; letter-spacing: .08em; }
+  .methodology-index-note { margin: 1rem .25rem 0; color: #68778A; font-family: "Manrope", sans-serif; font-size: .74rem; line-height: 1.7; }
+  .methodology-publication { order: 2; min-width: 0; }
+  .methodology-principles { display: grid; gap: 1rem; }
+  .methodology-principle { display: grid; grid-template-columns: minmax(3.6rem, .18fr) 1fr; gap: 1.25rem; padding: clamp(1.35rem, 3vw, 2.4rem); border: 1px solid #DED6C3; background: #FFFEFA; box-shadow: 0 12px 30px rgba(10,22,52,.045); }
+  .methodology-principle-index { display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid #D7C08A; color: #0B6756; font-family: "DM Serif Display", Georgia, serif; font-size: 1.1rem; }
+  .methodology-principle-kicker, .methodology-reference-label { margin: 0; color: #B88A43; font-family: "Manrope", sans-serif; font-size: .61rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+  .methodology-principle h2 { margin: .55rem 0 0; color: #0A2844; font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.55; }
+  .methodology-principle p:last-child { margin: .75rem 0 0; color: #56677B; font-family: "Manrope", sans-serif; font-size: .9rem; line-height: 1.85; }
+  .methodology-reference-column { display: grid; order: 3; gap: 1rem; }
+  .methodology-reference-card, .methodology-contact-card { padding: 1.5rem; }
+  .methodology-reference-card { border: 1px solid #D9C78D; background: linear-gradient(145deg, #FFFDF6, #FAF5E9); box-shadow: 0 14px 34px rgba(10,22,52,.045); }
+  .methodology-reference-card h2, .methodology-contact-card h2 { margin: .7rem 0 0; color: #0A2844; font-size: 1.85rem; line-height: 1.25; }
+  .methodology-reference-card p:last-child, .methodology-contact-card p:not(.methodology-reference-label) { margin: .8rem 0 0; font-family: "Manrope", sans-serif; font-size: .82rem; line-height: 1.8; }
+  .methodology-reference-card p:last-child { color: #53657A; }
+  .methodology-contact-card { position: relative; overflow: hidden; background: linear-gradient(145deg, #06172A, #0B345B); color: white; }
+  .methodology-contact-card::after { content: "۞"; position: absolute; right: 1rem; bottom: .35rem; color: rgba(232,209,141,.24); font-family: "Amiri", serif; font-size: 3rem; }
+  .methodology-contact-card h2 { color: white; }
+  .methodology-contact-card p:not(.methodology-reference-label) { color: rgba(255,255,255,.72); }
+  .methodology-email, .methodology-question-link { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: .45rem; margin-top: 1rem; font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800; text-decoration: none; }
+  .methodology-email { border: 1px solid rgba(232,209,141,.58); padding: .7rem .75rem; color: #F5E7BF; overflow-wrap: anywhere; }
+  .methodology-question-link { color: white; }
+  .methodology-question-link:hover { color: #F2E3BC; }
+  .ask-fatwa-hero { background-image: radial-gradient(circle at 82% 12%, rgba(11,103,86,.19), transparent 21rem), linear-gradient(120deg, #06172A, #143D64 58%, #092C4C); }
+  .ask-hero-trust { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem; color: rgba(242,227,188,.9); font-family: "Manrope", sans-serif; font-size: .64rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .ask-guidance-sidebar { align-self: start; }
+  .ask-trust-note { border: 1px solid #C8D8D2; border-left: 3px solid #0B6756; background: #F2F7F4; padding: 1.45rem; }
+  .ask-trust-note p { margin: 1rem 0 0; color: #33564E; font-family: "Manrope", sans-serif; font-size: .86rem; line-height: 1.85; }
+  .ask-contact-route { position: relative; overflow: hidden; padding: 1.5rem; background: linear-gradient(145deg, #06172A, #0B345B); color: white; }
+  .ask-contact-route::after { content: "۞"; position: absolute; right: 1rem; bottom: .2rem; color: rgba(232,209,141,.22); font-family: "Amiri", serif; font-size: 3rem; }
+  .ask-contact-route > * { position: relative; z-index: 1; }
+  .ask-fatwa-form { border-color: #C8B06E; }
+  .ask-form-heading { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 1.25rem; margin-bottom: 2rem; padding-bottom: 1.4rem; border-bottom: 1px solid #D8C898; }
+  .ask-form-steps { display: flex; gap: .45rem; margin: 0; padding: 0; color: #68778A; font-family: "Manrope", sans-serif; font-size: .58rem; font-weight: 800; letter-spacing: .06em; list-style: none; text-transform: uppercase; }
+  .ask-form-steps li { display: inline-flex; align-items: center; gap: .3rem; }
+  .ask-form-steps span { display: grid; width: 1.1rem; height: 1.1rem; place-items: center; border: 1px solid #C7B77F; border-radius: 999px; font-size: .56rem; }
+  .ask-form-steps .is-current { color: #0B6756; }
+  .ask-form-steps .is-current span { border-color: #0B6756; background: #0B6756; color: white; }
+  .form-field { display: block; }
+  .form-field:focus-within .form-label { color: #0B6756; }
+  .form-field:focus-within .form-label::before { color: #0B6756; }
+  .form-control:focus { border-color: #0B6756; box-shadow: 0 0 0 3px rgba(11,103,86,.11), inset 0 0 0 3px rgba(243,231,198,.22); }
+  .ask-attachment-note { display: flex; gap: .75rem; border: 1px dashed #B7C9C2; background: #F4F8F6; padding: 1rem; color: #53657A; font-family: "Manrope", sans-serif; font-size: .78rem; line-height: 1.7; }
+  .ask-submit-button { display: inline-flex; align-items: center; gap: .55rem; margin-top: 2rem; border: 1px solid #0B6756; background: #0B6756; padding: 1rem 1.25rem; color: white; font-family: "Manrope", sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease-out, box-shadow 160ms ease-out; }
+  .ask-submit-button:hover { background: #0A4E43; box-shadow: 0 12px 24px rgba(11,103,86,.2); transform: translateY(-2px); }
+  .ask-submit-button:active { transform: scale(.98); }
+  .ask-success-notice { border-left: 3px solid #0B6756; background: #F2F7F4; padding: 1rem; }
+  .platform-error-screen { display: grid; min-height: 100vh; place-items: center; padding: 1.5rem; background: radial-gradient(circle at 85% 10%, rgba(184,138,67,.17), transparent 20rem), linear-gradient(135deg, #06172A, #0B345B); }
+  .platform-error-card { position: relative; overflow: hidden; width: min(100%, 35rem); padding: clamp(1.8rem, 5vw, 3.4rem); border: 1px solid rgba(232,209,141,.55); background: rgba(255,254,250,.98); box-shadow: 0 25px 70px rgba(0,0,0,.25); text-align: center; }
+  .platform-error-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(184,138,67,.24); border-bottom: 0; border-radius: 160px 160px 0 0 / 105px 105px 0 0; pointer-events: none; }
+  .platform-error-card > * { position: relative; z-index: 1; }
+  .platform-error-seal { display: block; margin-bottom: .7rem; color: rgba(184,138,67,.25); font-family: "Amiri", serif; font-size: 3rem; line-height: 1; }
+  .platform-error-kicker { margin: .75rem 0 0; color: #B88A43; font-family: "Manrope", sans-serif; font-size: .65rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .platform-error-card h1 { margin: .75rem 0 0; color: #0B345B; font-size: clamp(1.8rem, 4vw, 2.55rem); line-height: 1.35; }
+  .platform-error-card p:not(.platform-error-kicker) { margin: 1rem auto 0; max-width: 27rem; color: #56677B; font-family: "Manrope", sans-serif; font-size: .88rem; line-height: 1.8; }
+  .platform-error-action { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem; border: 1px solid #0B6756; background: #0B6756; padding: .85rem 1rem; color: white; font-family: "Manrope", sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease-out; }
+  .platform-error-action:hover { background: #0A4E43; transform: translateY(-2px); }
+  #about, #services, #scholars, #contact { position: relative; isolation: isolate; }
+  #about::before, #services::before, #scholars::before, #contact::before { content: "۞"; position: absolute; z-index: 0; color: rgba(184,138,67,.12); font-family: "Amiri", serif; font-size: 5rem; line-height: 1; pointer-events: none; }
+  #about::before, #scholars::before { right: clamp(1rem, 7vw, 7rem); top: 2rem; }
+  #services::before, #contact::before { left: clamp(1rem, 7vw, 7rem); bottom: 2rem; }
+  #about > *, #services > *, #scholars > *, #contact > * { position: relative; z-index: 1; }
+  #services { background: linear-gradient(180deg, #EDF2F4, #E6EDF1) !important; }
+  #services::after { content: ""; position: absolute; inset: 0; opacity: .28; background-image: linear-gradient(rgba(11,52,91,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(11,52,91,.035) 1px, transparent 1px); background-size: 26px 26px; pointer-events: none; }
+  #services > * { position: relative; z-index: 1; }
+  #fatawa { background: radial-gradient(circle at 85% 15%, rgba(184,138,67,.17), transparent 23rem), linear-gradient(120deg, #06172A, #0B345B 52%, #082944) !important; }
+  #fatawa > .absolute { display: none; }
+  #fatawa .section-eyebrow span:not(.h-px):not(.h-1\.5) { color: #F2E3BC; }
+  #fatawa .section-title { color: #FFF9E8; }
+  #fatawa .section-description { color: rgba(255,255,255,.7); }
+  #fatawa .text-link { border-bottom-color: rgba(242,227,188,.65); color: #F2E3BC; }
+  #fatawa .text-link:hover { color: white; }
+  #fatawa .border.border-white\/20 { border-color: rgba(232,209,141,.5); background-color: rgba(255,255,255,.08); box-shadow: 0 26px 55px rgba(0,0,0,.24); }
+  #fatawa .border.border-white\/20::before { content: "فہرستِ فتاویٰ"; display: block; margin-bottom: .7rem; color: #F2E3BC; font-family: "Aref Ruqaa Ink", "Noto Naskh Arabic", serif; font-size: .9rem; opacity: .9; }
+  #fatawa .border.border-white\/20 > p:first-child { margin-top: 0; }
+  #scholars { background: linear-gradient(180deg, #FCFAF4, #F5F1E7) !important; }
+  #scholars article { transition: transform 220ms cubic-bezier(.23,1,.32,1), box-shadow 220ms cubic-bezier(.23,1,.32,1), border-color 220ms ease-out; }
+  #scholars article:hover { transform: translateY(-5px); border-color: #B88A43; box-shadow: 0 20px 42px rgba(10,22,52,.12); }
+  #contact { background: #FFFEFA !important; }
+  .site-shell { position: relative; min-height: 100vh; background: var(--paper); }
+  .site-reading-progress { position: fixed; z-index: 80; top: 0; left: 0; width: 100%; height: 3px; background: rgba(255,255,255,.14); pointer-events: none; }
+  .site-reading-progress span { display: block; width: 100%; height: 100%; transform-origin: left center; background: linear-gradient(90deg, #B88A43, #E8D18D, #0B6756); transition: transform 120ms linear; }
+  .site-header { transition: box-shadow 220ms cubic-bezier(.23,1,.32,1), transform 220ms cubic-bezier(.23,1,.32,1); }
+  .site-header .royal-masthead { max-height: 170px; transition: max-height 240ms cubic-bezier(.23,1,.32,1), opacity 180ms ease-out; }
+  .site-header-condensed { box-shadow: 0 10px 26px rgba(4,16,32,.18); }
+  .site-header-condensed .royal-masthead { max-height: 0; opacity: 0; pointer-events: none; }
+  .page-canvas { position: relative; }
+  .mobile-nav-overlay { position: fixed; z-index: 70; inset: 0; display: grid; grid-template-columns: minmax(2rem, 1fr) minmax(0, 22rem); align-items: stretch; background: rgba(3,12,25,.55); backdrop-filter: blur(5px); }
+  .mobile-nav-backdrop { border: 0; background: transparent; }
+  .mobile-nav-panel { overflow-y: auto; padding: 1.35rem 1.15rem 2rem; background: linear-gradient(155deg, #06172A, #0B345B 64%, #082944); box-shadow: -18px 0 45px rgba(0,0,0,.28); }
+  .mobile-nav-link, .mobile-nav-bayan { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .96rem 0; border-bottom: 1px solid rgba(255,255,255,.11); color: rgba(255,255,255,.88); font-family: "Manrope", sans-serif; font-size: .88rem; font-weight: 700; transition: color 160ms ease-out, transform 160ms ease-out; }
+  .mobile-nav-link:hover { color: #F2E3BC; transform: translateX(-3px); }
+  .mobile-nav-bayan { margin-top: 1.25rem; padding: .95rem 1rem; border: 1px solid rgba(232,209,141,.62); background: rgba(184,138,67,.12); color: #F2E3BC; }
+  .back-to-top { position: fixed; z-index: 45; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); display: inline-flex; align-items: center; gap: .45rem; border: 1px solid rgba(232,209,141,.7); background: #0B345B; padding: .72rem .85rem; color: #FFF9E8; box-shadow: 0 14px 28px rgba(6,23,42,.26); font-family: "Manrope", sans-serif; font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease-out; }
+  .back-to-top:hover { transform: translateY(-3px); background: #0B6756; }
+  .back-to-top:active { transform: scale(.97); }
   #donate { isolation: isolate; background-image: radial-gradient(circle at 8% 15%, rgba(35,83,173,.32), transparent 22rem), linear-gradient(115deg, #040914, #0A315B 52%, #06152E); }
   #donate::before { content: ""; position: absolute; left: 7%; bottom: -150px; width: 430px; height: 510px; border: 1px solid rgba(255,218,126,.22); border-bottom: 0; border-radius: 230px 230px 0 0 / 300px 300px 0 0; box-shadow: 0 0 0 22px rgba(255,218,126,.035), 0 0 0 44px rgba(255,218,126,.025); }
   #donate::after { content: "۞  صدقہ و خدمت  ۞"; position: absolute; top: 28px; right: 9%; color: rgba(255,218,126,.53); font-family: "Aref Ruqaa Ink", "Amiri", serif; font-size: 17px; letter-spacing: .08em; }
@@ -230,6 +363,10 @@
   .hero-watermark { animation: watermark-drift 14s ease-in-out infinite; }
   .page-hero::before, #donate::before { animation: arch-breathe 7s ease-in-out infinite; }
   .page-hero::after { animation: calligraphy-arrive .75s cubic-bezier(.23,1,.32,1) .18s both; }
+  .page-canvas-enter { animation: page-enter .38s cubic-bezier(.23,1,.32,1) both; }
+  .mobile-nav-panel { animation: mobile-menu-enter .28s cubic-bezier(.23,1,.32,1) both; }
+  .mobile-nav-link { animation: mobile-link-enter .34s cubic-bezier(.23,1,.32,1) calc(var(--mobile-nav-index, 0) * 42ms + 70ms) both; }
+  .scholar-skeleton span { animation: scholar-shimmer 1.6s ease-in-out infinite; }
   .arch-frame img, .guidance-manuscript, .featured-fatwa { transition: transform .55s cubic-bezier(.23,1,.32,1), box-shadow .55s cubic-bezier(.23,1,.32,1); }
   .arch-frame:hover img { transform: scale(1.035); }
   .featured-fatwa:hover { transform: translateX(-5px); }
@@ -246,8 +383,15 @@
   @keyframes mark-breathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
   @keyframes watermark-drift { 0%, 100% { transform: translateX(-50%) translateY(0) rotate(0deg); } 50% { transform: translateX(-50%) translateY(-9px) rotate(1deg); } }
   @keyframes arch-breathe { 0%, 100% { opacity: .72; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-7px); } }
+  @keyframes page-enter { from { opacity: .98; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes mobile-menu-enter { from { opacity: 0; transform: translateX(22px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes mobile-link-enter { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes scholar-shimmer { from { background-position: 180% 0; } to { background-position: -20% 0; } }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
 @media (max-width: 767px) { .fatwa-catalogue-list::before { left: 1.7rem; } .fatwa-folio { min-height: 0; flex-direction: row; justify-content: flex-start; gap: .8rem; padding: 1rem 1.4rem; } .fatwa-folio::before { inset: 6px; border-radius: 65px 65px 0 0 / 42px 42px 0 0; } .fatwa-catalogue-content { padding: 1.45rem; } .fatwa-catalogue-action { padding: 1.2rem 1.45rem; } }
-@media (max-width: 640px) { .date-card { min-width: 0; width: 100%; } .hero-overlay { background: linear-gradient(90deg, rgba(3,7,18,.96), rgba(6,21,46,.78)); } .bismillah-script { font-size: 14px; } .page-hero::after { left: 50%; transform: translateX(-50%); font-size: 15px; } .detail-hero::after { left: 50%; right: auto; transform: translateX(-50%); font-size: 15px; white-space: nowrap; } .detail-urdu-title { font-size: 2rem; } .detail-hero-rule { margin-top: 2rem; } .hero-text-stack { gap: .38rem; margin-top: 1rem; } .hero-urdu-identity { font-size: clamp(1.66rem, 8vw, 2.35rem); line-height: 1.85; } .hero-english-identity { font-size: clamp(1.82rem, 9vw, 2.55rem); line-height: 1.08; } .hero-support-copy { margin-top: 1.25rem; } }
+@media (min-width: 768px) { .scholar-loading-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .scholar-loading-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .methodology-reading-grid { grid-template-columns: minmax(11rem, .68fr) minmax(0, 1.35fr) minmax(15rem, .72fr); gap: clamp(1.5rem, 2.4vw, 3rem); } .methodology-index-shell { position: sticky; top: 8.5rem; align-self: start; } .methodology-reference-column { position: sticky; top: 8.5rem; align-self: start; } }
+@media (max-width: 640px) { .site-header .royal-masthead { max-height: 135px; } .date-card { min-width: 0; width: 100%; } .hero-overlay { background: linear-gradient(90deg, rgba(3,7,18,.96), rgba(6,21,46,.78)); } .bismillah-script { font-size: 14px; } .page-hero::after { left: 50%; transform: translateX(-50%); font-size: 15px; } .detail-hero::after { left: 50%; right: auto; transform: translateX(-50%); font-size: 15px; white-space: nowrap; } .detail-urdu-title { font-size: 2rem; } .detail-hero-rule { margin-top: 2rem; } .hero-text-stack { gap: .38rem; margin-top: 1rem; } .hero-urdu-identity { font-size: clamp(1.66rem, 8vw, 2.35rem); line-height: 1.85; } .hero-english-identity { font-size: clamp(1.82rem, 9vw, 2.55rem); line-height: 1.08; } .hero-support-copy { margin-top: 1.25rem; } }
 @media print { header, footer, .utility-button { display: none !important; } body { background: white !important; } }

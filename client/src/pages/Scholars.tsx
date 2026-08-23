@@ -30,7 +30,8 @@ export default function Scholars() {
               title={urdu ? "ذمہ دار علمی خدمت" : "A directory of scholarly service"}
               description={urdu ? "ہر پروفائل میں تعارف، تخصصات، ذمہ داریاں اور دارالافتاء کے ساتھ علمی خدمات کو مرتب انداز میں پیش کیا گیا ہے۔" : "Each profile presents a clear introduction, areas of expertise, responsibilities, and service to the Darul Ifta."}
             />
-            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {loading && !scholars.length && <div className="scholar-loading-grid mt-10" aria-live="polite" aria-label={urdu ? "علماء کے پروفائل لوڈ ہو رہے ہیں" : "Loading scholar profiles"}>{Array.from({ length: 3 }, (_, index) => <div key={index} className="scholar-skeleton"><span /><span /><span /><span /></div>)}</div>}
+            {!!scholars.length && <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {scholars.map((scholar, index) => (
                 <article key={scholar.slug} className="group flex min-h-[315px] flex-col border border-[#D8D0C3] bg-white p-6 shadow-[0_12px_34px_rgba(29,43,66,.07)] transition duration-300 hover:-translate-y-1 hover:border-[#C89C46] hover:shadow-[0_18px_42px_rgba(21,47,85,.13)] sm:p-7">
                   <div className="flex items-start justify-between gap-5">
@@ -45,11 +46,12 @@ export default function Scholars() {
                   </Link>
                 </article>
               ))}
-            </div>
+            </div>}
             {!loading && !scholars.length && (
-              <div className="mt-10 border border-dashed border-[#C9C0B3] bg-white p-8 text-center">
+              <div className="scholar-empty-state mt-10" role="status">
                 <BookOpenCheck className="mx-auto h-8 w-8 text-[#C89C46]" />
                 <p className={urdu ? "mt-4 font-urdu text-xl text-[#43536A]" : "mt-4 font-sans text-sm text-[#43536A]"}>{failed ? (urdu ? "علماء کے ریکارڈ اس وقت دستیاب نہیں ہیں۔" : "Scholar records are temporarily unavailable.") : (urdu ? "جلد علماء کے پروفائل یہاں دستیاب ہوں گے۔" : "Scholar profiles will be available here soon.")}</p>
+                <p className="mt-2 font-sans text-xs leading-6 text-[#68778A]">{urdu ? "براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔" : "Please try again in a moment."}</p>
               </div>
             )}
           </div>

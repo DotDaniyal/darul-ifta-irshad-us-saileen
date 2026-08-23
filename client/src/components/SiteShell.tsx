@@ -2,8 +2,8 @@
  * Royal Calligraphy House: Centered transparent identity, Bismillah masthead, royal-blue/navy/black/white/gold palette,
  * ceremonial calligraphy, and clear bilingual navigation for a premium Darul Ifta experience.
  */
-import { useEffect, useState, type ReactNode } from "react";
-import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, BookOpenCheck, ExternalLink } from "lucide-react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, BookOpenCheck, ExternalLink, ArrowUp } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
@@ -111,6 +111,8 @@ export function SectionHeading({ eyebrow, title, description, align = "start" }:
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { language, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const [location] = useLocation();
   const t = copy[language];
   const homePrefix = location === "/" ? "" : "/";
@@ -167,8 +169,43 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     }
   }, [location]);
 
+  useEffect(() => {
+    const updateScrollState = () => {
+      const maximum = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      const progress = Math.min(window.scrollY / maximum, 1);
+      setScrollProgress(progress);
+      setShowBackToTop(window.scrollY > 520);
+    };
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    if (!open) return;
+    const originalOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [open]);
+
+  const returnToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <div className={`min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
+    <div className={`site-shell min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
+      <div className="site-reading-progress" aria-hidden="true"><span style={{ transform: `scaleX(${scrollProgress})` }} /></div>
       <div className="bismillah-bar px-4 py-2 sm:px-8">
         <div className="mx-auto grid max-w-[1360px] grid-cols-[1fr_auto_1fr] items-center gap-4 font-sans text-[10px] tracking-wide sm:text-xs">
           <a href="tel:+923332617671" className="flex items-center gap-2 text-white/72 transition hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a>
@@ -176,7 +213,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           <a href="https://wa.me/923332617671" className="flex items-center justify-end gap-2 text-white/72 transition hover:text-[#E9D4A2]" target="_blank" rel="noreferrer"><MessageCircle className="h-3.5 w-3.5" /><span className="hidden sm:inline">WhatsApp</span></a>
         </div>
       </div>
-      <header className="sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)]">
+      <header className={`site-header sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)] ${scrollProgress > 0.025 ? "site-header-condensed" : ""}`}>
         <div className="royal-masthead"><InstitutionalLetterhead /></div>
         <div className="royal-nav">
           <div className="relative mx-auto flex min-h-[57px] max-w-[1360px] items-center justify-center px-4 sm:px-8">
@@ -188,13 +225,13 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             <div className="absolute right-4 flex items-center gap-2 sm:right-8 sm:gap-3">
               <button onClick={() => setLanguage(language === "ur" ? "en" : "ur")} className="rounded-none border border-white/25 px-2.5 py-2 font-sans text-[10px] font-bold tracking-wide text-white transition hover:border-[#E9D4A2] hover:text-[#E9D4A2]" aria-label="Switch language">{t.lang}</button>
               <Link href="/ask-fatwa" className="hidden items-center gap-2 rounded-none bg-[#D1AC5B] px-4 py-2.5 font-sans text-[11px] font-bold text-[#07152E] transition hover:bg-[#F1DC9B] sm:flex"><BookOpenCheck className="h-4 w-4" />{language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa"}</Link>
-              <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center text-white lg:hidden" aria-label="Toggle navigation">{open ? <X /> : <Menu />}</button>
+              <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center text-white lg:hidden" aria-label="Toggle navigation" aria-expanded={open} aria-controls="mobile-primary-navigation">{open ? <X /> : <Menu />}</button>
             </div>
           </div>
-          {open && <div className="border-t border-white/10 bg-[#05070B] px-5 py-5 lg:hidden"><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="flex items-center justify-between border-b border-white/10 py-3.5 text-sm text-white/90"><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}<a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="mt-2 flex items-center justify-between border border-[#D1AC5B]/60 bg-[#D1AC5B]/10 px-4 py-3.5 text-sm font-bold text-[#FFE2A0]"><span>{language === "ur" ? "آن لائن بیان سنیں" : "Listen to Online Bayan"}</span><ExternalLink className="h-4 w-4" /></a></nav></div>}
+          {open && <div className="mobile-nav-overlay lg:hidden" role="presentation"><button type="button" className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => setOpen(false)} /><div id="mobile-primary-navigation" className="mobile-nav-panel"><div className="mb-5 flex items-center justify-between"><p className="font-sans text-[10px] font-bold uppercase tracking-[.18em] text-[#E9D4A2]">{language === "ur" ? "رہنمائی کے راستے" : "Explore guidance"}</p><button type="button" onClick={() => setOpen(false)} className="grid h-9 w-9 place-items-center border border-white/20 text-white" aria-label="Close navigation"><X className="h-4 w-4" /></button></div><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item, index) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="mobile-nav-link" style={{ "--mobile-nav-index": index } as CSSProperties}><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}<a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="mobile-nav-bayan"><span>{language === "ur" ? "آن لائن بیان سنیں" : "Listen to Online Bayan"}</span><ExternalLink className="h-4 w-4" /></a></nav></div></div>}
         </div>
       </header>
-      <div className="page-canvas">{children}</div>
+      <div className="page-canvas page-canvas-enter">{children}</div>
       <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
         <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
@@ -207,6 +244,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row"><span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span><span>{t.rights}</span></div>
         </div>
       </footer>
+      {showBackToTop && <button type="button" onClick={returnToTop} className="back-to-top" aria-label={language === "ur" ? "اوپر جائیں" : "Back to top"}><ArrowUp className="h-4 w-4" /><span>{language === "ur" ? "اوپر" : "Top"}</span></button>}
     </div>
   );
 }
