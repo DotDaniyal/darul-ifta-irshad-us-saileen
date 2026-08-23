@@ -363,3 +363,11 @@
 - [x] Add an accessible share control for sanitized Fatwa PDF URLs that uses native device sharing when available and a clear copy-link fallback without constructing or exposing raw document URLs.
 - [x] Add focused regression coverage and verify direct archive/detail PDF actions plus the new share control at desktop and mobile widths.
 - [x] Save and publish the verified privacy-safe Fatwa PDF sharing checkpoint.
+
+## Supplied Calligraphic Masthead Reference Checklist
+
+- [x] Inspect the supplied wide calligraphic image in ordered overlapping crops and verify its readable wording, colour treatment, proportions, and relation to the existing right-side masthead heading.
+- [x] Prepare the user-supplied reference asset for managed responsive website use without changing, redrawing, or guessing its calligraphy.
+- [x] Apply the visual reference only to the right-side institutional masthead heading while retaining the approved wording in an accessible text equivalent, preserving the English heading, official logo, navigation, and address capsules.
+- [x] Add or update focused regression coverage and verify the calligraphic treatment at desktop and mobile widths without clipping, distortion, or horizontal overflow.
+- [x] Save and publish the verified supplied-calligraphy masthead checkpoint.
