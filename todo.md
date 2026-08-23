@@ -356,3 +356,10 @@
 - [x] Fix only verified functional, accessibility, performance, security, or maintainability defects while preserving established design, routes, content, privacy-safe Fatwa controls, and working features.
 - [x] Add or update targeted regression coverage, then complete release checks across desktop, tablet, mobile, public routes, protected flows, diagnostics, TypeScript, production build, and dependency audit.
 - [x] Document verified findings, actual fixes, preserved safeguards, remaining non-blocking limitations, and save the audited release checkpoint.
+
+## Privacy-Safe Fatwa PDF Sharing Checklist
+
+- [x] Inspect existing archive and detail PDF action controls, current copy/share helpers, and localized action labels.
+- [x] Add an accessible share control for sanitized Fatwa PDF URLs that uses native device sharing when available and a clear copy-link fallback without constructing or exposing raw document URLs.
+- [x] Add focused regression coverage and verify direct archive/detail PDF actions plus the new share control at desktop and mobile widths.
+- [x] Save and publish the verified privacy-safe Fatwa PDF sharing checkpoint.
