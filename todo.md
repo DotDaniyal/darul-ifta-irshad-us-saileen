@@ -347,3 +347,12 @@
 - [x] Prepare English translation entries only as review-required drafts unless authoritative approved translations are supplied; do not represent drafts as scholarly approved or overwrite Urdu originals.
 - [x] Add deterministic coverage for language switching, refresh persistence, direct detail routes, both-language search and categories, review status, desktop/mobile layouts, and preserved privacy-safe PDF links.
 - [x] Document the scholar-review and publication workflow for English Fatwa translations, then save and publish the verified bilingual Fatwa foundation checkpoint.
+
+## Comprehensive Evidence-Based Project Audit Checklist
+
+- [x] Establish a fresh baseline of repository state, project structure, dependencies, scripts, routes, active assets, diagnostics, test coverage, type checking, production build, and production dependency audit.
+- [x] Audit public and protected routes, navigation, links, menus, forms, search, filters, buttons, API/data flows, error states, accessibility semantics, responsive layouts, and asset delivery without assuming faults.
+- [x] Scan for confirmed unused imports, dead code, duplicated logic, redundant CSS, unsafe user-input handling, secret exposure, avoidable console output, and dependencies that are demonstrably unused or insecure.
+- [x] Fix only verified functional, accessibility, performance, security, or maintainability defects while preserving established design, routes, content, privacy-safe Fatwa controls, and working features.
+- [x] Add or update targeted regression coverage, then complete release checks across desktop, tablet, mobile, public routes, protected flows, diagnostics, TypeScript, production build, and dependency audit.
+- [x] Document verified findings, actual fixes, preserved safeguards, remaining non-blocking limitations, and save the audited release checkpoint.
