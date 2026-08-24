@@ -460,3 +460,14 @@
 - [x] Cover public, admin, privacy, upload, scheduled publishing, RTL, search, category, duplication, pagination, and status workflows with focused automated tests.
 - [x] Verify desktop, tablet, mobile, diagnostics, TypeScript, production build, dependency audit, database migration, public and protected flows, and release integrity.
 - [x] Publish the verified Daily Posts system checkpoint.
+
+## WhatsApp-Origin Daily Posts Integration Checklist
+
+- [x] Record the official WhatsApp Channel capability assessment and retain a policy-compliant no-scraping boundary.
+- [x] Confirm the preferred supported fallback workflow for bringing WhatsApp Channel content into Daily Posts.
+- [x] Add source, source-post identifier, original source URL, import timestamp, source publication timestamp, duplicate-protection, import status, and failure-history persistence without exposing private credentials.
+- [x] Extend the protected Daily Posts Management area with WhatsApp-origin connection status, auto-publish preference, manual import, import history, failure visibility, retry guidance, and duplicate feedback.
+- [x] Preserve imported multilingual text, publication metadata, source link, managed media, RTL display, and WhatsApp sharing in public Daily Posts without redesigning unrelated pages.
+- [x] Add focused tests for supported manual imports, duplicate rejection, auto-publish settings, failed imports, source attribution, public visibility, and access controls.
+- [x] Verify responsive public/admin flows, database migration, diagnostics, TypeScript, build, dependency audit, integrity, and publication.
+- [x] Publish the verified WhatsApp-origin Daily Posts workflow checkpoint.

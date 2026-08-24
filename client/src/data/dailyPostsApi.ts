@@ -19,6 +19,13 @@ export type DailyPost = {
   id: number;
   slug: string;
   status: DailyPostStatus;
+  source: "manual" | "whatsapp_channel";
+  sourcePostId: string | null;
+  sourceMediaIdentifier: string | null;
+  originalPostUrl: string | null;
+  sourceCaption: string | null;
+  sourcePublishedAt: string | null;
+  importedAt: string | null;
   categoryId: number | null;
   category: Pick<DailyPostCategory, "id" | "slug" | "nameEn" | "nameUr" | "nameAr"> | null;
   authorName: string | null;
@@ -51,6 +58,9 @@ export type DailyPost = {
 
 export type DailyPostPage = { items: DailyPost[]; page: number; pageSize: number; total: number };
 export type DailyPostUpload = { key: string; url: string; fileName: string; mimeType: string; byteSize: number };
+export type WhatsappImportSettings = { id: number; channelUrl: string; importMode: "manual_only"; autoPublish: boolean; isEnabled: boolean; lastImportAt: string | null; importedPostsCount: number; failedImportsCount: number; lastFailureMessage: string | null; updatedAt: string };
+export type WhatsappImportHistory = { id: number; dailyPostId: number | null; source: "whatsapp_channel"; sourcePostId: string; sourceMediaIdentifier: string | null; originalPostUrl: string | null; sourcePublishedAt: string | null; status: "imported" | "duplicate" | "failed"; errorMessage: string | null; importedAt: string };
+export type WhatsappImportPayload = { sourcePostId: string; sourceMediaIdentifier?: string | null; originalPostUrl?: string | null; sourcePublishedAt?: string | null; language: "en" | "ur" | "ar"; title: string; content: string; caption?: string | null; categoryId?: number | null; authorName?: string | null; featuredImageStorageKey?: string | null; featuredImageUrl?: string | null; featuredImageAlt?: string | null };
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const response = await fetch(path, init);
@@ -98,6 +108,10 @@ export const dailyPostsAdminApi = {
   updateCategory: (key: string, id: number, body: Record<string, unknown>) => adminRequest<DailyPostCategory>(key, `/api/admin/daily-post-categories/${id}`, { method: "PATCH", body: JSON.stringify(body) }),
   removeCategory: (key: string, id: number) => adminRequest<void>(key, `/api/admin/daily-post-categories/${id}`, { method: "DELETE" }),
   upload: (key: string, body: { kind: "image" | "attachment"; fileName: string; mimeType: string; base64: string }) => adminRequest<DailyPostUpload>(key, "/api/admin/daily-posts/upload", { method: "POST", body: JSON.stringify(body) }),
+  whatsappImportStatus: (key: string) => adminRequest<{ settings: WhatsappImportSettings; history: WhatsappImportHistory[] }>(key, "/api/admin/daily-posts/whatsapp-import"),
+  updateWhatsappImportSettings: (key: string, body: { autoPublish?: boolean; isEnabled?: boolean }) => adminRequest<WhatsappImportSettings>(key, "/api/admin/daily-posts/whatsapp-import/settings", { method: "PATCH", body: JSON.stringify(body) }),
+  checkWhatsappImportCapability: (key: string) => adminRequest<{ mode: "manual_only"; settings: WhatsappImportSettings; message: string }>(key, "/api/admin/daily-posts/whatsapp-import/check", { method: "POST" }),
+  importWhatsappPost: (key: string, body: WhatsappImportPayload) => adminRequest<{ kind: "imported" | "duplicate"; post: DailyPost }>(key, "/api/admin/daily-posts/whatsapp-import", { method: "POST", body: JSON.stringify(body) }),
 };
 
 export function useDailyPostCategories() {

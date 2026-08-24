@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { parseDailyPostCategoryInput, parseDailyPostInput, slugifyDailyPost } from "./dailyPosts";
+import { parseDailyPostCategoryInput, parseDailyPostInput, parseWhatsappImportInput, slugifyDailyPost } from "./dailyPosts";
 
 const app = readFileSync(new URL("./app.ts", import.meta.url), "utf8");
 const storage = readFileSync(new URL("./storage.ts", import.meta.url), "utf8");
@@ -39,6 +39,36 @@ describe("Daily Posts server validation and publication boundary", () => {
     expect(app).toContain('api.post("/api/admin/daily-posts/upload", requireAdministrator');
     expect(app).toContain('api.post("/api/admin/daily-posts/:id/duplicate", requireAdministrator');
     expect(app).toContain('api.get("/api/admin/daily-post-categories", requireAdministrator');
+    expect(app).toContain('api.get("/api/admin/daily-posts/whatsapp-import", requireAdministrator');
+    expect(app).toContain('api.post("/api/admin/daily-posts/whatsapp-import", requireAdministrator');
+    expect(app).toContain('api.patch("/api/admin/daily-posts/whatsapp-import/settings", requireAdministrator');
+  });
+
+  it("accepts administrator-supplied multilingual WhatsApp-origin content only with a stable reference and official WhatsApp source URL", () => {
+    const input = parseWhatsappImportInput({
+      sourcePostId: "official-channel-20260824-001",
+      originalPostUrl: "https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q",
+      sourcePublishedAt: "2026-08-24T09:00:00.000Z",
+      language: "ur",
+      title: "اہم اعلان",
+      content: "یہ محفوظ دستی درآمد کا متن ہے۔",
+      caption: "اطلاع",
+    });
+    expect(input).toMatchObject({ sourcePostId: "official-channel-20260824-001", language: "ur", title: "اہم اعلان" });
+    expect(input?.sourcePublishedAt).toBeInstanceOf(Date);
+    expect(parseWhatsappImportInput({ sourcePostId: "ref", originalPostUrl: "https://untrusted.example/post", language: "en", title: "Post", content: "Body" })).toBeUndefined();
+    expect(parseWhatsappImportInput({ originalPostUrl: "https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q", language: "en", title: "Post", content: "Body" })).toBeUndefined();
+  });
+
+  it("retains a no-scraping manual-only import boundary with duplicate and failure history support", () => {
+    const service = readFileSync(new URL("./dailyPosts.ts", import.meta.url), "utf8");
+    const schema = readFileSync(new URL("../drizzle/schema.ts", import.meta.url), "utf8");
+    expect(service).toContain('importMode: "manual_only"');
+    expect(service).toContain('status: "duplicate"');
+    expect(service).toContain("recordWhatsappImportFailure");
+    expect(schema).toContain('uniqueIndex("daily_posts_source_post_unique")');
+    expect(schema).toContain("whatsappChannelImportSettings");
+    expect(schema).toContain("dailyPostImports");
   });
 
   it("limits upload types and routes managed bytes through presigned storage rather than local files", () => {

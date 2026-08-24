@@ -8,6 +8,7 @@ const listing = readFileSync(new URL("./DailyPosts.tsx", import.meta.url), "utf8
 const detail = readFileSync(new URL("./DailyPostDetail.tsx", import.meta.url), "utf8");
 const admin = readFileSync(new URL("./DailyPostsAdmin.tsx", import.meta.url), "utf8");
 const content = readFileSync(new URL("../components/DailyPostContent.tsx", import.meta.url), "utf8");
+const importQueue = readFileSync(new URL("../components/WhatsappImportQueue.tsx", import.meta.url), "utf8");
 
 describe("Daily Posts public and management UI", () => {
   it("registers lazy-loaded public listing, detail, and protected management routes", () => {
@@ -52,5 +53,24 @@ describe("Daily Posts public and management UI", () => {
     expect(admin).toContain('dailyPostsAdminApi.createCategory');
     expect(admin).toContain('DailyPostContent');
     expect(admin).toContain('(["En", "Ur", "Ar"] as const)');
+  });
+
+  it("adds a compliant administrator-only Guided Import Queue without a Channel scraping client", () => {
+    expect(admin).toContain("WhatsappImportQueue");
+    expect(importQueue).toContain("dailyPostsAdminApi.importWhatsappPost");
+    expect(importQueue).toContain("dailyPostsAdminApi.updateWhatsappImportSettings");
+    expect(importQueue).toContain("dailyPostsAdminApi.checkWhatsappImportCapability");
+    expect(importQueue).toContain("sourcePostId");
+    expect(importQueue).toContain("Manual import mode");
+    expect(importQueue).toContain("No imports have been recorded yet.");
+    expect(importQueue).not.toContain("fetch(\"https://whatsapp.com");
+  });
+
+  it("shows WhatsApp-origin source attribution and a WhatsApp share action on the public reader", () => {
+    expect(detail).toContain('post.source === "whatsapp_channel"');
+    expect(detail).toContain("post.originalPostUrl");
+    expect(detail).toContain("post.sourcePublishedAt");
+    expect(detail).toContain("https://wa.me/?text=");
+    expect(detail).toContain("shareWhatsapp");
   });
 });

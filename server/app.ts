@@ -3,7 +3,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createDailyPostStorageKey, storagePut } from "./storage";
-import { createDailyPost, createDailyPostCategory, deleteDailyPost, deleteDailyPostCategory, duplicateDailyPost, getAdminDailyPost, getPublicDailyPost, listAdminDailyPostCategories, listAdminDailyPosts, listPublicDailyPostCategories, listPublicDailyPosts, listRelatedPublicDailyPosts, parseDailyPostCategoryInput, parseDailyPostInput, updateDailyPost, updateDailyPostCategory } from "./dailyPosts";
+import { createDailyPost, createDailyPostCategory, deleteDailyPost, deleteDailyPostCategory, duplicateDailyPost, getAdminDailyPost, getPublicDailyPost, getWhatsappChannelImportSettings, importWhatsappChannelPost, listAdminDailyPostCategories, listAdminDailyPosts, listPublicDailyPostCategories, listPublicDailyPosts, listRelatedPublicDailyPosts, listWhatsappChannelImportHistory, parseDailyPostCategoryInput, parseDailyPostInput, parseWhatsappImportInput, recordWhatsappImportFailure, updateDailyPost, updateDailyPostCategory, updateWhatsappChannelImportSettings } from "./dailyPosts";
 import { getInstitutionalDateStatus } from "./institutionalDate";
 import { createScholar, deleteScholar, getPublishedScholar, getScholarById, listAllScholars, listPublishedScholars, parseScholarInput, updateScholar } from "./scholars";
 
@@ -136,6 +136,37 @@ export function createScholarApi() {
   });
 
   api.get("/api/admin/daily-posts-session", requireAdministrator, (_req, res) => res.status(204).end());
+  api.get("/api/admin/daily-posts/whatsapp-import", requireAdministrator, async (_req, res) => {
+    try { return res.json({ settings: await getWhatsappChannelImportSettings(), history: await listWhatsappChannelImportHistory() }); }
+    catch { return res.status(503).json({ error: "WhatsApp-origin import settings are temporarily unavailable." }); }
+  });
+  api.patch("/api/admin/daily-posts/whatsapp-import/settings", requireAdministrator, async (req, res) => {
+    const body = req.body as { autoPublish?: unknown; isEnabled?: unknown };
+    const input = { autoPublish: typeof body.autoPublish === "boolean" ? body.autoPublish : undefined, isEnabled: typeof body.isEnabled === "boolean" ? body.isEnabled : undefined };
+    if (input.autoPublish === undefined && input.isEnabled === undefined) return res.status(400).json({ error: "Choose an import setting to update." });
+    try { return res.json(await updateWhatsappChannelImportSettings(input)); }
+    catch { return res.status(503).json({ error: "Import settings could not be updated." }); }
+  });
+  api.post("/api/admin/daily-posts/whatsapp-import/check", requireAdministrator, async (_req, res) => {
+    try { return res.json({ mode: "manual_only", settings: await getWhatsappChannelImportSettings(), message: "WhatsApp Channel post reading is not available through the supported API boundary; use the guided import form." }); }
+    catch { return res.status(503).json({ error: "Import status could not be checked." }); }
+  });
+  api.post("/api/admin/daily-posts/whatsapp-import", requireAdministrator, async (req, res) => {
+    const input = parseWhatsappImportInput(req.body);
+    if (!input) {
+      const reference = typeof (req.body as { sourcePostId?: unknown })?.sourcePostId === "string" ? (req.body as { sourcePostId: string }).sourcePostId : "invalid-reference";
+      await recordWhatsappImportFailure(reference, "Provide a source reference, language, title, and content; any image must first be uploaded through managed storage.");
+      return res.status(400).json({ error: "Provide a source reference, language, title, and content. Use managed storage for optional images." });
+    }
+    try {
+      const result = await importWhatsappChannelPost(input);
+      if (result.kind === "disabled") return res.status(409).json({ error: "The WhatsApp-origin import queue is currently switched off." });
+      return res.status(result.kind === "imported" ? 201 : 200).json(result);
+    } catch {
+      await recordWhatsappImportFailure(input.sourcePostId, "The import could not be completed. No partial Daily Post was published.");
+      return res.status(503).json({ error: "The import could not be completed. No partial Daily Post was published." });
+    }
+  });
   api.get("/api/admin/daily-posts", requireAdministrator, async (req, res) => {
     const status = req.query.status === "draft" || req.query.status === "published" || req.query.status === "unpublished" ? req.query.status : undefined;
     const categoryId = Number(req.query.categoryId);

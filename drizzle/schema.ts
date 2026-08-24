@@ -242,6 +242,13 @@ export const dailyPosts = mysqlTable("dailyPosts", {
   id: int("id").autoincrement().primaryKey(),
   slug: varchar("slug", { length: 160 }).notNull().unique(),
   status: mysqlEnum("status", ["draft", "published", "unpublished"]).default("draft").notNull(),
+  source: mysqlEnum("source", ["manual", "whatsapp_channel"]).default("manual").notNull(),
+  sourcePostId: varchar("sourcePostId", { length: 255 }),
+  sourceMediaIdentifier: varchar("sourceMediaIdentifier", { length: 255 }),
+  originalPostUrl: varchar("originalPostUrl", { length: 512 }),
+  sourceCaption: text("sourceCaption"),
+  sourcePublishedAt: timestamp("sourcePublishedAt"),
+  importedAt: timestamp("importedAt"),
   categoryId: int("categoryId").references(() => dailyPostCategories.id, { onDelete: "set null" }),
   authorName: varchar("authorName", { length: 180 }),
   titleEn: varchar("titleEn", { length: 300 }),
@@ -275,9 +282,45 @@ export const dailyPosts = mysqlTable("dailyPosts", {
   index("daily_posts_publication_idx").on(table.status, table.scheduledAt, table.publishedAt),
   index("daily_posts_category_publication_idx").on(table.categoryId, table.status, table.publishedAt),
   index("daily_posts_created_idx").on(table.createdAt),
+  uniqueIndex("daily_posts_source_post_unique").on(table.source, table.sourcePostId),
+  index("daily_posts_source_publication_idx").on(table.source, table.sourcePublishedAt),
+]);
+
+/** Singleton administrative settings for a policy-compliant WhatsApp Channel import queue. No tokens or credentials are stored here. */
+export const whatsappChannelImportSettings = mysqlTable("whatsappChannelImportSettings", {
+  id: int("id").autoincrement().primaryKey(),
+  channelUrl: varchar("channelUrl", { length: 512 }).notNull(),
+  importMode: mysqlEnum("importMode", ["manual_only"]).default("manual_only").notNull(),
+  autoPublish: boolean("autoPublish").default(true).notNull(),
+  isEnabled: boolean("isEnabled").default(true).notNull(),
+  lastImportAt: timestamp("lastImportAt"),
+  importedPostsCount: int("importedPostsCount").default(0).notNull(),
+  failedImportsCount: int("failedImportsCount").default(0).notNull(),
+  lastFailureMessage: varchar("lastFailureMessage", { length: 500 }),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+/** Append-only record of every administrator-triggered import, duplicate skip, or rejected import attempt. */
+export const dailyPostImports = mysqlTable("dailyPostImports", {
+  id: int("id").autoincrement().primaryKey(),
+  dailyPostId: int("dailyPostId").references(() => dailyPosts.id, { onDelete: "set null" }),
+  initiatedById: int("initiatedById").references(() => users.id, { onDelete: "set null" }),
+  source: mysqlEnum("source", ["whatsapp_channel"]).default("whatsapp_channel").notNull(),
+  sourcePostId: varchar("sourcePostId", { length: 255 }).notNull(),
+  sourceMediaIdentifier: varchar("sourceMediaIdentifier", { length: 255 }),
+  originalPostUrl: varchar("originalPostUrl", { length: 512 }),
+  sourcePublishedAt: timestamp("sourcePublishedAt"),
+  status: mysqlEnum("status", ["imported", "duplicate", "failed"]).notNull(),
+  errorMessage: varchar("errorMessage", { length: 500 }),
+  importedAt: timestamp("importedAt").defaultNow().notNull(),
+}, table => [
+  index("daily_post_imports_source_reference_idx").on(table.source, table.sourcePostId),
+  index("daily_post_imports_status_time_idx").on(table.status, table.importedAt),
 ]);
 
 export type DailyPostCategory = typeof dailyPostCategories.$inferSelect;
 export type InsertDailyPostCategory = typeof dailyPostCategories.$inferInsert;
 export type DailyPost = typeof dailyPosts.$inferSelect;
 export type InsertDailyPost = typeof dailyPosts.$inferInsert;
+export type WhatsappChannelImportSettings = typeof whatsappChannelImportSettings.$inferSelect;
+export type DailyPostImport = typeof dailyPostImports.$inferSelect;

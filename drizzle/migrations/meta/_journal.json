@@ -15,6 +15,13 @@
       "when": 1787549654525,
       "tag": "0001_crazy_firelord",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787551182609,
+      "tag": "0002_careless_doomsday",
+      "breakpoints": true
     }
   ]
 }

@@ -1,9 +1,11 @@
 import { and, asc, count, desc, eq, isNotNull, like, lte, ne, or, sql } from "drizzle-orm";
-import { dailyPostCategories, dailyPosts, type InsertDailyPost, type InsertDailyPostCategory } from "../drizzle/schema";
+import { dailyPostCategories, dailyPostImports, dailyPosts, whatsappChannelImportSettings, type InsertDailyPost, type InsertDailyPostCategory } from "../drizzle/schema";
 import { getDb } from "./db";
 
 export type DailyPostStatus = "draft" | "published" | "unpublished";
 export type DailyPostSort = "newest" | "oldest";
+
+const officialWhatsappChannelUrl = "https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q";
 
 const defaultCategories: Array<InsertDailyPostCategory> = [
   { slug: "islamic-reminder", nameEn: "Islamic Reminder", nameUr: "اسلامی یاددہانی", nameAr: "تذكرة إسلامية", sortOrder: 10, isActive: true },
@@ -19,6 +21,13 @@ const postFields = {
   id: dailyPosts.id,
   slug: dailyPosts.slug,
   status: dailyPosts.status,
+  source: dailyPosts.source,
+  sourcePostId: dailyPosts.sourcePostId,
+  sourceMediaIdentifier: dailyPosts.sourceMediaIdentifier,
+  originalPostUrl: dailyPosts.originalPostUrl,
+  sourceCaption: dailyPosts.sourceCaption,
+  sourcePublishedAt: dailyPosts.sourcePublishedAt,
+  importedAt: dailyPosts.importedAt,
   categoryId: dailyPosts.categoryId,
   authorName: dailyPosts.authorName,
   titleEn: dailyPosts.titleEn,
@@ -81,6 +90,18 @@ function optionalStorageUrl(value: unknown) {
   return parsed?.startsWith("/manus-storage/") ? parsed : undefined;
 }
 
+function optionalOfficialWhatsappUrl(value: unknown) {
+  const parsed = optionalString(value, 512);
+  if (parsed === null) return null;
+  if (!parsed) return undefined;
+  try {
+    const url = new URL(parsed);
+    return url.protocol === "https:" && (url.hostname === "whatsapp.com" || url.hostname === "www.whatsapp.com") ? url.toString() : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function parseId(value: unknown) {
   if (value === null || value === "") return null;
   const number = typeof value === "number" ? value : Number(value);
@@ -126,6 +147,14 @@ export function parseDailyPostInput(body: unknown, partial = false): Partial<Ins
   for (const field of ["featuredImageUrl", "attachmentUrl"] as const) {
     if (field in data) { const value = optionalStorageUrl(data[field]); if (value !== undefined) output[field] = value; }
   }
+  for (const field of ["sourcePostId", "sourceMediaIdentifier"] as const) {
+    if (field in data) { const value = optionalString(data[field], 255); if (value !== undefined) output[field] = value; }
+  }
+  if ("originalPostUrl" in data) { const value = optionalOfficialWhatsappUrl(data.originalPostUrl); if (value !== undefined) output.originalPostUrl = value; }
+  if ("sourceCaption" in data) { const value = optionalString(data.sourceCaption, 12_000); if (value !== undefined) output.sourceCaption = value; }
+  for (const field of ["sourcePublishedAt", "importedAt"] as const) {
+    if (field in data) { const value = parseDate(data[field]); if (value !== undefined) output[field] = value; }
+  }
   if ("categoryId" in data) { const value = parseId(data.categoryId); if (value !== undefined) output.categoryId = value; }
   if ("scheduledAt" in data) { const value = parseDate(data.scheduledAt); if (value !== undefined) output.scheduledAt = value; }
   if ("status" in data) { const value = parseStatus(data.status); if (value) output.status = value; }
@@ -137,6 +166,42 @@ export function parseDailyPostInput(body: unknown, partial = false): Partial<Ins
     if (!output.slug) output.slug = slugifyDailyPost(String(output.titleEn || output.titleUr || output.titleAr));
   }
   return Object.keys(output).length ? output : undefined;
+}
+
+export type WhatsappImportInput = {
+  sourcePostId: string;
+  sourceMediaIdentifier?: string | null;
+  originalPostUrl?: string | null;
+  sourcePublishedAt?: Date | null;
+  language: "en" | "ur" | "ar";
+  title: string;
+  content: string;
+  caption?: string | null;
+  categoryId?: number | null;
+  authorName?: string | null;
+  featuredImageStorageKey?: string | null;
+  featuredImageUrl?: string | null;
+  featuredImageAlt?: string | null;
+};
+
+export function parseWhatsappImportInput(body: unknown): WhatsappImportInput | undefined {
+  if (!body || typeof body !== "object" || Array.isArray(body)) return undefined;
+  const data = body as Record<string, unknown>;
+  const sourcePostId = cleanString(data.sourcePostId, 255);
+  const language = data.language === "ur" || data.language === "ar" || data.language === "en" ? data.language : undefined;
+  const title = cleanString(data.title, 300);
+  const content = cleanString(data.content, 60_000);
+  const caption = data.caption === undefined ? null : optionalString(data.caption, 12_000);
+  const originalPostUrl = data.originalPostUrl === undefined ? null : optionalOfficialWhatsappUrl(data.originalPostUrl);
+  const sourceMediaIdentifier = data.sourceMediaIdentifier === undefined ? null : optionalString(data.sourceMediaIdentifier, 255);
+  const sourcePublishedAt = data.sourcePublishedAt === undefined ? null : parseDate(data.sourcePublishedAt);
+  const categoryId = data.categoryId === undefined ? null : parseId(data.categoryId);
+  const authorName = data.authorName === undefined ? null : optionalString(data.authorName, 180);
+  const featuredImageStorageKey = data.featuredImageStorageKey === undefined ? null : optionalString(data.featuredImageStorageKey, 512);
+  const featuredImageUrl = data.featuredImageUrl === undefined ? null : optionalStorageUrl(data.featuredImageUrl);
+  const featuredImageAlt = data.featuredImageAlt === undefined ? null : optionalString(data.featuredImageAlt, 300);
+  if (!sourcePostId || !language || !title || !content || caption === undefined || originalPostUrl === undefined || sourceMediaIdentifier === undefined || sourcePublishedAt === undefined || categoryId === undefined || authorName === undefined || featuredImageStorageKey === undefined || featuredImageUrl === undefined || featuredImageAlt === undefined) return undefined;
+  return { sourcePostId, language, title, content, caption, originalPostUrl, sourceMediaIdentifier, sourcePublishedAt, categoryId, authorName, featuredImageStorageKey, featuredImageUrl, featuredImageAlt };
 }
 
 export function parseDailyPostCategoryInput(body: unknown, partial = false): Partial<InsertDailyPostCategory> | undefined {
@@ -159,6 +224,60 @@ export async function publishDueDailyPosts(now = new Date()) {
     status: "published",
     publishedAt: sql`coalesce(${dailyPosts.publishedAt}, ${dailyPosts.scheduledAt})`,
   }).where(and(eq(dailyPosts.status, "draft"), isNotNull(dailyPosts.scheduledAt), lte(dailyPosts.scheduledAt, now)));
+}
+
+export async function getWhatsappChannelImportSettings() {
+  const db = getDb();
+  const [existing] = await db.select().from(whatsappChannelImportSettings).limit(1);
+  if (existing) return existing;
+  const result = await db.insert(whatsappChannelImportSettings).values({ channelUrl: officialWhatsappChannelUrl, importMode: "manual_only", autoPublish: true, isEnabled: true }).$returningId();
+  const [created] = await db.select().from(whatsappChannelImportSettings).where(eq(whatsappChannelImportSettings.id, result[0]!.id)).limit(1);
+  return created!;
+}
+
+export async function updateWhatsappChannelImportSettings(input: { autoPublish?: boolean; isEnabled?: boolean }) {
+  const settings = await getWhatsappChannelImportSettings();
+  const values: { autoPublish?: boolean; isEnabled?: boolean } = {};
+  if (typeof input.autoPublish === "boolean") values.autoPublish = input.autoPublish;
+  if (typeof input.isEnabled === "boolean") values.isEnabled = input.isEnabled;
+  if (Object.keys(values).length) await getDb().update(whatsappChannelImportSettings).set(values).where(eq(whatsappChannelImportSettings.id, settings.id));
+  return getWhatsappChannelImportSettings();
+}
+
+export async function listWhatsappChannelImportHistory(limit = 30) {
+  return getDb().select().from(dailyPostImports).orderBy(desc(dailyPostImports.importedAt)).limit(Math.min(100, Math.max(1, limit)));
+}
+
+async function logWhatsappImport(input: { dailyPostId?: number | null; sourcePostId: string; sourceMediaIdentifier?: string | null; originalPostUrl?: string | null; sourcePublishedAt?: Date | null; status: "imported" | "duplicate" | "failed"; errorMessage?: string | null }) {
+  await getDb().insert(dailyPostImports).values({ dailyPostId: input.dailyPostId ?? null, sourcePostId: input.sourcePostId, sourceMediaIdentifier: input.sourceMediaIdentifier ?? null, originalPostUrl: input.originalPostUrl ?? null, sourcePublishedAt: input.sourcePublishedAt ?? null, status: input.status, errorMessage: input.errorMessage ?? null });
+}
+
+export async function recordWhatsappImportFailure(sourcePostId: string, errorMessage: string) {
+  const reference = cleanString(sourcePostId, 255) || "invalid-reference";
+  await logWhatsappImport({ sourcePostId: reference, status: "failed", errorMessage: errorMessage.slice(0, 500) });
+  const settings = await getWhatsappChannelImportSettings();
+  await getDb().update(whatsappChannelImportSettings).set({ failedImportsCount: settings.failedImportsCount + 1, lastFailureMessage: errorMessage.slice(0, 500) }).where(eq(whatsappChannelImportSettings.id, settings.id));
+}
+
+export async function importWhatsappChannelPost(input: WhatsappImportInput) {
+  const settings = await getWhatsappChannelImportSettings();
+  if (!settings.isEnabled) {
+    await logWhatsappImport({ sourcePostId: input.sourcePostId, sourceMediaIdentifier: input.sourceMediaIdentifier, originalPostUrl: input.originalPostUrl, sourcePublishedAt: input.sourcePublishedAt, status: "failed", errorMessage: "The WhatsApp-origin import queue is currently switched off." });
+    return { kind: "disabled" as const };
+  }
+  const [existing] = await getDb().select().from(dailyPosts).where(and(eq(dailyPosts.source, "whatsapp_channel"), eq(dailyPosts.sourcePostId, input.sourcePostId))).limit(1);
+  if (existing) {
+    await logWhatsappImport({ dailyPostId: existing.id, sourcePostId: input.sourcePostId, sourceMediaIdentifier: input.sourceMediaIdentifier, originalPostUrl: input.originalPostUrl, sourcePublishedAt: input.sourcePublishedAt, status: "duplicate", errorMessage: "A Daily Post with this WhatsApp source reference already exists." });
+    return { kind: "duplicate" as const, post: existing };
+  }
+  const localeTitle = input.language === "ur" ? { titleUr: input.title } : input.language === "ar" ? { titleAr: input.title } : { titleEn: input.title };
+  const localeContent = input.language === "ur" ? { contentUr: input.content, excerptUr: input.caption || input.content.slice(0, 240) } : input.language === "ar" ? { contentAr: input.content, excerptAr: input.caption || input.content.slice(0, 240) } : { contentEn: input.content, excerptEn: input.caption || input.content.slice(0, 240) };
+  const localeAlt = input.language === "ur" ? { featuredImageAltUr: input.featuredImageAlt } : input.language === "ar" ? { featuredImageAltAr: input.featuredImageAlt } : { featuredImageAltEn: input.featuredImageAlt };
+  const post = await createDailyPost({ slug: slugifyDailyPost(`whatsapp-${input.sourcePostId}`), status: settings.autoPublish ? "published" : "draft", source: "whatsapp_channel", sourcePostId: input.sourcePostId, sourceMediaIdentifier: input.sourceMediaIdentifier || null, originalPostUrl: input.originalPostUrl || officialWhatsappChannelUrl, sourceCaption: input.caption || null, sourcePublishedAt: input.sourcePublishedAt || new Date(), importedAt: new Date(), categoryId: input.categoryId || null, authorName: input.authorName || "WhatsApp Channel", featuredImageStorageKey: input.featuredImageStorageKey || null, featuredImageUrl: input.featuredImageUrl || null, ...localeTitle, ...localeContent, ...localeAlt });
+  if (!post) throw new Error("The imported Daily Post could not be created.");
+  await logWhatsappImport({ dailyPostId: post.id, sourcePostId: input.sourcePostId, sourceMediaIdentifier: input.sourceMediaIdentifier, originalPostUrl: input.originalPostUrl, sourcePublishedAt: input.sourcePublishedAt, status: "imported" });
+  await getDb().update(whatsappChannelImportSettings).set({ lastImportAt: new Date(), importedPostsCount: settings.importedPostsCount + 1, lastFailureMessage: null }).where(eq(whatsappChannelImportSettings.id, settings.id));
+  return { kind: "imported" as const, post };
 }
 
 export async function ensureDailyPostCategories() {
@@ -277,6 +396,13 @@ export async function duplicateDailyPost(id: number) {
     id: undefined,
     slug: `${source.slug}-copy-${Date.now().toString(36)}`.slice(0, 160),
     status: "draft",
+    source: "manual",
+    sourcePostId: null,
+    sourceMediaIdentifier: null,
+    originalPostUrl: null,
+    sourceCaption: null,
+    sourcePublishedAt: null,
+    importedAt: null,
     scheduledAt: null,
     publishedAt: null,
     createdAt: undefined,
