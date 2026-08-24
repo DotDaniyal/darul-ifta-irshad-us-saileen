@@ -479,7 +479,7 @@
 - [x] Add the minimum Vercel build/runtime configuration required for the existing Vite and Express application without changing public site behavior.
 - [x] Validate clean dependency installation, production build, tests, TypeScript, audit, and configuration integrity in a Vercel-like environment.
 - [ ] Commit and push the verified external deployment fixes to the connected GitHub `main` branch.
-- [ ] Publish the verified external-deployment compatibility checkpoint.
+- [x] Publish the verified external-deployment compatibility checkpoint.
 
 ## Comprehensive GitHub and Vercel Production Audit Checklist
 
@@ -489,3 +489,10 @@
 - [x] Repair every confirmed production issue without changing established design, branding, content, public routes, Fatwa privacy controls, or Daily Posts workflows.
 - [x] Validate a clean frozen dependency install, strict TypeScript, full tests, production build, dependency audit, integrity, public/protected API flows, direct-route behavior, responsive presentation, and fresh diagnostics.
 - [x] Publish the verified comprehensive production-audit checkpoint and prepare the corrected GitHub commit for synchronization once repository write access is restored.
+
+## Active Error Remediation Checklist
+
+- [x] Inspect fresh build, runtime, browser, network, API, route, and Vercel configuration diagnostics; separate historical tooling notices from active application errors.
+- [x] Fix every confirmed application or Vercel deployment error without changing existing design, content, public flows, security controls, or data; the fresh audit found no active errors requiring code changes.
+- [x] Re-run complete build, test, TypeScript, API, responsive, and diagnostic verification after remediation.
+- [x] Publish the verified active error-remediation checkpoint.
