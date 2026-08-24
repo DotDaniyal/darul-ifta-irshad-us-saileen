@@ -446,3 +446,17 @@
 - [x] Add the established Online Bayan Mixlr event as a dedicated accessible contact card in the homepage Contact section, while preserving existing contact cards.
 - [x] Add focused regression coverage and verify responsive presentation, release validation, and diagnostics.
 - [x] Publish the verified homepage Online Bayan contact-card update in a checkpoint.
+
+## Daily Posts Publishing System Checklist
+
+- [x] Inspect and document the existing public routes, scholar administration security, database patterns, upload helpers, and scheduled-work support to preserve established behavior.
+- [x] Confirm the preferred server-side scheduling approach for future-dated Daily Posts before enabling automatic publication.
+- [x] Add persistent Daily Posts and manageable category data structures with draft, published, unpublished, and scheduled-publication states.
+- [x] Implement protected administrator APIs for Daily Post and category create, edit, duplicate, publish, unpublish, delete, search, filter, sort, preview, and upload operations.
+- [x] Implement a professional bilingual Urdu/Arabic/English Daily Post editor with semantic rich-text formatting, RTL controls, optional featured image, PDF attachment, author, category, date, and excerpt support.
+- [x] Build responsive public Daily Posts list and individual SEO-friendly post routes with pagination, search, category filtering, sharing, attachments, related content, and published-only visibility.
+- [x] Add a restrained Latest Daily Posts homepage section and an accessible Daily Posts navigation entry without disturbing existing page content or Fatwa workflows.
+- [x] Build the authenticated responsive Daily Posts Management area and retain the existing scholar management area.
+- [x] Cover public, admin, privacy, upload, scheduled publishing, RTL, search, category, duplication, pagination, and status workflows with focused automated tests.
+- [x] Verify desktop, tablet, mobile, diagnostics, TypeScript, production build, dependency audit, database migration, public and protected flows, and release integrity.
+- [x] Publish the verified Daily Posts system checkpoint.

@@ -4,7 +4,8 @@ import react from "@vitejs/plugin-react";
 import express from "express";
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig, type Plugin, type ViteDevServer } from "vite";
+import { type Plugin, type ViteDevServer } from "vite";
+import { defineConfig } from "vitest/config";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 import { createScholarApi } from "./server/app";
 
@@ -220,6 +221,12 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
+  test: {
+    include: [
+      path.resolve(PROJECT_ROOT, "client", "src", "**", "*.test.ts"),
+      path.resolve(PROJECT_ROOT, "server", "**", "*.test.ts"),
+    ],
+  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

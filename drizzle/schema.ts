@@ -217,3 +217,67 @@ export const siteSettings = mysqlTable("siteSettings", {
   updatedById: int("updatedById").references(() => users.id, { onDelete: "set null" }),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
+
+/** Editorially managed taxonomy for Daily Posts. Labels support the website's English, Urdu, and Arabic reading contexts. */
+export const dailyPostCategories = mysqlTable("dailyPostCategories", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 96 }).notNull().unique(),
+  nameEn: varchar("nameEn", { length: 160 }).notNull(),
+  nameUr: varchar("nameUr", { length: 160 }),
+  nameAr: varchar("nameAr", { length: 160 }),
+  descriptionEn: text("descriptionEn"),
+  descriptionUr: text("descriptionUr"),
+  descriptionAr: text("descriptionAr"),
+  sortOrder: int("sortOrder").default(0).notNull(),
+  isActive: boolean("isActive").default(true).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [index("daily_post_categories_active_sort_idx").on(table.isActive, table.sortOrder)]);
+
+/**
+ * Public editorial posts. A future `scheduledAt` remains non-public until due;
+ * server-side release queries promote it to `published` atomically before public output.
+ */
+export const dailyPosts = mysqlTable("dailyPosts", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 160 }).notNull().unique(),
+  status: mysqlEnum("status", ["draft", "published", "unpublished"]).default("draft").notNull(),
+  categoryId: int("categoryId").references(() => dailyPostCategories.id, { onDelete: "set null" }),
+  authorName: varchar("authorName", { length: 180 }),
+  titleEn: varchar("titleEn", { length: 300 }),
+  titleUr: varchar("titleUr", { length: 300 }),
+  titleAr: varchar("titleAr", { length: 300 }),
+  excerptEn: text("excerptEn"),
+  excerptUr: text("excerptUr"),
+  excerptAr: text("excerptAr"),
+  contentEn: text("contentEn"),
+  contentUr: text("contentUr"),
+  contentAr: text("contentAr"),
+  featuredImageStorageKey: varchar("featuredImageStorageKey", { length: 512 }),
+  featuredImageUrl: varchar("featuredImageUrl", { length: 512 }),
+  featuredImageAltEn: varchar("featuredImageAltEn", { length: 300 }),
+  featuredImageAltUr: varchar("featuredImageAltUr", { length: 300 }),
+  featuredImageAltAr: varchar("featuredImageAltAr", { length: 300 }),
+  attachmentStorageKey: varchar("attachmentStorageKey", { length: 512 }),
+  attachmentUrl: varchar("attachmentUrl", { length: 512 }),
+  attachmentName: varchar("attachmentName", { length: 255 }),
+  attachmentMimeType: varchar("attachmentMimeType", { length: 120 }),
+  seoDescriptionEn: varchar("seoDescriptionEn", { length: 320 }),
+  seoDescriptionUr: varchar("seoDescriptionUr", { length: 320 }),
+  seoDescriptionAr: varchar("seoDescriptionAr", { length: 320 }),
+  scheduledAt: timestamp("scheduledAt"),
+  publishedAt: timestamp("publishedAt"),
+  createdById: int("createdById").references(() => users.id, { onDelete: "set null" }),
+  updatedById: int("updatedById").references(() => users.id, { onDelete: "set null" }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  index("daily_posts_publication_idx").on(table.status, table.scheduledAt, table.publishedAt),
+  index("daily_posts_category_publication_idx").on(table.categoryId, table.status, table.publishedAt),
+  index("daily_posts_created_idx").on(table.createdAt),
+]);
+
+export type DailyPostCategory = typeof dailyPostCategories.$inferSelect;
+export type InsertDailyPostCategory = typeof dailyPostCategories.$inferInsert;
+export type DailyPost = typeof dailyPosts.$inferSelect;
+export type InsertDailyPost = typeof dailyPosts.$inferInsert;

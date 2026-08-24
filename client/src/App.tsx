@@ -10,6 +10,9 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 const AskFatwa = lazy(() => import("./pages/AskFatwa"));
+const DailyPostDetail = lazy(() => import("./pages/DailyPostDetail"));
+const DailyPosts = lazy(() => import("./pages/DailyPosts"));
+const DailyPostsAdmin = lazy(() => import("./pages/DailyPostsAdmin"));
 const Fatawa = lazy(() => import("./pages/Fatawa"));
 const FatwaDetail = lazy(() => import("./pages/FatwaDetail"));
 const Methodology = lazy(() => import("./pages/Methodology"));
@@ -36,6 +39,9 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/fatawa"} component={Fatawa} />
         <Route path={"/fatawa/:slug"} component={FatwaDetail} />
+        <Route path={"/daily-posts"} component={DailyPosts} />
+        <Route path={"/daily-posts/:slug"} component={DailyPostDetail} />
+        <Route path={"/admin/daily-posts"} component={DailyPostsAdmin} />
         <Route path={"/scholars"} component={Scholars} />
         <Route path={"/scholars/admin"} component={ScholarAdmin} />
         <Route path={"/scholars/:slug"} component={ScholarProfile} />
