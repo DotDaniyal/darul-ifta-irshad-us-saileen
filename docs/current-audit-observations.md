@@ -1,6 +1,6 @@
 # Current Audit Observations
 
-**Review date:** 2026-08-22  
+**Review date:** 2026-08-22
 **Scope:** Current restored project state after checkpoint `c9a7c1d7`.
 
 ## Public-route visual review

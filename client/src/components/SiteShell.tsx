@@ -20,7 +20,7 @@ const copy = {
   },
   ur: {
     home: "سرورق", about: "تعارف", services: "خدمات", fatawa: "فتاویٰ", dailyPosts: "روزانہ پوسٹس", methodology: "منہج", scholars: "علماء", contact: "رابطہ", donate: "عطیات",
-    lang: "English", quick: "اہم روابط", aboutText: "قرآن و سنت کی روشنی میں معتبر اور ذمہ دار شرعی رہنمائی کا مرکز۔", 
+    lang: "English", quick: "اہم روابط", aboutText: "قرآن و سنت کی روشنی میں معتبر اور ذمہ دار شرعی رہنمائی کا مرکز۔",
     rights: "تمام حقوق محفوظ ہیں۔", location: "المجیب گارڈن اے 31، کراچی، پاکستان", contactUs: "رابطہ", serviceLinks: "ہماری خدمات",
   },
 };

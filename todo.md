@@ -471,3 +471,21 @@
 - [x] Add focused tests for supported manual imports, duplicate rejection, auto-publish settings, failed imports, source attribution, public visibility, and access controls.
 - [x] Verify responsive public/admin flows, database migration, diagnostics, TypeScript, build, dependency audit, integrity, and publication.
 - [x] Publish the verified WhatsApp-origin Daily Posts workflow checkpoint.
+
+## External Vercel Deployment Compatibility Checklist
+
+- [x] Inspect the committed package patch references, repository ignore rules, GitHub branch state, and Vercel build constraints behind the reported installation failure.
+- [ ] Repair the broken `wouter` patch reference and synchronize the verified current project source to GitHub so Vercel no longer deploys the obsolete incomplete snapshot.
+- [x] Add the minimum Vercel build/runtime configuration required for the existing Vite and Express application without changing public site behavior.
+- [x] Validate clean dependency installation, production build, tests, TypeScript, audit, and configuration integrity in a Vercel-like environment.
+- [ ] Commit and push the verified external deployment fixes to the connected GitHub `main` branch.
+- [ ] Publish the verified external-deployment compatibility checkpoint.
+
+## Comprehensive GitHub and Vercel Production Audit Checklist
+
+- [x] Inventory every deployable source area, serverless boundary, route, external service, asset reference, environment variable, and GitHub repository divergence affecting production.
+- [x] Audit build scripts, package and lockfile compatibility, imports, filename casing, static assets, API routes, SPA rewrites, database usage, managed storage, authentication, and security boundaries.
+- [x] Add or update safe GitHub/Vercel configuration, deployment documentation, and regression coverage only for confirmed production requirements; environment names are documented rather than placed in a tracked environment file.
+- [x] Repair every confirmed production issue without changing established design, branding, content, public routes, Fatwa privacy controls, or Daily Posts workflows.
+- [x] Validate a clean frozen dependency install, strict TypeScript, full tests, production build, dependency audit, integrity, public/protected API flows, direct-route behavior, responsive presentation, and fresh diagnostics.
+- [x] Publish the verified comprehensive production-audit checkpoint and prepare the corrected GitHub commit for synchronization once repository write access is restored.

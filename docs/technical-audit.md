@@ -1,7 +1,7 @@
 # Complete Technical Audit Record
 
-**Project:** Darul Ifta Irshad-us-Saileen Karachi  
-**Audit scope:** Public institutional pages, Fatwa discovery, question-intake handoff, the governed scholars API and administration surface, responsive presentation, code quality, runtime diagnostics, dependency health, and production build readiness.  
+**Project:** Darul Ifta Irshad-us-Saileen Karachi
+**Audit scope:** Public institutional pages, Fatwa discovery, question-intake handoff, the governed scholars API and administration surface, responsive presentation, code quality, runtime diagnostics, dependency health, and production build readiness.
 **Audit approach:** This review was deliberately conservative. Changes were made only where a defect, unsafe dependency resolution, or compiler-confirmed dead code was established. The established bilingual design, content, routes, branding, and public functionality were preserved.
 
 ## Executive conclusion

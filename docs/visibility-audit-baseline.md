@@ -1,6 +1,6 @@
 # Public Content Visibility Baseline
 
-**Recorded:** 2026-08-21  
+**Recorded:** 2026-08-21
 **Scope:** Public desktop (1280×720) and mobile (375×812) full-page rendering checks for `/`, `/fatawa`, `/methodology`, and `/ask-fatwa`.
 
 ## Initial Findings

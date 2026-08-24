@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import path from "path";
+import { put } from "@vercel/blob";
 
 type ManagedUpload = {
   key: string;
@@ -25,6 +26,20 @@ export function createDailyPostStorageKey(kind: "images" | "attachments", fileNa
 }
 
 export async function storagePut(key: string, bytes: Uint8Array, contentType: string): Promise<ManagedUpload> {
+  const vercelBlobAvailable = Boolean(
+    process.env.BLOB_READ_WRITE_TOKEN ||
+    (process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN),
+  );
+
+  if (vercelBlobAvailable) {
+    const blob = await put(key, bytes, {
+      access: "public",
+      addRandomSuffix: false,
+      contentType,
+    });
+    return { key: blob.pathname, url: blob.url };
+  }
+
   const { baseUrl, apiKey } = storageConfiguration();
   const presignUrl = new URL("v1/storage/presign/put", `${baseUrl}/`);
   presignUrl.searchParams.set("path", key);
