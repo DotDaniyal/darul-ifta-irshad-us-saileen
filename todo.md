@@ -396,3 +396,12 @@
 - [x] Add restrained reading, navigation, scroll, and micro-interaction polish that honors `prefers-reduced-motion`, keyboard use, contrast, screen readers, and mobile performance.
 - [x] Add and update focused automated coverage for new shared UI behavior and run a complete functional, bilingual, RTL/LTR, responsive, accessibility, diagnostics, TypeScript, build, audit, and diff-integrity validation pass.
 - [x] Save and publish the verified premium platform redesign checkpoint.
+
+## Targeted Full-Project Audit and Stabilization Checklist
+
+- [x] Inventory the current project structure, dependencies, routes, components, assets, server/data flow, scripts, diagnostics, and existing test coverage without altering working behavior.
+- [x] Audit code and runtime evidence for confirmed TypeScript, React, route, interaction, accessibility, responsive, security, reliability, dead-code, duplicate-code, and performance issues; document only evidence-based findings.
+- [x] Apply minimal fixes for every confirmed defect, remove only proven unused code or imports, and consolidate only safe duplication without redesigning or removing functioning features.
+- [x] Verify every public route, primary navigation path, archive search/filter/detail flow, privacy-safe PDF/share action, Ask-a-Fatwa handoff, scholar flow, header/footer navigation, and responsive layout across mobile through large desktop.
+- [x] Run full tests, strict TypeScript, production build, production dependency audit, integrity checks, current diagnostics review, and targeted source checks for secrets or unsafe rendering.
+- [x] Save and publish the verified audited stabilization checkpoint.
