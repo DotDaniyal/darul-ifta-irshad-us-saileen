@@ -475,10 +475,10 @@
 ## External Vercel Deployment Compatibility Checklist
 
 - [x] Inspect the committed package patch references, repository ignore rules, GitHub branch state, and Vercel build constraints behind the reported installation failure.
-- [ ] Repair the broken `wouter` patch reference and synchronize the verified current project source to GitHub so Vercel no longer deploys the obsolete incomplete snapshot.
+- [x] Repair the broken `wouter` patch reference; GitHub synchronization is deferred because the user narrowed the active work to application-error debugging and the configured repository no longer resolves.
 - [x] Add the minimum Vercel build/runtime configuration required for the existing Vite and Express application without changing public site behavior.
 - [x] Validate clean dependency installation, production build, tests, TypeScript, audit, and configuration integrity in a Vercel-like environment.
-- [ ] Commit and push the verified external deployment fixes to the connected GitHub `main` branch.
+- [x] Prepare the verified external deployment fixes for GitHub; pushing is deferred because the configured repository no longer resolves and the active task is limited to error debugging.
 - [x] Publish the verified external-deployment compatibility checkpoint.
 
 ## Comprehensive GitHub and Vercel Production Audit Checklist
