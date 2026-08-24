@@ -440,3 +440,9 @@
 - [x] Add the official WhatsApp Channel as a dedicated accessible contact card in the homepage Contact section, while preserving direct WhatsApp contact, phone, email, and social links.
 - [x] Add focused regression coverage and verify responsive presentation, release validation, and diagnostics.
 - [x] Publish the verified homepage WhatsApp Channel contact-card update in a checkpoint.
+
+## Homepage Online Bayan Contact-Link Checklist
+
+- [x] Add the established Online Bayan Mixlr event as a dedicated accessible contact card in the homepage Contact section, while preserving existing contact cards.
+- [x] Add focused regression coverage and verify responsive presentation, release validation, and diagnostics.
+- [x] Publish the verified homepage Online Bayan contact-card update in a checkpoint.
