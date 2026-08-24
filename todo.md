@@ -427,3 +427,10 @@
 - [x] Apply a background-aware, accessible heading-colour treatment that restores visibility while preserving the premium navy, gold, ivory, and dark-chamber visual system.
 - [x] Add focused regression coverage and verify affected public routes at desktop and mobile widths, plus tests, TypeScript, production build, audit, integrity, and current diagnostics.
 - [x] Save and publish the verified shared-heading visibility correction checkpoint.
+
+## Official WhatsApp Channel Link Checklist
+
+- [x] Inspect existing WhatsApp, social, footer, and contact surfaces to select the appropriate consistent placement for `https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q`.
+- [x] Add the official WhatsApp Channel link with clear bilingual labelling, secure new-tab behavior, and no change to the existing direct-contact WhatsApp number.
+- [x] Add focused regression coverage and verify desktop/mobile public presentation, tests, TypeScript, production build, audit, integrity, and diagnostics.
+- [x] Save and publish the verified official WhatsApp Channel link checkpoint.
