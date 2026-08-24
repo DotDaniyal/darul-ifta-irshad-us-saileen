@@ -434,3 +434,9 @@
 - [x] Add the official WhatsApp Channel link with clear bilingual labelling, secure new-tab behavior, and no change to the existing direct-contact WhatsApp number.
 - [x] Add focused regression coverage and verify desktop/mobile public presentation, tests, TypeScript, production build, audit, integrity, and diagnostics.
 - [x] Save and publish the verified official WhatsApp Channel link checkpoint.
+
+## Homepage WhatsApp Channel Contact-Link Checklist
+
+- [x] Add the official WhatsApp Channel as a dedicated accessible contact card in the homepage Contact section, while preserving direct WhatsApp contact, phone, email, and social links.
+- [x] Add focused regression coverage and verify responsive presentation, release validation, and diagnostics.
+- [x] Publish the verified homepage WhatsApp Channel contact-card update in a checkpoint.
