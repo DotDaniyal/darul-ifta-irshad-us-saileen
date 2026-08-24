@@ -24,7 +24,7 @@ function sourceFor(days: Record<string, { day: string; month: number; year: stri
 }
 
 function getDeterministicStatus(options: NonNullable<Parameters<typeof getInstitutionalDateStatus>[0]>) {
-  return getInstitutionalDateStatus({ ...options, manualOverride: "" });
+  return getInstitutionalDateStatus({ ...options, manualOverride: "", useOfficialPakistanDecisions: false });
 }
 
 describe("Karachi Maghrib institutional date", () => {
@@ -64,8 +64,8 @@ describe("Karachi Maghrib institutional date", () => {
 
   it("uses only a date-scoped official decision when it is explicitly configured", async () => {
     const override = JSON.stringify({ effectiveGregorianDate: "2026-08-22", day: 12, month: 3, year: 1448, reason: "Official committee announcement" });
-    const overridden = await getInstitutionalDateStatus({ now: new Date("2026-08-22T12:00:00.000Z"), fetchSource: sourceFor(days), manualOverride: override });
-    const differentDay = await getInstitutionalDateStatus({ now: new Date("2026-08-23T12:00:00.000Z"), fetchSource: sourceFor(days), manualOverride: override });
+    const overridden = await getInstitutionalDateStatus({ now: new Date("2026-08-22T12:00:00.000Z"), fetchSource: sourceFor(days), manualOverride: override, useOfficialPakistanDecisions: false });
+    const differentDay = await getInstitutionalDateStatus({ now: new Date("2026-08-23T12:00:00.000Z"), fetchSource: sourceFor(days), manualOverride: override, useOfficialPakistanDecisions: false });
     expect(overridden.hijri.day).toBe(12);
     expect(overridden.verification.status).toBe("manual_override");
     expect(differentDay.verification.status).not.toBe("manual_override");
@@ -76,6 +76,21 @@ describe("Karachi Maghrib institutional date", () => {
     expect(configured.hijri.day).toBe(9);
     expect(configured.verification.status).toBe("manual_override");
     expect(configured.verification.message).toContain("Pakistan Central Ruet-e-Hilal Committee");
+  });
+
+  it("keeps Karachi aligned with the Pakistan committee month decision when the structured source is one day ahead", async () => {
+    const source = sourceFor({
+      "24-08-2026": { day: "11", month: 3, year: "1448" },
+      "25-08-2026": { day: "12", month: 3, year: "1448" },
+    });
+
+    const beforeMaghrib = await getInstitutionalDateStatus({ now: new Date("2026-08-24T12:00:00.000Z"), fetchSource: source, manualOverride: "" });
+    const afterMaghrib = await getInstitutionalDateStatus({ now: new Date("2026-08-24T14:00:00.000Z"), fetchSource: source, manualOverride: "" });
+
+    expect(beforeMaghrib.hijri.day).toBe(10);
+    expect(beforeMaghrib.verification.status).toBe("manual_override");
+    expect(afterMaghrib.hijri.day).toBe(11);
+    expect(afterMaghrib.gregorian.iso).toBe("2026-08-25");
   });
 
   it("schedules browser resynchronization at Maghrib or within the periodic safety window", () => {

@@ -405,3 +405,11 @@
 - [x] Verify every public route, primary navigation path, archive search/filter/detail flow, privacy-safe PDF/share action, Ask-a-Fatwa handoff, scholar flow, header/footer navigation, and responsive layout across mobile through large desktop.
 - [x] Run full tests, strict TypeScript, production build, production dependency audit, integrity checks, current diagnostics review, and targeted source checks for secrets or unsafe rendering.
 - [x] Save and publish the verified audited stabilization checkpoint.
+
+## Karachi Islamic-Date Correction Checklist
+
+- [x] Inspect the current live institutional-date response, displayed bilingual card, fallback logic, override configuration, and existing date regression coverage.
+- [x] Check current Pakistan/Karachi Islamic-date evidence from authoritative or institutionally credible sources before selecting any date override.
+- [x] Apply only the minimal evidence-based date correction, preserving Karachi Maghrib rollover, bilingual display, source-fallback behavior, and historic Fatwa dates.
+- [x] Add or update date regression coverage and verify the live endpoint, responsive public card, tests, TypeScript, production build, audit, integrity, and current diagnostics.
+- [x] Save and publish the verified Karachi Islamic-date correction checkpoint.

@@ -178,6 +178,44 @@ function sameHijri(left: HijriParts, right: HijriParts): boolean {
 }
 
 type ManualOverride = { effectiveGregorianDate: string; day: number; month: number; year: number; reason?: string };
+type OfficialMonthDecision = {
+  startsOn: GregorianDate;
+  firstHijri: HijriParts;
+  length: number;
+  reason: string;
+};
+
+const officialPakistanMonthDecisions: OfficialMonthDecision[] = [
+  {
+    startsOn: { year: 2026, month: 8, day: 15 },
+    firstHijri: { day: 1, month: 3, year: 1448 },
+    length: 30,
+    reason: "Pakistan Central Ruet-e-Hilal Committee: 1 Rabi al-Awwal 1448 began on 15 August 2026.",
+  },
+];
+
+function calendarDayDistance(from: GregorianDate, to: GregorianDate) {
+  return Math.round(
+    (Date.UTC(to.year, to.month - 1, to.day) - Date.UTC(from.year, from.month - 1, from.day)) /
+      86_400_000,
+  );
+}
+
+function officialPakistanOverride(date: GregorianDate): ManualOverride | undefined {
+  for (const decision of officialPakistanMonthDecisions) {
+    const offset = calendarDayDistance(decision.startsOn, date);
+    if (offset >= 0 && offset < decision.length) {
+      return {
+        effectiveGregorianDate: isoDate(date),
+        day: decision.firstHijri.day + offset,
+        month: decision.firstHijri.month,
+        year: decision.firstHijri.year,
+        reason: decision.reason,
+      };
+    }
+  }
+  return undefined;
+}
 
 function parseManualOverride(raw: string | undefined, date: GregorianDate): ManualOverride | undefined {
   if (!raw) return undefined;
@@ -193,14 +231,30 @@ function parseManualOverride(raw: string | undefined, date: GregorianDate): Manu
   }
 }
 
-function resolvedHijri(sourceHijri: HijriParts, effectiveDate: GregorianDate, rawOverride: string | undefined) {
-  const override = parseManualOverride(rawOverride, effectiveDate);
+function resolvedHijri(
+  sourceHijri: HijriParts,
+  effectiveDate: GregorianDate,
+  rawOverride: string | undefined,
+  useOfficialPakistanDecisions: boolean,
+) {
+  const override = parseManualOverride(rawOverride, effectiveDate)
+    ?? (useOfficialPakistanDecisions ? officialPakistanOverride(effectiveDate) : undefined);
   return override ? { hijri: { day: override.day, month: override.month, year: override.year }, override } : { hijri: sourceHijri, override: undefined };
 }
 
 const defaultFetch: SourceFetch = (url) => fetch(url);
 
-export async function getInstitutionalDateStatus({ now = new Date(), fetchSource = defaultFetch, manualOverride = process.env.HIJRI_DATE_OVERRIDE }: { now?: Date; fetchSource?: SourceFetch; manualOverride?: string } = {}): Promise<InstitutionalDateStatus> {
+export async function getInstitutionalDateStatus({
+  now = new Date(),
+  fetchSource = defaultFetch,
+  manualOverride = process.env.HIJRI_DATE_OVERRIDE,
+  useOfficialPakistanDecisions = true,
+}: {
+  now?: Date;
+  fetchSource?: SourceFetch;
+  manualOverride?: string;
+  useOfficialPakistanDecisions?: boolean;
+} = {}): Promise<InstitutionalDateStatus> {
   const today = karachiGregorianDate(now);
   const fallbackTodayMaghrib = fallbackMaghrib(today);
   const fallbackAfterMaghrib = now.getTime() >= makeKarachiDate(today, fallbackTodayMaghrib).getTime();
@@ -216,7 +270,7 @@ export async function getInstitutionalDateStatus({ now = new Date(), fetchSource
     const nextMaghrib = afterMaghrib ? effectiveSource.maghrib : todaySource.maghrib;
     const nextDate = afterMaghrib ? effectiveDate : today;
     const sourceHijri = effectiveSource.hijri;
-    const resolved = resolvedHijri(sourceHijri, effectiveDate, manualOverride);
+    const resolved = resolvedHijri(sourceHijri, effectiveDate, manualOverride, useOfficialPakistanDecisions);
     const fallbackForEffectiveDate = fallbackHijri(effectiveDate);
     const mismatch = !resolved.override && !sameHijri(sourceHijri, fallbackForEffectiveDate);
     if (mismatch) console.warn("Institutional Hijri-date discrepancy", { effectiveDate: isoDate(effectiveDate), source: sourceHijri, fallback: fallbackForEffectiveDate });
@@ -238,7 +292,7 @@ export async function getInstitutionalDateStatus({ now = new Date(), fetchSource
     console.error("Institutional Hijri-date source fallback", { message: error instanceof Error ? error.message : "Unknown source failure" });
     const nextDate = fallbackAfterMaghrib ? addDays(today, 1) : today;
     const nextMaghrib = fallbackAfterMaghrib ? fallbackMaghrib(nextDate) : fallbackTodayMaghrib;
-    const resolved = resolvedHijri(fallbackEffectiveHijri, fallbackEffectiveDate, manualOverride);
+    const resolved = resolvedHijri(fallbackEffectiveHijri, fallbackEffectiveDate, manualOverride, useOfficialPakistanDecisions);
     return {
       boundary: "maghrib",
       karachiTimezone: KARACHI_TIMEZONE,
