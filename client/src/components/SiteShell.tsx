@@ -102,7 +102,7 @@ export function SectionHeading({ eyebrow, title, description, align = "start" }:
       <div className={`section-eyebrow mb-4 flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
         <span className="h-px w-9 bg-[#C89C46]" /><span className="font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-[#075A9B]">{eyebrow}</span><span className="h-1.5 w-1.5 rotate-45 bg-[#C89C46]" />
       </div>
-      <h2 className="section-title font-display text-4xl leading-[1.05] text-[#10223A] sm:text-5xl">{title}</h2>
+      <h2 className="section-title font-display text-4xl leading-[1.05] text-[#0B2A4A] sm:text-5xl">{title}</h2>
       {description && <p className="section-description mt-5 max-w-xl font-sans text-sm leading-7 text-[#52627A] sm:text-base">{description}</p>}
     </div>
   );

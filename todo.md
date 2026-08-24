@@ -413,3 +413,10 @@
 - [x] Apply only the minimal evidence-based date correction, preserving Karachi Maghrib rollover, bilingual display, source-fallback behavior, and historic Fatwa dates.
 - [x] Add or update date regression coverage and verify the live endpoint, responsive public card, tests, TypeScript, production build, audit, integrity, and current diagnostics.
 - [x] Save and publish the verified Karachi Islamic-date correction checkpoint.
+
+## SiteShell Heading Colour Correction Checklist
+
+- [x] Inspect the reported `SiteShell.tsx:105` target and its current shared colour rule after the visual-editor no-op.
+- [x] Apply the selected deep-navy `#0B2A4A` text colour only to the confirmed heading, preserving all other SiteShell branding and layout.
+- [x] Add focused regression coverage and verify the corrected text colour at desktop and mobile widths, plus tests, TypeScript, production build, audit, integrity, and diagnostics.
+- [x] Save and publish the verified SiteShell heading-colour correction checkpoint.
