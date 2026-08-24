@@ -290,9 +290,6 @@
   #services > * { position: relative; z-index: 1; }
   #fatawa { background: radial-gradient(circle at 85% 15%, rgba(184,138,67,.17), transparent 23rem), linear-gradient(120deg, #06172A, #0B345B 52%, #082944) !important; }
   #fatawa > .absolute { display: none; }
-  #fatawa .section-eyebrow span:not(.h-px):not(.h-1\.5) { color: #F2E3BC; }
-  #fatawa .section-title { color: #FFF9E8; }
-  #fatawa .section-description { color: rgba(255,255,255,.7); }
   #fatawa .text-link { border-bottom-color: rgba(242,227,188,.65); color: #F2E3BC; }
   #fatawa .text-link:hover { color: white; }
   #fatawa .border.border-white\/20 { border-color: rgba(232,209,141,.5); background-color: rgba(255,255,255,.08); box-shadow: 0 26px 55px rgba(0,0,0,.24); }

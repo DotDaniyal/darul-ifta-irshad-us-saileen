@@ -420,3 +420,10 @@
 - [x] Apply the selected deep-navy `#0B2A4A` text colour only to the confirmed heading, preserving all other SiteShell branding and layout.
 - [x] Add focused regression coverage and verify the corrected text colour at desktop and mobile widths, plus tests, TypeScript, production build, audit, integrity, and diagnostics.
 - [x] Save and publish the verified SiteShell heading-colour correction checkpoint.
+
+## Shared Heading Visibility Correction Checklist
+
+- [x] Inspect every shared SectionHeading use and its actual section background to identify the specific contrast failure behind the reported invisible text.
+- [x] Apply a background-aware, accessible heading-colour treatment that restores visibility while preserving the premium navy, gold, ivory, and dark-chamber visual system.
+- [x] Add focused regression coverage and verify affected public routes at desktop and mobile widths, plus tests, TypeScript, production build, audit, integrity, and current diagnostics.
+- [x] Save and publish the verified shared-heading visibility correction checkpoint.
