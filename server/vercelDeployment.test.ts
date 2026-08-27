@@ -5,6 +5,8 @@ const vercel = readFileSync(new URL("../vercel.json", import.meta.url), "utf8");
 const adapter = readFileSync(new URL("../api/[...path].ts", import.meta.url), "utf8");
 const packageJson = readFileSync(new URL("../package.json", import.meta.url), "utf8");
 const storage = readFileSync(new URL("./storage.ts", import.meta.url), "utf8");
+const dailyPosts = readFileSync(new URL("./dailyPosts.ts", import.meta.url), "utf8");
+const viteConfig = readFileSync(new URL("../vite.config.ts", import.meta.url), "utf8");
 const deploymentGuide = readFileSync(new URL("../docs/vercel-deployment.md", import.meta.url), "utf8");
 
 describe("Vercel deployment configuration", () => {
@@ -14,6 +16,8 @@ describe("Vercel deployment configuration", () => {
     expect(vercel).toContain('"api/[...path].ts"');
     expect(vercel).toContain('"source": "/manus-storage/:path*"');
     expect(vercel).toContain('"destination": "https://darulifta-bkfbzf6u.manus.space/manus-storage/:path*"');
+    expect(vercel).toContain('"X-Content-Type-Options"');
+    expect(vercel).toContain('"Strict-Transport-Security"');
     expect(adapter).toContain('import { createScholarApi } from "../server/app"');
     expect(adapter).toContain("export default api");
   });
@@ -33,5 +37,19 @@ describe("Vercel deployment configuration", () => {
     expect(deploymentGuide).toContain("`SCHOLAR_ADMIN_ACCESS_KEY`");
     expect(deploymentGuide).toContain("`BLOB_READ_WRITE_TOKEN`");
     expect(deploymentGuide).not.toContain("`VITE_BLOB_READ_WRITE_TOKEN`");
+  });
+
+  it("persists only public Daily Posts Blob URLs and excludes managed preview tooling from standalone Vercel builds", () => {
+    expect(dailyPosts).toContain('url.hostname.endsWith(".public.blob.vercel-storage.com")');
+    expect(dailyPosts).toContain('url.pathname.startsWith("/daily-posts/")');
+    expect(viteConfig).toContain('const isExternalVercelBuild = process.env.VERCEL === "1"');
+    expect(viteConfig).toContain("...(isExternalVercelBuild ? [] : [vitePluginManusRuntime()])");
+  });
+
+  it("applies the same baseline response hardening to the Vercel API adapter", () => {
+    const api = readFileSync(new URL("./app.ts", import.meta.url), "utf8");
+    expect(api).toContain('res.removeHeader("X-Powered-By")');
+    expect(api).toContain('res.setHeader("X-Content-Type-Options", "nosniff")');
+    expect(api).toContain('res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin")');
   });
 });

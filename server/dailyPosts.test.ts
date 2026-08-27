@@ -20,11 +20,13 @@ describe("Daily Posts server validation and publication boundary", () => {
     expect(input?.scheduledAt).toBeInstanceOf(Date);
   });
 
-  it("requires at least one localized title and content field, and rejects untrusted attachment URLs", () => {
+  it("requires at least one localized title and content field, and accepts only managed attachment URLs", () => {
     expect(parseDailyPostInput({ titleEn: "Only a title" })).toBeUndefined();
     expect(parseDailyPostInput({ contentEn: "Only content" })).toBeUndefined();
     const partial = parseDailyPostInput({ attachmentUrl: "https://untrusted.example/file.pdf" }, true);
     expect(partial).toBeUndefined();
+    expect(parseDailyPostInput({ attachmentUrl: "https://store.public.blob.vercel-storage.com/daily-posts/attachments/file.pdf" }, true)).toMatchObject({ attachmentUrl: "https://store.public.blob.vercel-storage.com/daily-posts/attachments/file.pdf" });
+    expect(parseDailyPostInput({ attachmentUrl: "https://store.public.blob.vercel-storage.com/untrusted/file.pdf" }, true)).toBeUndefined();
   });
 
   it("validates manageable category names and URL slugs", () => {
@@ -57,6 +59,7 @@ describe("Daily Posts server validation and publication boundary", () => {
     expect(input).toMatchObject({ sourcePostId: "official-channel-20260824-001", language: "ur", title: "اہم اعلان" });
     expect(input?.sourcePublishedAt).toBeInstanceOf(Date);
     expect(parseWhatsappImportInput({ sourcePostId: "ref", originalPostUrl: "https://untrusted.example/post", language: "en", title: "Post", content: "Body" })).toBeUndefined();
+    expect(parseWhatsappImportInput({ sourcePostId: "ref", originalPostUrl: "https://whatsapp.com/channel/other-channel", language: "en", title: "Post", content: "Body" })).toBeUndefined();
     expect(parseWhatsappImportInput({ originalPostUrl: "https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q", language: "en", title: "Post", content: "Body" })).toBeUndefined();
   });
 
@@ -71,11 +74,11 @@ describe("Daily Posts server validation and publication boundary", () => {
     expect(schema).toContain("dailyPostImports");
   });
 
-  it("limits upload types and routes managed bytes through presigned storage rather than local files", () => {
+  it("limits upload types and Vercel-safe server payloads while routing managed bytes through storage rather than local files", () => {
     expect(app).toContain('const allowedImage = ["image/jpeg", "image/png", "image/webp"]');
     expect(app).toContain('const allowedAttachment = ["application/pdf"]');
-    expect(app).toContain("5 * 1024 * 1024");
-    expect(app).toContain("8 * 1024 * 1024");
+    expect(app).toContain('express.json({ limit: "4mb" })');
+    expect(app).toContain("const maximum = 3_000_000");
     expect(storage).toContain('new URL("v1/storage/presign/put"');
     expect(storage).toContain('url: `/manus-storage/${key}`');
   });

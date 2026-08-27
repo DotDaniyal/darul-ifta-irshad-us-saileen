@@ -12,7 +12,16 @@ const __dirname = path.dirname(__filename);
 
 export function createScholarApi() {
   const api = express.Router();
-  api.use(express.json({ limit: "12mb" }));
+  api.use((_req, res, next) => {
+    res.removeHeader("X-Powered-By");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    res.setHeader("Permissions-Policy", "camera=(), geolocation=(), microphone=()");
+    return next();
+  });
+  // 3,000,000 raw bytes produce a base64 JSON body below Vercel Functions' 4.5 MB cap.
+  // The parser limit also bounds malformed JSON before any allocation for file storage.
+  api.use(express.json({ limit: "4mb" }));
 
   api.get("/api/institutional-date", async (_req, res) => {
     res.setHeader("Cache-Control", "no-store");
@@ -45,8 +54,8 @@ export function createScholarApi() {
     const isAllowed = kind === "image" ? allowedImage.includes(mimeType) : kind === "attachment" ? allowedAttachment.includes(mimeType) : false;
     if (!kind || !fileName || !isAllowed || typeof body.base64 !== "string" || !/^[a-z0-9+/]+=*$/i.test(body.base64)) return res.status(400).json({ error: "Provide a supported image or PDF file." });
     const bytes = Buffer.from(body.base64, "base64");
-    const maximum = kind === "image" ? 5 * 1024 * 1024 : 8 * 1024 * 1024;
-    if (!bytes.length || bytes.length > maximum) return res.status(400).json({ error: kind === "image" ? "Images must be 5 MB or smaller." : "PDF attachments must be 8 MB or smaller." });
+    const maximum = 3_000_000;
+    if (!bytes.length || bytes.length > maximum) return res.status(400).json({ error: "Images and PDF attachments must be 3 MB or smaller." });
     try {
       const upload = await storagePut(createDailyPostStorageKey(kind === "image" ? "images" : "attachments", fileName), bytes, mimeType);
       return res.status(201).json({ ...upload, fileName, mimeType, byteSize: bytes.length });

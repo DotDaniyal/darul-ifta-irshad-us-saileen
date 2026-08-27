@@ -217,7 +217,10 @@ export function vitePluginScholarApi(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy(), vitePluginScholarApi()];
+// The managed runtime powers this project's local preview and visual editing. It is not
+// required by the standalone Vite app and would add its preview tooling to Vercel output.
+const isExternalVercelBuild = process.env.VERCEL === "1";
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), ...(isExternalVercelBuild ? [] : [vitePluginManusRuntime()]), vitePluginManusDebugCollector(), vitePluginStorageProxy(), vitePluginScholarApi()];
 
 export default defineConfig({
   plugins,

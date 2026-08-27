@@ -6,6 +6,7 @@ export type DailyPostStatus = "draft" | "published" | "unpublished";
 export type DailyPostSort = "newest" | "oldest";
 
 const officialWhatsappChannelUrl = "https://whatsapp.com/channel/0029VaCc5dK7T8bclVGHu20Q";
+const officialWhatsappChannelPath = new URL(officialWhatsappChannelUrl).pathname;
 
 const defaultCategories: Array<InsertDailyPostCategory> = [
   { slug: "islamic-reminder", nameEn: "Islamic Reminder", nameUr: "اسلامی یاددہانی", nameAr: "تذكرة إسلامية", sortOrder: 10, isActive: true },
@@ -84,10 +85,17 @@ function optionalString(value: unknown, maxLength: number): string | null | unde
   return cleanString(value, maxLength);
 }
 
-function optionalStorageUrl(value: unknown) {
+function optionalManagedMediaUrl(value: unknown) {
   const parsed = optionalString(value, 512);
   if (parsed === null) return null;
-  return parsed?.startsWith("/manus-storage/") ? parsed : undefined;
+  if (!parsed) return undefined;
+  if (parsed.startsWith("/manus-storage/")) return parsed;
+  try {
+    const url = new URL(parsed);
+    return url.protocol === "https:" && url.hostname.endsWith(".public.blob.vercel-storage.com") && url.pathname.startsWith("/daily-posts/") ? url.toString() : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 function optionalOfficialWhatsappUrl(value: unknown) {
@@ -96,7 +104,9 @@ function optionalOfficialWhatsappUrl(value: unknown) {
   if (!parsed) return undefined;
   try {
     const url = new URL(parsed);
-    return url.protocol === "https:" && (url.hostname === "whatsapp.com" || url.hostname === "www.whatsapp.com") ? url.toString() : undefined;
+    const officialHost = url.hostname === "whatsapp.com" || url.hostname === "www.whatsapp.com";
+    const officialPath = url.pathname === officialWhatsappChannelPath || url.pathname.startsWith(`${officialWhatsappChannelPath}/`);
+    return url.protocol === "https:" && officialHost && officialPath ? url.toString() : undefined;
   } catch {
     return undefined;
   }
@@ -145,7 +155,7 @@ export function parseDailyPostInput(body: unknown, partial = false): Partial<Ins
     if (field in data) { const value = optionalString(data[field], 512); if (value !== undefined) output[field] = value; }
   }
   for (const field of ["featuredImageUrl", "attachmentUrl"] as const) {
-    if (field in data) { const value = optionalStorageUrl(data[field]); if (value !== undefined) output[field] = value; }
+    if (field in data) { const value = optionalManagedMediaUrl(data[field]); if (value !== undefined) output[field] = value; }
   }
   for (const field of ["sourcePostId", "sourceMediaIdentifier"] as const) {
     if (field in data) { const value = optionalString(data[field], 255); if (value !== undefined) output[field] = value; }
@@ -198,7 +208,7 @@ export function parseWhatsappImportInput(body: unknown): WhatsappImportInput | u
   const categoryId = data.categoryId === undefined ? null : parseId(data.categoryId);
   const authorName = data.authorName === undefined ? null : optionalString(data.authorName, 180);
   const featuredImageStorageKey = data.featuredImageStorageKey === undefined ? null : optionalString(data.featuredImageStorageKey, 512);
-  const featuredImageUrl = data.featuredImageUrl === undefined ? null : optionalStorageUrl(data.featuredImageUrl);
+  const featuredImageUrl = data.featuredImageUrl === undefined ? null : optionalManagedMediaUrl(data.featuredImageUrl);
   const featuredImageAlt = data.featuredImageAlt === undefined ? null : optionalString(data.featuredImageAlt, 300);
   if (!sourcePostId || !language || !title || !content || caption === undefined || originalPostUrl === undefined || sourceMediaIdentifier === undefined || sourcePublishedAt === undefined || categoryId === undefined || authorName === undefined || featuredImageStorageKey === undefined || featuredImageUrl === undefined || featuredImageAlt === undefined) return undefined;
   return { sourcePostId, language, title, content, caption, originalPostUrl, sourceMediaIdentifier, sourcePublishedAt, categoryId, authorName, featuredImageStorageKey, featuredImageUrl, featuredImageAlt };

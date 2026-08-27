@@ -496,3 +496,34 @@
 - [x] Fix every confirmed application or Vercel deployment error without changing existing design, content, public flows, security controls, or data; the fresh audit found no active errors requiring code changes.
 - [x] Re-run complete build, test, TypeScript, API, responsive, and diagnostic verification after remediation.
 - [x] Publish the verified active error-remediation checkpoint.
+
+## Darul Ifta Website QR Code Checklist
+
+- [x] Create a high-resolution square QR code for `https://darulifta-bkfbzf6u.manus.space/` with a dark-blue module color, white quiet zone, and reliable error-correction margin.
+- [x] Add restrained Islamic visual framing outside the protected QR quiet zone without distorting modules or impairing mobile scanning.
+- [x] Verify the encoded payload by decoding the final QR image and confirm print/digital resolution and square padding.
+- [x] Deliver the verified QR code image asset.
+
+## Branded QR Code Refinement Checklist
+
+- [x] Add the official Darul Ifta logo and institution name outside the QR code’s protected quiet zone without changing any QR module.
+- [x] Re-verify exact QR decoding, high-resolution square format, and visual separation of the logo/name from the scannable code.
+- [x] Deliver the verified branded QR code image asset.
+
+## Premium QR Poster Refinement Checklist
+
+- [x] Refine the existing poster without altering the official logo, dark-navy QR modules, white quiet zone, double-line border, or restrained Islamic institutional identity.
+- [x] Improve hierarchy and spacing with a more prominent logo, balanced QR scale, institution name, Karachi label, CTA, supporting line, and manually readable website URL.
+- [x] Keep the navy, white, and light blue-gray palette; use minimal symmetric Islamic corner motifs and avoid gold, gradients, bright colors, or crowded decoration.
+- [x] Verify exact QR decoding, safe separation from text and border elements, square 300 DPI output, alignment, and print/digital readability.
+- [x] Deliver the verified refined QR poster asset.
+
+## Comprehensive Evidence-Based Code Audit Checklist
+
+- [x] Inventory the complete project structure, frameworks, routing, API surface, database model, authentication, build tooling, environment usage, assets, dependencies, and current test coverage.
+- [x] Audit every production-relevant source area for compile/runtime errors, unsafe imports/exports, broken routes/links/API handling, nullability faults, state/lifecycle issues, validation gaps, loading/error states, and deployment configuration.
+- [x] Audit security boundaries for XSS, injection, unsafe URLs/HTML/uploads, authentication and authorization flaws, secrets exposure, cookie/CORS/header risks, sensitive logs, dependency vulnerabilities, and excessive endpoint permissions.
+- [x] Audit performance, duplicate/dead code, responsiveness, accessibility, SEO/metadata, static assets, bundle strategy, database/index use, and unnecessary network or rendering work; retain working code unless safe removal is evidenced.
+- [x] Apply only minimal, verified remediation with focused tests while preserving current design, content, routes, APIs, Fatwa privacy safeguards, Daily Posts workflows, and brand identity.
+- [x] Validate clean install, strict TypeScript, full test suite, production build, dependency audit, route/API security boundaries, responsive public/admin presentation, SEO essentials, diff integrity, and diagnostics.
+- [x] Publish the verified comprehensive audit checkpoint and deliver concise findings, changes, validation evidence, and retained advisories.
