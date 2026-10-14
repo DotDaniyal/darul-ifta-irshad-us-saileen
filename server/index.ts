@@ -1,6 +1,6 @@
 import { createServer } from "http";
 import { createApp } from "./app";
-function resolvePort(value = process.env.PORT) {
+function resolvePort(value = process.env.PORT || 3000) {
   const port = Number(value);
   if (!Number.isInteger(port) || port < 1 || port > 65_535) {
     throw new Error(
@@ -13,7 +13,7 @@ async function startServer() {
   const app = createApp();
   const server = createServer(app);
   const port = resolvePort();
-  server.listen(port, () => {
+  server.listen(port, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${port}/`);
   });
 }

@@ -8,6 +8,11 @@ import { type Plugin, type ViteDevServer } from "vite";
 import { defineConfig } from "vitest/config";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 import { createScholarApi } from "./server/app";
+import { inMemoryStorage } from "./server/storage";
+
+if (!process.env.SCHOLAR_ADMIN_ACCESS_KEY) {
+  process.env.SCHOLAR_ADMIN_ACCESS_KEY = "darul-ifta-admin-access-key-2026";
+}
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -169,8 +174,17 @@ function vitePluginStorageProxy(): Plugin {
         const forgeKey = process.env.BUILT_IN_FORGE_API_KEY;
 
         if (!forgeBaseUrl || !forgeKey) {
-          res.writeHead(500, { "Content-Type": "text/plain" });
-          res.end("Storage proxy not configured");
+          const inMem = inMemoryStorage.get(key);
+          if (inMem) {
+            res.writeHead(200, { "Content-Type": inMem.contentType });
+            res.end(Buffer.from(inMem.bytes));
+            return;
+          }
+          res.writeHead(307, {
+            Location: `https://darulifta-bkfbzf6u.manus.space/manus-storage/${key}`,
+            "Cache-Control": "no-store",
+          });
+          res.end();
           return;
         }
 
@@ -245,17 +259,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    strictPort: false, // Will find next available port if 3000 is busy
-    host: true,
-    allowedHosts: [
-      ".manuspre.computer",
-      ".manus.computer",
-      ".manus-asia.computer",
-      ".manuscomputer.ai",
-      ".manusvm.computer",
-      "localhost",
-      "127.0.0.1",
-    ],
+    strictPort: true,
+    host: "0.0.0.0",
+    allowedHosts: true,
     fs: {
       strict: true,
       deny: ["**/.*"],

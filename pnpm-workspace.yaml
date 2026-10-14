@@ -1,5 +1,0 @@
-packages:
-  - .
-
-patchedDependencies:
-  wouter@3.7.1: patches/wouter@3.7.1.patch

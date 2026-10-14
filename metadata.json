@@ -1,0 +1,7 @@
+{
+  "name": "Darul Ifta Irshad-us-Saileen Karachi",
+  "description": "Darul Ifta Irshad-us-Saileen Karachi — authentic Islamic guidance in the light of the Qur’an and Sunnah.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
