@@ -109,7 +109,7 @@ export function PrayerTimesWidget({ compact = false }: { compact?: boolean }) {
                 <BookOpen className="h-3 w-3" />
                 <span>{urdu ? "فرمانِ نبوی ﷺ" : "Daily Wisdom"}</span>
               </div>
-              <p className="mt-1.5 font-urdu text-sm leading-relaxed text-[#FFF8DE]">
+              <p className="mt-1.5 font-arabic-quran text-base leading-loose text-[#FFF8DE]">
                 {DAILY_HADITH.ar}
               </p>
               <p className="mt-1 text-xs leading-normal text-white/80">

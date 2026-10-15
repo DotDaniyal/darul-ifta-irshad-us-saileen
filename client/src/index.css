@@ -4,19 +4,81 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Local Fallback for Jameel Noori Nastaleeq */
+@font-face {
+  font-family: "Jameel Noori Nastaleeq";
+  src: local("Jameel Noori Nastaleeq"),
+       local("Jameel Noori Nastaleeq Regular"),
+       local("Urdu Typesetting");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
-  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --font-sans: "Manrope", sans-serif; --font-display: "DM Serif Display", Georgia, serif; --font-urdu: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; --font-calligraphy: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; --font-arabic-display: "Reem Kufi", "Amiri", "Noto Naskh Arabic", serif;
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0;
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Cinzel Decorative", "Playfair Display", "DM Serif Display", Georgia, serif;
+  --font-display-serif: "Playfair Display", "DM Serif Display", Georgia, serif;
+  --font-cinzel: "Cinzel Decorative", "Playfair Display", "DM Serif Display", serif;
+  --font-playfair: "Playfair Display", "DM Serif Display", Georgia, serif;
+  --font-nastaliq: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Noto Naskh Arabic", serif;
+  --font-arabic: "Amiri", "Scheherazade New", serif;
+  --font-arabic-quran: "Amiri Quran", "Amiri", serif;
+  --font-arabic-calligraphy: "Aref Ruqaa", "Aref Ruqaa Ink", "Reem Kufi", "Amiri", serif;
+  --font-calligraphy: "Great Vibes", "Cinzel Decorative", cursive, serif;
+  --font-script: "Great Vibes", cursive;
 }
 
 :root { --background: #FCFAF4; --foreground: #081B30; --card: #FFFEFA; --card-foreground: #081B30; --popover: #FFFEFA; --popover-foreground: #081B30; --primary: #0B345B; --primary-foreground: #FFFFFF; --secondary: #EDF2EF; --secondary-foreground: #0C3F36; --muted: #F1F0EA; --muted-foreground: #64748B; --accent: #E7D7AE; --accent-foreground: #102238; --destructive: #B34242; --destructive-foreground: #FFFFFF; --border: #D7D6CB; --input: #BBC8DC; --ring: #0B6756; --ink-950: #06172A; --ink-900: #0B2D50; --ink-700: #1B517E; --green-700: #0B6756; --gold-500: #B88A43; --gold-200: #F2E3BC; --paper: #FCFAF4; --paper-strong: #FFFEFA; }
 
-@layer base { * { @apply border-border outline-ring/50; } html { scroll-behavior: smooth; } body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; } button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; } ::selection { background: #DDE6FF; color: #06152E; } }
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground; position: relative; background-image: radial-gradient(circle at 8% 5%, rgba(218,190,115,.15), transparent 27rem), radial-gradient(circle at 90% 20%, rgba(62,115,210,.12), transparent 31rem), linear-gradient(180deg, #FFFFFF, #F7F9FD); font-family: "Manrope", sans-serif; }
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), a[href], select:not(:disabled), input, textarea { @apply cursor-pointer; }
+  ::selection { background: #DDE6FF; color: #06152E; }
+}
 
 @layer components {
-  .font-display { font-family: "DM Serif Display", Georgia, serif; }
-  .font-urdu { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; }
-  .font-calligraphy { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; }
-  .font-arabic-display { font-family: "Reem Kufi", "Amiri", "Noto Naskh Arabic", serif; }
+  /* High-Fidelity Calligraphy Font Utility Classes */
+  .font-display { font-family: var(--font-display); }
+  .font-display-serif { font-family: var(--font-display-serif); }
+  .font-cinzel { font-family: var(--font-cinzel); }
+  .font-playfair { font-family: var(--font-playfair); }
+  .font-nastaliq { font-family: var(--font-nastaliq); line-height: 2.3; }
+  .font-urdu { font-family: var(--font-urdu); line-height: 2.2; }
+  .font-arabic { font-family: var(--font-arabic); line-height: 1.85; }
+  .font-arabic-quran { font-family: var(--font-arabic-quran); line-height: 2.1; }
+  .font-arabic-calligraphy { font-family: var(--font-arabic-calligraphy); line-height: 1.7; }
+  .font-calligraphy { font-family: var(--font-calligraphy); }
+  .font-script { font-family: var(--font-script); }
+
+  /* OpenType Ligatures, Kerning & Legibility Optimization */
+  .font-nastaliq,
+  .font-urdu,
+  .font-arabic,
+  .font-arabic-quran,
+  .font-arabic-calligraphy,
+  .font-arabic-display,
+  .font-calligraphy,
+  .font-cinzel,
+  .font-playfair {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Vertical Clipping Safeguards for Nastaliq Script */
+  .nastaliq-safe-pad,
+  .urdu-badge,
+  .urdu-chip {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.9;
+  }
   .bismillah-bar { position: relative; overflow: hidden; background: linear-gradient(90deg, #02040A, #071B45 48%, #02040A); border-bottom: 1px solid rgba(209,172,91,.34); }
   .bismillah-bar::after { content: ""; position: absolute; bottom: 0; left: -25%; height: 1px; width: 28%; background: linear-gradient(90deg, transparent, #FFE4A3, transparent); opacity: .9; }
   .bismillah-script { font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFD77D; font-size: 18px; line-height: 1.3; letter-spacing: .035em; text-shadow: 0 1px 0 rgba(255,255,255,.15), 0 5px 18px rgba(214,162,53,.35); }
@@ -77,7 +139,7 @@
   .hero-copy { max-width: 39rem; }
   .hero-text-stack { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; margin-top: 1.35rem; }
   .hero-bismillah { margin: 0; font-family: "Aref Ruqaa Ink", "Amiri", "Noto Naskh Arabic", serif; color: #FFE39A; font-size: clamp(1.42rem, 2.35vw, 2.08rem); line-height: 1.46; letter-spacing: .025em; text-shadow: 0 1px 0 rgba(255,255,255,.24), 0 5px 22px rgba(0,0,0,.40), 0 0 26px rgba(233,188,78,.22); }
-  .hero-urdu-identity { margin: .18rem 0 0; font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; color: #FFF6D4; font-size: clamp(1.88rem, 3.3vw, 3.12rem); line-height: 1.75; text-shadow: 0 5px 24px rgba(0,0,0,.36); }
+  .hero-urdu-identity { margin: .18rem 0 0; font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Noto Naskh Arabic", serif; color: #FFF6D4; font-size: clamp(1.88rem, 3.3vw, 3.12rem); line-height: 2.1; text-shadow: 0 5px 24px rgba(0,0,0,.36); }
   .hero-english-identity { margin: .1rem 0 0; font-size: clamp(1.92rem, 3.7vw, 3.7rem); line-height: 1.04; letter-spacing: -.03em; text-shadow: 0 5px 22px rgba(0,0,0,.32); }
   .hero-english-identity span { color: #D7E7F8; }
   .hero-support-copy { max-width: 34rem; margin-top: 1.65rem; }
