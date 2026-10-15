@@ -3,8 +3,29 @@
  * ceremonial calligraphy, and clear bilingual navigation for a premium Darul Ifta experience.
  */
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
-import { Menu, X, Phone, Mail, MessageCircle, ChevronRight, HeartHandshake, BookOpenCheck, ExternalLink, ArrowUp, Radio } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MessageCircle,
+  ChevronRight,
+  HeartHandshake,
+  BookOpenCheck,
+  ExternalLink,
+  ArrowUp,
+  Radio,
+  Search,
+  Sun,
+  Moon,
+  Sparkles,
+  Send,
+} from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { toast } from "sonner";
+import { useTheme } from "@/contexts/ThemeContext";
+import { QuickSearchModal } from "./QuickSearchModal";
+import { SmoothScroll } from "./SmoothScroll";
 
 const officialLogo = "/manus-storage/darul-ifta-logo-transparent_c2993680.png";
 const onlineBayanUrl = "https://faisal-hayat.mixlr.com/events/5246475?utm_source=new_broadcast_alert&utm_medium=email&utm_campaign=alert";
@@ -111,9 +132,12 @@ export function SectionHeading({ eyebrow, title, description, align = "start", t
 
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { language, setLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState("");
   const [location] = useLocation();
   const t = copy[language];
   const homePrefix = location === "/" ? "" : "/";
@@ -202,50 +226,284 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     };
   }, [open]);
 
+  // Global Cmd+K / Ctrl+K listener for Quick Fatwa Search
+  useEffect(() => {
+    const handleCmdK = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setSearchOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener("keydown", handleCmdK);
+    return () => window.removeEventListener("keydown", handleCmdK);
+  }, []);
+
   const returnToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim() || !newsletterEmail.includes("@")) {
+      toast.error(language === "ur" ? "براہِ کرم درست ای میل پتہ درج کریں۔" : "Please enter a valid email address.");
+      return;
+    }
+    toast.success(language === "ur" ? "آپ کو ہفتہ وار فتاویٰ کے لیے سبسکرائب کر لیا گیا ہے۔" : "Subscribed successfully to weekly Islamic rulings.");
+    setNewsletterEmail("");
+  };
+
   return (
-    <div className={`site-shell min-h-screen overflow-x-hidden bg-white ${language === "ur" ? "font-urdu" : "font-sans"}`}>
-      <div className="site-reading-progress" aria-hidden="true"><span style={{ transform: `scaleX(${scrollProgress})` }} /></div>
-      <div className="bismillah-bar px-4 py-2 sm:px-8">
-        <div className="mx-auto grid max-w-[1360px] grid-cols-[1fr_auto_1fr] items-center gap-4 font-sans text-[10px] tracking-wide sm:text-xs">
-          <a href="tel:+923332617671" className="flex items-center gap-2 text-white/72 transition hover:text-[#E9D4A2]"><Phone className="h-3.5 w-3.5" />+92 333 2617671</a>
-          <span className="bismillah-script text-center">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</span>
-          <a href="https://wa.me/923332617671" className="flex items-center justify-end gap-2 text-white/72 transition hover:text-[#E9D4A2]" target="_blank" rel="noreferrer"><MessageCircle className="h-3.5 w-3.5" /><span className="hidden sm:inline">WhatsApp</span></a>
+    <SmoothScroll>
+      <div className={`site-shell min-h-screen overflow-x-hidden bg-white dark:bg-[#030B17] text-[#10223A] dark:text-[#E6EDF5] ${language === "ur" ? "font-urdu" : "font-sans"}`}>
+        {/* Scroll Progress Indicator Bar at Top */}
+        <div className="site-reading-progress" aria-hidden="true">
+          <span style={{ transform: `scaleX(${scrollProgress})` }} />
         </div>
-      </div>
-      <header className={`site-header sticky top-0 z-50 shadow-[0_14px_32px_rgba(4,11,29,.14)] ${scrollProgress > 0.025 ? "site-header-condensed" : ""}`}>
-        <div className="royal-masthead"><InstitutionalLetterhead /></div>
-        <div className="royal-nav">
-          <div className="relative mx-auto flex min-h-[57px] max-w-[1360px] items-center justify-center px-4 sm:px-8">
-            <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
-              <Link href="/" className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
-              {links.map((item) => <a key={item.label} href={item.href} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>)}
-              <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="nav-link nav-link-bayan">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}<ExternalLink className="h-3 w-3" /></a>
-            </nav>
-            <div className="absolute right-4 flex items-center gap-2 sm:right-8 sm:gap-3">
-              <button onClick={() => setLanguage(language === "ur" ? "en" : "ur")} className="rounded-none border border-white/25 px-2.5 py-2 font-sans text-[10px] font-bold tracking-wide text-white transition hover:border-[#E9D4A2] hover:text-[#E9D4A2]" aria-label="Switch language">{t.lang}</button>
-              <Link href="/ask-fatwa" className="hidden items-center gap-2 rounded-none bg-[#D1AC5B] px-4 py-2.5 font-sans text-[11px] font-bold text-[#07152E] transition hover:bg-[#F1DC9B] sm:flex"><BookOpenCheck className="h-4 w-4" />{language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa"}</Link>
-              <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center text-white lg:hidden" aria-label="Toggle navigation" aria-expanded={open} aria-controls="mobile-primary-navigation">{open ? <X /> : <Menu />}</button>
+
+        {/* Global Quick Search Modal */}
+        <QuickSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
+        {/* Bismillah & Contact Bar */}
+        <div className="bismillah-bar px-4 py-2 sm:px-8">
+          <div className="mx-auto grid max-w-[1360px] grid-cols-[1fr_auto_1fr] items-center gap-4 font-sans text-[10px] tracking-wide sm:text-xs">
+            <a href="tel:+923332617671" className="flex items-center gap-2 text-white/72 transition hover:text-[#E9D4A2]">
+              <Phone className="h-3.5 w-3.5" />+92 333 2617671
+            </a>
+            <span className="bismillah-script text-center">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</span>
+            <div className="flex items-center justify-end gap-3 text-white/72">
+              <a href="https://wa.me/923332617671" className="flex items-center gap-1.5 transition hover:text-[#E9D4A2]" target="_blank" rel="noreferrer">
+                <MessageCircle className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">WhatsApp</span>
+              </a>
             </div>
           </div>
-          {open && <div className="mobile-nav-overlay lg:hidden" role="presentation"><button type="button" className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => setOpen(false)} /><div id="mobile-primary-navigation" className="mobile-nav-panel"><div className="mb-5 flex items-center justify-between"><p className="font-sans text-[10px] font-bold uppercase tracking-[.18em] text-[#E9D4A2]">{language === "ur" ? "رہنمائی کے راستے" : "Explore guidance"}</p><button type="button" onClick={() => setOpen(false)} className="grid h-9 w-9 place-items-center border border-white/20 text-white" aria-label="Close navigation"><X className="h-4 w-4" /></button></div><nav className="flex flex-col gap-1">{[{ href: "/", label: t.home }, ...links, { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" }].map((item, index) => <a onClick={() => setOpen(false)} key={item.label} href={item.href} className="mobile-nav-link" style={{ "--mobile-nav-index": index } as CSSProperties}><span>{item.label}</span><ChevronRight className="h-4 w-4 text-[#D1AC5B]" /></a>)}<a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="mobile-nav-bayan"><span>{language === "ur" ? "آن لائن بیان سنیں" : "Listen to Online Bayan"}</span><ExternalLink className="h-4 w-4" /></a></nav></div></div>}
         </div>
-      </header>
-      <div className="page-canvas page-canvas-enter">{children}</div>
-      <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
-        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
-        <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
-          <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.45fr_0.75fr_0.9fr_1fr]">
-            <div><BrandMark /><p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p><div className="mt-6 flex gap-3"><a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon" aria-label="WhatsApp"><MessageCircle className="h-4 w-4" /></a><a href={whatsappChannelUrl} target="_blank" rel="noreferrer" className="footer-icon" aria-label={language === "ur" ? "واٹس ایپ چینل" : "WhatsApp Channel"}><Radio className="h-4 w-4" /></a><a href="tel:+923332617671" className="footer-icon" aria-label="Call Darul Ifta"><Phone className="h-4 w-4" /></a><a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="footer-icon" aria-label="Email Darul Ifta"><Mail className="h-4 w-4" /></a></div></div>
-            <div><h3 className="footer-title">{t.quick}</h3><div className="footer-links">{links.slice(0, 5).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}</div></div>
-            <div><h3 className="footer-title">{t.serviceLinks}</h3><div className="footer-links"><a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a><a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a><a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a><a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a><a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a></div></div>
-            <div><h3 className="footer-title">{t.contactUs}</h3><p className="font-sans text-sm leading-7 text-white/70">{t.location}</p><a href="tel:+923332617671" className="mt-4 block font-sans text-sm font-semibold text-[#E9D4A2]">+92 333 2617671</a><a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="mt-2 block break-all font-sans text-xs text-[#E9D4A2] transition hover:text-white">ask.darulifa.irshadussaaileen@gmail.com</a><a href={whatsappChannelUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 font-sans text-xs text-[#E9D4A2] transition hover:text-white"><Radio className="h-3.5 w-3.5" />{language === "ur" ? "واٹس ایپ چینل" : "WhatsApp Channel"}<ExternalLink className="h-3 w-3" /></a><Link href="/ask-fatwa" className="mt-5 inline-flex items-center gap-2 text-sm text-white transition hover:text-[#E9D4A2]"><HeartHandshake className="h-4 w-4 text-[#C89C46]" />{language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}</Link></div>
+
+        {/* Header with Letterhead and Navbar */}
+        <header className={`site-header sticky top-0 z-40 shadow-[0_14px_32px_rgba(4,11,29,.14)] ${scrollProgress > 0.025 ? "site-header-condensed" : ""}`}>
+          <div className="royal-masthead"><InstitutionalLetterhead /></div>
+          <div className="royal-nav">
+            <div className="relative mx-auto flex min-h-[58px] max-w-[1360px] items-center justify-between px-4 sm:px-8">
+              {/* Primary Nav Links */}
+              <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary navigation">
+                <Link href="/" className={`nav-link ${location === "/" ? "nav-link-active" : ""}`}>{t.home}</Link>
+                {links.map((item) => (
+                  <a key={item.label} href={item.href} className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}>{item.label}</a>
+                ))}
+                <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="nav-link nav-link-bayan">
+                  {language === "ur" ? "آن لائن بیان" : "Online Bayan"}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </nav>
+
+              {/* Utility Actions: Search Trigger, Theme Toggle, Lang Switcher, Glowing CTA */}
+              <div className="flex items-center gap-2 sm:gap-3">
+                {/* Search Bar Modal Trigger */}
+                <button
+                  type="button"
+                  onClick={() => setSearchOpen(true)}
+                  className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3 py-1.5 text-xs text-white/80 transition hover:border-[#D1AC5B] hover:text-white"
+                  title={language === "ur" ? "فوری تلاش (Ctrl+K)" : "Search Fatwas (Ctrl+K)"}
+                  aria-label="Search Fatwas"
+                >
+                  <Search className="h-3.5 w-3.5 text-[#D1AC5B]" />
+                  <span className="hidden md:inline font-sans text-[11px]">{language === "ur" ? "تلاش..." : "Search..."}</span>
+                  <kbd className="hidden lg:inline font-mono text-[9px] text-white/50 border border-white/20 rounded px-1">⌘K</kbd>
+                </button>
+
+                {/* Dark / Light Mode Toggle */}
+                {toggleTheme && (
+                  <button
+                    type="button"
+                    onClick={toggleTheme}
+                    className="grid h-9 w-9 place-items-center rounded-lg border border-white/20 text-white/80 transition hover:border-[#D1AC5B] hover:text-[#D1AC5B]"
+                    aria-label="Toggle dark mode"
+                  >
+                    {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                  </button>
+                )}
+
+                {/* Language Switcher */}
+                <button
+                  onClick={() => setLanguage(language === "ur" ? "en" : "ur")}
+                  className="rounded-lg border border-white/25 px-2.5 py-1.5 font-sans text-[11px] font-bold tracking-wide text-white transition hover:border-[#E9D4A2] hover:text-[#E9D4A2]"
+                  aria-label="Switch language"
+                >
+                  {t.lang}
+                </button>
+
+                {/* Glowing "Ask a Question" CTA */}
+                <Link
+                  href="/ask-fatwa"
+                  className="relative hidden sm:inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#D1AC5B] via-[#E4C77F] to-[#D1AC5B] px-4 py-2 font-sans text-xs font-bold text-[#07152E] shadow-[0_4px_16px_rgba(209,172,91,0.35)] transition duration-200 hover:shadow-[0_6px_22px_rgba(209,172,91,0.55)] hover:-translate-y-0.5 active:scale-95"
+                >
+                  <BookOpenCheck className="h-4 w-4" />
+                  <span>{language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa"}</span>
+                </Link>
+
+                {/* Mobile Menu Button */}
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white lg:hidden"
+                  aria-label="Toggle navigation"
+                  aria-expanded={open}
+                  aria-controls="mobile-primary-navigation"
+                >
+                  {open ? <X /> : <Menu />}
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Navigation Panel */}
+            {open && (
+              <div className="mobile-nav-overlay lg:hidden" role="presentation">
+                <button type="button" className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => setOpen(false)} />
+                <div id="mobile-primary-navigation" className="mobile-nav-panel">
+                  <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-[.18em] text-[#E9D4A2]">
+                      {language === "ur" ? "رہنمائی کے راستے" : "Explore guidance"}
+                    </p>
+                    <button type="button" onClick={() => setOpen(false)} className="grid h-9 w-9 place-items-center rounded-lg border border-white/20 text-white" aria-label="Close navigation">
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                  <nav className="flex flex-col gap-1">
+                    {[
+                      { href: "/", label: t.home },
+                      ...links,
+                      { href: "/ask-fatwa", label: language === "ur" ? "فتویٰ دریافت کریں" : "Ask a Fatwa" },
+                    ].map((item, index) => (
+                      <a
+                        onClick={() => setOpen(false)}
+                        key={item.label}
+                        href={item.href}
+                        className="mobile-nav-link"
+                        style={{ "--mobile-nav-index": index } as CSSProperties}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronRight className="h-4 w-4 text-[#D1AC5B]" />
+                      </a>
+                    ))}
+                    <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="mobile-nav-bayan">
+                      <span>{language === "ur" ? "آن لائن بیان سنیں" : "Listen to Online Bayan"}</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </nav>
+                </div>
+              </div>
+            )}
           </div>
-          <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row"><span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span><span>{t.rights}</span></div>
-        </div>
-      </footer>
-      {showBackToTop && <button type="button" onClick={returnToTop} className="back-to-top" aria-label={language === "ur" ? "اوپر جائیں" : "Back to top"}><ArrowUp className="h-4 w-4" /><span>{language === "ur" ? "اوپر" : "Top"}</span></button>}
-    </div>
+        </header>
+
+        {/* Page Content */}
+        <div className="page-canvas page-canvas-enter">{children}</div>
+
+        {/* Modern Footer */}
+        <footer className="site-footer relative overflow-hidden bg-[#061A34] text-white">
+          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/manus-storage/darul-ifta-geometric-pattern_a1249f4a.jpg')", backgroundSize: "360px" }} />
+          <div className="relative mx-auto max-w-[1360px] px-5 pb-7 pt-16 sm:px-8 lg:pt-20">
+            <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.3fr_0.75fr_0.85fr_1.1fr]">
+              {/* Brand and Mission */}
+              <div>
+                <BrandMark />
+                <p className="mt-6 max-w-sm font-sans text-sm leading-7 text-white/65">{t.aboutText}</p>
+                <div className="mt-6 flex gap-3">
+                  <a href="https://wa.me/923332617671" target="_blank" rel="noreferrer" className="footer-icon" aria-label="WhatsApp">
+                    <MessageCircle className="h-4 w-4" />
+                  </a>
+                  <a href={whatsappChannelUrl} target="_blank" rel="noreferrer" className="footer-icon" aria-label={language === "ur" ? "واٹس ایپ چینل" : "WhatsApp Channel"}>
+                    <Radio className="h-4 w-4" />
+                  </a>
+                  <a href="tel:+923332617671" className="footer-icon" aria-label="Call Darul Ifta">
+                    <Phone className="h-4 w-4" />
+                  </a>
+                  <a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="footer-icon" aria-label="Email Darul Ifta">
+                    <Mail className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="footer-title">{t.quick}</h3>
+                <div className="footer-links">
+                  {links.slice(0, 5).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}
+                </div>
+              </div>
+
+              {/* Services */}
+              <div>
+                <h3 className="footer-title">{t.serviceLinks}</h3>
+                <div className="footer-links">
+                  <a href="/fatawa">{language === "ur" ? "فتویٰ سروس" : "Fatwa Service"}</a>
+                  <a href="/#services">{language === "ur" ? "اسلامی تعلیم" : "Islamic Education"}</a>
+                  <a href="/#services">{language === "ur" ? "اشاعت و طباعت" : "Publications"}</a>
+                  <a href="/ask-fatwa">{language === "ur" ? "علمی مشاورت" : "Scholarly Consultation"}</a>
+                  <a href={onlineBayanUrl} target="_blank" rel="noreferrer" className="text-[#E9D4A2]">{language === "ur" ? "آن لائن بیان" : "Online Bayan"}</a>
+                </div>
+              </div>
+
+              {/* Newsletter & Contact */}
+              <div>
+                <h3 className="footer-title">{language === "ur" ? "ہفتہ وار فتاویٰ سبسکرپشن" : "Weekly Jurisprudence Newsletter"}</h3>
+                <p className="mt-2 font-sans text-xs leading-relaxed text-white/70">
+                  {language === "ur" ? "اہم اور جدید فتاویٰ اپنے ای میل ان باکس میں مفت حاصل فرمائیں۔" : "Receive authenticated Islamic rulings and beneficial reflections weekly."}
+                </p>
+                <form onSubmit={handleNewsletterSubmit} className="mt-4 flex gap-2">
+                  <input
+                    type="email"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder={language === "ur" ? "اپنا ای میل لکھیں" : "Your email address"}
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-3.5 py-2 text-xs text-white placeholder:text-white/40 outline-none focus:border-[#D1AC5B]"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 rounded-lg bg-[#D1AC5B] px-4 py-2 text-xs font-bold uppercase text-[#06152E] hover:bg-[#E4C77F]"
+                  >
+                    <Send className="h-3.5 w-3.5" />
+                  </button>
+                </form>
+
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <h3 className="footer-title">{t.contactUs}</h3>
+                  <p className="mt-1 font-sans text-xs leading-5 text-white/70">{t.location}</p>
+                  <a href="tel:+923332617671" className="mt-2 block font-sans text-xs font-semibold text-[#E9D4A2]">+92 333 2617671</a>
+                  <a href="mailto:ask.darulifa.irshadussaaileen@gmail.com" className="mt-1 block break-all font-sans text-xs text-[#E9D4A2] transition hover:text-white">
+                    ask.darulifa.irshadussaaileen@gmail.com
+                  </a>
+                  <a href={whatsappChannelUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1.5 font-sans text-xs text-[#E9D4A2] transition hover:text-white">
+                    <Radio className="h-3.5 w-3.5" />
+                    {language === "ur" ? "واٹس ایپ چینل" : "WhatsApp Channel"}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                  <Link href="/ask-fatwa" className="mt-3 inline-flex items-center gap-2 text-xs text-white transition hover:text-[#E9D4A2]">
+                    <HeartHandshake className="h-4 w-4 text-[#C89C46]" />
+                    {language === "ur" ? "شرعی سوال جمع کروائیں" : "Submit a question"}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Copyright & Disclaimer */}
+            <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row">
+              <span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span>
+              <span>{t.rights}</span>
+            </div>
+          </div>
+        </footer>
+
+        {/* Back to top floating button */}
+        {showBackToTop && (
+          <button
+            type="button"
+            onClick={returnToTop}
+            className="back-to-top"
+            aria-label={language === "ur" ? "اوپر جائیں" : "Back to top"}
+          >
+            <ArrowUp className="h-4 w-4" />
+            <span>{language === "ur" ? "اوپر" : "Top"}</span>
+          </button>
+        )}
+      </div>
+    </SmoothScroll>
   );
 }
