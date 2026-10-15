@@ -349,11 +349,11 @@ export default function Home() {
                 <p className="hero-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</p>
                 <p className="hero-urdu-identity">دارالافتاء ارشاد السائلین کراچی</p>
                 <h1 className="hero-english-identity font-display text-white">
-                  Authentic Islamic Guidance<br />
-                  <span>for Modern Challenges</span>
+                  Darul Ifta Irshad-us-Saileen<br />
+                  <span>Karachi</span>
                 </h1>
-                <p className="font-urdu text-xl text-[#F2DFB4] mt-1">
-                  شرعی مسائل کا مستند اور بااعتماد حل
+                <p className={`text-xl text-[#F2DFB4] mt-1 ${urdu ? "font-urdu" : "font-sans text-base sm:text-lg tracking-wide"}`}>
+                  {urdu ? "شرعی مسائل کا مستند اور بااعتماد حل" : "Authentic Islamic Guidance for Modern Challenges"}
                 </p>
               </div>
 
