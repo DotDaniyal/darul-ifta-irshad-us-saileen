@@ -19,6 +19,8 @@ const Methodology = lazy(() => import("./pages/Methodology"));
 const ScholarAdmin = lazy(() => import("./pages/ScholarAdmin"));
 const ScholarProfile = lazy(() => import("./pages/ScholarProfile"));
 const Scholars = lazy(() => import("./pages/Scholars"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 function RouteLoadingFallback() {
   return (
@@ -48,6 +50,8 @@ function Router() {
         <Route path={"/admin/scholars"} component={ScholarAdmin} />
         <Route path={"/ask-fatwa"} component={AskFatwa} />
         <Route path={"/methodology"} component={Methodology} />
+        <Route path={"/privacy"} component={Privacy} />
+        <Route path={"/terms"} component={Terms} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>

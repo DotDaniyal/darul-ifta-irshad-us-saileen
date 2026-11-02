@@ -118,6 +118,8 @@ export function TrendingFatwasSection() {
                   <div className="flex items-center gap-1.5 font-mono font-semibold">
                     <span className="text-[#075A9B] dark:text-[#F3D794]">#{fatwa.number}</span>
                     <span aria-hidden="true">·</span>
+                    <span>{fatwa.date}</span>
+                    <span aria-hidden="true">·</span>
                     <span>{fatwa.category}</span>
                   </div>
                   <span className="flex items-center gap-1 text-[11px] font-medium text-[#1E7246] dark:text-[#78C99B]">
@@ -211,6 +213,8 @@ export function TrendingFatwasSection() {
                 <div>
                   <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#075A9B] dark:text-[#D1AC5B]">
                     <span>#{selectedFatwa.number}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{selectedFatwa.date}</span>
                     <span aria-hidden="true">·</span>
                     <span>{selectedFatwa.category}</span>
                     <span aria-hidden="true">·</span>

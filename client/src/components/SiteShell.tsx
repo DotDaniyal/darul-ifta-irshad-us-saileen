@@ -483,10 +483,18 @@ export default function SiteShell({ children }: { children: ReactNode }) {
               </div>
             </div>
 
-            {/* Copyright & Disclaimer */}
-            <div className="flex flex-col justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row">
-              <span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi</span>
-              <span>{t.rights}</span>
+            {/* Copyright & Legal Links */}
+            <div className="flex flex-col items-center justify-between gap-3 pt-7 font-sans text-[11px] text-white/45 sm:flex-row">
+              <span>© {new Date().getFullYear()} Darul Ifta Irshad-us-Saileen Karachi. {t.rights}</span>
+              <div className="flex items-center gap-4">
+                <Link href="/privacy" className="transition hover:text-[#E9D4A2]">
+                  {language === "ur" ? "تحفظِ راز داری (Privacy Policy)" : "Privacy Policy"}
+                </Link>
+                <span className="text-white/20">•</span>
+                <Link href="/terms" className="transition hover:text-[#E9D4A2]">
+                  {language === "ur" ? "شرائط و ضوابط (Terms & Conditions)" : "Terms & Conditions"}
+                </Link>
+              </div>
             </div>
           </div>
         </footer>

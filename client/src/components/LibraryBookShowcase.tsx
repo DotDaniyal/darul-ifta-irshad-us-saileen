@@ -76,7 +76,7 @@ export function LibraryBookShowcase() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#071D3A] text-white px-5 py-20 sm:px-8 lg:py-28" id="library-showcase">
+    <section className="relative overflow-hidden bg-[#071D3A] text-white px-5 py-20 sm:px-8 lg:py-28" id="library">
       {/* Background Islamic Geometry Overlay */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"

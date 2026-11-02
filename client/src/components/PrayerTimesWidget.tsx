@@ -52,8 +52,9 @@ export function PrayerTimesWidget({ compact = false }: { compact?: boolean }) {
               <MapPin className="h-3 w-3" />
               <span>{urdu ? "اوقاتِ نماز · کراچی" : "Prayer Times · Karachi"}</span>
             </div>
-            <p className="text-xs text-white/70">
+            <p className={`text-xs text-white/80 ${urdu ? "font-urdu" : "font-sans"}`}>
               {status?.hijri[language] || (urdu ? "تاریخِ ہجری" : "Hijri Date")}
+              {status?.gregorian[language] ? ` · ${status.gregorian[language]}` : ""}
             </p>
           </div>
         </div>

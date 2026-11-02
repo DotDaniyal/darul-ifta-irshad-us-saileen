@@ -347,9 +347,9 @@ export default function Home() {
               {/* Bismillah & Title Stack */}
               <div className="hero-text-stack">
                 <p className="hero-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</p>
-                <p className="hero-urdu-identity">دارالافتاء ارشاد السائلین کراچی</p>
+                <p className="hero-urdu-identity">دار الإفتاء إرشاد السائلين کراچی</p>
                 <h1 className="hero-english-identity font-display text-white">
-                  Darul Ifta Irshad-us-Saileen<br />
+                  Darul Ifta Irshad us Saileen<br />
                   <span>Karachi</span>
                 </h1>
                 <p className={`text-xl text-[#F2DFB4] mt-1 ${urdu ? "font-urdu" : "font-sans text-base sm:text-lg tracking-wide"}`}>

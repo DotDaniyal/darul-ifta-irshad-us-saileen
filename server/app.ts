@@ -12,11 +12,14 @@ const __dirname = path.dirname(__filename);
 
 export function createScholarApi() {
   const api = express.Router();
-  api.use((_req, res, next) => {
+  api.use((req, res, next) => {
     res.removeHeader("X-Powered-By");
     res.setHeader("X-Content-Type-Options", "nosniff");
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("Permissions-Policy", "camera=(), geolocation=(), microphone=()");
+    if (req.url && !req.url.startsWith("/api") && !req.url.startsWith("/?")) {
+      req.url = "/api" + (req.url.startsWith("/") ? req.url : "/" + req.url);
+    }
     return next();
   });
   // 3,000,000 raw bytes produce a base64 JSON body below Vercel Functions' 4.5 MB cap.
@@ -25,7 +28,11 @@ export function createScholarApi() {
 
   api.get("/api/institutional-date", async (_req, res) => {
     res.setHeader("Cache-Control", "no-store");
-    return res.json(await getInstitutionalDateStatus());
+    try {
+      return res.json(await getInstitutionalDateStatus());
+    } catch {
+      return res.json(await getInstitutionalDateStatus({ useOfficialPakistanDecisions: false, fetchSource: async () => { throw new Error("offline"); } }));
+    }
   });
 
   const hasAdministratorAccess = (req: express.Request) => {
@@ -239,6 +246,10 @@ export function createScholarApi() {
     if (!Number.isInteger(id) || id < 1) return res.status(400).json({ error: "A valid category is required." });
     await deleteDailyPostCategory(id);
     return res.status(204).end();
+  });
+
+  api.use((_req, res) => {
+    res.status(404).json({ error: "API endpoint not found." });
   });
 
   return api;

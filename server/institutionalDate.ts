@@ -242,7 +242,12 @@ function resolvedHijri(
   return override ? { hijri: { day: override.day, month: override.month, year: override.year }, override } : { hijri: sourceHijri, override: undefined };
 }
 
-const defaultFetch: SourceFetch = (url) => fetch(url);
+const defaultFetch: SourceFetch = (url) => {
+  const signal = typeof AbortSignal !== "undefined" && typeof AbortSignal.timeout === "function"
+    ? AbortSignal.timeout(2500)
+    : undefined;
+  return fetch(url, { signal });
+};
 
 export async function getInstitutionalDateStatus({
   now = new Date(),
