@@ -6,6 +6,9 @@
   "functions": {
     "api/[...path].ts": {
       "maxDuration": 10
+    },
+    "api/index.ts": {
+      "maxDuration": 10
     }
   },
   "headers": [

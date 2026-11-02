@@ -17,14 +17,41 @@ export function createScholarApi() {
     res.setHeader("X-Content-Type-Options", "nosniff");
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("Permissions-Policy", "camera=(), geolocation=(), microphone=()");
-    if (req.url && !req.url.startsWith("/api") && !req.url.startsWith("/?")) {
-      req.url = "/api" + (req.url.startsWith("/") ? req.url : "/" + req.url);
+
+    if (req.url) {
+      let path = req.url;
+      const queryIndex = path.indexOf("?");
+      let pathname = queryIndex >= 0 ? path.slice(0, queryIndex) : path;
+      const query = queryIndex >= 0 ? path.slice(queryIndex) : "";
+
+      if (!pathname.startsWith("/api")) {
+        pathname = "/api" + (pathname.startsWith("/") ? pathname : "/" + pathname);
+      }
+
+      if (pathname.length > 4 && pathname.endsWith("/")) {
+        pathname = pathname.slice(0, -1);
+      }
+
+      req.url = pathname + query;
     }
     return next();
   });
   // 3,000,000 raw bytes produce a base64 JSON body below Vercel Functions' 4.5 MB cap.
   // The parser limit also bounds malformed JSON before any allocation for file storage.
   api.use(express.json({ limit: "4mb" }));
+
+  const apiStatus = (_req: express.Request, res: express.Response) => {
+    res.setHeader("Cache-Control", "no-store");
+    return res.json({
+      status: "ok",
+      name: "Darul Ifta Irshad-us-Saileen Karachi API",
+      timestamp: new Date().toISOString(),
+    });
+  };
+
+  api.get("/api", apiStatus);
+  api.get("/api/health", apiStatus);
+  api.get("/api/status", apiStatus);
 
   api.get("/api/institutional-date", async (_req, res) => {
     res.setHeader("Cache-Control", "no-store");
@@ -140,6 +167,15 @@ export function createScholarApi() {
     const category = typeof req.query.category === "string" ? req.query.category : undefined;
     try { return res.json(await listPublicDailyPosts({ page, pageSize, query, category, sort })); }
     catch { return res.status(503).json({ error: "Daily Posts are temporarily unavailable." }); }
+  });
+
+  api.get("/api/daily-posts/:slug/related", async (req, res) => {
+    try {
+      const post = await getPublicDailyPost(req.params.slug);
+      if (!post) return res.status(404).json({ error: "Daily Post not found." });
+      const relatedPost = post as typeof post & { id: number; categoryId: number | null };
+      return res.json(await listRelatedPublicDailyPosts({ id: relatedPost.id, categoryId: relatedPost.categoryId }));
+    } catch { return res.status(503).json({ error: "Related Daily Posts are temporarily unavailable." }); }
   });
 
   api.get("/api/daily-posts/:slug", async (req, res) => {
