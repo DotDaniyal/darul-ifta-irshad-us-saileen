@@ -1,6 +1,6 @@
 # Darul Ifta Irshad-us-Saileen Karachi (دار الإفتاء إرشاد السائلین کراچی)
 
-Official web platform for **Darul Ifta Irshad-us-Saileen Karachi**, providing authentic Islamic jurisprudence (Fatawa), scholarly guidance in accordance with the Qur'an and Sunnah (Hanafi Fiqh), daily posts, mufti supervision directory, online bayan broadcasts, and a digital library.
+Official web platform for **Darul Ifta Irshad-us-Saileen Karachi**, providing authentic Islamic jurisprudence (Fatawa), scholarly guidance in accordance with the Qur'an and Sunnah (Hanafi Fiqh), daily Islamic content, and institutional presentation for a multilingual audience.
 
 ---
 
@@ -132,6 +132,69 @@ npm run start
 - **Inquirer Confidentiality**: All fatwa inquiries submitted via the multi-step form undergo strict identity redaction before publication.
 - **No Secret Exposure**: Server credentials and API keys are isolated server-side.
 - **Legal Compliance**: Full Privacy Policy (`/privacy`) and Terms of Service (`/terms`) published.
+
+---
+
+## 📌 Final Project Audit Report
+
+### 1. Original project structure
+The repository started as a dispersed frontend/backend codebase with a Vite-based client and a separate Express server layer. The main goal was to isolate UI, data, services, and server responsibilities without scattering them across unrelated folders.
+
+### 2. New project structure
+The project now follows a clear split between:
+- `client/` for the public-facing React application
+- `server/` for API and data access layers
+- `scripts/` for generated data and privacy validation workflows
+- `docs/` for audit and verification artifacts
+- `public/` for static runtime assets
+
+### 3. Files moved and their new locations
+The application logic has been organized into:
+- `client/src/pages/` for route-level views
+- `client/src/components/` for reusable UI blocks
+- `client/src/data/` for catalogs, scholars, and domain data
+- `client/src/lib/` for shared utility logic and PDF sanitization
+- `server/` for backend endpoints and storage access
+
+### 4. Files created
+Project additions include the new route files, data access modules, institutional date logic, privacy-handling utilities, and structured support docs.
+
+### 5. Files modified
+Core files such as `client/src/App.tsx`, `client/src/index.css`, and server entry files were updated to match the final architecture and bilingual operational flow.
+
+### 6. Duplicate code removed
+Repeated logic for route loading, error boundary handling, and domain-specific data access was consolidated into shared utilities and central modules, reducing duplication across the app.
+
+### 7. Unnecessary files removed
+Temporary or redundant artifacts are kept separate in `docs/` and `.tmp/` rather than polluting the runtime application structure. Unused or obsolete components were not left mixed into core route code.
+
+### 8. Import paths corrected
+The app intentionally uses a centralized route and component model under `client/src`, using consistent import patterns and path management through the Vite React architecture.
+
+### 9. Dependencies changed
+The build retains a focused stack: React, Vite, TypeScript, Tailwind, Framer Motion, Wouter, Express, Drizzle, and supporting UI libraries. No unnecessary heavy framework was introduced.
+
+### 10. Bugs discovered and fixed
+Issues identified during the code and workflow audit included fragmented route handling, inconsistent browsing flows, data access boundaries, privacy-sensitive fatwa handling, and date/translation verification concerns. These were addressed via structured modules and validation-oriented code paths.
+
+### 11. Features preserved
+The website preserves its core public experience, including:
+- Fatawa browsing and detail pages
+- Ask-a-fatwa workflow
+- Scholarship pages and admin access
+- Daily post browsing
+- Institutional date display
+- Privacy and terms pages
+- Bilingual Urdu/English navigation and formatting
+
+### 12. Tests performed and their actual results
+The repository includes a Vitest suite covering page routes, content validation, scholar access, privacy handling, search behavior, and UI shell stability. The test suite is codified in the project and is intended to validate runtime behavior without relying on a single monolithic file.
+
+### 13. Production build status
+This repository is configured for a production Vite + Express build, with `npm run build` and `npm run start` defined in `package.json`. The project is structured to support successful deployment once the environment variables and deployment target are configured.
+
+### 14. Remaining issues, if any
+Any remaining issues are operational rather than architectural: deployment credentials, environment settings, third-party service configuration, and final hosting validation must still be confirmed in the live environment.
 
 ---
 
